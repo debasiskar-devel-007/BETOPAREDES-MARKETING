@@ -118,7 +118,7 @@
 
 .span1stloopSUB{ display: block; list-style: none; background: #ffffff; padding: 20px; box-shadow: 0 0 8px #ddd; margin: 13px 0;}
 
-.marketingre_view_body_con_right_bottom_wrapper    p{ display: inline-block; font-size: 18px; color: #00bdf2; margin: 0; padding: 5px 12px 0 0; }
+.marketingre_view_body_con_right_bottom_wrapper p{ display: inline-block; font-size: 18px; color: #00bdf2; margin: 0; padding: 5px 12px 0 0; }
 
 .marketingre_view_body_con_right_bottom_wrapper   .event_f_name{ display: block; font-size: 18px;     line-height: 24px; color: #434343; font-weight: bold; margin: 0; padding: 0 0 5px 0;}
 
@@ -190,6 +190,23 @@
 .marketingre_view_body_con_right_additionBlock .div_block2 h2{ padding: 15px; font-size: 30px; color: #fefefe; text-shadow: 1px 1px 2px #096089;}
 
 .marketingre_view_body_con_right_additionBlock .div_block2 h2 span{ color: #f1ff12; display: inline-block;}
+
+.marketingre_view_btn_group{ display: block; text-align:center;}
+
+.marketingre_view_btn_group button{ display: inline-block; 
+    border-radius: 0px;
+    margin: 0 5px 10px 5px;   
+    font-size: 26px;
+    line-height: 32px; color: #0b1f28; text-shadow: 0 1px 1px #add1e6; text-align: center; padding: 14px 15px 16px 15px;
+    font-weight: bold; text-transform: uppercase; border: none; cursor: pointer;  
+       background: rgba(104,207,255,1);
+       background: -moz-linear-gradient(top, rgba(104,207,255,1) 0%, rgba(13,168,240,1) 100%);
+       background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(104,207,255,1)), color-stop(100%, rgba(13,168,240,1)));
+       background: -webkit-linear-gradient(top, rgba(104,207,255,1) 0%, rgba(13,168,240,1) 100%);
+       background: -o-linear-gradient(top, rgba(104,207,255,1) 0%, rgba(13,168,240,1) 100%);
+       background: -ms-linear-gradient(top, rgba(104,207,255,1) 0%, rgba(13,168,240,1) 100%);
+       background: linear-gradient(to bottom, rgba(104,207,255,1) 0%, rgba(13,168,240,1) 100%);
+       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#68cfff', endColorstr='#0da8f0', GradientType=0 );}
 
 @media screen and (max-width:1860px) {
     .marketingre_view_top_body{ width: 1730px;}
@@ -460,4 +477,9 @@
 modal-container .modal-content {
     border: 0 !important;
 }
+
+
+
+.span1stloopSUB p{ margin: 0px;}
+
 
