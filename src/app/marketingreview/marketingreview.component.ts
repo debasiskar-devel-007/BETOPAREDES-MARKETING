@@ -30,6 +30,7 @@ export class MarketingreviewComponent implements OnInit {
   public lead_data: any = '';
   public discov: boolean = false;
   public youtubeVideoUrl: any = '';
+  public modalRef: BsModalRef;
   modalRef3: BsModalRef;
   public leadflag: any = 0;
   public pageurl: any = ' https://backoffice.betoparedes.com/marketing-review';
@@ -178,7 +179,26 @@ export class MarketingreviewComponent implements OnInit {
   ngOnInit() {
     this.slotview();
   }
-
+  goToContractPage(){
+    this.router.navigateByUrl("/contract-review/"+ this.activatedroute.snapshot.params['product_id']+'/'+this.activatedroute.snapshot.params['rep_id']+'/'+ this.activatedroute.snapshot.params['lead_id'])
+  }
+  sendToCM(template:TemplateRef<any>){
+    // console.log(this.activatedroute.snapshot.params['rep_id'], this.activatedroute.snapshot.params['product_id'], this.activatedroute.snapshot.params['lead_id']);
+    const link1 = this._commonservice.nodesslurl + 'addorupdatedata';
+    let data = {
+        source: 'contract_repote',
+        data: { status: 'request', rep_id: this.activatedroute.snapshot.params['rep_id'], product_id: this.activatedroute.snapshot.params['product_id'], lead_id:this.activatedroute.snapshot.params['lead_id'], created_by: this.activatedroute.snapshot.params['lead_id']}
+    };
+    this._http.post(link1, data).subscribe((res: any) => {
+        // console.log(res);
+        if (res.status == 'success') {
+          this.modalRef = this.modal.show(template);
+          setTimeout(() => {
+            this.modalRef.hide();
+          }, 100000);
+        }
+    });
+  }
    settimezone(){
      this.loading = true;
     this.cookeiservice.set('timezone',this.timezoneval);

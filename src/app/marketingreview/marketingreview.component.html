@@ -81,8 +81,8 @@
     </div>
 
     <div class="marketingre_view_btn_group">
-      <button>Goto contract review Page</button>
-      <button> REQUEST A CONTRACT</button>
+      <button (click)="goToContractPage()">Goto contract review Page</button>
+      <button  (click)="sendToCM(messagemodal)"> REQUEST A CONTRACT</button>
       <button *ngIf="product_id =='5dd68c367b583967f3e573b2'">Product Review</button>
     </div>
 
@@ -325,5 +325,16 @@
 
       <iframe width="560" height="315" [attr.src]="youtubeVideoUrl" frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</ng-template>
+
+
+<ng-template #messagemodal>
+  <div class="modal-body brandmanagement_modal">
+      <div class="logo_wrapper">
+          <img src="assets/images/logo.png">
+      </div>
+      <div class="message_success  text-center"> Your Contact Request Done Successfully !!</div>
+
   </div>
 </ng-template>

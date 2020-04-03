@@ -113,6 +113,10 @@ export class ContractReviewVideoComponent implements OnInit {
     this.slotview();
   }
 
+  goToMarketingPage(){
+    this.router.navigateByUrl("/marketing-review/"+ this.activatedroute.snapshot.params['product_id']+'/'+this.activatedroute.snapshot.params['rep_id']+'/'+ this.activatedroute.snapshot.params['lead_id'])
+  }
+
   sendToCM(template:TemplateRef<any>){
     // console.log(this.activatedroute.snapshot.params['rep_id'], this.activatedroute.snapshot.params['product_id'], this.activatedroute.snapshot.params['lead_id']);
     const link1 = this._commonservice.nodesslurl + 'addorupdatedata';
