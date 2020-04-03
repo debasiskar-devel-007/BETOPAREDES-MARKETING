@@ -145,7 +145,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/betoparedesmarketing/production/1585902466441-2020-04-03T08:27:46.441Z/betoparedesmarketing.zip"
+          "S3Key": "serverless/betoparedesmarketing/production/1585914316765-2020-04-03T11:45:16.765Z/betoparedesmarketing.zip"
         },
         "FunctionName": "betoparedesmarketing-production-api",
         "Handler": "lambda.universal",
@@ -164,14 +164,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "ApiLambdaVersionNB7lQDKrgrsU7ss6a5CoCNByelgH5xRMHWmqIyCXA": {
+    "ApiLambdaVersion4HXMy2gdXeSde3mfC11e57wHRrWtPecDv085kl0WMs": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ApiLambdaFunction"
         },
-        "CodeSha256": "QbMp5ui8KcVwBQRoDhtB8RuJOtWRzADkUXcHgEsB0pE="
+        "CodeSha256": "YJ9Ik3nTntz8I2X3fyFY9KHvfH55M7rozrcN3zZw58U="
       }
     },
     "ApiGatewayRestApi": {
@@ -289,7 +289,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1585902414212": {
+    "ApiGatewayDeployment1585914258994": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -349,7 +349,7 @@
     "ApiLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ApiLambdaVersionNB7lQDKrgrsU7ss6a5CoCNByelgH5xRMHWmqIyCXA"
+        "Ref": "ApiLambdaVersion4HXMy2gdXeSde3mfC11e57wHRrWtPecDv085kl0WMs"
       }
     },
     "ServiceEndpoint": {

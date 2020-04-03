@@ -43,39 +43,12 @@ export class MarketingreviewComponent implements OnInit {
     {'product_id':"5dd68c367b583967f3e573b2", 'link':"https://www.youtube.com/embed/fnX8ZDfFzD4", 'start':0, 'second_start':175},
   ]
   public safeSrc:SafeResourceUrl;
-  constructor(public _commonservice: Commonservices, public modal: BsModalService, public _http: HttpClient, public cookeiservice: CookieService, public activatedroute: ActivatedRoute, public router: Router, private sanitizer: DomSanitizer, private readonly meta: MetaService) {
+  constructor(public _commonservice: Commonservices, public modal: BsModalService, public _http: HttpClient, public cookeiservice: CookieService, public activatedroute: ActivatedRoute, public router: Router, private sanitizer: DomSanitizer, public meta: MetaService) {
 
-    
-
-    for (const key in this.youtube_url) {
-      this.youtube_url[key].safeSrc = this.sanitizer.bypassSecurityTrustResourceUrl(this.youtube_url[key].link);
-    }
-    // if (activatedroute.snapshot.params['lead_id'] != null) {
-    //   this.lead_id = activatedroute.snapshot.params['lead_id'];
-    //   this.activatedroute.data.forEach((data: any) => {
-    //     this.leadData = data.results.res;
-    //     console.log(this.leadData)
-    //   });
-    // }
     this.product_id = activatedroute.snapshot.params['product_id'];
-    this._http.get("assets/data/timezone.json")
-          .subscribe((res:any) => {
-              this.timezone=res;
-              this.timezoneval=this.cookeiservice.get('timezone');
-          }, error => {
-              console.log('Oooops!');
-          });
-
-    // console.log(this.product_id)
-   }
-
-
-  ngOnInit() {
-    this.slotview();
-
     this.meta.setTag('og:type', 'website');
     // for aws
-    // if (this.activatedroute.snapshot.params['product_id'] == '5dd68c367b583967f3e573b2') {
+    if (this.activatedroute.snapshot.params['product_id'] == '5dd68c367b583967f3e573b2') {
       this.meta.setTag('og:keyword', 'ANS Testing Management Software, AWS Healthcare Management System, ANS Device and Wellness System');
       this.meta.setTag('twitter:keyword', 'ANS Testing Management Software, AWS Healthcare Management System, ANS Device and Wellness System');
       this.meta.setTitle('Advanced Wellness Solutions');
@@ -86,14 +59,14 @@ export class MarketingreviewComponent implements OnInit {
       this.meta.setTag('og:image', '../../assets/images/marketingre_view_awslogo.png');
       this.meta.setTag('twitter:image', '../../assets/images/marketingre_view_awslogo.png');
       if (this.activatedroute.snapshot.params['lead_id'] == null || typeof (this.activatedroute.snapshot.params['lead_id']) != 'undefined') {
-        this.meta.setTag('og:url', this.pageurl + '/' + this.product_id + '/' + this.activatedroute.snapshot.params['rep_id']);
+        this.meta.setTag('og:url', this.pageurl + '/' + activatedroute.snapshot.params['product_id'] + '/' + this.activatedroute.snapshot.params['rep_id']);
       } else {
-        this.meta.setTag('og:url', this.pageurl + '/' + this.product_id + '/' + this.activatedroute.snapshot.params['rep_id'] + '/' + this.activatedroute.snapshot.params['lead_id']);
+        this.meta.setTag('og:url', this.pageurl + '/' + activatedroute.snapshot.params['product_id'] + '/' + this.activatedroute.snapshot.params['rep_id'] + '/' + this.activatedroute.snapshot.params['lead_id']);
       }
-      console.log(this.pageurl + '/' + this.product_id + '/' + this.activatedroute.snapshot.params['rep_id'] + '/' + this.activatedroute.snapshot.params['lead_id'])
-    // }
+      console.log(this.pageurl + '/' + activatedroute.snapshot.params['product_id'] + '/' + this.activatedroute.snapshot.params['rep_id'] + '/' + this.activatedroute.snapshot.params['lead_id'])
+    }
     // for uta  
-    if (this.product_id == '5d4d5e8cc9e23d43cc124394') {
+    if (this.activatedroute.snapshot.params['product_id'] == '5d4d5e8cc9e23d43cc124394') {
       this.meta.setTag('og:keyword', 'Global Technology Partner, Global Technology Partnerships, Global Technology Solutions');
       this.meta.setTag('twitter:keyword', 'Global Technology Partner, Global Technology Partnerships, Global Technology Solutions');
       this.meta.setTitle('Universal Tech Associates');
@@ -110,7 +83,7 @@ export class MarketingreviewComponent implements OnInit {
       }
     }
     // for apogee
-    if (this.product_id == '5d4d5eedc9e23d43cc124395') {
+    if (this.activatedroute.snapshot.params['product_id'] == '5d4d5eedc9e23d43cc124395') {
       this.meta.setTag('og:keyword', 'Ecommerce Technology Solutions, Marketing Technology Solutions, Customized Technological Innovations');
       this.meta.setTag('twitter:keyword', 'Ecommerce Technology Solutions, Marketing Technology Solutions, Customized Technological Innovations');
       this.meta.setTitle('ApogeeINVENT');
@@ -127,7 +100,7 @@ export class MarketingreviewComponent implements OnInit {
       }
     }
     // for geo
-    if (this.product_id == '5d4d5f66c9e23d43cc1243a2') {
+    if (activatedroute.snapshot.params['product_id'] == '5d4d5f66c9e23d43cc1243a2') {
       this.meta.setTag('og:keyword', 'Residential GEO Fencing Solutions, Commercial GEO Fencing Solutions, Targeted GEO Fencing Solutions, Big Data GEO Fencing Solutions');
       this.meta.setTag('twitter:keyword', 'Residential GEO Fencing Solutions, Commercial GEO Fencing Solutions, Targeted GEO Fencing Solutions, Big Data GEO Fencing Solutions');
       this.meta.setTitle('GEOFenceDSP');
@@ -144,7 +117,7 @@ export class MarketingreviewComponent implements OnInit {
       }
     }
     // for MedWorldOne
-    if (this.product_id == '5e4e634052b7254c601f7559') {
+    if (activatedroute.snapshot.params['product_id'] == '5e4e634052b7254c601f7559') {
       this.meta.setTag('og:keyword', ' Buy & Sell Medical Equipment, List Medical Supplies, Premium Used Medical Equipment');
       this.meta.setTag('twitter:keyword', ' Buy & Sell Medical Equipment, List Medical Supplies, Premium Used Medical Equipment');
       this.meta.setTitle('Med World One');
@@ -161,7 +134,7 @@ export class MarketingreviewComponent implements OnInit {
       }
     }
     // for Helios Medical Marketing
-    if (this.product_id == '5e4e675185f01a4ee4f0ac22') {
+    if (activatedroute.snapshot.params['product_id'] == '5e4e675185f01a4ee4f0ac22') {
       this.meta.setTag('og:keyword', 'Medical Marketing Solutions, Big Data Medical Marketing, Medical Marketing Strategies');
       this.meta.setTag('twitter:keyword', 'Medical Marketing Solutions, Big Data Medical Marketing, Medical Marketing Strategies');
       this.meta.setTitle('Helios Medical Marketing');
@@ -177,6 +150,33 @@ export class MarketingreviewComponent implements OnInit {
         this.meta.setTag('og:url', this.pageurl + '/' + this.product_id + '/' + this.activatedroute.snapshot.params['rep_id'] + '/' + this.activatedroute.snapshot.params['lead_id']);
       }
     }
+
+
+
+    for (const key in this.youtube_url) {
+      this.youtube_url[key].safeSrc = this.sanitizer.bypassSecurityTrustResourceUrl(this.youtube_url[key].link);
+    }
+    // if (activatedroute.snapshot.params['lead_id'] != null) {
+    //   this.lead_id = activatedroute.snapshot.params['lead_id'];
+    //   this.activatedroute.data.forEach((data: any) => {
+    //     this.leadData = data.results.res;
+    //     console.log(this.leadData)
+    //   });
+    // }
+    this._http.get("assets/data/timezone.json")
+          .subscribe((res:any) => {
+              this.timezone=res;
+              this.timezoneval=this.cookeiservice.get('timezone');
+          }, error => {
+              console.log('Oooops!');
+          });
+
+    // console.log(this.product_id)
+   }
+
+
+  ngOnInit() {
+    this.slotview();
   }
 
    settimezone(){
