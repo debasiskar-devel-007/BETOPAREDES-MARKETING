@@ -273,6 +273,11 @@
 
 
 @media screen and (max-width:1440px) {
+    .marketingre_view_body_con_right  .topbtn1 {    font-size: 22px; margin-bottom: 16px;}
+
+    .marketingre_view_body_con_right h2  {
+        font-size: 30px;}
+
     .marketingre_view_top_body{ width: 1300px;}
     .marketingre_view_body_wrapper{ width: 1300px;}
 
@@ -289,6 +294,13 @@
 
     .marketingre_view_body_con_right_additionBlock .div_block1 {  padding: 20px;}
 
+}
+
+@media screen and (max-width:1400px) {
+.marketingre_view_body_con_right_con_sub {
+    padding: 16px 10px;
+}
+.marketingre_view_body_con_right  .topbtn1 {   line-height: 26px;}
 }
 
 @media screen and (max-width:1380px) {

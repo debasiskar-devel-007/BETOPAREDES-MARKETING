@@ -9,6 +9,7 @@ import { TestresolveService } from './testresolve.service';
 import { SlotviewComponent } from "./slotview/slotview.component";
 import { MarketingreviewComponent } from './marketingreview/marketingreview.component';
 import { ContractReviewVideoComponent } from './contract-review-video/contract-review-video.component';
+import { ProductreviewComponent } from './productreview/productreview.component';
 const appRoutes: Routes = [
     { path: '', redirectTo:'/login', pathMatch: 'full' },
     { path: 'slotview', component: SlotviewComponent},
@@ -30,6 +31,11 @@ const appRoutes: Routes = [
 
     {path: 'marketing-review/:product_id/:rep_id/:lead_id', component: MarketingreviewComponent},
     {path: 'marketing-review/:product_id/:rep_id', component: MarketingreviewComponent},
+
+    { path: 'product-review/:product_id/:rep_id/:lead_id', component: ProductreviewComponent },
+    { path: 'product-review/:product_id/:rep_id', component: ProductreviewComponent },
+
+    
 
     // {path: 'marketing-review/:product_id/:rep_id/:lead_id/:flag', component: MarketingreviewComponent},
     // {path: 'marketing-review/:product_id/:rep_id/:lead_id', component: MarketingreviewComponent, resolve : {results: TestresolveService},data: { requestcondition: {condition: {"_id":'lead_id'}}, endpoint: 'datalistfornewlead'}},

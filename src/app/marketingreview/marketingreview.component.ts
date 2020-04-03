@@ -179,8 +179,12 @@ export class MarketingreviewComponent implements OnInit {
   ngOnInit() {
     this.slotview();
   }
-  goToContractPage(){
-    this.router.navigateByUrl("/contract-review/"+ this.activatedroute.snapshot.params['product_id']+'/'+this.activatedroute.snapshot.params['rep_id']+'/'+ this.activatedroute.snapshot.params['lead_id'])
+  goTo(val:any){
+    if (val == 'contract') {
+      this.router.navigateByUrl("/contract-review/"+ this.activatedroute.snapshot.params['product_id']+'/'+this.activatedroute.snapshot.params['rep_id']+'/'+ this.activatedroute.snapshot.params['lead_id'])
+    } else {
+      this.router.navigateByUrl("/product-review/"+ this.activatedroute.snapshot.params['product_id']+'/'+this.activatedroute.snapshot.params['rep_id']+'/'+ this.activatedroute.snapshot.params['lead_id'])
+    }
   }
   sendToCM(template:TemplateRef<any>){
     // console.log(this.activatedroute.snapshot.params['rep_id'], this.activatedroute.snapshot.params['product_id'], this.activatedroute.snapshot.params['lead_id']);

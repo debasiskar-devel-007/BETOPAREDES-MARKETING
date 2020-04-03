@@ -112,9 +112,12 @@ export class ContractReviewVideoComponent implements OnInit {
   ngOnInit() {
     this.slotview();
   }
-
-  goToMarketingPage(){
-    this.router.navigateByUrl("/marketing-review/"+ this.activatedroute.snapshot.params['product_id']+'/'+this.activatedroute.snapshot.params['rep_id']+'/'+ this.activatedroute.snapshot.params['lead_id'])
+  goTo(val:any){
+    if (val == 'marketing') {
+      this.router.navigateByUrl("/marketing-review/"+ this.activatedroute.snapshot.params['product_id']+'/'+this.activatedroute.snapshot.params['rep_id']+'/'+ this.activatedroute.snapshot.params['lead_id']);
+    } else {
+      this.router.navigateByUrl("/product-review/"+ this.activatedroute.snapshot.params['product_id']+'/'+this.activatedroute.snapshot.params['rep_id']+'/'+ this.activatedroute.snapshot.params['lead_id']);
+    }
   }
 
   sendToCM(template:TemplateRef<any>){
