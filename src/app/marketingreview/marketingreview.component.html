@@ -53,6 +53,8 @@
 
 </div>
 
+
+
 <div class="marketingre_view_body">
 
 
@@ -76,6 +78,12 @@
 
       </div>
 
+    </div>
+
+    <div class="marketingre_view_btn_group">
+      <button>Goto contract review Page</button>
+      <button> REQUEST A CONTRACT</button>
+      <button *ngIf="product_id =='5dd68c367b583967f3e573b2'">Product Review</button>
     </div>
 
     <div class="marketingre_view_body_con">
@@ -107,8 +115,8 @@
 
         <div class="marketingre_view_body_con_right_top">
 
-          <h2 *ngIf="allslotslength == 0">No Result Found</h2>
-          <h2 *ngIf="allslotslength != 0">PLEASE CHOOSE A SLOT</h2>
+          <h2 *ngIf="allslotslength == 0" style="padding:0 0 14px 0!important;">No Result Found</h2>
+          <h2 *ngIf="allslotslength != 0" style="padding:0 0 14px 0!important;">PLEASE CHOOSE A SLOT</h2>
         <form *ngIf="allslotslength != 0">
 
             <div class="form-group">

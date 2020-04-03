@@ -26,6 +26,7 @@ import { Router } from '@angular/router';
 import { MarketingreviewComponent } from './marketingreview/marketingreview.component';
 import { ContractReviewVideoComponent } from './contract-review-video/contract-review-video.component';
 import { MetaModule, MetaLoader, MetaStaticLoader, PageTitlePositioning } from '@ngx-meta/core';
+import { ProductreviewComponent } from './productreview/productreview.component';
 
 // import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 
@@ -58,7 +59,8 @@ export function metaFactory(): MetaLoader {
     SlotsComponent,
     SlotviewComponent,
     OrderBy,
-    MarketingreviewComponent
+    MarketingreviewComponent,
+    ProductreviewComponent
 
   ],
   imports: [
