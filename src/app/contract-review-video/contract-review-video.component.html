@@ -1,0 +1,229 @@
+<!-- <app-adminheader></app-adminheader> -->
+
+<div class="marketingre_view_top">
+
+  <div class="marketingre_view_top_body">
+  <div class="marketingre_view_top_wrapper">
+
+
+    <div class="marketingre_view_top_left">
+      <img *ngIf="product_id =='5dd68c367b583967f3e573b2'" src="../../assets/images/marketingre_view_awslogo.png" alt="#">
+      <img  *ngIf="product_id =='5d4d5e8cc9e23d43cc124394'" src="../../assets/images/uta_marketingre_view_logo.png" alt="#">
+      <img  *ngIf="product_id =='5e4e675185f01a4ee4f0ac22'" src="../../assets/images/ami_new_img4.png" alt="#">
+      <img  *ngIf="product_id =='5d4d5eedc9e23d43cc124395'" src="../../assets/images/ApogeeInvent_logo.png" alt="#">
+      <img  *ngIf="product_id =='5d4d5f66c9e23d43cc1243a2'" src="../../assets/images/repdashboard_offer_img7.png" alt="#">
+      <img  *ngIf="product_id =='5e4e634052b7254c601f7559'" src="../../assets/images/MedWorldOne_logo.png" alt="#">
+    </div>
+   
+    <!-- <div class="marketingre_view_top_right">
+   <h2>Lorem Ipsum is simply </h2>
+
+   <h3>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in <br/>a piece of classical Latin literature from 45 BC, making it over 2000 years old. </h3>
+    </div> -->
+
+    <div class="marketingre_view_top_right" *ngIf="product_id =='5dd68c367b583967f3e573b2'">
+      <h2>Advanced Wellness Solutions </h2>
+   
+      <h3>The Ultimate Testing And Referral Platform And The Most Powerful Diagnostic Tool For Diagnostic 
+        And Imaging Centers, As Well As Their Referring Physicians In The ANS Medical Industry.
+     </h3>
+       </div>
+   
+       <div class="marketingre_view_top_right" *ngIf="product_id =='5e4e634052b7254c601f7559'">
+         <h2>MedWorldOne - A Globus Relief Initiative  </h2>
+      
+         <h3>Our comprehensive software is a powerful one-stop marketplace for all things medical supplies. List,
+            sell or buy premium medical devices, equipment, and supplies, all under one roof.
+                 </h3>
+          </div>
+   
+          <div class="marketingre_view_top_right" *ngIf="product_id =='5d4d5e8cc9e23d43cc124394'">
+           <h2>Universal Tech Associates</h2>
+        
+           <h3>Bringing emerging technologies to a massive vertical in the global marketplace while also specializing in global
+              technology, data, and other marketing initiatives all around the world.
+              </h3>
+            </div>
+   
+            <div class="marketingre_view_top_right" *ngIf="product_id =='5d4d5eedc9e23d43cc124395'">
+             <h2>ApogeeINVENT - Transforming Dreams Into Technolog</h2>
+          
+             <h3>Providing Ecommerce and marketing technology solutions to businesses around the world for over 15 years, focusing on offering technological 
+               innovation and outstanding customer service.  </h3>
+              </div>
+   
+
+  </div>
+</div>
+
+</div>
+
+<div class="marketingre_view_body">
+
+
+  <div class="marketingre_view_body_wrapper">
+
+    <div class="marketingre_view_body_con_top">
+
+
+      <div class="marketingre_view_body_con_top_left">
+
+      <h2>Know your Representative</h2>
+      </div>
+
+      <div class="marketingre_view_body_con_top_right">
+
+        <div *ngIf="rep_data !=''" class="marketingre_view_body_con_top_right_box">
+
+          <h3>Name - {{rep_data.fullname}},  Email - {{rep_data.email}}<br/>
+
+            <ng-container *ngIf="rep_data.telephone != null">Contact number - <span>{{rep_data.telephone}}</span></ng-container></h3>
+
+          </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="marketingre_view_body_con">
+
+      <ng-container *ngFor="let item of youtube_url">
+        <div class="marketingre_view_body_con_left" *ngIf="product_id == item.product_id">
+          <!-- <p>{{product_id}}</p> -->
+          <div class="video-responsive" >
+
+            <iframe width="560" height="315" [src]="item.safeSrc" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <!-- <div class="video-responsive" *ngIf="this.discov == true">
+      
+            <iframe width="560" height="315" [src]="safeSrc" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div> -->
+      
+      
+          <button (click)="startTime(item, '1')">Jump To Marketing Strategies</button>
+      
+          <button (click)="startTime(item,'2')">Jump To Expected Revenues </button>
+      
+        </div>
+      </ng-container>
+
+
+      <div class="marketingre_view_body_con_right">
+        <div class="marketingre_view_body_con_right_con">
+          <div class="marketingre_view_body_con_right_con_sub">
+      <h2>To Request a Contract, click on the button below. We will get back to you soon</h2>
+
+  <button (click)="sendToCM(messagemodal)">Request</button>
+</div>
+      </div>
+    </div>
+
+
+    </div>
+
+
+
+    <div class="marketingre_view_body_footer" *ngIf="product_id =='5dd68c367b583967f3e573b2'">
+
+      <div class="marketingre_view_body_footer_wrapper">
+    
+        <h2>Your Doctors Will Be Excited With The RM-3A Testing And Report</h2>
+        <h3>Take advantage of your physicians’ network and earn big with AWS PECE
+           Program and the RM-3A medical device. No other system in the ANS medical industry gives 
+           you as much data, and our level of analytical accuracy is unmatched by any other available devices.
+        </h3>
+      
+      </div>
+    
+    </div>
+    
+    
+    <div class="marketingre_view_body_footer marketingre_view_apog" *ngIf="product_id =='5d4d5eedc9e23d43cc124395'">
+    
+      <div class="marketingre_view_body_footer_wrapper">
+    
+        <h2>Offering Custom Software Solutions That Help You Stand Out</h2>
+        <h3>With ApogeeINVENT, you get more than just software. What you get is customized 
+          technological solutions that have the backing of a professional team of experts with
+           more than 15 years of experience. Our scalable solutions will help you take your business
+            to the very top of the online world.
+        </h3>
+      
+      </div>
+    
+    </div>
+    
+    
+    <div class="marketingre_view_body_footer marketingre_view_uta" *ngIf="product_id =='5d4d5e8cc9e23d43cc124394'">
+    
+      <div class="marketingre_view_body_footer_wrapper">
+    
+        <h2>Introducing and Representing You In The Global Marketplace</h2>
+        <h3>We help to speed up your go-to-market strategies while also introducing, 
+          negotiating and aligning you with the largest corporations and governments around the globe. Working in 
+          partnership with Wirthlin Worldwide, we take your 
+          technological innovations and solutions to the global marketplace.</h3>
+      
+      </div>
+    
+    </div>
+    
+    <div class="marketingre_view_body_footer marketingre_view_Helios" *ngIf="product_id =='5e4e675185f01a4ee4f0ac22'">
+    
+      <div class="marketingre_view_body_footer_wrapper">
+    
+        <h2>There are many variations of passages of Lorem Ipsum available,</h2>
+        <h3>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,</h3>
+      
+      </div>
+    
+    </div>
+    
+    
+    <div class="marketingre_view_body_footer marketingre_view_Medworld" *ngIf="product_id =='5e4e634052b7254c601f7559'">
+    
+      <div class="marketingre_view_body_footer_wrapper">
+    
+        <h2>List, Buy, Save and Profit, Within The United States And Internationally</h2>
+        <h3>Our international online marketplace will bring you extreme value in the turnover of 
+          your used, expired or nearly-expired medical devices, equipment, and supplies, and help you make 
+          valuable contributions to your cost savings and the financial success of your medical business.
+        </h3>
+      
+      </div>
+    
+    </div>
+    
+    <div class="marketingre_view_body_footer marketingre_view_geo" *ngIf="product_id =='5d4d5f66c9e23d43cc1243a2'">
+    
+      <div class="marketingre_view_body_footer_wrapper">
+    
+        <h2>There are many variations of passages of Lorem Ipsum available,</h2>
+        <h3>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,</h3>
+      
+      </div>
+    
+    </div>
+    
+    
+
+  </div>
+
+
+</div>
+
+
+<ng-template #messagemodal>
+  <div class="modal-body brandmanagement_modal">
+      <div class="logo_wrapper">
+          <img src="assets/images/logo.png">
+      </div>
+      <div class="message_success  text-center"> Your Contact Request Done Successfully !!</div>
+
+  </div>
+</ng-template>
+  
+<!-- <app-footer></app-footer> -->

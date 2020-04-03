@@ -59,7 +59,7 @@
     "ApiLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
-        "LogGroupName": "/aws/lambda/bvtvirusmedicalmask-production-api"
+        "LogGroupName": "/aws/lambda/betoparedesmarketing-production-api"
       }
     },
     "IamRoleLambdaExecution": {
@@ -88,7 +88,7 @@
                 "-",
                 [
                   "production",
-                  "bvtvirusmedicalmask",
+                  "betoparedesmarketing",
                   "lambda"
                 ]
               ]
@@ -99,12 +99,11 @@
                 {
                   "Effect": "Allow",
                   "Action": [
-                    "logs:CreateLogStream",
-                    "logs:CreateLogGroup"
+                    "logs:CreateLogStream"
                   ],
                   "Resource": [
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/bvtvirusmedicalmask-production*:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/betoparedesmarketing-production*:*"
                     }
                   ]
                 },
@@ -115,7 +114,7 @@
                   ],
                   "Resource": [
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/bvtvirusmedicalmask-production*:*:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/betoparedesmarketing-production*:*:*"
                     }
                   ]
                 }
@@ -128,7 +127,7 @@
           "Fn::Join": [
             "-",
             [
-              "bvtvirusmedicalmask",
+              "betoparedesmarketing",
               "production",
               {
                 "Ref": "AWS::Region"
@@ -146,9 +145,9 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/bvtvirusmedicalmask/production/1585681216901-2020-03-31T19:00:16.901Z/bvtvirusmedicalmask.zip"
+          "S3Key": "serverless/betoparedesmarketing/production/1585902466441-2020-04-03T08:27:46.441Z/betoparedesmarketing.zip"
         },
-        "FunctionName": "bvtvirusmedicalmask-production-api",
+        "FunctionName": "betoparedesmarketing-production-api",
         "Handler": "lambda.universal",
         "MemorySize": 192,
         "Role": {
@@ -165,26 +164,25 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "ApiLambdaVersionsdSQhryCZ4ZWWEyPQcvsXBPrtz6bs44kvqr2pt5Pg": {
+    "ApiLambdaVersionNB7lQDKrgrsU7ss6a5CoCNByelgH5xRMHWmqIyCXA": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ApiLambdaFunction"
         },
-        "CodeSha256": "o8i4XhWSXSBgkEvfQrtiKHPq4u8beRyKNE1Rl0yR8/Y="
+        "CodeSha256": "QbMp5ui8KcVwBQRoDhtB8RuJOtWRzADkUXcHgEsB0pE="
       }
     },
     "ApiGatewayRestApi": {
       "Type": "AWS::ApiGateway::RestApi",
       "Properties": {
-        "Name": "production-bvtvirusmedicalmask",
+        "Name": "production-betoparedesmarketing",
         "EndpointConfiguration": {
           "Types": [
             "EDGE"
           ]
-        },
-        "Policy": ""
+        }
       }
     },
     "ApiGatewayResourceProxyVar": {
@@ -291,7 +289,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1585681187992": {
+    "ApiGatewayDeployment1585902414212": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -351,7 +349,7 @@
     "ApiLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ApiLambdaVersionsdSQhryCZ4ZWWEyPQcvsXBPrtz6bs44kvqr2pt5Pg"
+        "Ref": "ApiLambdaVersionNB7lQDKrgrsU7ss6a5CoCNByelgH5xRMHWmqIyCXA"
       }
     },
     "ServiceEndpoint": {
