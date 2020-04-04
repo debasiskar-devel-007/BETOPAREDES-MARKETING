@@ -21,11 +21,10 @@ export class ProductreviewComponent implements OnInit {
 
   public modalRef: BsModalRef;
   public safeSrc:SafeResourceUrl;
-  public repData:any;
+  public repData:any = '';
   constructor(public _commonservice: Commonservices, public modal: BsModalService, public _http: HttpClient, public cookeiservice: CookieService, public activatedroute: ActivatedRoute, public router: Router, private sanitizer: DomSanitizer, public meta: MetaService) {
    let link = this._commonservice.nodesslurl + 'datalistforleaddata';
    this._http.post(link, {source: 'users_view_rep', condition:{_id_object: this.activatedroute.snapshot.params['rep_id']}}).subscribe((res: any) =>{
-     console.log(res,'++++++');
      this.repData = res.res[0];
    })
     // 

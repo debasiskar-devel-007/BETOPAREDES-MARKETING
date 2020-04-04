@@ -33,7 +33,7 @@ export class MarketingreviewComponent implements OnInit {
   public modalRef: BsModalRef;
   modalRef3: BsModalRef;
   public leadflag: any = 0;
-  public pageurl: any = ' https://backoffice.betoparedes.com/marketing-review';
+  public pageurl: any = 'https://marketing.betoparedes.com/marketing-review';
   public loading:boolean = false;
   public youtube_url: any = [
     {'product_id':"5dd68c367b583967f3e57312", 'link':"https://www.youtube.com/embed/8qkgcCBOQM4", 'start':0, 'second_start':75},
@@ -57,8 +57,8 @@ export class MarketingreviewComponent implements OnInit {
       this.meta.setTag('twitter:description', 'The Ultimate Testing And Referral management system for Diagnostic and Imaging Centers, and Physicians in the ANS Medical Industry for “smart” engagement and billing.');
       this.meta.setTag('og:title', 'Advanced Wellness Solutions');
       this.meta.setTag('twitter:title', 'Advanced Wellness Solutions');
-      this.meta.setTag('og:image', '../../assets/images/marketingre_view_awslogo.png');
-      this.meta.setTag('twitter:image', '../../assets/images/marketingre_view_awslogo.png');
+      this.meta.setTag('og:image', 'https://marketing.betoparedes.com/assets/images/marketingre_view_awslogo.png');
+      this.meta.setTag('twitter:image', 'https://marketing.betoparedes.com/assets/images/marketingre_view_awslogo.png');
       if (this.activatedroute.snapshot.params['lead_id'] == null || typeof (this.activatedroute.snapshot.params['lead_id']) != 'undefined') {
         this.meta.setTag('og:url', this.pageurl + '/' + activatedroute.snapshot.params['product_id'] + '/' + this.activatedroute.snapshot.params['rep_id']);
       } else {
@@ -75,8 +75,8 @@ export class MarketingreviewComponent implements OnInit {
       this.meta.setTag('twitter:description', 'Bringing emerging technologies to a massive vertical in the global marketplace, while also specializing in global technology, data, and other marketing initiatives all around the world.');
       this.meta.setTag('og:title', 'Universal Tech Associates');
       this.meta.setTag('twitter:title', 'Universal Tech Associates');
-      this.meta.setTag('og:image', '../../assets/images/uta_marketingre_view_logo.png');
-      this.meta.setTag('twitter:image', '../../assets/images/uta_marketingre_view_logo.png');
+      this.meta.setTag('og:image', 'https://marketing.betoparedes.com/assets/images/uta_marketingre_view_logo.png');
+      this.meta.setTag('twitter:image', 'https://marketing.betoparedes.com/assets/images/uta_marketingre_view_logo.png');
       if (this.activatedroute.snapshot.params['lead_id'] == null || typeof (this.activatedroute.snapshot.params['lead_id']) != 'undefined') {
         this.meta.setTag('og:url', this.pageurl + '/' + this.product_id + '/' + this.activatedroute.snapshot.params['rep_id']);
       } else {
@@ -92,8 +92,8 @@ export class MarketingreviewComponent implements OnInit {
       this.meta.setTag('twitter:description', 'Providing Ecommerce and marketing technology solutions to businesses around the world for over 15 years, focusing on offering technological innovation and outstanding customer service.');
       this.meta.setTag('og:title', 'ApogeeINVENT');
       this.meta.setTag('twitter:title', 'ApogeeINVENT');
-      this.meta.setTag('og:image', '../../assets/images/ApogeeInvent_logo.png');
-      this.meta.setTag('twitter:image', '../../assets/images/ApogeeInvent_logo.png');
+      this.meta.setTag('og:image', 'https://marketing.betoparedes.com/assets/images/ApogeeInvent_logo.png');
+      this.meta.setTag('twitter:image', 'https://marketing.betoparedes.com/assets/images/ApogeeInvent_logo.png');
       if (this.activatedroute.snapshot.params['lead_id'] == null || typeof (this.activatedroute.snapshot.params['lead_id']) != 'undefined') {
         this.meta.setTag('og:url', this.pageurl + '/' + this.product_id + '/' + this.activatedroute.snapshot.params['rep_id']);
       } else {
@@ -109,8 +109,8 @@ export class MarketingreviewComponent implements OnInit {
       this.meta.setTag('twitter:description', 'Targeted GEOFencing solutions with Big Data Integration for Residential and Commercial GEOFencing across multiple industries, offering unprecedented accuracy in display advertising campaigns.');
       this.meta.setTag('og:title', 'GEOFenceDSP');
       this.meta.setTag('twitter:title', 'GEOFenceDSP');
-      this.meta.setTag('og:image', '../../assets/images/repdashboard_offer_img7.png');
-      this.meta.setTag('twitter:image', '../../assets/images/repdashboard_offer_img7.png');
+      this.meta.setTag('og:image', 'https://marketing.betoparedes.com/assets/images/repdashboard_offer_img7.png');
+      this.meta.setTag('twitter:image', 'https://marketing.betoparedes.com/assets/images/repdashboard_offer_img7.png');
       if (this.activatedroute.snapshot.params['lead_id'] == null || typeof (this.activatedroute.snapshot.params['lead_id']) != 'undefined') {
         this.meta.setTag('og:url', this.pageurl + '/' + this.product_id + '/' + this.activatedroute.snapshot.params['rep_id']);
       } else {
@@ -126,8 +126,8 @@ export class MarketingreviewComponent implements OnInit {
       this.meta.setTag('twitter:description', ' A powerful one-stop marketplace for all things medical supplies, where Medical partners can list, sell or buy premium medical devices, equipment, and supplies, all under one roof.');
       this.meta.setTag('og:title', 'Med World One');
       this.meta.setTag('twitter:title', 'Med World One');
-      this.meta.setTag('og:image', '../../assets/images/MedWorldOne_logo.png');
-      this.meta.setTag('twitter:image', '../../assets/images/MedWorldOne_logo.png');
+      this.meta.setTag('og:image', 'https://marketing.betoparedes.com/assets/images/MedWorldOne_logo.png');
+      this.meta.setTag('twitter:image', 'https://marketing.betoparedes.com/assets/images/MedWorldOne_logo.png');
       if (this.activatedroute.snapshot.params['lead_id'] == null || typeof (this.activatedroute.snapshot.params['lead_id']) != 'undefined') {
         this.meta.setTag('og:url', this.pageurl + '/' + this.product_id + '/' + this.activatedroute.snapshot.params['rep_id']);
       } else {
@@ -143,8 +143,8 @@ export class MarketingreviewComponent implements OnInit {
       this.meta.setTag('twitter:description', 'Taking Marketing Campaigns to unique Medical Big Data audience in the largest digital marketplace in the global arena, and reaching target audiences in their very mobile devices.');
       this.meta.setTag('og:title', 'Helios Medical Marketing');
       this.meta.setTag('twitter:title', 'Helios Medical Marketing');
-      this.meta.setTag('og:image', '../../assets/images/MedWorldOne_logo.png');
-      this.meta.setTag('twitter:image', '../../assets/images/MedWorldOne_logo.png');
+      this.meta.setTag('og:image', 'https://marketing.betoparedes.com/assets/images/MedWorldOne_logo.png');
+      this.meta.setTag('twitter:image', 'https://marketing.betoparedes.com/assets/images/MedWorldOne_logo.png');
       if (this.activatedroute.snapshot.params['lead_id'] == null || typeof (this.activatedroute.snapshot.params['lead_id']) != 'undefined') {
         this.meta.setTag('og:url', this.pageurl + '/' + this.product_id + '/' + this.activatedroute.snapshot.params['rep_id']);
       } else {

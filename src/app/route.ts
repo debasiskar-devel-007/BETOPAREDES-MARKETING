@@ -6,24 +6,15 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { TestresolveService } from './testresolve.service';
-import { SlotviewComponent } from "./slotview/slotview.component";
 import { MarketingreviewComponent } from './marketingreview/marketingreview.component';
 import { ContractReviewVideoComponent } from './contract-review-video/contract-review-video.component';
 import { ProductreviewComponent } from './productreview/productreview.component';
-const appRoutes: Routes = [
-    { path: '', redirectTo:'/login', pathMatch: 'full' },
-    { path: 'slotview', component: SlotviewComponent},
-    { path: 'on-boarding-call/:id', component: SlotviewComponent },
-    { path: 'customevents/:slotval', component: SlotviewComponent },
-    { path: 'customevent', component: SlotviewComponent }, 
-    { path: 'customevent/:slot', component: SlotviewComponent }, 
-    { path: 'discovery-call/:id', component: SlotviewComponent },
-    { path: 'book-a-closer/:id', component: SlotviewComponent },
-    { path: 'book-a-closer/:leadid/:pid', component: SlotviewComponent },
-    { path: 'book-a-closer', component: SlotviewComponent },
-    { path: 'question-and-answer-call/:id', component: SlotviewComponent },
+import { TempaccessComponent } from './tempaccess/tempaccess.component';
 
-    { path: 'slotview/:id', component: SlotviewComponent },
+
+
+const appRoutes: Routes = [
+    { path: 'on-boarding-call-booked/:userId/:googleEventId', component: TempaccessComponent},
     // {path: 'marketingre_view/:product_id/:rep_id', component: MarketingreviewComponent, resolve : {results: TestresolveService},data: { requestcondition: {condition: {"rep_id":'rep_id'}}, endpoint: 'datalistforslot'}},
     {path: 'contract-review/:product_id/:rep_id/:lead_id', component: ContractReviewVideoComponent},
     {path: 'contract-review/:product_id/:rep_id', component: ContractReviewVideoComponent},
@@ -33,18 +24,7 @@ const appRoutes: Routes = [
     {path: 'marketing-review/:product_id/:rep_id', component: MarketingreviewComponent},
 
     { path: 'product-review/:product_id/:rep_id/:lead_id', component: ProductreviewComponent},
-    { path: 'product-review/:product_id/:rep_id', component: ProductreviewComponent},
-    // {path: 'marketing-review/:product_id/:rep_id/:lead_id/:flag', component: MarketingreviewComponent},
-    // {path: 'marketing-review/:product_id/:rep_id/:lead_id', component: MarketingreviewComponent, resolve : {results: TestresolveService},data: { requestcondition: {condition: {"_id":'lead_id'}}, endpoint: 'datalistfornewlead'}},
-
-
-
-    
-
-    
-   
-
-
+    { path: 'product-review/:product_id/:rep_id', component: ProductreviewComponent}
 ];
 
 export const appRoutingProviders: any[] = [

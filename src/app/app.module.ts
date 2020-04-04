@@ -13,20 +13,19 @@ import { TestresolveService } from './testresolve.service';
 import { ApiService } from './api.service';
 import { SlotsComponent } from './slots/slots.component';
 import { UsersearchPipe } from './search.pipe';
-import { SlotviewComponent } from './slotview/slotview.component';
 import { OrderBy } from './orderby';
 import { CommonModule } from '@angular/common';
 import { TransferHttpCacheModule } from '@nguniversal/common';
 import { NgtUniversalModule } from '@ng-toolkit/universal';
 // import { DemoMaterialModule } from './material-module';
-import { LoaderService } from './loader.service';
+// import { LoaderService } from './loader.service';
 import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
-import { LoaderInterceptor } from './loader.interceptor';
 import { Router } from '@angular/router';
 import { MarketingreviewComponent } from './marketingreview/marketingreview.component';
 import { ContractReviewVideoComponent } from './contract-review-video/contract-review-video.component';
 import { MetaModule, MetaLoader, MetaStaticLoader, PageTitlePositioning } from '@ngx-meta/core';
 import { ProductreviewComponent } from './productreview/productreview.component';
+import { TempaccessComponent } from './tempaccess/tempaccess.component';
 
 // import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 
@@ -57,7 +56,7 @@ export function metaFactory(): MetaLoader {
     AppComponent,
     UsersearchPipe,
     SlotsComponent,
-    SlotviewComponent,
+    TempaccessComponent,
     OrderBy,
     MarketingreviewComponent,
     ProductreviewComponent
@@ -102,8 +101,7 @@ export function metaFactory(): MetaLoader {
     // DemoMaterialModule,
   ],
   providers: [
-    CookieService,TestresolveService,ApiService, LoaderService,
-    { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true }
+    CookieService,TestresolveService,ApiService
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   bootstrap: [AppComponent]
