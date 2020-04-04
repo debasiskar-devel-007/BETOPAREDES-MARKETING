@@ -45,7 +45,7 @@
   
           <div  class="marketingre_view_body_con_top_right_box">
   
-            <h3>Name - Debasis kar, Email - f5@yopmail.com </h3>
+            <h3>Name - {{repData.firstname}} {{repData.lastname}}, Email - {{repData.email}} <ng-container *ngIf="repData.phoneno != null">Contact number - {{repData.phoneno}}</ng-container></h3>
   
             </div>
   
@@ -54,8 +54,9 @@
       </div>
   
       <div class="marketingre_view_btn_group">
-        <button>Goto contract review Page</button>
-        <button> REQUEST A CONTRACT</button>
+        <button (click)="goTo('contract')">Goto contract review Page</button>
+        <button (click)="goTo('')">Goto marketing review Page</button>
+        <button (click)="sendToCM(messagemodal)"> REQUEST A CONTRACT</button>
        
       </div>
   
@@ -231,3 +232,12 @@
   
   
    
+<ng-template #messagemodal>
+  <div class="modal-body brandmanagement_modal">
+      <div class="logo_wrapper">
+          <img src="assets/images/logo.png">
+      </div>
+      <div class="message_success  text-center"> Your Contact Request Done Successfully !!</div>
+
+  </div>
+</ng-template>

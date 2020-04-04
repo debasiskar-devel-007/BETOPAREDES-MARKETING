@@ -32,11 +32,8 @@ const appRoutes: Routes = [
     {path: 'marketing-review/:product_id/:rep_id/:lead_id', component: MarketingreviewComponent},
     {path: 'marketing-review/:product_id/:rep_id', component: MarketingreviewComponent},
 
-    { path: 'product-review/:product_id/:rep_id/:lead_id', component: ProductreviewComponent },
-    { path: 'product-review/:product_id/:rep_id', component: ProductreviewComponent },
-
-    
-
+    { path: 'product-review/:product_id/:rep_id/:lead_id', component: ProductreviewComponent},
+    { path: 'product-review/:product_id/:rep_id', component: ProductreviewComponent},
     // {path: 'marketing-review/:product_id/:rep_id/:lead_id/:flag', component: MarketingreviewComponent},
     // {path: 'marketing-review/:product_id/:rep_id/:lead_id', component: MarketingreviewComponent, resolve : {results: TestresolveService},data: { requestcondition: {condition: {"_id":'lead_id'}}, endpoint: 'datalistfornewlead'}},
 
