@@ -117,13 +117,23 @@ export class ContractReviewVideoComponent implements OnInit {
   ngOnInit() {
     this.slotview();
   }
+
   goTo(val:any){
     if (val == 'marketing') {
-      this.router.navigateByUrl("/marketing-review/"+ this.activatedroute.snapshot.params['product_id']+'/'+this.activatedroute.snapshot.params['rep_id']+'/'+ this.activatedroute.snapshot.params['lead_id']);
+      if (typeof(this.activatedroute.snapshot.params['lead_id']) == 'undefined' || this.activatedroute.snapshot.params['lead_id'] == null) {
+        this.router.navigateByUrl("/marketing-review/"+ this.activatedroute.snapshot.params['product_id']+'/'+this.activatedroute.snapshot.params['rep_id'])
+      }else{
+        this.router.navigateByUrl("/marketing-review/"+ this.activatedroute.snapshot.params['product_id']+'/'+this.activatedroute.snapshot.params['rep_id']+'/'+ this.activatedroute.snapshot.params['lead_id'])
+      }
     } else {
-      this.router.navigateByUrl("/product-review/"+ this.activatedroute.snapshot.params['product_id']+'/'+this.activatedroute.snapshot.params['rep_id']+'/'+ this.activatedroute.snapshot.params['lead_id']);
+      if (typeof(this.activatedroute.snapshot.params['lead_id']) == 'undefined' || this.activatedroute.snapshot.params['lead_id'] == null) {
+      this.router.navigateByUrl("/product-review/"+ this.activatedroute.snapshot.params['product_id']+'/'+this.activatedroute.snapshot.params['rep_id'])
+      }else{
+        this.router.navigateByUrl("/product-review/"+ this.activatedroute.snapshot.params['product_id']+'/'+this.activatedroute.snapshot.params['rep_id']+'/'+ this.activatedroute.snapshot.params['lead_id'])
+      }
     }
   }
+  
   dosubmitForLead(template:TemplateRef<any>){
     let y: any;
       for (y in this.dataFormForLead.controls) {
