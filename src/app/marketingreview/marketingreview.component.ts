@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 declare var moment: any;
 import { MetaService } from '@ngx-meta/core';
+import { FormGroup, Validators, FormBuilder } from '@angular/forms';
   
  
 
@@ -35,6 +36,9 @@ export class MarketingreviewComponent implements OnInit {
   public leadflag: any = 0;
   public pageurl: any = 'https://marketing.betoparedes.com/marketing-review';
   public loading:boolean = false;
+  public dataFormForLead: FormGroup;
+  public productval: any;
+  public leaddata: any = '';
   public youtube_url: any = [
     {'product_id':"5dd68c367b583967f3e57312", 'link':"https://www.youtube.com/embed/8qkgcCBOQM4", 'start':0, 'second_start':75},
     {'product_id':"5e4e634052b7254c601f7559", 'link':"https://www.youtube.com/embed/8qkgcCBOQM4", 'start':0, 'second_start':75},
@@ -44,7 +48,7 @@ export class MarketingreviewComponent implements OnInit {
     {'product_id':"5dd68c367b583967f3e573b2", 'link':"https://www.youtube.com/embed/fnX8ZDfFzD4", 'start':0, 'second_start':175},
   ]
   public safeSrc:SafeResourceUrl;
-  constructor(public _commonservice: Commonservices, public modal: BsModalService, public _http: HttpClient, public cookeiservice: CookieService, public activatedroute: ActivatedRoute, public router: Router, private sanitizer: DomSanitizer, public meta: MetaService) {
+  constructor(public _commonservice: Commonservices, public modal: BsModalService, public _http: HttpClient, public cookeiservice: CookieService, public activatedroute: ActivatedRoute, public router: Router, private sanitizer: DomSanitizer, public meta: MetaService, public kp: FormBuilder) {
 
     this.product_id = activatedroute.snapshot.params['product_id'];
     this.meta.setTag('og:type', 'website');
@@ -64,7 +68,7 @@ export class MarketingreviewComponent implements OnInit {
       } else {
         this.meta.setTag('og:url', this.pageurl + '/' + activatedroute.snapshot.params['product_id'] + '/' + this.activatedroute.snapshot.params['rep_id'] + '/' + this.activatedroute.snapshot.params['lead_id']);
       }
-      console.log(this.pageurl + '/' + activatedroute.snapshot.params['product_id'] + '/' + this.activatedroute.snapshot.params['rep_id'] + '/' + this.activatedroute.snapshot.params['lead_id'])
+      // console.log(this.pageurl + '/' + activatedroute.snapshot.params['product_id'] + '/' + this.activatedroute.snapshot.params['rep_id'] + '/' + this.activatedroute.snapshot.params['lead_id'])
     }
     // for uta  
     if (this.activatedroute.snapshot.params['product_id'] == '5d4d5e8cc9e23d43cc124394') {
@@ -157,23 +161,74 @@ export class MarketingreviewComponent implements OnInit {
     for (const key in this.youtube_url) {
       this.youtube_url[key].safeSrc = this.sanitizer.bypassSecurityTrustResourceUrl(this.youtube_url[key].link);
     }
-    // if (activatedroute.snapshot.params['lead_id'] != null) {
-    //   this.lead_id = activatedroute.snapshot.params['lead_id'];
-    //   this.activatedroute.data.forEach((data: any) => {
-    //     this.leadData = data.results.res;
-    //     console.log(this.leadData)
-    //   });
-    // }
+    if (activatedroute.snapshot.params['lead_id'] != null) {
+      this.lead_id = activatedroute.snapshot.params['lead_id'];
+      this.activatedroute.data.forEach((data: any) => {
+        this.leaddata = data.results.res;
+        console.log(this.leaddata)
+      });
+    }
     this._http.get("assets/data/timezone.json")
           .subscribe((res:any) => {
               this.timezone=res;
               this.timezoneval=this.cookeiservice.get('timezone');
           }, error => {
               console.log('Oooops!');
-          });
+          }); 
+  }
 
-    // console.log(this.product_id)
-   }
+
+  //  booknowmodal_appointmentlist1(val: any = {}, template2:TemplateRef<any>){
+
+
+// }
+
+dosubmitForLead(template:TemplateRef<any>){
+let y: any;
+  for (y in this.dataFormForLead.controls) {
+      this.dataFormForLead.controls[y].markAsTouched();
+  }
+  if(this.dataFormForLead.valid){
+  const link = this._commonservice.nodesslurl + 'addorupdatedata';
+  this.dataFormForLead.value.id = this.leaddata._id;
+      this._http.post(link, { source: 'leads', data: this.dataFormForLead.value, sourceobj: ['created_by']  })
+          .subscribe((res:any) => {
+            if(res.status == 'success'){
+              let data;
+              const link1 = this._commonservice.nodesslurl + 'addorupdatedata';
+              if (this.activatedroute.snapshot.params['lead_id'] == null) {
+                data = {
+                  source: 'contract_repote',
+                  data: { status: 'request', rep_id: this.activatedroute.snapshot.params['rep_id'], product_id: this.activatedroute.snapshot.params['product_id'], lead_id:res.res, created_by: res.res,
+                  product: this.productval[0].productname,
+                  by: 'lead'}
+                  // sourceobj: ['lead_id','rep_id','product_id','created_by']
+              };
+              } else {
+              data = {
+                  source: 'contract_repote',
+                  data: { status: 'request', rep_id: this.activatedroute.snapshot.params['rep_id'], product_id: this.activatedroute.snapshot.params['product_id'], lead_id:this.activatedroute.snapshot.params['lead_id'],
+                  created_by: this.activatedroute.snapshot.params['lead_id'],
+                  product: this.productval[0].productname,
+                  by: 'lead'
+                }
+                  // sourceobj: ['lead_id','rep_id','product_id','created_by']
+              };
+            }
+              this._http.post(link1, data).subscribe((res: any) => {
+                  // console.log(res);
+                  if (res.status == 'success') {
+                    this.modalRef3 = this.modal.show(template);
+                    setTimeout(() => {
+                      this.modalRef3.hide();
+                    }, 100000);
+                  }
+              });
+            }
+          });
+        }
+
+}
 
 
   ngOnInit() {
@@ -186,22 +241,39 @@ export class MarketingreviewComponent implements OnInit {
       this.router.navigateByUrl("/product-review/"+ this.activatedroute.snapshot.params['product_id']+'/'+this.activatedroute.snapshot.params['rep_id']+'/'+ this.activatedroute.snapshot.params['lead_id'])
     }
   }
-  sendToCM(template:TemplateRef<any>){
-    // console.log(this.activatedroute.snapshot.params['rep_id'], this.activatedroute.snapshot.params['product_id'], this.activatedroute.snapshot.params['lead_id']);
-    const link1 = this._commonservice.nodesslurl + 'addorupdatedata';
-    let data = {
-        source: 'contract_repote',
-        data: { status: 'request', rep_id: this.activatedroute.snapshot.params['rep_id'], product_id: this.activatedroute.snapshot.params['product_id'], lead_id:this.activatedroute.snapshot.params['lead_id'], created_by: this.activatedroute.snapshot.params['lead_id']}
-    };
-    this._http.post(link1, data).subscribe((res: any) => {
-        // console.log(res);
-        if (res.status == 'success') {
-          this.modalRef = this.modal.show(template);
-          setTimeout(() => {
-            this.modalRef.hide();
-          }, 100000);
-        }
+  sendToCM( template2:TemplateRef<any>){
+    if (typeof(this.activatedroute.snapshot.params['lead_id']) == 'undefined' || this.activatedroute.snapshot.params['lead_id'] == null) {
+    const link1 = this._commonservice.nodesslurl + 'datalistforleaddata';
+    this._http.post(link1, { source:'products_name', condition: { _id_object: this.activatedroute.snapshot.params['product_id'] }}).subscribe((res:any) => {
+      this.productval = res.res;
+    this.dataFormForLead = this.kp.group({
+      firstname: [ '', Validators.required ],
+      lastname: [ '', Validators.required ],
+      company: [ '', Validators.required ],
+      email: [ '', Validators.required ],
+      address: [ '', Validators.required ],
+      phoneno: [ '', Validators.required ],
+      product:[res.res[0]._id]
     });
+    this.modalRef = this.modal.show(template2);
+    });
+    }
+     else {
+    const link1 = this._commonservice.nodesslurl + 'datalistforleaddata';
+    this._http.post(link1, { source:'leads_view', condition: { _id_object: this.activatedroute.snapshot.params['lead_id'] }}).subscribe((res:any) => {
+      this.leaddata = res.res[0];
+    this.dataFormForLead = this.kp.group({
+      firstname: [ '', Validators.required ],
+      lastname: [ '', Validators.required ],
+      company: [ '', Validators.required ],
+      email: [ res.res[0].email, Validators.required ],
+      address: [ '', Validators.required ],
+      phoneno: [ '', Validators.required ],
+      product:[res.res[0].product]
+    });
+    this.modalRef = this.modal.show(template2);
+    });
+    }
   }
    settimezone(){
      this.loading = true;

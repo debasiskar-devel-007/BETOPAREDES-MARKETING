@@ -257,7 +257,7 @@
 <ng-template #messagemodal2>
         <div class="modal-body slotevent">
             <div class="modal_header">
-                <h3>ADD/EDIT LEADS LIST</h3>
+                <h3>ADD LEAD</h3>
             </div>
     
             <div class="content_wrapper">    
@@ -296,11 +296,11 @@
                             <label> Email Id</label>
                             <input class="form-control"  *ngIf="leaddata != '' && leaddata.email.length > 3" type="text" [formControl]="dataFormForLead.controls['email']"
                            readonly>
-                           <input *ngIf="leaddata == '' || leaddata.email.length < 3" class="form-control" type="text" [formControl]="dataFormForLead.controls['email']"
+                           <input *ngIf="leaddata == '' || leaddata.email.length < 3" class="form-control" type="text" [formControl]="dataFormForLead.controls['email']" placeholder="Please Input Your Email Here"
                             >
 
                             <span class="errortext" style="color:red"
-                                *ngIf="leaddata != '' && leaddata.email.length< 2 && !dataFormForLead.controls['lastname'].valid && dataFormForLead.controls['lastname'].touched"> Last Name
+                                *ngIf="leaddata != '' && leaddata.email.length< 2 && !dataFormForLead.controls['email'].valid && dataFormForLead.controls['email'].touched"> Email
                                 can not be blank</span>
                         </div>
 

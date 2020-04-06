@@ -82,7 +82,7 @@
 
     <div class="marketingre_view_btn_group">
       <button (click)="goTo('contract')">Goto contract review Page</button>
-      <button  (click)="sendToCM(messagemodal)"> REQUEST A CONTRACT</button>
+      <button  (click)="sendToCM(messagemodal2)"> REQUEST A CONTRACT</button>
       <button *ngIf="product_id =='5dd68c367b583967f3e573b2'" (click)="goTo('')">Product Review</button>
     </div>
 
@@ -337,4 +337,90 @@
       <div class="message_success  text-center"> Your Contact Request Done Successfully !!</div>
 
   </div>
+</ng-template>
+
+
+
+<ng-template #messagemodal2>
+        <div class="modal-body slotevent">
+            <div class="modal_header">
+                <h3>ADD LEAD</h3>
+            </div>
+    
+            <div class="content_wrapper">    
+                <div class="editInfo_main_wrap">
+                    <form [formGroup]="dataFormForLead" (ngSubmit)="dosubmitForLead(messagemodal)">
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <input class="form-control" type="text" placeholder="Please Input Your First Name Here"
+                                [formControl]="dataFormForLead.controls['firstname']">
+    
+                            <span class="errortext" style="color:red"
+                                *ngIf="!dataFormForLead.controls['firstname'].valid && dataFormForLead.controls['firstname'].touched"> First Name
+                                can not be blank</span>
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input class="form-control" type="text" placeholder="Please Input Your Last Name Here"
+                                [formControl]="dataFormForLead.controls['lastname']">
+    
+                            <span class="errortext" style="color:red"
+                                *ngIf="!dataFormForLead.controls['lastname'].valid && dataFormForLead.controls['lastname'].touched"> Last Name
+                                can not be blank</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Company</label>
+                            <input class="form-control" type="text" placeholder="Please Input Your Company Here"
+                                [formControl]="dataFormForLead.controls['company']">
+
+                                <span class="errortext" style="color:red"
+                                *ngIf="!dataFormForLead.controls['company'].valid && dataFormForLead.controls['company'].touched"> Company
+                                can not be blank</span>
+                        </div>
+    
+                        <div class="form-group">
+                            <label> Email Id</label>
+                            <input class="form-control"  *ngIf="leaddata != ''  && leaddata.email.length > 3" type="text" [formControl]="dataFormForLead.controls['email']"
+                           readonly>
+                           <input *ngIf="leaddata == '' || leaddata.email.length < 3" class="form-control" type="text" [formControl]="dataFormForLead.controls['email']" placeholder="Please Input Your Email Here"
+                            >
+
+                            <span class="errortext" style="color:red"
+                                *ngIf="leaddata != '' && leaddata.email.length< 2 && !dataFormForLead.controls['email'].valid && dataFormForLead.controls['email'].touched"> Email
+                                can not be blank</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Address</label>
+                            <input class="form-control" type="textarea" placeholder="Please Input Your Address Here"
+                                [formControl]="dataFormForLead.controls['address']">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Phone No.</label>
+                            <input class="form-control" type="text" placeholder="Please Input Your Phone Number Here"
+                                [formControl]="dataFormForLead.controls['phoneno']">
+                        </div>
+                        <div class="form-group">
+                          <label>Product.</label>
+                            <select *ngIf="leaddata == '' || leaddata == null" formControlName="product"  class="productselect">
+                                <option value="0" disabled>Select Product</option>
+                                <option *ngFor="let searchval of productval" value="{{searchval._id}}">
+                                    {{searchval.productname}}</option>
+                            </select>
+                            <select *ngIf="leaddata != '' && leaddata != null" formControlName="product"  class="productselect">
+                                <option value="0" disabled>Select Product</option>
+                                <option *ngFor="let searchval of leaddata.productname" value="{{searchval.product_id}}">
+                                    {{searchval.product_name}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn_sv"> Submit </button>
+                            <button class="btn_cncl" type="button" (click)="modalRef2.hide()"> cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
 </ng-template>

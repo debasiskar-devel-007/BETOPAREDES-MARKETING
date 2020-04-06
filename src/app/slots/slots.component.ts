@@ -338,7 +338,6 @@ public bookNowStatus:boolean = true;
           this.slotdata = val;
 
     this.modalRef2 = this.modal.show(template2);
-    // console.log('pkoklk',this.leaddata ,'+++++++', val);
     if (typeof(this.route.snapshot.params['lead_id']) == 'undefined' || this.route.snapshot.params['lead_id'] == null) {
       const link1 = this._commonservices.nodesslurl + 'datalistforleaddata';
       this._http.post(link1, { source:'products_name', condition: { _id_object: this.route.snapshot.params['product_id'] }}).subscribe((res:any) => {
