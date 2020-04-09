@@ -170,6 +170,7 @@ export class ContractReviewVideoComponent implements OnInit {
                       // console.log(res);
                       if (res.status == 'success') {
                         this.modalRef3 = this.modal.show(template);
+                        this.modalRef.hide();
                         setTimeout(() => {
                           this.modalRef3.hide();
                         }, 100000);

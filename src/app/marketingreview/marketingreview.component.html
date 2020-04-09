@@ -72,7 +72,7 @@
 
           <h3>Name - {{rep_data.fullname}},  Email - {{rep_data.email}}<br/>
 
-            <ng-container *ngIf="rep_data.telephone != null">Contact number - <span>{{rep_data.telephone}}</span></ng-container></h3>
+            <ng-container *ngIf="rep_data.telephone != null">, Contact number - <span>{{rep_data.telephone}}</span></ng-container></h3>
 
           </div>
 
@@ -81,7 +81,7 @@
     </div>
 
     <div class="marketingre_view_btn_group">
-      <button (click)="goTo('contract')">Goto contract review Page</button>
+      <button (click)="goTo('contract')">contract review</button>
       <button  (click)="sendToCM(messagemodal2)"> REQUEST A CONTRACT</button>
       <button *ngIf="product_id =='5dd68c367b583967f3e573b2'" (click)="goTo('')">Product Review</button>
     </div>

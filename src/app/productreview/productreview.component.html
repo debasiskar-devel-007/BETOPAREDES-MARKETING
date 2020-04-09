@@ -45,7 +45,7 @@
   
           <div *ngIf="repData !=''" class="marketingre_view_body_con_top_right_box">
   
-            <h3>Name - {{repData.firstname}} {{repData.lastname}}, Email - {{repData.email}} <ng-container *ngIf="repData.phoneno != null">Contact number - {{repData.phoneno}}</ng-container></h3>
+            <h3>Name - {{repData.firstname}} {{repData.lastname}}, Email - {{repData.email}}<ng-container *ngIf="repData.phoneno != null">, Contact number - {{repData.phoneno}}</ng-container></h3>
   
             </div>
   
@@ -54,146 +54,90 @@
       </div>
   
       <div class="marketingre_view_btn_group">
-        <button (click)="goTo('contract')">Goto contract review Page</button>
-        <button (click)="goTo('')">Goto marketing review Page</button>
+        <button (click)="goTo('contract')">contract review</button>
+        <button (click)="goTo('')">marketing review</button>
         <button (click)="sendToCM(messagemodal2)"> REQUEST A CONTRACT</button>
        
       </div>
   
       <div class="marketingre_view_body_con">
   
-    <div class="marketingre_view_body_con_left" >
-      <!-- <p>{{item.safeSrc}}</p> -->
-      <div class="video-responsive" >
-  
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/fnX8ZDfFzD4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      
-  
-  
-      <button  >Jump To Marketing Strategies</button>
-  
-      <button  >Jump To Expected Revenues </button>
-  
-    </div>
+        <ng-container *ngFor="let item of youtube_url">
+          <div class="marketingre_view_body_con_left" *ngIf="product_id == item.product_id">
+            <!-- <p>{{item.safeSrc}}</p> -->
+            <div class="video-responsive" *ngIf="this.discov != true">
+        
+              <iframe width="560" height="315" [src]="item.safeSrc" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-responsive" *ngIf="this.discov == true">
+        
+              <iframe width="560" height="315" [src]="safeSrc" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        
+        
+            <button (click)="startTime(item, '1')">Jump To Marketing Strategies</button>
+        
+            <button (click)="startTime(item,'2')">Jump To Expected Revenues </button>
+        
+          </div>
+        </ng-container>
   
        <div class="marketingre_view_body_con_right">
   
   
         <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
 
+          <!-- <ng-container *ngFor="let functionalities of allAccordion;let i = index"> -->
             <!-- Accordion card -->
-            <div class="card">
+            <div class="card" *ngFor="let functionalities of allAccordion;let i = index">
           
               <!-- Card header -->
-              <div class="card-header" role="tab" id="headingOne1">
-                <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true"
-                  aria-controls="collapseOne1">
+              <div class="card-header" role="tab" [id]="'heading'+i">
+                <span class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordionEx" [href]="'#collapse'+i" [attr.aria-expanded]="functionalities[0].status"
+                [attr.aria-controls]="'collapse'+i">
                   <h5 class="mb-0">
-                    module 1
+                    {{functionalities[0].title}}
                   </h5>
                 </a>
+              </span>
               </div>
           
               <!-- Card body -->
-              <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1"
-                data-parent="#accordionEx">
+              <div [id]="'collapse'+i" class="collapse show" role="tabpanel" [attr.aria-labelledby]="'heading'+i" data-parent="#accordionEx">
                 <div class="card-body">
-
-
-                   
-
-
-
-                        <!-- video start  -->
-                       <div class="video_thumblock">
-
-                        <div class="video_thumblock_img">
-                          <div class="video_thumblock_imgdiv">
-                            <img src="https://marketing.betoparedes.com/assets/images/product-review_playicon.png" class="playicon">
-                          <img  class="youtube-image" src="http://img.youtube.com/vi/fnX8ZDfFzD4/0.jpg" />
-                           </div>
+                  <!-- video start  -->
+                  <ng-container *ngFor="let item of functionalities">
+                    <div class="video_thumblock" (click)="startTime(item, '3')">
+              
+                      <div class="video_thumblock_img">
+                        <div class="video_thumblock_imgdiv">
+                          <img src="https://marketing.betoparedes.com/assets/images/product-review_playicon.png" class="playicon">
+                          <img class="youtube-image" src="http://img.youtube.com/vi/{{item.link}}/0.jpg" />
                         </div>
-
-                            <div class="video_thumblock_text">
-                                    <label>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</label>
-
-                            </div>
-
-
-                       </div>
-                     <!-- video end  -->
-                        <!-- video start  -->
-                        <div class="video_thumblock">
-
-                          <div class="video_thumblock_img">
-                            <div class="video_thumblock_imgdiv">
-                              <img src="https://marketing.betoparedes.com/assets/images/product-review_playicon.png" class="playicon">
-                              <img  class="youtube-image" src="http://img.youtube.com/vi/fnX8ZDfFzD4/0.jpg" />
-                             </div>
-                          </div>
-  
-                              <div class="video_thumblock_text">
-                                      <label>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</label>
-  
-                              </div>
-  
-  
-                         </div>
-                       <!-- video end  -->
-                          <!-- video start  -->
-                          <div class="video_thumblock">
-
-                            <div class="video_thumblock_img">
-                              <div class="video_thumblock_imgdiv">
-                                <img src="https://marketing.betoparedes.com/assets/images/product-review_playicon.png" class="playicon">
-                                <img  class="youtube-image" src="http://img.youtube.com/vi/fnX8ZDfFzD4/0.jpg" />
-                               </div>
-                            </div>
-    
-                                <div class="video_thumblock_text">
-                                        <label>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</label>
-    
-                                </div>
-    
-    
-                           </div>
-                         <!-- video end  -->
-                            <!-- video start  -->
-                       <div class="video_thumblock">
-
-                        <div class="video_thumblock_img">
-                          <div class="video_thumblock_imgdiv">
-                            <img src="https://marketing.betoparedes.com/assets/images/product-review_playicon.png" class="playicon">
-                            <img  class="youtube-image" src="http://img.youtube.com/vi/fnX8ZDfFzD4/0.jpg" />
-                           </div>
-                        </div>
-
-                            <div class="video_thumblock_text">
-                                    <label>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</label>
-
-                            </div>
-
-
-                       </div>
-                     <!-- video end  -->
-             
-
-
-
-                    
-
-
+                      </div>
+              
+                      <div class="video_thumblock_text">
+                        <label>{{item.module}}</label>
+              
+                      </div>
+              
+              
+                    </div>
+                  </ng-container>
                 </div>
               </div>
           
             </div>
+          <!-- </ng-container> -->
+
             <!-- Accordion card -->
           
             <!-- Accordion card -->
-            <div class="card">
+            <!-- <div class="card">
           
-              <!-- Card header -->
               <div class="card-header" role="tab" id="headingTwo2">
                 <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseTwo2"
                   aria-expanded="false" aria-controls="collapseTwo2">
@@ -202,106 +146,36 @@
                   </h5>
                 </a>
               </div>
-          
-              <!-- Card body -->
+        
               <div id="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2"
                 data-parent="#accordionEx">
                 <div class="card-body">
-
-
-                   
-
-
-
-                  <!-- video start  -->
-                 <div class="video_thumblock">
-
-                  <div class="video_thumblock_img">
-                    <div class="video_thumblock_imgdiv">
-                      <img src="https://marketing.betoparedes.com/assets/images/product-review_playicon.png" class="playicon">
-                    <img  class="youtube-image" src="http://img.youtube.com/vi/fnX8ZDfFzD4/0.jpg" />
-                     </div>
-                  </div>
-
-                      <div class="video_thumblock_text">
-                              <label>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</label>
-
-                      </div>
-
-
-                 </div>
-               <!-- video end  -->
-                  <!-- video start  -->
-                  <div class="video_thumblock">
-
-                    <div class="video_thumblock_img">
-                      <div class="video_thumblock_imgdiv">
-                        <img src="https://marketing.betoparedes.com/assets/images/product-review_playicon.png" class="playicon">
-                        <img  class="youtube-image" src="http://img.youtube.com/vi/fnX8ZDfFzD4/0.jpg" />
-                       </div>
-                    </div>
-
-                        <div class="video_thumblock_text">
-                                <label>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</label>
-
-                        </div>
-
-
-                   </div>
-                 <!-- video end  -->
-                    <!-- video start  -->
-                    <div class="video_thumblock">
-
+                  <ng-container *ngFor="let item of productReviewData2">
+                    <div class="video_thumblock" (click)="startTime(item, '3')">
+                  
                       <div class="video_thumblock_img">
                         <div class="video_thumblock_imgdiv">
                           <img src="https://marketing.betoparedes.com/assets/images/product-review_playicon.png" class="playicon">
-                          <img  class="youtube-image" src="http://img.youtube.com/vi/fnX8ZDfFzD4/0.jpg" />
-                         </div>
+                          <img class="youtube-image" src="http://img.youtube.com/vi/{{item.link}}/0.jpg" />
+                        </div>
                       </div>
-
-                          <div class="video_thumblock_text">
-                                  <label>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</label>
-
-                          </div>
-
-
-                     </div>
-                   <!-- video end  -->
-                      <!-- video start  -->
-                 <div class="video_thumblock">
-
-                  <div class="video_thumblock_img">
-                    <div class="video_thumblock_imgdiv">
-                      <img src="https://marketing.betoparedes.com/assets/images/product-review_playicon.png" class="playicon">
-                      <img  class="youtube-image" src="http://img.youtube.com/vi/fnX8ZDfFzD4/0.jpg" />
-                     </div>
-                  </div>
-
+                  
                       <div class="video_thumblock_text">
-                              <label>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</label>
-
+                        <label>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</label>
+                  
                       </div>
-
-
-                 </div>
-               <!-- video end  -->
-       
-
-
-
-              
-
-
+                  
+                  
+                    </div>
+                  </ng-container>
           </div>
               </div>
           
-            </div>
-            <!-- Accordion card -->
+            </div> -->
+
+
+            <!-- <div class="card">
           
-            <!-- Accordion card -->
-            <div class="card">
-          
-              <!-- Card header -->
               <div class="card-header" role="tab" id="headingThree3">
                 <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseThree3"
                   aria-expanded="false" aria-controls="collapseThree3">
@@ -310,104 +184,35 @@
                   </h5>
                 </a>
               </div>
-          
-              <!-- Card body -->
+
               <div id="collapseThree3" class="collapse" role="tabpanel" aria-labelledby="headingThree3"
                 data-parent="#accordionEx">
                 <div class="card-body">
 
-
-                   
-
-
-
-                  <!-- video start  -->
-                 <div class="video_thumblock">
-
-                  <div class="video_thumblock_img">
-                    <div class="video_thumblock_imgdiv">
-                      <img src="https://marketing.betoparedes.com/assets/images/product-review_playicon.png" class="playicon">
-                    <img  class="youtube-image" src="http://img.youtube.com/vi/fnX8ZDfFzD4/0.jpg" />
-                     </div>
-                  </div>
-
-                      <div class="video_thumblock_text">
-                              <label>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</label>
-
-                      </div>
-
-
-                 </div>
-               <!-- video end  -->
-                  <!-- video start  -->
-                  <div class="video_thumblock">
-
-                    <div class="video_thumblock_img">
-                      <div class="video_thumblock_imgdiv">
-                        <img src="https://marketing.betoparedes.com/assets/images/product-review_playicon.png" class="playicon">
-                        <img  class="youtube-image" src="http://img.youtube.com/vi/fnX8ZDfFzD4/0.jpg" />
-                       </div>
-                    </div>
-
-                        <div class="video_thumblock_text">
-                                <label>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</label>
-
-                        </div>
-
-
-                   </div>
-                 <!-- video end  -->
-                    <!-- video start  -->
-                    <div class="video_thumblock">
-
-                      <div class="video_thumblock_img">
-                        <div class="video_thumblock_imgdiv">
-                          <img src="https://marketing.betoparedes.com/assets/images/product-review_playicon.png" class="playicon">
-                          <img  class="youtube-image" src="http://img.youtube.com/vi/fnX8ZDfFzD4/0.jpg" />
-                         </div>
-                      </div>
-
-                          <div class="video_thumblock_text">
-                                  <label>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</label>
-
-                          </div>
-
-
-                     </div>
-                   <!-- video end  -->
-                      <!-- video start  -->
-                 <div class="video_thumblock">
-
-                  <div class="video_thumblock_img">
-                    <div class="video_thumblock_imgdiv">
-                      <img src="https://marketing.betoparedes.com/assets/images/product-review_playicon.png" class="playicon">
-                    <img  class="youtube-image" src="http://img.youtube.com/vi/fnX8ZDfFzD4/0.jpg" />
-                     </div>
-                  </div>
-
-                      <div class="video_thumblock_text">
-                              <label>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</label>
-
-                      </div>
-
-
-                 </div>
-               <!-- video end  -->
-       
-
-
-
+              <ng-container *ngFor="let item of productReviewData3">
+                <div class="video_thumblock" (click)="startTime(item, '3')">
               
-
-
+                  <div class="video_thumblock_img">
+                    <div class="video_thumblock_imgdiv">
+                      <img src="https://marketing.betoparedes.com/assets/images/product-review_playicon.png" class="playicon">
+                      <img class="youtube-image" src="http://img.youtube.com/vi/{{item.link}}/0.jpg" />
+                    </div>
+                  </div>
+              
+                  <div class="video_thumblock_text">
+                    <label>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</label>
+              
+                  </div>
+              
+              
+                </div>
+              </ng-container>
           </div>
               </div>
           
-            </div>
-            <!-- Accordion card -->
+            </div> -->
           
           </div>
-          <!-- Accordion wrapper -->
   
   
         

@@ -77,7 +77,7 @@
 
           <h3>Name - {{rep_data.fullname}},  Email - {{rep_data.email}}<br/>
 
-            <ng-container *ngIf="rep_data.telephone != null">Contact number - <span>{{rep_data.telephone}}</span></ng-container></h3>
+            <ng-container *ngIf="rep_data.telephone != null">, Contact number - <span>{{rep_data.telephone}}</span></ng-container></h3>
 
           </div>
 
@@ -112,7 +112,7 @@
 
 
       <div class="marketingre_view_body_con_right">
-        <button class="topbtn1" (click)="goTo('marketing')">Goto marketing review Page</button>
+        <button class="topbtn1" (click)="goTo('marketing')">marketing review</button>
         <button class="topbtn1" *ngIf="product_id =='5dd68c367b583967f3e573b2'" (click)="goTo('')">Product Review</button>
         <div class="marketingre_view_body_con_right_con">
           <div class="marketingre_view_body_con_right_con_sub">
