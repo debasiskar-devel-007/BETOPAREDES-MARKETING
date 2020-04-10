@@ -3617,7 +3617,7 @@ modal-container .modal-content {
         text-shadow: 0 1px 1px #add1e6; text-decoration: none;  font-weight: bold;      display: block;   }
     
 
-        .marketingre_view_body_con_right .accordion .card .card-header a h5{background: url(https://marketing.betoparedes.com/assets/images/product-review_arrowdown.png) no-repeat 98% center; background-size: 20px;  padding-right: 40px;  font-family: 'RalewaySemiBold';}
+        .marketingre_view_body_con_right .accordion .card .card-header a h5{background: url(https://marketing.betoparedes.com/assets/images/product-review_arrowdown.png) no-repeat 98% center; background-size: 20px;  padding-right: 40px;   }
         .marketingre_view_body_con_right.card-header:first-child {
         border-radius: 0!important;
     }
