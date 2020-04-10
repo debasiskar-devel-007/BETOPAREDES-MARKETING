@@ -97,7 +97,7 @@
               <div class="card-header" role="tab" [id]="'heading'+i">
                 <span class="panel-title">
                 <a data-toggle="collapse" data-parent="#accordionEx"  [href]="'#collapse'+i" [attr.aria-expanded]="functionalities[0].status"
-                [attr.aria-controls]="'collapse'+i">
+                [attr.aria-controls]="'collapse'+i" [ngClass]="(functionalities[0].status == false)?'collapsed':''">
                   <h5 class="mb-0">
                     {{functionalities[0].title}}
                   </h5>
@@ -106,7 +106,7 @@
               </div>
           
               <!-- Card body -->
-              <div [id]="'collapse'+i" class="collapse show" role="tabpanel" [attr.aria-labelledby]="'heading'+i" data-parent="#accordionEx">
+              <div [id]="'collapse'+i" role="tabpanel" [attr.aria-labelledby]="'heading'+i" data-parent="#accordionEx" [ngClass]="(functionalities[0].status == true)?'collapse show':'collapse'">
                 <div class="card-body">
                   <!-- video start  -->
                   <ng-container *ngFor="let item of functionalities">
