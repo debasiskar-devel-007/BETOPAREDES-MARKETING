@@ -285,7 +285,9 @@
               <form [formGroup]="dataFormForLead" (ngSubmit)="dosubmitForLead(messagemodal)">
                   <div class="form-group">
                       <label>First Name</label>
-                      <input class="form-control" type="text" placeholder="Please Input Your First Name Here"
+                      <input class="form-control"  *ngIf="leaddata != ''  && leaddata.firstname.length > 1" type="text" [formControl]="dataFormForLead.controls['firstname']"
+                     readonly>
+                      <input class="form-control" *ngIf="leaddata == '' || leaddata.firstname.length < 1" type="text" placeholder="Please Input Your First Name Here"
                           [formControl]="dataFormForLead.controls['firstname']">
 
                       <span class="errortext" style="color:red"
@@ -294,7 +296,9 @@
                   </div>
                   <div class="form-group">
                       <label>Last Name</label>
-                      <input class="form-control" type="text" placeholder="Please Input Your Last Name Here"
+                      <input class="form-control"  *ngIf="leaddata != ''  && leaddata.lastname.length > 1" type="text" [formControl]="dataFormForLead.controls['lastname']"
+                     readonly>
+                      <input class="form-control" *ngIf="leaddata == '' || leaddata.lastname.length < 1" type="text" placeholder="Please Input Your Last Name Here"
                           [formControl]="dataFormForLead.controls['lastname']">
 
                       <span class="errortext" style="color:red"
@@ -304,7 +308,9 @@
 
                   <div class="form-group">
                       <label>Company</label>
-                      <input class="form-control" type="text" placeholder="Please Input Your Company Here"
+                      <input class="form-control"  *ngIf="leaddata != ''  && leaddata.company.length > 1" type="text" [formControl]="dataFormForLead.controls['company']"
+                     readonly>
+                      <input class="form-control" *ngIf="leaddata == '' || leaddata.company.length < 1" type="text" placeholder="Please Input Your Company Here"
                           [formControl]="dataFormForLead.controls['company']">
 
                           <span class="errortext" style="color:red"
@@ -326,13 +332,18 @@
 
                   <div class="form-group">
                       <label>Address</label>
-                      <input class="form-control" type="textarea" placeholder="Please Input Your Address Here"
+                      <input class="form-control"  *ngIf="leaddata != ''  && leaddata.address.length > 1" type="text" [formControl]="dataFormForLead.controls['address']"
+                     readonly>
+                      <input class="form-control" *ngIf="leaddata == '' || leaddata.address.length < 1"  type="textarea" placeholder="Please Input Your Address Here"
                           [formControl]="dataFormForLead.controls['address']">
                   </div>
 
                   <div class="form-group">
                       <label>Phone No.</label>
-                      <input class="form-control" type="text" placeholder="Please Input Your Phone Number Here"
+
+                      <input class="form-control" *ngIf="leaddata != ''  && leaddata.phoneno.length > 1" type="text" [formControl]="dataFormForLead.controls['phoneno']"
+                     readonly>
+                      <input class="form-control" *ngIf="leaddata == '' || leaddata.phoneno.length < 1" type="text" placeholder="Please Input Your Phone Number Here"
                           [formControl]="dataFormForLead.controls['phoneno']">
                   </div>
                   <div class="form-group">

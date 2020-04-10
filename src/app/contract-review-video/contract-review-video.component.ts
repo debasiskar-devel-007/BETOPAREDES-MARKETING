@@ -160,14 +160,16 @@ export class ContractReviewVideoComponent implements OnInit {
                       source: 'contract_repote',
                       data: { status: 'request', rep_id: this.activatedroute.snapshot.params['rep_id'], product_id: this.activatedroute.snapshot.params['product_id'], lead_id:this.activatedroute.snapshot.params['lead_id'],
                       created_by: this.activatedroute.snapshot.params['lead_id'],
-                      product: this.productval[0].productname,
+                      product: this.leaddata.productname[0].product_name,
                       by: 'lead'
                     }
                       // sourceobj: ['lead_id','rep_id','product_id','created_by']
                   };
                 }
+                // console.log(data);
+                // return;
                   this._http.post(link1, data).subscribe((res: any) => {
-                      // console.log(res);
+                      console.log(res);
                       if (res.status == 'success') {
                         this.modalRef3 = this.modal.show(template);
                         this.modalRef.hide();
@@ -203,12 +205,12 @@ export class ContractReviewVideoComponent implements OnInit {
       this._http.post(link1, { source:'leads_view', condition: { _id_object: this.activatedroute.snapshot.params['lead_id'] }}).subscribe((res:any) => {
         this.leaddata = res.res[0];
       this.dataFormForLead = this.kp.group({
-        firstname: [ '', Validators.required ],
-        lastname: [ '', Validators.required ],
-        company: [ '', Validators.required ],
+        firstname: [ res.res[0].firstname, Validators.required ],
+        lastname: [ res.res[0].lastname, Validators.required ],
+        company: [ res.res[0].company, Validators.required ],
         email: [ res.res[0].email, Validators.required ],
-        address: [ '', Validators.required ],
-        phoneno: [ '', Validators.required ],
+        address: [ res.res[0].address, Validators.required ],
+        phoneno: [ res.res[0].phoneno, Validators.required ],
         product:[res.res[0].product]
       });
       this.modalRef = this.modal.show(template2);

@@ -161,7 +161,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/betoparedesmarketing/production/1586504392585-2020-04-10T07:39:52.585Z/betoparedesmarketing.zip"
+                "S3Key": "serverless/betoparedesmarketing/production/1586528502691-2020-04-10T14:21:42.691Z/betoparedesmarketing.zip"
               },
               "FunctionName": "betoparedesmarketing-production-api",
               "Handler": "lambda.universal",
@@ -180,14 +180,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "ApiLambdaVersionJwYiG8D9xogwe0pCfgLrH5e8RJSHMKWwwG8jY4Zp5lc": {
+          "ApiLambdaVersiond7bYohDiumWVUeLIHDYgXdSokn6MwPaMBCKyuqWY": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ApiLambdaFunction"
               },
-              "CodeSha256": "2QwMrloiA/DzgYo9mpmNbAnqnTcw4Dz/fhI8/zaMmVc="
+              "CodeSha256": "hPRI7myY5uppk7ZQGSeNdOpNndZqHQFlR/zDNq3yDng="
             }
           },
           "ApiGatewayRestApi": {
@@ -305,7 +305,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1586504310892": {
+          "ApiGatewayDeployment1586528408075": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -365,7 +365,7 @@
           "ApiLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ApiLambdaVersionJwYiG8D9xogwe0pCfgLrH5e8RJSHMKWwwG8jY4Zp5lc"
+              "Ref": "ApiLambdaVersiond7bYohDiumWVUeLIHDYgXdSokn6MwPaMBCKyuqWY"
             }
           },
           "ServiceEndpoint": {
@@ -497,7 +497,7 @@
     "artifact": "/home/influx/Documents/all_project/t/BETOPAREDES-MARKETING/.serverless/betoparedesmarketing.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/betoparedesmarketing/production/1586504392585-2020-04-10T07:39:52.585Z",
+    "artifactDirectoryName": "serverless/betoparedesmarketing/production/1586528502691-2020-04-10T14:21:42.691Z",
     "artifact": "betoparedesmarketing.zip"
   }
 }

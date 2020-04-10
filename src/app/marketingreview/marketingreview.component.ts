@@ -175,10 +175,11 @@ export class MarketingreviewComponent implements OnInit {
     }
     if (activatedroute.snapshot.params['lead_id'] != null) {
       this.lead_id = activatedroute.snapshot.params['lead_id'];
-      this.activatedroute.data.forEach((data: any) => {
-        this.leaddata = data.results.res;
-        console.log(this.leaddata)
-      });
+      // this.activatedroute.data.forEach((data: any) => {
+      //   console.log(data)
+      //   this.leaddata = data.results.res;
+      //   console.log(this.leaddata)
+      // });
     }
     this._http.get("assets/data/timezone.json")
           .subscribe((res:any) => {
@@ -221,12 +222,14 @@ let y: any;
                   source: 'contract_repote',
                   data: { status: 'request', rep_id: this.activatedroute.snapshot.params['rep_id'], product_id: this.activatedroute.snapshot.params['product_id'], lead_id:this.activatedroute.snapshot.params['lead_id'],
                   created_by: this.activatedroute.snapshot.params['lead_id'],
-                  product: this.productval[0].productname,
+                  product: this.leaddata.productname[0].product_name,
                   by: 'lead'
                 }
                   // sourceobj: ['lead_id','rep_id','product_id','created_by']
               };
             }
+            // console.log(data, res, this.leaddata);
+            // return;
               this._http.post(link1, data).subscribe((res: any) => {
                   // console.log(res);
                   if (res.status == 'success') {
@@ -284,12 +287,12 @@ let y: any;
     this._http.post(link1, { source:'leads_view', condition: { _id_object: this.activatedroute.snapshot.params['lead_id'] }}).subscribe((res:any) => {
       this.leaddata = res.res[0];
     this.dataFormForLead = this.kp.group({
-      firstname: [ '', Validators.required ],
-      lastname: [ '', Validators.required ],
-      company: [ '', Validators.required ],
+      firstname: [ res.res[0].firstname, Validators.required ],
+      lastname: [ res.res[0].lastname, Validators.required ],
+      company: [ res.res[0].company, Validators.required ],
       email: [ res.res[0].email, Validators.required ],
-      address: [ '', Validators.required ],
-      phoneno: [ '', Validators.required ],
+      address: [ res.res[0].address, Validators.required ],
+      phoneno: [ res.res[0].phoneno, Validators.required ],
       product:[res.res[0].product]
     });
     this.modalRef = this.modal.show(template2);
