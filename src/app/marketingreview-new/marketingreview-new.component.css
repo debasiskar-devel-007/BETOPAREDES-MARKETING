@@ -3,11 +3,43 @@
     padding-right: 0;
 }
 
+.marketingre_view_body_con_top_left h2{ text-align: left;}
+
+.marketingre_view_body_con_top button{display: inline-block;
+    border-radius: 0px;
+    margin: 0 5px;
+    font-size: 26px;
+    line-height: 32px;
+    color: #001420!important;
+  
+    text-align: center;
+    padding: 14px 15px 16px 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    background: rgb(250,226,156);
+    background: linear-gradient(
+180deg
+, rgba(250,226,156,1) 0%, rgba(244,185,20,1) 100%);}
+
+    .marketingre_view_body_con_top{display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;}
+
 @media screen and (max-width: 1199px){
 
     .marketingre_view_body_con_left button {  display: block; width: 100%;}
 
     .marketingre_view_body_con_left button:last-of-type { margin-left: 0;  }
+
+    .marketingre_view_body_con_top_left h2  {
+        text-align: center;
+        padding-bottom: 15px;
+    }
+
+    .marketingre_view_body_con_top button{ display: block; margin: 0 auto;}
 }
 
  
