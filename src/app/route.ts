@@ -10,6 +10,7 @@ import { MarketingreviewComponent } from './marketingreview/marketingreview.comp
 import { ContractReviewVideoComponent } from './contract-review-video/contract-review-video.component';
 import { ProductreviewComponent } from './productreview/productreview.component';
 import { TempaccessComponent } from './tempaccess/tempaccess.component';
+import { MarketingreviewNewComponent } from './marketingreview-new/marketingreview-new.component';
 
 
 
@@ -24,7 +25,9 @@ const appRoutes: Routes = [
     {path: 'marketing-review/:product_id/:rep_id', component: MarketingreviewComponent},
 
     { path: 'product-review/:product_id/:rep_id/:lead_id', component: ProductreviewComponent},
-    { path: 'product-review/:product_id/:rep_id', component: ProductreviewComponent}
+    { path: 'product-review/:product_id/:rep_id', component: ProductreviewComponent},
+
+    { path: 'marketingreview_new', component: MarketingreviewNewComponent}
 ];
 
 export const appRoutingProviders: any[] = [

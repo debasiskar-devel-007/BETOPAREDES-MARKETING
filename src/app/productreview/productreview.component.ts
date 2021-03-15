@@ -114,7 +114,7 @@ export class ProductreviewComponent implements OnInit {
     {'product_id':"5d4d5e8cc9e23d43cc124394", 'link':"https://www.youtube.com/embed/8qkgcCBOQM4", 'start':0, 'second_start':75},
     {'product_id':"5d4d5f66c9e23d43cc1243a2", 'link':"https://www.youtube.com/embed/b86g1ATb4ok", 'start':0, 'second_start':75},
     {'product_id':"5e4e675185f01a4ee4f0ac22", 'link':"https://www.youtube.com/embed/9mgR4iPsQW0", 'start':0, 'second_start':75},
-    {'product_id':"5dd68c367b583967f3e573b2", 'link':"https://www.youtube.com/embed/fnX8ZDfFzD4", 'start':0, 'second_start':175},
+    {'product_id':"604aff3691b7c80008ca11a8", 'link':"https://www.youtube.com/embed/fnX8ZDfFzD4", 'start':0, 'second_start':175},
   ];
   public discov: boolean = false;
   public modalRef: BsModalRef;
@@ -130,7 +130,7 @@ export class ProductreviewComponent implements OnInit {
     this.product_id = activatedroute.snapshot.params['product_id'];
     this.meta.setTag('og:type', 'website');
     // for aws
-    if (this.activatedroute.snapshot.params['product_id'] == '5dd68c367b583967f3e573b2') {
+    if (this.activatedroute.snapshot.params['product_id'] == '604aff3691b7c80008ca11a8') {
       this.meta.setTag('og:keyword', 'ANS Testing Management Software, AWS Healthcare Management System, ANS Device and Wellness System');
       this.meta.setTag('twitter:keyword', 'ANS Testing Management Software, AWS Healthcare Management System, ANS Device and Wellness System');
       this.meta.setTitle('Advanced Wellness Solutions');

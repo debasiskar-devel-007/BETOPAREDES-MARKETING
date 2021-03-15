@@ -26,6 +26,7 @@ import { ContractReviewVideoComponent } from './contract-review-video/contract-r
 import { MetaModule, MetaLoader, MetaStaticLoader, PageTitlePositioning } from '@ngx-meta/core';
 import { ProductreviewComponent } from './productreview/productreview.component';
 import { TempaccessComponent } from './tempaccess/tempaccess.component';
+import { MarketingreviewNewComponent } from './marketingreview-new/marketingreview-new.component';
 
 // import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 
@@ -59,7 +60,8 @@ export function metaFactory(): MetaLoader {
     TempaccessComponent,
     OrderBy,
     MarketingreviewComponent,
-    ProductreviewComponent
+    ProductreviewComponent,
+    MarketingreviewNewComponent
 
   ],
   imports: [

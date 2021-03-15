@@ -1,0 +1,13 @@
+.marketingre_view_body_con_left {
+    width: 100%;
+    padding-right: 0;
+}
+
+@media screen and (max-width: 1199px){
+
+    .marketingre_view_body_con_left button {  display: block; width: 100%;}
+
+    .marketingre_view_body_con_left button:last-of-type { margin-left: 0;  }
+}
+
+ 

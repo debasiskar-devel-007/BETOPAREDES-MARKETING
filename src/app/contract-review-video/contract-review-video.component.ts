@@ -34,7 +34,7 @@ export class ContractReviewVideoComponent implements OnInit {
     {'product_id':"5d4d5eedc9e23d43cc124395", 'link':"https://www.youtube.com/embed/8qkgcCBOQM4", 'start':0, 'second_start':75},
     {'product_id':"5d4d5f66c9e23d43cc1243a2", 'link':"https://www.youtube.com/embed/8qkgcCBOQM4", 'start':0, 'second_start':75},
     {'product_id':"5e4e634052b7254c601f7559", 'link':"https://www.youtube.com/embed/8qkgcCBOQM4", 'start':0, 'second_start':75},
-    {'product_id':"5dd68c367b583967f3e573b2", 'link':"https://www.youtube.com/embed/8qkgcCBOQM4", 'start':0, 'second_start':175},
+    {'product_id':"604aff3691b7c80008ca11a8", 'link':"https://www.youtube.com/embed/8qkgcCBOQM4", 'start':0, 'second_start':175},
   ]
   public safeSrc:SafeResourceUrl;
   public dataFormForLead: FormGroup;
