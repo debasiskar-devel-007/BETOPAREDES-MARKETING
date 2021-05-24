@@ -35,18 +35,18 @@ export class ApiService {
       this.getRefreshCognitoTokens()
     }
 
-  } 
- 
+  }
+
   //ON SUBMIT CHECK IF TOKEN NEEDED REFRESHING
   getRefreshCognitoTokens(){
 
     console.log('API_SERVICE WE REFRESHED THE TOKENS')
     let body = new URLSearchParams();
-    body.set('grant_type', 'refresh_token'); 
+    body.set('grant_type', 'refresh_token');
     body.set('client_id', environment["pool_app_client_id"]);
     body.set('refresh_token', localStorage.getItem('refresh_token'));
 
-    
+
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type':  'application/x-www-form-urlencoded',
@@ -79,33 +79,38 @@ export class ApiService {
     var result = this.getRefreshCognitoTokens()
     return result
   }*/
- 
+
   getData(endpoint:string){
     var result = this._http.get(this.getEndpointUrl(endpoint)).pipe(map(res => res));
 
 		return result;
   } //end getData
 
-  
+
   postData(endpoint:string, source, condition){
       var result =this._http.post(this.getEndpointUrl(endpoint),{source:source,condition:condition}/*JSON.stringify(data)*/).pipe(map(res => res));
       return result;
   } //end postData
-  
-  
+
+  requestData(endpoint:string,  condition){
+      var result =this._http.post(this.getEndpoint(endpoint),{condition:condition}/*JSON.stringify(data)*/).pipe(map(res => res));
+      return result;
+  } //end postData
+
+
   putData(endpoint:string,data,id:string,is_cache_buster=true){
     if (is_cache_buster==true){
       let ran = Math.floor(Math.random() * 10000) + 1;
       var cache_buster = '?cache=' + ran.toString();
       endpoint = endpoint + cache_buster;
     }
-  
+
     var result =this._http.put(this.getEndpointUrl(endpoint)+'/'+id,JSON.stringify(data)).pipe(map(res => res));
-  
+
     return result;
   } //end putData
- 
-  
+
+
   // deleteData(endpoint:string,id:string){
   //   var result = this._http.delete(this.getEndpointUrl(endpoint)+"/"+id).pipe(map(res => res));
 	// 	return result;
@@ -113,6 +118,9 @@ export class ApiService {
 
   private getEndpointUrl(endpoint:string){
       return this.nodesslurl + endpoint+'?token='+this.cookie.get('jwttoken');
+  }
+  private getEndpoint(endpoint:string){
+      return endpoint;
   }
   customRequest(requestdata: any, endpoint: any) {
     // const httpOptions = {
@@ -128,9 +136,9 @@ export class ApiService {
       var result = this._http.post( this.nodesslurl+endpoint, requestdata).pipe(map(res => res));
       return result;
     }
-   
+
   }
-  
+
 
 
 }

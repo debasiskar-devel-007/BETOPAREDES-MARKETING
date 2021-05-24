@@ -27,10 +27,9 @@ const appRoutes: Routes = [
     { path: 'product-review/:product_id/:rep_id/:lead_id', component: ProductreviewComponent},
     { path: 'product-review/:product_id/:rep_id', component: ProductreviewComponent},
 
-    { path: 'marketingreview_new', component: MarketingreviewNewComponent}
+    { path: 'marketing-review-new/:product_id/:rep_id/:lead_id', component: MarketingreviewNewComponent}
 ];
 
 export const appRoutingProviders: any[] = [
 ];
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes, { useHash: false });
-

@@ -6,14 +6,13 @@
     },
     "provider": {
       "stage": "production",
-      "variableSyntax": "\\${([ ~:a-zA-Z0-9._@'\",\\-\\/\\(\\)*?]+?)}",
+      "variableSyntax": "\\${([^{}]+?)}",
       "name": "aws",
       "runtime": "nodejs10.x",
       "memorySize": 192,
       "timeout": 10,
       "region": "us-east-1",
       "versionFunctions": true,
-      "remoteFunctionData": null,
       "compiledCloudFormationTemplate": {
         "AWSTemplateFormatVersion": "2010-09-09",
         "Description": "The AWS CloudFormation template for this Serverless application",
@@ -103,8 +102,8 @@
                     "Fn::Join": [
                       "-",
                       [
-                        "production",
                         "betoparedesmarketing",
+                        "production",
                         "lambda"
                       ]
                     ]
@@ -115,7 +114,8 @@
                       {
                         "Effect": "Allow",
                         "Action": [
-                          "logs:CreateLogStream"
+                          "logs:CreateLogStream",
+                          "logs:CreateLogGroup"
                         ],
                         "Resource": [
                           {
@@ -161,7 +161,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/betoparedesmarketing/production/1586528502691-2020-04-10T14:21:42.691Z/betoparedesmarketing.zip"
+                "S3Key": "serverless/betoparedesmarketing/production/1618216201926-2021-04-12T08:30:01.926Z/betoparedesmarketing.zip"
               },
               "FunctionName": "betoparedesmarketing-production-api",
               "Handler": "lambda.universal",
@@ -176,18 +176,17 @@
               "Timeout": 10
             },
             "DependsOn": [
-              "ApiLogGroup",
-              "IamRoleLambdaExecution"
+              "ApiLogGroup"
             ]
           },
-          "ApiLambdaVersiond7bYohDiumWVUeLIHDYgXdSokn6MwPaMBCKyuqWY": {
+          "ApiLambdaVersionHT2vdnnUstQAzr3U61iHsG16PIA1mnkjnNdbwBapyU": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ApiLambdaFunction"
               },
-              "CodeSha256": "hPRI7myY5uppk7ZQGSeNdOpNndZqHQFlR/zDNq3yDng="
+              "CodeSha256": "zkGtVGTtC0PMOGvDYexlhivUMTPIwRkOY2RykSft8mc="
             }
           },
           "ApiGatewayRestApi": {
@@ -198,7 +197,8 @@
                 "Types": [
                   "EDGE"
                 ]
-              }
+              },
+              "Policy": ""
             }
           },
           "ApiGatewayResourceProxyVar": {
@@ -305,7 +305,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1586528408075": {
+          "ApiGatewayDeployment1618216144170": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -365,7 +365,7 @@
           "ApiLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ApiLambdaVersiond7bYohDiumWVUeLIHDYgXdSokn6MwPaMBCKyuqWY"
+              "Ref": "ApiLambdaVersionHT2vdnnUstQAzr3U61iHsG16PIA1mnkjnNdbwBapyU"
             }
           },
           "ServiceEndpoint": {
@@ -489,15 +489,55 @@
         "memory": 192,
         "timeout": 10,
         "runtime": "nodejs10.x",
-        "vpc": {}
+        "vpc": {},
+        "versionLogicalId": "ApiLambdaVersionHT2vdnnUstQAzr3U61iHsG16PIA1mnkjnNdbwBapyU"
       }
     },
+    "configValidationMode": "warn",
     "serviceFilename": "serverless.yml",
     "layers": {},
-    "artifact": "/home/influx/Documents/all_project/t/BETOPAREDES-MARKETING/.serverless/betoparedesmarketing.zip"
+    "initialServerlessConfig": {
+      "service": "betoparedesmarketing",
+      "plugins": {
+        "$ref": "$[\"service\"][\"plugins\"]"
+      },
+      "provider": {
+        "name": "aws",
+        "runtime": "nodejs10.x",
+        "memorySize": 192,
+        "timeout": 10,
+        "stage": "production",
+        "region": "us-east-1"
+      },
+      "package": {
+        "exclude": [
+          "src/**",
+          "node_modules/**",
+          "firebug-lite/**",
+          "e2e/**",
+          "coverage/**",
+          "!node_modules/aws-serverless-express/**",
+          "!node_modules/binary-case/**",
+          "!node_modules/type-is/**",
+          "!node_modules/media-typer/**",
+          "!node_modules/mime-types/**",
+          "!node_modules/mime-db/**"
+        ],
+        "artifact": "/home/influxiq/Documents/BETOPAREDES-MARKETING/.serverless/betoparedesmarketing.zip",
+        "artifactDirectoryName": "serverless/betoparedesmarketing/production/1618216201926-2021-04-12T08:30:01.926Z"
+      },
+      "custom": {
+        "$ref": "$[\"service\"][\"custom\"]"
+      },
+      "functions": {
+        "$ref": "$[\"service\"][\"functions\"]"
+      }
+    },
+    "isDashboardMonitoringPreconfigured": false,
+    "artifact": "/home/influxiq/Documents/BETOPAREDES-MARKETING/.serverless/betoparedesmarketing.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/betoparedesmarketing/production/1586528502691-2020-04-10T14:21:42.691Z",
+    "artifactDirectoryName": "serverless/betoparedesmarketing/production/1618216201926-2021-04-12T08:30:01.926Z",
     "artifact": "betoparedesmarketing.zip"
   }
 }

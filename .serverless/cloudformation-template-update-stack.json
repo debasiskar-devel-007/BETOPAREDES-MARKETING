@@ -87,8 +87,8 @@
               "Fn::Join": [
                 "-",
                 [
-                  "production",
                   "betoparedesmarketing",
+                  "production",
                   "lambda"
                 ]
               ]
@@ -99,7 +99,8 @@
                 {
                   "Effect": "Allow",
                   "Action": [
-                    "logs:CreateLogStream"
+                    "logs:CreateLogStream",
+                    "logs:CreateLogGroup"
                   ],
                   "Resource": [
                     {
@@ -145,7 +146,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/betoparedesmarketing/production/1586528502691-2020-04-10T14:21:42.691Z/betoparedesmarketing.zip"
+          "S3Key": "serverless/betoparedesmarketing/production/1618216201926-2021-04-12T08:30:01.926Z/betoparedesmarketing.zip"
         },
         "FunctionName": "betoparedesmarketing-production-api",
         "Handler": "lambda.universal",
@@ -160,18 +161,17 @@
         "Timeout": 10
       },
       "DependsOn": [
-        "ApiLogGroup",
-        "IamRoleLambdaExecution"
+        "ApiLogGroup"
       ]
     },
-    "ApiLambdaVersiond7bYohDiumWVUeLIHDYgXdSokn6MwPaMBCKyuqWY": {
+    "ApiLambdaVersionHT2vdnnUstQAzr3U61iHsG16PIA1mnkjnNdbwBapyU": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ApiLambdaFunction"
         },
-        "CodeSha256": "hPRI7myY5uppk7ZQGSeNdOpNndZqHQFlR/zDNq3yDng="
+        "CodeSha256": "zkGtVGTtC0PMOGvDYexlhivUMTPIwRkOY2RykSft8mc="
       }
     },
     "ApiGatewayRestApi": {
@@ -182,7 +182,8 @@
           "Types": [
             "EDGE"
           ]
-        }
+        },
+        "Policy": ""
       }
     },
     "ApiGatewayResourceProxyVar": {
@@ -289,7 +290,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1586528408075": {
+    "ApiGatewayDeployment1618216144170": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -349,7 +350,7 @@
     "ApiLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ApiLambdaVersiond7bYohDiumWVUeLIHDYgXdSokn6MwPaMBCKyuqWY"
+        "Ref": "ApiLambdaVersionHT2vdnnUstQAzr3U61iHsG16PIA1mnkjnNdbwBapyU"
       }
     },
     "ServiceEndpoint": {
