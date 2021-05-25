@@ -15,7 +15,7 @@ export class MarketingreviewNewComponent implements OnInit {
   }
   request_contract(){
     console.log(this.activatedroute.snapshot.params);
-    let endpoint=this.api_service.nodesslurl+'api/requestcontractfromlead'
+    let endpoint='https://z2oo2a8oq9.execute-api.us-east-1.amazonaws.com/dev/api/requestcontractfromlead'
 let data={
   product_id:this.activatedroute.snapshot.params.product_id,
   lead_id:this.activatedroute.snapshot.params.lead_id,
