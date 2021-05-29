@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from "../api.service";
 import { ActivatedRoute, Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({
   selector: 'app-marketingreview-new',
   templateUrl: './marketingreview-new.component.html',
@@ -9,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class MarketingreviewNewComponent implements OnInit {
 
   constructor(public api_service: ApiService,
-    public activatedroute: ActivatedRoute,) { }
+    public activatedroute: ActivatedRoute,public snackBar:MatSnackBar) { }
 
   ngOnInit() {
   }
@@ -22,7 +23,9 @@ export class MarketingreviewNewComponent implements OnInit {
       rep_id: this.activatedroute.snapshot.params.rep_id
     }
     this.api_service.requestData(endpoint, data).subscribe((res: any) => {
-
+      this.snackBar.open('Contract Request Successfully', 'Ok', {
+        duration: 3000,
+      });
     })
   }
 }
