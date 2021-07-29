@@ -1,16 +1,32 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from "../api.service";
 import { ActivatedRoute, Router } from '@angular/router';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatSnackBar } from '@angular/material';
 @Component({
   selector: 'app-marketingreview-new',
   templateUrl: './marketingreview-new.component.html',
   styleUrls: ['./marketingreview-new.component.css']
 })
 export class MarketingreviewNewComponent implements OnInit {
-
+  public requestflag: boolean = false;
+  public productdata:any;
+  public techata:any;
   constructor(public api_service: ApiService,
-    public activatedroute: ActivatedRoute,public snackBar:MatSnackBar) { }
+    public activatedroute: ActivatedRoute, public snackBar: MatSnackBar) {
+      let endpoint = 'https://z2oo2a8oq9.execute-api.us-east-1.amazonaws.com/dev/api/marketiingreviewteach'
+      let data = {
+        productid: this.activatedroute.snapshot.params.product_id,
+        
+        userid: this.activatedroute.snapshot.params.rep_id
+      }
+      this.api_service.requestData(endpoint, data).subscribe((res: any) => {
+       console.log(res);
+       this.productdata=res.results.productdata[0];
+       this.techata=res.results.userdata[0];
+       console.log(this.productdata,'productdata',this.techata);
+       
+      })
+  }
 
   ngOnInit() {
   }

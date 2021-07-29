@@ -27,6 +27,7 @@ import { MetaModule, MetaLoader, MetaStaticLoader, PageTitlePositioning } from '
 import { ProductreviewComponent } from './productreview/productreview.component';
 import { TempaccessComponent } from './tempaccess/tempaccess.component';
 import { MarketingreviewNewComponent } from './marketingreview-new/marketingreview-new.component';
+import { DemoMaterialModule } from 'src/material-module';
 
 // import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 
@@ -100,7 +101,7 @@ export function metaFactory(): MetaLoader {
     CommonModule,
     TransferHttpCacheModule,
     NgtUniversalModule,
-    // DemoMaterialModule,
+    DemoMaterialModule,
   ],
   providers: [
     CookieService,TestresolveService,ApiService

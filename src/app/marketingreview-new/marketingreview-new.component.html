@@ -5,14 +5,14 @@
 
 
     <div class="marketingre_view_top_left">
-      <img  src="https://marketing.betoparedes.com/assets/images/marketingre_view_awslogo.png" alt="#">
+      <img  src={{productdata?.image}} alt="#">
 
     </div>
 
     <div class="marketingre_view_top_right">
-   <h2>Advanced Wellness Solutions </h2>
+   <h2>{{productdata?.productname}} </h2>
 
-   <h3>Advanced Wellness Solutions </h3>
+   <h3>{{productdata?.productname}}  </h3>
     </div>
 
 
@@ -32,10 +32,11 @@
       <div class="marketingre_view_body_con_top" >
         <div class="marketingre_view_body_con_top_left">
 
-        <h2>Know your Representative</h2>
+        <h3>Know your Representative. This Present link sent by {{techata?.fullname}}, {{techata?.email}},{{techata?.phone}}</h3>
         </div>
 
-        <button (click)=request_contract() > REQUEST A CONTRACT</button>
+        <button *ngIf="requestflag==false" (click)=request_contract() > REQUEST A CONTRACT</button>
+        <button *ngIf="requestflag==true" (click)=request_contract() > Contract request sent</button>
 
       </div>
 
