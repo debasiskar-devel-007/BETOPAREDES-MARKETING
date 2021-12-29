@@ -1,25 +1,30 @@
 <div class="marketingre_view_top">
 
   <div class="marketingre_view_top_body">
-  <div class="marketingre_view_top_wrapper">
+    <div class="marketingre_view_top_wrapper">
 
 
-    <div class="marketingre_view_top_left">
-      <img  src={{productdata?.image}} alt="#">
+      <div class="marketingre_view_top_left">
+
+        <img src='../../assets/images/betologo.png' alt="#">
+        <!-- <img src={{productdata?.image}} alt="#"> -->
+
+      </div>
+
+      <div class="marketingre_view_top_right">
+
+        <img src={{productdata?.image}} alt="#">
+
+        <!-- <h2>{{productdata?.productname}} </h2>
+
+        <h3>{{productdata?.productname}} </h3> -->
+      </div>
+
+
+
 
     </div>
-
-    <div class="marketingre_view_top_right">
-   <h2>{{productdata?.productname}} </h2>
-
-   <h3>{{productdata?.productname}}  </h3>
-    </div>
-
-
-
-
   </div>
-</div>
 
 </div>
 
@@ -27,16 +32,40 @@
 <div class="marketingre_view_body">
 
 
-    <div class="marketingre_view_body_wrapper">
+  <div class="marketingre_view_body_wrapper">
 
-      <div class="marketingre_view_body_con_top" >
+
+    <div class="neoGEN_bluetextwrapper_main">
+      <div class="neoGEN_bluetextwrapper_sub">
+        <h2>YOUR DOCTORS WILL BE EXCITED WITH THE RM-3A TESTING AND REPORT </h2>
+        <p>Take advantage of your physicians’ network and earn big with AWS PECE Program and the RM-3A medical device.
+          No other system in the ANS medical industry gives you as much data, and our level of analytical accuracy is
+          unmatched by any other available devices.
+        </p>
+      </div>
+    </div>
+
+
+
+
+    <div class="marketingre_view_body_wrapper_detail">
+      <div class="marketingre_view_body_con_top">
         <div class="marketingre_view_body_con_top_left">
+          <!-- 
+          <h3>Know your Representative. This Present link sent by {{techata?.fullname}},
+            {{techata?.email}},{{techata?.phone}}</h3> -->
 
-        <h3>Know your Representative. This Present link sent by {{techata?.fullname}}, {{techata?.email}},{{techata?.phone}}</h3>
+
+          <h2>Sale deck</h2>
+          <h2>Sales pitch</h2>
+          <h2>Software walkthrough</h2>
+
+
         </div>
 
-        <button *ngIf="requestflag==false" (click)=request_contract() > REQUEST A CONTRACT</button>
-        <button *ngIf="requestflag==true" (click)=request_contract() > Contract request sent</button>
+
+        <!-- <button *ngIf="requestflag==false" (click)=request_contract()> REQUEST A CONTRACT</button>
+        <button *ngIf="requestflag==true" (click)=request_contract()> Contract request sent</button> -->
 
       </div>
 
@@ -48,49 +77,55 @@
 
       <div class="marketingre_view_body_con">
 
-    <div class="marketingre_view_body_con_left" >
+        <div class="marketingre_view_body_con_left">
 
-      <div class="video-responsive"  >
+          <div class="video-responsive">
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/jssO8-5qmag" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-      </div>
-
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/jssO8-5qmag" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
 
 
-      <button  >Marketing Strategies</button>
-
-      <button  >Expected Revenues </button>
-
-    </div>
+          </div>
 
 
 
+          <!-- <button>Marketing Strategies</button>
 
-
-      </div>
-
-
-
-
-      <div class="marketingre_view_body_footer"  >
-
-        <div class="marketingre_view_body_footer_wrapper">
-
-          <h2>Your Doctors Will Be Excited With The RM-3A Testing And Report</h2>
-          <h3>Take advantage of your physicians’ network and earn big with AWS PECE
-             Program and the RM-3A medical device. No other system in the ANS medical industry gives
-             you as much data, and our level of analytical accuracy is unmatched by any other available devices.
-          </h3>
+          <button>Expected Revenues </button> -->
 
         </div>
 
+
+
+
+
       </div>
+
 
 
 
     </div>
 
 
+    <!-- 
+    <div class="marketingre_view_body_footer">
+
+      <div class="marketingre_view_body_footer_wrapper">
+
+        <h2>Your Doctors Will Be Excited With The RM-3A Testing And Report</h2>
+        <h3>Take advantage of your physicians’ network and earn big with AWS PECE
+          Program and the RM-3A medical device. No other system in the ANS medical industry gives
+          you as much data, and our level of analytical accuracy is unmatched by any other available devices.
+        </h3>
+
+      </div>
+
+    </div> -->
+
+
+
   </div>
+
+
+</div>

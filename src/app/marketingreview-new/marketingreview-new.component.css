@@ -28,6 +28,122 @@
         flex-wrap: wrap;
         justify-content: space-between;}
 
+
+        .marketingre_view_body_wrapper_detail{display: flex;
+            
+            flex-wrap: wrap;
+            justify-content: space-between; flex-direction: row-reverse;}
+
+ .marketingre_view_body_wrapper_detail .marketingre_view_body_con_top{ width: 28%; margin: 0; display: block;   position: relative;}
+ .marketingre_view_body_wrapper_detail .marketingre_view_body_con{ width: 71%;}
+
+ .marketingre_view_body_wrapper_detail  .marketingre_view_body_con_top button {position: absolute;
+    width: 100%;
+    margin: 0;
+    left: 0;
+    bottom: 0; padding: 18px 15px 18px 15px;}
+
+
+
+    .neoGEN_bluetextwrapper_main {
+        position: relative;
+        background: rgb(22,87,174);
+        background: linear-gradient(
+    45deg,rgba(22,87,174,1) 0%,rgba(21,68,110,1) 100%);
+        border-left: 10px solid #f6dc17;
+        border-bottom: 10px solid #f6dc17;
+        border-radius: 11px;
+        padding-top: 10px;     margin-bottom: 10px;
+    }
+
+
+    .neoGEN_bluetextwrapper_main h2 {
+        margin: 0;
+        padding: 0;
+        font-size: 36px;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: bold;
+        line-height: 34px;
+    }
+
+    .neoGEN_bluetextwrapper_main p {
+        margin: 0;
+        padding: 12px 0 0 0;
+        font-size: 20px;
+        color: #fff;
+    }
+
+    .neoGEN_bluetextwrapper_sub {
+        padding: 15px;
+        padding-right: 22px;
+        border-left: 7px solid #052b4e;
+        border-bottom: 7px solid #052b4e;
+        position: relative;
+        border-radius: 5px;
+    }
+
+    .neoGEN_bluetextwrapper_main::before {
+        content: '';
+        background-image: url(../../assets/images/joinasadistributor_border3.png);
+        width: 500px;
+        height: 160px;
+        position: absolute;
+        left: -10px;
+        top: 0;
+        background-repeat: no-repeat;
+    }
+    .neoGEN_bluetextwrapper_sub::before {
+        content: '';
+        background-image: url(../../assets/images/joinasadistributor_border5.png);
+        width: 430px;
+        height: 50px;
+        position: absolute;
+        left: -7px;
+        top: 0;
+        background-repeat: no-repeat;
+    }
+    .neoGEN_bluetextwrapper_sub::after {
+        content: '';
+        background-image: url(../../assets/images/joinasadistributor_border6.png);
+        width: 106px;
+        height: 68px;
+        position: absolute;
+        right: 10px;
+        bottom: -10px;
+        background-repeat: no-repeat;
+    }
+
+    .neoGEN_bluetextwrapper_main::after {
+        content: '';
+        background-image: url(../../assets/images/joinasadistributor_border4.png);
+        width: 356px;
+        height: 148px;
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        background-repeat: no-repeat;
+    }
+
+
+    .marketingre_view_body_con_top_left h2{border-radius: 0px;
+        margin: 0 5px;
+        font-size: 26px;
+        line-height: 32px;
+        color: #001420!important;
+        text-align: center;
+        padding: 14px 15px 16px 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        border: none;
+        cursor: pointer;
+        background: rgb(250,226,156);
+        background: -webkit-gradient( linear , left top, left bottom , from(rgba(250,226,156,1)), to(rgba(244,185,20,1)));
+        background: linear-gradient( 
+    180deg , rgba(250,226,156,1) 0%, rgba(244,185,20,1) 100%); width: auto;
+    text-shadow: none;
+}
+
 @media screen and (max-width: 1199px){
 
     .marketingre_view_body_con_left button {  display: block; width: 100%;}
@@ -40,6 +156,37 @@
     }
 
     .marketingre_view_body_con_top button{ display: block; margin: 0 auto;}
+
+
+    .neoGEN_bluetextwrapper_main::before {
+     display: none;
+    }
+    .neoGEN_bluetextwrapper_sub::before {
+        display: none;
+    }
+    .neoGEN_bluetextwrapper_sub::after {
+        display: none;
+    }
+
+    .neoGEN_bluetextwrapper_main::after {
+        display: none;
+    }
+
+    .neoGEN_bluetextwrapper_main {
+        border: 7px solid #f6dc17;
+        padding: 0;
+    }
+    .neoGEN_bluetextwrapper_sub {
+        border: 7px solid #052b4e;
+    }
+
+
+
+    
+    .marketingre_view_body_wrapper_detail{display: block; }
+
+.marketingre_view_body_wrapper_detail .marketingre_view_body_con_top{ width: auto;   margin-bottom: 20px;}
+.marketingre_view_body_wrapper_detail .marketingre_view_body_con{ width: auto;}
 }
 
  

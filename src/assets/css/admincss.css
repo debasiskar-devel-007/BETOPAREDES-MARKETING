@@ -3071,16 +3071,23 @@ text-align: center;}
 .marketingre_view_top_body{ width: 1780px; margin: 0 auto;}
 
 .marketingre_view_top_wrapper{ display: flex;     align-items: center;}
-.marketingre_view_top_left{ width: 237px;  padding-right: 40px;}
+.marketingre_view_top_left{ width: 290px;  padding-right: 40px;}
 
 .marketingre_view_top_left img{ width: auto; max-width: 100%;}
 
-.marketingre_view_top_right{   padding-left: 50px; background: url(https://marketing.betoparedes.com/assets/images/marketingre_view_devider.png) no-repeat left center;}
+.marketingre_view_top_right{   padding-left: 40px; background: url(https://marketing.betoparedes.com/assets/images/marketingre_view_devider.png) no-repeat left center;}
 
 .marketingre_view_top_right h2{ font-size: 48px; color: #00bdf2; text-transform: uppercase; font-weight: bold; text-shadow: 1px 1px 2px #737c7f;}
 
 .marketingre_view_top_right h3{ margin: 0; padding: 5px 0 0 0; font-size: 20px; color: #1f1f1f; line-height: 24px; font-weight: normal;}
 
+
+.marketingre_view_top_right img{     display: inline-block;
+    width: 150px;
+    background: #fff;
+    padding: 5px;
+    border: solid 1px #bce5d7;
+    border-radius: 5px; margin: 2px;} 
 .marketingre_view_body{ background: url(https://marketing.betoparedes.com/assets/images/marketingre_view_bodybg.jpg) no-repeat; background-size: cover; padding: 8px 0;}
 
 .marketingre_view_body_wrapper{width: 1780px; margin: 0 auto;}
@@ -3212,7 +3219,7 @@ text-align: center;}
 }
 
 
-.marketingre_view_body_con_top_left{ width: 45%;}
+/* .marketingre_view_body_con_top_left{ width: 45%;} */
  
 .marketingre_view_body_con_top_left h2{ margin: 0; padding: 0; display: block; text-align: center; font-size: 48px; color: #ffffff; text-shadow: 1px 1px 2px #096089; text-transform: uppercase;}
     
@@ -3390,6 +3397,8 @@ text-align: center;}
 
 @media screen and (max-width:1199px) {
 
+    .marketingre_view_top_left img{ max-width: 90%;}
+
     .marketingre_view_body_con_right_additionBlock{ width: auto; margin-top: 10px; text-align: center;}
 
     .marketingre_view_body_con_right_additionBlock .div_block2 h2{word-break: break-all;}
@@ -3398,7 +3407,7 @@ text-align: center;}
 
     .marketingre_view_top_body{ width: auto;}
     .marketingre_view_top_wrapper{ display: block; text-align: center;}
-    .marketingre_view_top_right{   padding-left: 0px; background:none;}
+    .marketingre_view_top_right{   padding-left: 0px; background:none; padding-top: 10px;}
 
     .marketingre_view_top_left{ width: auto; background:none; padding:0 0 5px 0;}
 
