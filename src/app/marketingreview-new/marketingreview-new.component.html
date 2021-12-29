@@ -15,6 +15,8 @@
 
         <img src={{productdata?.image}} alt="#">
 
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
         <!-- <h2>{{productdata?.productname}} </h2>
 
         <h3>{{productdata?.productname}} </h3> -->
@@ -55,10 +57,20 @@
           <h3>Know your Representative. This Present link sent by {{techata?.fullname}},
             {{techata?.email}},{{techata?.phone}}</h3> -->
 
+          <ng-container *ngFor='let item of videolist; let i=index'>
 
-          <h2>Sale deck</h2>
-          <h2>Sales pitch</h2>
-          <h2>Software walkthrough</h2>
+            <h2 (click)='videoplay(item)'>{{item.name}}</h2>
+
+
+            <label *ngFor='let vlink of videolink; let j=index'>{{vlink.title}}</label>
+
+
+          </ng-container>
+
+
+
+
+
 
 
         </div>
