@@ -143,7 +143,9 @@
     180deg , rgba(250,226,156,1) 0%, rgba(244,185,20,1) 100%); width: auto;
     text-shadow: none;
 }
-
+.marketingre_view_top_right_sub{ display: flex;     padding: 0 40px;    background: url(https://marketing.betoparedes.com/assets/images/marketingre_view_devider.png) no-repeat left center;}
+.marketingre_view_top_right_sub:first-of-type{ background: none; padding-left: 0;}
+.marketingre_view_top_right_sub span{ display: block; padding-left: 10px;}
 @media screen and (max-width: 1199px){
 
     .marketingre_view_body_con_left button {  display: block; width: 100%;}
@@ -187,6 +189,10 @@
 
 .marketingre_view_body_wrapper_detail .marketingre_view_body_con_top{ width: auto;   margin-bottom: 20px;}
 .marketingre_view_body_wrapper_detail .marketingre_view_body_con{ width: auto;}
-}
+
+.marketingre_view_top_right{  display: block; background: none; padding: 0; text-align: center;}
+
+.marketingre_view_top_right_sub{  display: inline-block; background: none; padding: 0; text-align: center; margin: 15px;}
+} 
 
  
