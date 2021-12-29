@@ -2,7 +2,7 @@
     width: 100%;
     padding-right: 0;
 }
-
+@import '~video.js/dist/video-js.css';
 .marketingre_view_body_con_top_left h2{ text-align: left;}
 
 .marketingre_view_body_con_top button{display: inline-block;
