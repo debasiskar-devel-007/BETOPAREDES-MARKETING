@@ -15,8 +15,14 @@
       </div>
 
       <div class="marketingre_view_top_right">
-
-        <img src={{productdata?.image}} alt="#">
+        <ng-container *ngFor="let item of productdata">
+          <ng-container *ngIf="medigrade != 2">
+          <img src={{item?.image}} alt="#">
+        </ng-container>
+      </ng-container>
+      <ng-container *ngIf="medigrade == 2">
+        <img src="../../assets/images/quadrant_logo.png" alt="#">
+      </ng-container>
 
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 

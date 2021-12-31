@@ -50,24 +50,41 @@ export class MarketingreviewNewComponent implements OnInit {
   public Change_video_percent: any = 0;
 
   public videotimeflag: any = false;
+  public medigrade:any = 0;
   constructor(public api_service: ApiService,
     public activatedroute: ActivatedRoute, public snackBar: MatSnackBar, private sanitizer: DomSanitizer, public cookie: CookieService, public router: Router) {
     let endpoint = 'https://z2oo2a8oq9.execute-api.us-east-1.amazonaws.com/dev/api/marketiingreviewteach'
-    let data = {
-      productid: this.activatedroute.snapshot.params.product_id,
-
-      userid: this.activatedroute.snapshot.params.rep_id
+    let data = {};
+    if(typeof (this.activatedroute.snapshot.queryParams.pid1) != 'undefined' && this.activatedroute.snapshot.queryParams.pid1 != null){
+      data = {
+        productid: [this.activatedroute.snapshot.queryParams.pid1],
+        userid: this.activatedroute.snapshot.params.rep_id
+      }
+      if(typeof (this.activatedroute.snapshot.queryParams.pid2) != 'undefined' && this.activatedroute.snapshot.queryParams.pid2 != null){
+        data = {
+          productid: [this.activatedroute.snapshot.queryParams.pid1,this.activatedroute.snapshot.queryParams.pid2],
+          userid: this.activatedroute.snapshot.params.rep_id
+        }
+      }
     }
     this.api_service.requestData(endpoint, data).subscribe((res: any) => {
       console.log(res);
-      this.productdata = res.results.productdata[0];
+      this.productdata = res.results.productdata;
+      for (const key in this.productdata) {
+        if (this.productdata[key]._id == '604aff3691b7c80008ca11a8') {
+          this.medigrade++;
+        }
+        if (this.productdata[key]._id == '604a0b6e40962e00088f0d79') {
+          this.medigrade++;
+        }
+      }
       this.techata = res.results.userdata[0];
       console.log(this.productdata, 'productdata', this.techata);
-
     })
   }
 
   ngOnInit() {
+   console.log(this.activatedroute.snapshot.queryParams);
    
     setTimeout(() => {
       if (this.cookie.check('video_url')) {
