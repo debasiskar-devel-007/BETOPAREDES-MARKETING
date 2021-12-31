@@ -96,7 +96,10 @@ export class ApiService {
       var result =this._http.post(this.getEndpoint(endpoint),{condition:condition}/*JSON.stringify(data)*/).pipe(map(res => res));
       return result;
   } //end postData
-
+  requestData1(endpoint:string,  condition){
+    var result =this._http.post(this.getEndpoint(endpoint),condition/*JSON.stringify(data)*/).pipe(map(res => res));
+    return result;
+}
 
   putData(endpoint:string,data,id:string,is_cache_buster=true){
     if (is_cache_buster==true){

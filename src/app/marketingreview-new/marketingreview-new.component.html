@@ -18,16 +18,38 @@
         <ng-container *ngFor="let item of productdata">
           <ng-container *ngIf="medigrade != 2">
           <img src={{item?.image}} alt="#">
-          <!-- <span>
-            <h2>{{item?.productname}} </h2>
-          </span> -->
+          <span *ngIf="item?._id == '604aff3691b7c80008ca11a8' && pececontract">
+            <h6>{{item?.productname}} </h6>
+            <button>Request Contract</button>
+          </span>
+          <span *ngIf="item?._id == '612c883f118c110009f02820' && biocontract">
+            <h6>{{item?.productname}} </h6>
+            <button>Request Contract</button>
+          </span>
+          <span *ngIf="item?._id == '612c89242005f400082d5fb1' && rstcontract">
+            <h6>{{item?.productname}} </h6>
+            <button>Request Contract</button>
+          </span>
         </ng-container>
       </ng-container>
       <ng-container *ngIf="medigrade == 2">
         <img src="../../assets/images/quadrant_logo.png" alt="#">
-        <!-- <span>
-          <h2>MediGrade</h2>
-        </span> -->
+        <span *ngIf="pececontract">
+          <h6>Pece</h6>
+          <button>Request Contract</button>
+        </span>
+        <span *ngIf="tmflowcontract">
+          <h6>TM-FLOW ANS MEDICAL</h6>
+          <button>Request Contract</button>
+        </span>
+        <span *ngIf="creditcontract">
+          <h6>TM-FLOW ANS MEDICAL CREDIT APPLICATION</h6>
+          <button>Request Contract</button>
+        </span>
+        <span *ngIf="warrantycontract">
+          <h6>TM-FLOW ANS MEDICAL DEVICE 5-YEAR EXTENDED WARRANTY</h6>
+          <button>Request Contract</button>
+        </span>
       </ng-container>
       </div>
 

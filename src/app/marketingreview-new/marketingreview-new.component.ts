@@ -54,19 +54,25 @@ export class MarketingreviewNewComponent implements OnInit {
   public videotitle: any = '';
   public videodescription: any = '';
   public videotimeflag: any = false;
-  public medigrade:any = 0;
+  public medigrade: any = 0;
+  public pececontract: boolean = true;
+  public creditcontract: boolean = true;
+  public tmflowcontract: boolean = true;
+  public biocontract: boolean = true;
+  public rstcontract: boolean = true;
+  public warrantycontract: boolean = true;
   constructor(public api_service: ApiService,
     public activatedroute: ActivatedRoute, public snackBar: MatSnackBar, private sanitizer: DomSanitizer, public cookie: CookieService, public router: Router) {
     let endpoint = 'https://z2oo2a8oq9.execute-api.us-east-1.amazonaws.com/dev/api/marketiingreviewteach'
     let data = {};
-    if(typeof (this.activatedroute.snapshot.queryParams.pid1) != 'undefined' && this.activatedroute.snapshot.queryParams.pid1 != null){
+    if (typeof (this.activatedroute.snapshot.queryParams.pid1) != 'undefined' && this.activatedroute.snapshot.queryParams.pid1 != null) {
       data = {
         productid: [this.activatedroute.snapshot.queryParams.pid1],
         userid: this.activatedroute.snapshot.params.rep_id
       }
-      if(typeof (this.activatedroute.snapshot.queryParams.pid2) != 'undefined' && this.activatedroute.snapshot.queryParams.pid2 != null){
+      if (typeof (this.activatedroute.snapshot.queryParams.pid2) != 'undefined' && this.activatedroute.snapshot.queryParams.pid2 != null) {
         data = {
-          productid: [this.activatedroute.snapshot.queryParams.pid1,this.activatedroute.snapshot.queryParams.pid2],
+          productid: [this.activatedroute.snapshot.queryParams.pid1, this.activatedroute.snapshot.queryParams.pid2],
           userid: this.activatedroute.snapshot.params.rep_id
         }
       }
@@ -85,11 +91,46 @@ export class MarketingreviewNewComponent implements OnInit {
       this.techata = res.results.userdata[0];
       console.log(this.productdata, 'productdata', this.techata);
     })
+    let send_data = {
+      "condition":
+      {
+        "id": this.activatedroute.snapshot.params.lead_id,
+        "status": 1
+      },
+      "secret": this.cookie.get('secret'),
+      "token": this.cookie.get('jwtToken'),
+      "limit": 0,
+      "skip": 0
+    }
+    this.api_service.requestData1('https://z2oo2a8oq9.execute-api.us-east-1.amazonaws.com/dev/api/firstcontractrequest', send_data).subscribe((res: any) => {
+      if (res.res[0].contracts.length > 0) {
+        for (const key in res.res[0].contracts) {
+          if (res.res[0].contracts[key].contractflag == 'credit') {
+            this.creditcontract = false;
+          }
+          if (res.res[0].contracts[key].contractflag == 'warrenty') {
+            this.warrantycontract = false;
+          }
+          if (res.res[0].contracts[key].contractflag == 'Pece Contract') {
+            this.pececontract = false;
+          }
+          if (res.res[0].contracts[key].contractflag == 'tmflow_contract') {
+            this.tmflowcontract = false;
+          }
+          if (res.res[0].contracts[key].contractflag == 'BioEntergetics Contract') {
+            this.biocontract = false;
+          }
+          if (res.res[0].contracts[key].contractflag == 'RST Sanexas Contract') {
+            this.rstcontract = false;
+          }
+        }
+      }
+    })
   }
 
   ngOnInit() {
-   console.log(this.activatedroute.snapshot.queryParams);
-   
+    console.log(this.activatedroute.snapshot.queryParams);
+
     setTimeout(() => {
       if (this.cookie.check('video_url')) {
         console.log(this.cookie.get('video_url'));
