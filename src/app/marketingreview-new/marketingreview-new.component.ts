@@ -48,7 +48,8 @@ export class MarketingreviewNewComponent implements OnInit {
   public video_url: any = '';
   public video_url1: any = '';
   public Change_video_percent: any = 0;
-
+  public videotitle: any = '';
+  public videodescription: any = '';
   public videotimeflag: any = false;
   constructor(public api_service: ApiService,
     public activatedroute: ActivatedRoute, public snackBar: MatSnackBar, private sanitizer: DomSanitizer, public cookie: CookieService, public router: Router) {
@@ -68,12 +69,19 @@ export class MarketingreviewNewComponent implements OnInit {
   }
 
   ngOnInit() {
-   
+
     setTimeout(() => {
       if (this.cookie.check('video_url')) {
         console.log(this.cookie.get('video_url'));
 
         this.video_url = this.cookie.get('video_url');
+        if (this.cookie.check('videotitle')) {
+          this.videotitle=this.cookie.get('videotitle');
+        }
+        if (this.cookie.check('videodesc')) {
+          this.videodescription=this.cookie.get('videodesc');
+          
+        }
 
       } else {
         var newarr = this.videolist[0].videodata[0].url.split("https://betoparedesallvideos.s3.amazonaws.com");
@@ -81,9 +89,21 @@ export class MarketingreviewNewComponent implements OnInit {
         //   this.video_listtable.video_file.path + this.video_listtable.video_file.fileservername;
         this.cookie.set('video_url', url, undefined, '/');
         this.video_url = url;
+        this.videotitle = this.videolist[0].videodata[0].title;
+        this.videodescription = this.videolist[0].videodata[0].description;
+        
+        // let videotitledesc = {
+        //   videotitle: this.videolist[0].videodata[0].title,
+        //   videodesc: this.videolist[0].videodata[0].description
+
+        // }
+        this.cookie.set('videotitle', this.videotitle, undefined, '/');
+        this.cookie.set('videodesc', this.videodescription, undefined, '/');
+
       }
       this.video_url1 = this.sanitizer.bypassSecurityTrustResourceUrl(this.video_url);
       this.videoplayflag = true;
+
       // console.log(this.videolist[0].videodata[0].url, newarr, url);
     }, 500);
 
@@ -92,9 +112,11 @@ export class MarketingreviewNewComponent implements OnInit {
       this.player = videojs('#my-video-modal');
 
       this.player.controls(false);
-      console.log('onload section');// TO CONTROL FALSE
 
       this.video_currenttime = parseInt(this.player.currentTime());
+      this.video_duration = parseInt(this.player.duration());
+      console.log(this.video_duration, 'onload section', this.video_currenttime);// TO CONTROL FALSE
+
       this.onprocess();
     }, 1000);
 
@@ -163,9 +185,10 @@ export class MarketingreviewNewComponent implements OnInit {
         const duration_seconds: any = sec_duration_num - (duration_hours * 3600) - (duration_minutes * 60);
         this.video_end_time = duration_hours + ':' + duration_minutes + ':' + duration_seconds;
         this.videotimeflag = true;
+        console.log(this.video_duration, 'audio_duration', this.video_end_time);
+
       }, 500);
 
-      console.log(this.video_time, 'audio_duration', this.video_end_time)
 
 
       this.video_percent = (this.video_currenttime / this.video_duration) * 100;
@@ -223,21 +246,26 @@ export class MarketingreviewNewComponent implements OnInit {
     // this.player.dispose();
     // videojs('#my-video-modal').dispose();
     // this.cookie.delete('video_url');
-console.log(this.cookie.get('video_url'),'video_url;;;;');
+    console.log(this.cookie.get('video_url'), 'video_url;;;;');
 
     console.log(val.url);
     // return;
     var newarr = val.url.split("https://betoparedesallvideos.s3.amazonaws.com");
     let url = 'https://d291rlacfzbauk.cloudfront.net' + newarr[1];
     // setTimeout(() => {
-      this.cookie.set('video_url', url, undefined, '/');
-      console.log(this.cookie.get('video_url'),'video_url;;;===========;');
+    this.cookie.set('video_url', url, undefined, '/');
+    
+    console.log(this.cookie.get('video_url'), 'video_url;;;===========;');
 
+    this.videotitle = val.title;
+    this.videodescription = val.description;
+    this.cookie.set('videotitle', this.videotitle, undefined, '/');
+    this.cookie.set('videodesc', this.videodescription, undefined, '/');
     // }, 500);
 
     setTimeout(() => {
       console.log('TEST________________-');
-      
+
       let currentUrl = this.router.url;
       this.router.routeReuseStrategy.shouldReuseRoute = () => false;
       this.router.onSameUrlNavigation = 'reload';
@@ -281,7 +309,7 @@ console.log(this.cookie.get('video_url'),'video_url;;;;');
 
   }
   ngOnDestroy() {
-    this.cookie.delete('video_url')
+    // this.cookie.delete('video_url')
     this.player.dispose();
   }
 }

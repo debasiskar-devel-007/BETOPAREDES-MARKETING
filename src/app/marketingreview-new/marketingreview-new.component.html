@@ -104,10 +104,9 @@
             <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/jssO8-5qmag" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe> -->
-            <video id="my-video-modal" *ngIf='videoplayflag' 
-              (timeupdate)="onprocess()" preload="auto" width="640" height="264"
-              poster="https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/dr_banner1.jpg" data-setup="{}"
-              controls>
+            <video id="my-video-modal" *ngIf='videoplayflag' (timeupdate)="onprocess()" preload="auto" width="640"
+              height="264" poster="https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/dr_banner1.jpg"
+              data-setup="{}" controls>
               <source [src]="video_url" type="video/mp4" />
               <p class="vjs-no-js">
                 To view this video please enable JavaScript, and consider upgrading to a
@@ -117,6 +116,12 @@
                 </a>
               </p>
             </video>
+            <div class="videotitledesc">
+              <strong>
+                {{videotitle}}
+              </strong><br>
+              {{videodescription}}
+            </div>
 
             <!-- <video width="100%" id="vid" autoplay loop controls muted>
               <source src="{{ video_url }}" type="video/mp4" />
@@ -126,12 +131,13 @@
             <ng-container *ngIf="videotimeflag">
               <!-- <mat-progress-bar class="loaderprogress" mode="determinate" value="{{ video_percent }}"></mat-progress-bar> -->
               <div (click)='progressvideo(video_percent)'>
-                <mat-slider  class="loaderprogress" [disabled]="disabled"  [value]='video_percent' [(ngModel)]="Change_video_percent" aria-labelledby="example-name-label">
+                <mat-slider class="loaderprogress" [disabled]="disabled" [value]='video_percent'
+                  [(ngModel)]="Change_video_percent" aria-labelledby="example-name-label">
                 </mat-slider>
               </div>
               <div class="actioncontrol" id="actionid" [ngClass]="show">
                 <span class="videotime">{{ video_time }}/{{ video_end_time }}</span>
-      
+
                 <button (click)="playbtn()" *ngIf='!playpauseflag' class="playbtn">
                   <span class="material-icons">play_arrow</span>
                 </button>
@@ -144,15 +150,15 @@
                   </button>
                   <mat-icon *ngIf='!exitfullscreenflag' (click)='fullscreenview()'>fullscreen</mat-icon>
                   <!-- <mat-icon *ngIf='exitfullscreenflag' (click)='fullscreenview()'>fullscreen_exit</mat-icon> -->
-      
+
                 </div>
-      
+
                 <button (click)="pausebtn()" *ngIf='playpauseflag' class="pausebtn">
                   <mat-icon>pause</mat-icon>
-      
+
                 </button>
               </div>
-      
+
             </ng-container>
 
           </div>
