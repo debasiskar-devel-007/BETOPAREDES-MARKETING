@@ -3075,7 +3075,8 @@ text-align: center;}
 
 .marketingre_view_top_left img{ width: auto; max-width: 100%;}
 
-.marketingre_view_top_right{   padding-left: 40px; background: url(https://marketing.betoparedes.com/assets/images/marketingre_view_devider.png) no-repeat left center;}
+.marketingre_view_top_right{   padding-left: 40px; display: flex;
+    background: url(https://marketing.betoparedes.com/assets/images/marketingre_view_devider.png) no-repeat left center;}
 
 .marketingre_view_top_right h2{ font-size: 48px; color: #00bdf2; text-transform: uppercase; font-weight: bold; text-shadow: 1px 1px 2px #737c7f;}
 
@@ -3144,6 +3145,7 @@ text-align: center;}
 
 
 .actioncontrol{ position: absolute;}
+.videotitledesc{ position: inherit;}
 .video-responsive{
     overflow:hidden;
     padding-bottom:56.25%;
@@ -3282,6 +3284,170 @@ text-align: center;}
        background: -ms-linear-gradient(top, rgba(104,207,255,1) 0%, rgba(13,168,240,1) 100%);
        background: linear-gradient(to bottom, rgba(104,207,255,1) 0%, rgba(13,168,240,1) 100%);
        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#68cfff', endColorstr='#0da8f0', GradientType=0 );}
+
+
+.video-responsive .vjs-control-bar{ display: none;}
+.video-responsive .vjs-loading-spinner{ display: none;}
+.video-responsive .vjs-big-play-button{ display: none;}
+.video-responsive .vjs-control-bar{ display: none;}
+.video-responsive .vjs-modal-dialog{ display: none;}
+
+.my-video-modal-dimensions {
+    width: 100%;
+    height: auto;
+}
+
+.vjs-poster {
+    display: inline-block;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-color: #000000;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%; }
+  
+  .vjs-has-started .vjs-poster {
+    display: none; }
+
+    .actioncontrol {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0,0,0,.5);
+        width: 100%;
+        bottom: 0;
+        color: #fff;
+        padding: 0 10px 3px;
+    }
+
+    .video-responsive  video{ width: 100%;}
+
+    .video-responsive  .mat-slider-horizontal {
+        bottom: 38px;
+        position: absolute;
+        z-index: 99999;
+        width: 100%;
+        min-width: 100%;
+        transition: opacity 250ms linear;
+        background: rgba(0,0,0,.5);
+        padding-top: 0;
+        height: auto;
+    }
+
+    .video-responsive .mat-slider-horizontal .mat-slider-wrapper {
+        background-color: #c5cae9!important;
+        left: 0;
+        right: 0;
+        cursor: pointer;
+        height: 2px;
+        top: 0;
+    }
+
+    
+ 
+.actioncontrol {
+    position: absolute;
+    z-index: 9999!important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,.5);
+    width: 100%;
+    bottom: 0;
+    color: #fff;
+    padding: 0 10px 3px;
+}
+
+.actioncontrol .videotime {
+    margin: 0 auto 0 0;
+    order: 3;
+}
+
+.actioncontrol button.playbtn {
+    order: 1; background: url(../images/play_icon.png) no-repeat center center;width: 18px;
+    height: 25px;
+    font-size: 0px;
+    background-size: 100%;
+    margin-right: 10px;
+}
+
+.actioncontrol button.pausebtn {
+    order: 1; background: url(../images/pause_icon.png) no-repeat center center;width: 18px;
+    height: 25px;
+    font-size: 0px;
+    background-size: 100%;
+    margin-right: 10px;
+}
+
+.fullscreenBTN{background: url(../images/fullscreen_img.png) no-repeat center center; width: 25px;
+    height: 25px;
+    font-size: 0px;
+    background-size: 100%;
+    margin: 0 0 0 6px;}
+.actioncontrol button {
+    background: 0 0;
+    box-shadow: none;
+    color: #fff;
+    border: none;
+    padding: 0;
+    height: 35px;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    outline: 0;
+}
+
+.py_playviderowrp .playbtnlessplus {
+    cursor: pointer;
+}
+.playbtnlessplus {
+    margin: 0;
+    order: 4;
+    display: flex;
+    align-items: center;
+}
+
+.actioncontrol button {
+    background: 0 0;
+    box-shadow: none;
+    color: #fff;
+    border: none;
+    padding: 0;
+    height: 35px;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    outline: 0;
+}
+.actioncontrol button {
+    background: 0 0;
+    box-shadow: none;
+    color: #fff;
+    border: none;
+    padding: 0;
+    height: 35px;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    outline: 0;
+}
+.actioncontrol button img {
+    -webkit-filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);
+    width: 32px;
+    height: 32px;
+    font-size: 32px;
+}
+
 
 @media screen and (max-width:1860px) {
     .marketingre_view_top_body{ width: 1730px;}

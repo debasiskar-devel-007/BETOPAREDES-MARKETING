@@ -18,17 +18,17 @@
         <ng-container *ngFor="let item of productdata">
           <ng-container *ngIf="medigrade != 2">
           <img src={{item?.image}} alt="#">
+          <!-- <span>
+            <h2>{{item?.productname}} </h2>
+          </span> -->
         </ng-container>
       </ng-container>
       <ng-container *ngIf="medigrade == 2">
         <img src="../../assets/images/quadrant_logo.png" alt="#">
+        <!-- <span>
+          <h2>MediGrade</h2>
+        </span> -->
       </ng-container>
-
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-
-        <!-- <h2>{{productdata?.productname}} </h2>
-
-        <h3>{{productdata?.productname}} </h3> -->
       </div>
 
 
@@ -57,6 +57,7 @@
     </div>
 
 
+ 
 
 
     <div class="marketingre_view_body_wrapper_detail">
@@ -70,10 +71,18 @@
 
             <h2 (click)='videoplay(item,i)'>{{item.name}}</h2>
             <ng-container *ngIf='videolist[i].flag==true'>
+
+
               <label *ngFor='let vlink of videolink; let j=index'>
+
+                <div class="vlinkdiv"> <img [src]="vlink?.img"></div>
+
+
                 <span (click)='playnext(vlink,j)'>
                   {{vlink.title}}
-                </span></label>
+                </span>
+              </label>
+
             </ng-container>
 
 
@@ -110,10 +119,9 @@
             <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/jssO8-5qmag" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe> -->
-            <video id="my-video-modal" *ngIf='videoplayflag' 
-              (timeupdate)="onprocess()" preload="auto" width="640" height="264"
-              poster="https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/dr_banner1.jpg" data-setup="{}"
-              controls>
+            <video id="my-video-modal" *ngIf='videoplayflag' (timeupdate)="onprocess()" preload="auto" width="640"
+              height="264" poster="https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/dr_banner1.jpg"
+              data-setup="{}" controls>
               <source [src]="video_url" type="video/mp4" />
               <p class="vjs-no-js">
                 To view this video please enable JavaScript, and consider upgrading to a
@@ -123,6 +131,12 @@
                 </a>
               </p>
             </video>
+            <div class="videotitledesc">
+              <strong>
+                {{videotitle}}
+              </strong><br>
+              {{videodescription}}
+            </div>
 
             <!-- <video width="100%" id="vid" autoplay loop controls muted>
               <source src="{{ video_url }}" type="video/mp4" />
@@ -132,14 +146,15 @@
             <ng-container *ngIf="videotimeflag">
               <!-- <mat-progress-bar class="loaderprogress" mode="determinate" value="{{ video_percent }}"></mat-progress-bar> -->
               <div (click)='progressvideo(video_percent)'>
-                <mat-slider  class="loaderprogress" [disabled]="disabled"  [value]='video_percent' [(ngModel)]="Change_video_percent" aria-labelledby="example-name-label">
+                <mat-slider class="loaderprogress" [disabled]="disabled" [value]='video_percent'
+                  [(ngModel)]="Change_video_percent" aria-labelledby="example-name-label">
                 </mat-slider>
               </div>
               <div class="actioncontrol" id="actionid" [ngClass]="show">
                 <span class="videotime">{{ video_time }}/{{ video_end_time }}</span>
-      
+
                 <button (click)="playbtn()" *ngIf='!playpauseflag' class="playbtn">
-                  <span class="material-icons">play_arrow</span>
+                  <span>play_arrow</span>
                 </button>
                 <div class="playbtnlessplus">
                   <button (click)="skip(-10)" class="playbtnless">
@@ -148,17 +163,17 @@
                   <button (click)="skip(10)" class="playbtnplus">
                     <img src="https://img.icons8.com/ios-glyphs/60/000000/forward-10.png" />
                   </button>
-                  <mat-icon *ngIf='!exitfullscreenflag' (click)='fullscreenview()'>fullscreen</mat-icon>
+                  <span *ngIf='!exitfullscreenflag' (click)='fullscreenview()' class="fullscreenBTN">fullscreen</span>
                   <!-- <mat-icon *ngIf='exitfullscreenflag' (click)='fullscreenview()'>fullscreen_exit</mat-icon> -->
-      
+
                 </div>
-      
+
                 <button (click)="pausebtn()" *ngIf='playpauseflag' class="pausebtn">
-                  <mat-icon>pause</mat-icon>
-      
+                  <span>pause</span>
+
                 </button>
               </div>
-      
+
             </ng-container>
 
           </div>
