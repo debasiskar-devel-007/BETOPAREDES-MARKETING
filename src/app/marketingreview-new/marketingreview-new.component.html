@@ -74,10 +74,18 @@
 
             <h2 (click)='videoplay(item,i)'>{{item.name}}</h2>
             <ng-container *ngIf='videolist[i].flag==true'>
+
+
               <label *ngFor='let vlink of videolink; let j=index'>
+
+                <div class="vlinkdiv"> <img [src]="vlink?.img"></div>
+
+
                 <span (click)='playnext(vlink,j)'>
                   {{vlink.title}}
-                </span></label>
+                </span>
+              </label>
+
             </ng-container>
 
 
@@ -126,6 +134,12 @@
                 </a>
               </p>
             </video>
+            <div class="videotitledesc">
+              <strong>
+                {{videotitle}}
+              </strong><br>
+              {{videodescription}}
+            </div>
 
             <!-- <video width="100%" id="vid" autoplay loop controls muted>
               <source src="{{ video_url }}" type="video/mp4" />

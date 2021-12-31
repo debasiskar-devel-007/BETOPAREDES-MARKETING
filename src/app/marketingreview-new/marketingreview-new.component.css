@@ -127,7 +127,7 @@
 
 
     .marketingre_view_body_con_top_left h2{border-radius: 0px;
-        margin: 0 5px;
+        margin: 0;
         font-size: 26px;
         line-height: 32px;
         color: #001420!important;
@@ -148,7 +148,18 @@
 .marketingre_view_top_right_sub span{ display: block; padding-left: 10px;}
 
 
-.marketingre_view_body_con_top_left label{ display: block; border-bottom: solid 1px #ccc}
+.marketingre_view_body_con_top_left label{ display: flex; flex-wrap: wrap;  border-bottom: solid 1px #154676; margin: 0; font-size: 18px;     align-items: center;
+   }
+   .vlinkdiv{  width: 100px;
+    margin-right: 10px;
+    height: 56px;
+    background: #000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;}
+ 
+    .vlinkdiv img{ width: 100%;}
 @media screen and (max-width: 1199px){
 
     .marketingre_view_body_con_left button {  display: block;  }

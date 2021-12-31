@@ -3145,6 +3145,7 @@ text-align: center;}
 
 
 .actioncontrol{ position: absolute;}
+.videotitledesc{ position: inherit;}
 .video-responsive{
     overflow:hidden;
     padding-bottom:56.25%;
