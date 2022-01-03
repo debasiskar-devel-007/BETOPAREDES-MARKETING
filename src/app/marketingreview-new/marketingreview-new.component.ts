@@ -90,7 +90,7 @@ export class MarketingreviewNewComponent implements OnInit {
   public userdetails: any = [];
   constructor(public api_service: ApiService,
     public activatedroute: ActivatedRoute, public snackBar: MatSnackBar, private sanitizer: DomSanitizer, public cookie: CookieService, public router: Router) {
-    let endpoint = 'https://z2oo2a8oq9.execute-api.us-east-1.amazonaws.com/dev/api/marketiingreviewteach'
+    let endpoint = environment.api_url + 'api/marketiingreviewteach';
     let data = {};
     if (typeof (this.activatedroute.snapshot.queryParams.pid1) != 'undefined' && this.activatedroute.snapshot.queryParams.pid1 != null) {
       data = {
@@ -118,57 +118,8 @@ export class MarketingreviewNewComponent implements OnInit {
       this.techata = res.results.userdata[0];
       console.log(this.productdata, 'productdata', this.techata);
     })
-    let send_data = {
-      "condition":
-      {
-        "id": this.activatedroute.snapshot.params.lead_id,
-        "status": 1
-      },
-      "secret": this.cookie.get('secret'),
-      "token": this.cookie.get('jwtToken'),
-      "limit": 0,
-      "skip": 0
-    }
-    this.api_service.requestData1(environment.api_url + 'api/firstcontractrequest', send_data).subscribe((res: any) => {
-      if (res.res[0].contracts.length > 0) {
-        for (const key in res.res[0].contracts) {
-          if (res.res[0].contracts[key].contractflag == 'credit') {
-            this.creditcontract = false;
-          }
-          if (res.res[0].contracts[key].contractflag == 'warrenty') {
-            this.warrantycontract = false;
-          }
-          if (res.res[0].contracts[key].contractflag == 'Pece Contract') {
-            this.pececontract = false;
-          }
-          if (res.res[0].contracts[key].contractflag == 'tmflow_contract') {
-            this.tmflowcontract = false;
-          }
-          if (res.res[0].contracts[key].contractflag == 'BioEntergetics Contract') {
-            this.biocontract = false;
-          }
-          if (res.res[0].contracts[key].contractflag == 'RST Sanexas Contract') {
-            this.rstcontract = false;
-          }
-        }
-      }
-    })
-    let req_data = {
-      "secret": this.cookie.get('secret'),
-      "token": this.cookie.get('jwtToken'),
-      "condition": {
-        "id": "_id",
-        "limit": 1,
-        "skip": 0,
-        "type": "lead",
-        "_id": this.activatedroute.snapshot.params.lead_id
-      }
-    }
-    this.api_service.requestData1(environment.api_url + 'api/getoneleadfolderview', req_data).subscribe((res: any) => {
-      this.userdetails = res.results.userView[0];
-      console.log(this.userdetails);
-
-    })
+    this.firstcontractrequest();
+    this.getoneleadfolderview();
   }
 
   ngOnInit() {
@@ -225,6 +176,61 @@ export class MarketingreviewNewComponent implements OnInit {
     }, 1000);
 
 
+  }
+  firstcontractrequest(){
+    let send_data = {
+      "condition":
+      {
+        "id": this.activatedroute.snapshot.params.lead_id,
+        "status": 1
+      },
+      "secret": this.cookie.get('secret'),
+      "token": this.cookie.get('jwtToken'),
+      "limit": 0,
+      "skip": 0
+    }
+    this.api_service.requestData1(environment.api_url + 'api/firstcontractrequest', send_data).subscribe((res: any) => {
+      if (res.res[0].contracts.length > 0) {
+        for (const key in res.res[0].contracts) {
+          if (res.res[0].contracts[key].contractflag == 'credit') {
+            this.creditcontract = false;
+          }
+          if (res.res[0].contracts[key].contractflag == 'warrenty') {
+            this.warrantycontract = false;
+          }
+          if (res.res[0].contracts[key].contractflag == 'Pece Contract') {
+            this.pececontract = false;
+          }
+          if (res.res[0].contracts[key].contractflag == 'tmflow_contract') {
+            this.tmflowcontract = false;
+          }
+          if (res.res[0].contracts[key].contractflag == 'BioEntergetics Contract') {
+            this.biocontract = false;
+          }
+          if (res.res[0].contracts[key].contractflag == 'RST Sanexas Contract') {
+            this.rstcontract = false;
+          }
+        }
+      }
+    })
+  }
+  getoneleadfolderview(){
+    let req_data = {
+      "secret": this.cookie.get('secret'),
+      "token": this.cookie.get('jwtToken'),
+      "condition": {
+        "id": "_id",
+        "limit": 1,
+        "skip": 0,
+        "type": "lead",
+        "_id": this.activatedroute.snapshot.params.lead_id
+      }
+    }
+    this.api_service.requestData1(environment.api_url + 'api/getoneleadfolderview', req_data).subscribe((res: any) => {
+      this.userdetails = res.results.userView[0];
+      console.log(this.userdetails);
+
+    })
   }
   loadvideo() {
 
@@ -361,6 +367,8 @@ export class MarketingreviewNewComponent implements OnInit {
       .requestData1(environment.api_url + ednpoint, data)
       .subscribe((res: any) => {
         this.snackBar.open(res.successmsg, 'ok');
+        this.firstcontractrequest();
+        this.getoneleadfolderview();
       });
   }
   videoplay(val, i) {
