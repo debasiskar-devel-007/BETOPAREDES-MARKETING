@@ -532,6 +532,6 @@ export class MarketingreviewNewComponent implements OnInit {
   }
   ngOnDestroy() {
     // this.cookie.delete('video_url')
-    this.player.dispose();
+    // this.player.dispose();
   }
 }

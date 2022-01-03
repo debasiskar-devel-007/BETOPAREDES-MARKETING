@@ -16,6 +16,46 @@
         }
       }
     },
+    "ServerlessDeploymentBucketPolicy": {
+      "Type": "AWS::S3::BucketPolicy",
+      "Properties": {
+        "Bucket": {
+          "Ref": "ServerlessDeploymentBucket"
+        },
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "s3:*",
+              "Effect": "Deny",
+              "Principal": "*",
+              "Resource": [
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":s3:::",
+                      {
+                        "Ref": "ServerlessDeploymentBucket"
+                      },
+                      "/*"
+                    ]
+                  ]
+                }
+              ],
+              "Condition": {
+                "Bool": {
+                  "aws:SecureTransport": false
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
     "ApiLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
@@ -47,8 +87,7 @@
               "Fn::Join": [
                 "-",
                 [
-                  "production",
-                  "betoparedesmarketing",
+                  "betoparedesmarketing-production",
                   "lambda"
                 ]
               ]
@@ -59,11 +98,12 @@
                 {
                   "Effect": "Allow",
                   "Action": [
-                    "logs:CreateLogStream"
+                    "logs:CreateLogStream",
+                    "logs:CreateLogGroup"
                   ],
                   "Resource": [
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/betoparedesmarketing-production-api:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/betoparedesmarketing-production*:*"
                     }
                   ]
                 },
@@ -74,7 +114,7 @@
                   ],
                   "Resource": [
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/betoparedesmarketing-production-api:*:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/betoparedesmarketing-production*:*:*"
                     }
                   ]
                 }
@@ -87,9 +127,10 @@
           "Fn::Join": [
             "-",
             [
-              "betoparedesmarketing",
-              "production",
-              "us-east-1",
+              "betoparedesmarketing-production",
+              {
+                "Ref": "AWS::Region"
+              },
               "lambdaRole"
             ]
           ]
@@ -103,7 +144,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/betoparedesmarketing/production/1627618811134-2021-07-30T04:20:11.134Z/betoparedesmarketing.zip"
+          "S3Key": "serverless/betoparedesmarketing/production/1641209629141-2022-01-03T11:33:49.141Z/betoparedesmarketing.zip"
         },
         "FunctionName": "betoparedesmarketing-production-api",
         "Handler": "lambda.universal",
@@ -122,14 +163,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "ApiLambdaVersion9uxJDFFHrXGgwYAHdogU57aRM2qHyEw885TnGihR2uI": {
+    "ApiLambdaVersionCc5ezqrECWNdYC1Fhe4UHTwogLptUL4aNEiXJynBttw": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ApiLambdaFunction"
         },
-        "CodeSha256": "haH0F8YWv3WBjrP2C806K+4NVpDFw9cRYANLEsQAWiU="
+        "CodeSha256": "qFwidGuseSqpxsGz8bUarJ854zc0yjiiaX5JtFqno2Q="
       }
     },
     "ApiGatewayRestApi": {
@@ -140,7 +181,8 @@
           "Types": [
             "EDGE"
           ]
-        }
+        },
+        "Policy": ""
       }
     },
     "ApiGatewayResourceProxyVar": {
@@ -247,7 +289,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1627618778708": {
+    "ApiGatewayDeployment1641209583466": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -270,17 +312,7 @@
           ]
         },
         "Action": "lambda:InvokeFunction",
-        "Principal": {
-          "Fn::Join": [
-            "",
-            [
-              "apigateway.",
-              {
-                "Ref": "AWS::URLSuffix"
-              }
-            ]
-          ]
-        },
+        "Principal": "apigateway.amazonaws.com",
         "SourceArn": {
           "Fn::Join": [
             "",
@@ -317,7 +349,7 @@
     "ApiLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ApiLambdaVersion9uxJDFFHrXGgwYAHdogU57aRM2qHyEw885TnGihR2uI"
+        "Ref": "ApiLambdaVersionCc5ezqrECWNdYC1Fhe4UHTwogLptUL4aNEiXJynBttw"
       }
     },
     "ServiceEndpoint": {
@@ -330,7 +362,11 @@
             {
               "Ref": "ApiGatewayRestApi"
             },
-            ".execute-api.us-east-1.",
+            ".execute-api.",
+            {
+              "Ref": "AWS::Region"
+            },
+            ".",
             {
               "Ref": "AWS::URLSuffix"
             },
