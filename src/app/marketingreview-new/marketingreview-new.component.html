@@ -17,40 +17,40 @@
       <div class="marketingre_view_top_right">
         <ng-container *ngFor="let item of productdata">
           <ng-container *ngIf="medigrade != 2">
-          <img src={{item?.image}} alt="#">
-          <span *ngIf="item?._id == '604aff3691b7c80008ca11a8' && pececontract">
-            <h6>{{item?.productname}} </h6>
-            <button (click)="newrequestcontract('pece')" >Request Contract</button>
+            <span class="contract_div"> <img src={{item?.image}} alt="#"></span>
+            <span *ngIf="item?._id == '604aff3691b7c80008ca11a8' && pececontract" class="contract_div">
+              <h2>{{item?.productname}} </h2>
+              <button (click)="newrequestcontract('pece')">Request Contract</button>
+            </span>
+            <span *ngIf="item?._id == '612c883f118c110009f02820' && biocontract" class="contract_div">
+              <h2>{{item?.productname}} </h2>
+              <button (click)="newrequestcontract('bio')">Request Contract</button>
+            </span>
+            <span *ngIf="item?._id == '612c89242005f400082d5fb1' && rstcontract" class="contract_div">
+              <h2>{{item?.productname}} </h2>
+              <button (click)="newrequestcontract('rst')">Request Contract</button>
+            </span>
+          </ng-container>
+        </ng-container>
+        <ng-container *ngIf="medigrade == 2">
+          <span class="contract_div"><img src="../../assets/images/quadrant_logo.png" alt="#"></span>
+          <span *ngIf="pececontract" class="contract_div">
+            <h2>Pece</h2>
+            <button (click)="newrequestcontract('pece')">Request Contract</button>
           </span>
-          <span *ngIf="item?._id == '612c883f118c110009f02820' && biocontract">
-            <h6>{{item?.productname}} </h6>
-            <button (click)="newrequestcontract('bio')" >Request Contract</button>
+          <span *ngIf="tmflowcontract" class="contract_div">
+            <h2>TM-FLOW ANS MEDICAL</h2>
+            <button (click)="newrequestcontract('tmflow')">Request Contract</button>
           </span>
-          <span *ngIf="item?._id == '612c89242005f400082d5fb1' && rstcontract">
-            <h6>{{item?.productname}} </h6>
-            <button (click)="newrequestcontract('rst')" >Request Contract</button>
+          <span *ngIf="creditcontract" class="contract_div">
+            <h2>TM-FLOW ANS MEDICAL CREDIT APPLICATION</h2>
+            <button (click)="newrequestcontract('credit')">Request Contract</button>
+          </span>
+          <span *ngIf="warrantycontract" class="contract_div">
+            <h2>TM-FLOW ANS MEDICAL DEVICE 5-YEAR EXTENDED WARRANTY</h2>
+            <button (click)="newrequestcontract('warranty')">Request Contract</button>
           </span>
         </ng-container>
-      </ng-container>
-      <ng-container *ngIf="medigrade == 2">
-        <img src="../../assets/images/quadrant_logo.png" alt="#">
-        <span *ngIf="pececontract">
-          <h6>Pece</h6>
-          <button (click)="newrequestcontract('pece')" >Request Contract</button>
-        </span>
-        <span *ngIf="tmflowcontract">
-          <h6>TM-FLOW ANS MEDICAL</h6>
-          <button (click)="newrequestcontract('tmflow')" >Request Contract</button>
-        </span>
-        <span *ngIf="creditcontract">
-          <h6>TM-FLOW ANS MEDICAL CREDIT APPLICATION</h6>
-          <button (click)="newrequestcontract('credit')" >Request Contract</button>
-        </span>
-        <span *ngIf="warrantycontract">
-          <h6>TM-FLOW ANS MEDICAL DEVICE 5-YEAR EXTENDED WARRANTY</h6>
-          <button (click)="newrequestcontract('warranty')" >Request Contract</button>
-        </span>
-      </ng-container>
       </div>
 
 
@@ -153,12 +153,7 @@
                 </a>
               </p>
             </video>
-            <div class="videotitledesc">
-              <strong>
-                {{videotitle}}
-              </strong><br>
-              {{videodescription}}
-            </div>
+
 
             <!-- <video width="100%" id="vid" autoplay loop controls muted>
               <source src="{{ video_url }}" type="video/mp4" />
@@ -200,8 +195,10 @@
 
           </div>
 
-
-
+          <div class="videodescription">
+            <h2>{{videotitle}}</h2>
+            <h3>{{videodescription}}</h3>
+          </div>
           <!-- <button>Marketing Strategies</button>
 
           <button>Expected Revenues </button> -->
@@ -220,16 +217,15 @@
     </div>
 
 
-    <!-- 
-    <div class="marketingre_view_body_footer">
+
+
+
+    <!-- <div class="marketingre_view_body_footer">
 
       <div class="marketingre_view_body_footer_wrapper">
 
-        <h2>Your Doctors Will Be Excited With The RM-3A Testing And Report</h2>
-        <h3>Take advantage of your physicians’ network and earn big with AWS PECE
-          Program and the RM-3A medical device. No other system in the ANS medical industry gives
-          you as much data, and our level of analytical accuracy is unmatched by any other available devices.
-        </h3>
+        <h2>{{videotitle}}</h2>
+        <h3>{{videodescription}}</h3>
 
       </div>
 
