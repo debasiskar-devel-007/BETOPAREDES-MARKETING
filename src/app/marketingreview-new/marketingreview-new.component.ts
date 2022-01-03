@@ -68,8 +68,10 @@ export class MarketingreviewNewComponent implements OnInit {
 
       [{ url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-16375886325607774485510954222850.mp4', title: 'TM-FLOW REPORT', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
 
-      { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4', title: 'Software walkthrough', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' }]
-  }];
+      { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4', title: 'Software walkthrough', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
+      { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/PECE-demo.mp4',  img: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-PECE-demo.jpg',  title: 'PECE Software Walk through', description: ' ' }]
+  },
+];
 
 
   public videolink: any = [];
