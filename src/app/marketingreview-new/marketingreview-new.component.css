@@ -163,6 +163,27 @@
 
     .videotitledesc{ display: none!important;}
 
+
+    .contract_div{ display: inline-block; padding-left: 10px;}
+.contract_div button{border-radius: 0px;
+    margin: 0;
+    font-size: 18px;
+    line-height: 20px;
+    color: #001420!important;
+    text-align: center;
+    padding: 14px 15px 16px 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    background: rgb(250,226,156);
+    background: -webkit-gradient( linear , left top, left bottom , from(rgba(250,226,156,1)), to(rgba(244,185,20,1)));
+    background: linear-gradient( 
+180deg , rgba(250,226,156,1) 0%, rgba(244,185,20,1) 100%);
+    width: auto;
+    text-shadow: none; border-radius: 5px;}
+
+
 @media screen and (max-width: 1199px){
 
     .marketingre_view_body_con_left button {  display: block;  }

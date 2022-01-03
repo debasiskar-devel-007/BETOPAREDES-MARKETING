@@ -18,15 +18,15 @@
         <ng-container *ngFor="let item of productdata">
           <ng-container *ngIf="medigrade != 2">
             <img src={{item?.image}} alt="#">
-            <span *ngIf="item?._id == '604aff3691b7c80008ca11a8' && pececontract">
+            <span *ngIf="item?._id == '604aff3691b7c80008ca11a8' && pececontract" class="contract_div">
               <h2>{{item?.productname}} </h2>
               <button>Request Contract</button>
             </span>
-            <span *ngIf="item?._id == '612c883f118c110009f02820' && biocontract">
+            <span *ngIf="item?._id == '612c883f118c110009f02820' && biocontract" class="contract_div">
               <h2>{{item?.productname}} </h2>
               <button>Request Contract</button>
             </span>
-            <span *ngIf="item?._id == '612c89242005f400082d5fb1' && rstcontract">
+            <span *ngIf="item?._id == '612c89242005f400082d5fb1' && rstcontract" class="contract_div">
               <h2>{{item?.productname}} </h2>
               <button>Request Contract</button>
             </span>
@@ -34,19 +34,19 @@
         </ng-container>
         <ng-container *ngIf="medigrade == 2">
           <img src="../../assets/images/quadrant_logo.png" alt="#">
-          <span *ngIf="pececontract">
+          <span *ngIf="pececontract" class="contract_div">
             <h2>Pece</h2>
             <button>Request Contract</button>
           </span>
-          <span *ngIf="tmflowcontract">
+          <span *ngIf="tmflowcontract" class="contract_div">
             <h2>TM-FLOW ANS MEDICAL</h2>
             <button>Request Contract</button>
           </span>
-          <span *ngIf="creditcontract">
+          <span *ngIf="creditcontract" class="contract_div">
             <h2>TM-FLOW ANS MEDICAL CREDIT APPLICATION</h2>
             <button>Request Contract</button>
           </span>
-          <span *ngIf="warrantycontract">
+          <span *ngIf="warrantycontract" class="contract_div">
             <h2>TM-FLOW ANS MEDICAL DEVICE 5-YEAR EXTENDED WARRANTY</h2>
             <button>Request Contract</button>
           </span>
