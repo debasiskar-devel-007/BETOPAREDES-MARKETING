@@ -97,7 +97,8 @@ export class MarketingreviewNewComponent implements OnInit {
   public biocontract: boolean = true;
   public rstcontract: boolean = true;
   public warrantycontract: boolean = true;
-  public userdetails: any = [];
+  public userdetails: any = {};
+  public parent_data:any = {};
   constructor(public api_service: ApiService,
     public activatedroute: ActivatedRoute, public snackBar: MatSnackBar, private sanitizer: DomSanitizer, public cookie: CookieService, public router: Router) {
     let endpoint = environment.api_url + 'api/marketiingreviewteach';
@@ -129,6 +130,7 @@ export class MarketingreviewNewComponent implements OnInit {
       console.log(this.productdata, 'productdata', this.techata);
     })
     this.firstcontractrequest();
+    this.parentdata();
     this.getoneleadfolderview();
   }
 
@@ -190,6 +192,14 @@ export class MarketingreviewNewComponent implements OnInit {
     }, 1000);
 
 
+  }
+  parentdata(){
+    let send_data={
+      id:this.activatedroute.snapshot.params.admin_id
+    }
+    this.api_service.requestData1(environment.api_url + 'api/getoneuser',send_data).subscribe((res:any)=>{
+      this.parent_data = res.result[0]
+    })
   }
   firstcontractrequest(){
     let send_data = {
@@ -289,10 +299,10 @@ export class MarketingreviewNewComponent implements OnInit {
         contracts: [
           {
             status: "request",
-            added_by_id: JSON.parse(this.cookie.get('userid')),
-            addedby: JSON.parse(this.cookie.get('firstname')) + ' ' + JSON.parse(this.cookie.get('lastname')),
+            added_by_id: this.parent_data._id,
+            addedby: this.parent_data.firstname + ' ' + this.parent_data.lastname,
             addedondatetime: Math.round(new Date().getTime()),
-            type: JSON.parse(this.cookie.get('type')),
+            type: this.parent_data.type,
           },
         ],
         contact_id: this.userdetails.singeealldata[0]._id ? this.userdetails.singeealldata[0]._id : '',
@@ -328,10 +338,10 @@ export class MarketingreviewNewComponent implements OnInit {
         contracts: [
           {
             status: "request",
-            added_by_id: JSON.parse(this.cookie.get('userid')),
-            addedby: JSON.parse(this.cookie.get('firstname')) + ' ' + JSON.parse(this.cookie.get('lastname')),
+            added_by_id: this.parent_data._id,
+            addedby: this.parent_data.firstname + ' ' + this.parent_data.lastname,
             addedondatetime: Math.round(new Date().getTime()),
-            type: JSON.parse(this.cookie.get('type')),
+            type: this.parent_data.type,
           },
         ],
         contact_id: this.userdetails.singeealldata[0]._id ? this.userdetails.singeealldata[0]._id : '',
@@ -364,10 +374,10 @@ export class MarketingreviewNewComponent implements OnInit {
         contracts: [
           {
             status: "request",
-            added_by_id: JSON.parse(this.cookie.get('userid')),
-            addedby: JSON.parse(this.cookie.get('firstname')) + ' ' + JSON.parse(this.cookie.get('lastname')),
+            added_by_id: this.parent_data._id,
+            addedby: this.parent_data.firstname + ' ' + this.parent_data.lastname,
             addedondatetime: Math.round(new Date().getTime()),
-            type: JSON.parse(this.cookie.get('type')),
+            type: this.parent_data.type,
           },
         ],
         contractflag: "credit",
