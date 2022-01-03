@@ -27,6 +27,8 @@ export class MarketingreviewNewComponent implements OnInit {
   public video_duration: any = '';
   public video_end_time: any = '0:0:0';
   public video_percent: any = 0;
+  public posterimg: any ;
+
   public videoJsConfigObj = {
     preload: 'metadata',
     controls: false,
@@ -57,9 +59,12 @@ export class MarketingreviewNewComponent implements OnInit {
   {
     name: 'Sales pitch', flag: false, videodata:
 
-      [{ url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-16375886325607774485510954222850.mp4', title: 'TM-FLOW REPORT', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
+      [{ url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/PECE-Sales-cript.mp4', img: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-PECE-Sales-pitch.jpg', title: 'PECE Sale Pitch', description: ' ' },
 
-      { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4', title: 'TM-FLOW REPORT', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' }]
+      // { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4', title: 'TM-FLOW REPORT', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' }
+    ]
+
+
   },
 
 
@@ -67,10 +72,13 @@ export class MarketingreviewNewComponent implements OnInit {
   {
     name: 'Software walkthrough', flag: false, videodata:
 
-      [{ url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-16375886325607774485510954222850.mp4', title: 'TM-FLOW REPORT', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
+      [
+        // { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-16375886325607774485510954222850.mp4', title: 'TM-FLOW REPORT', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
 
-      { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4', title: 'Software walkthrough', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
-      { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/PECE-demo.mp4',  img: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-PECE-demo.jpg',  title: 'PECE Software Walk through', description: ' ' }]
+      // { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4', title: 'Software walkthrough', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
+      
+      { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/PECE-demo.mp4',  img: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-PECE-demo.jpg',  title: 'PECE Software Walk through', description: ' Our product-based software walkthrough converts prospects and demonstrates the testing and tment platform features. After completing your Beto Paredes main training and product-based training, you are introducing with product’s back-office features; from here, you can get a clear idea about the access of different tools back-office system. ' }
+    ]
   },
 ];
 
@@ -132,28 +140,32 @@ export class MarketingreviewNewComponent implements OnInit {
       "skip": 0
     }
     this.api_service.requestData1(environment.api_url + 'api/firstcontractrequest', send_data).subscribe((res: any) => {
-      if (res.res[0].contracts.length > 0) {
-        for (const key in res.res[0].contracts) {
-          if (res.res[0].contracts[key].contractflag == 'credit') {
-            this.creditcontract = false;
-          }
-          if (res.res[0].contracts[key].contractflag == 'warrenty') {
-            this.warrantycontract = false;
-          }
-          if (res.res[0].contracts[key].contractflag == 'Pece Contract') {
-            this.pececontract = false;
-          }
-          if (res.res[0].contracts[key].contractflag == 'tmflow_contract') {
-            this.tmflowcontract = false;
-          }
-          if (res.res[0].contracts[key].contractflag == 'BioEntergetics Contract') {
-            this.biocontract = false;
-          }
-          if (res.res[0].contracts[key].contractflag == 'RST Sanexas Contract') {
-            this.rstcontract = false;
+      console.log("res-+-",res);
+        if(res.res!=null){
+          if (res.res[0].contracts.length > 0) {
+            for (const key in res.res[0].contracts) {
+              if (res.res[0].contracts[key].contractflag == 'credit') {
+                this.creditcontract = false;
+              }
+              if (res.res[0].contracts[key].contractflag == 'warrenty') {
+                this.warrantycontract = false;
+              }
+              if (res.res[0].contracts[key].contractflag == 'Pece Contract') {
+                this.pececontract = false;
+              }
+              if (res.res[0].contracts[key].contractflag == 'tmflow_contract') {
+                this.tmflowcontract = false;
+              }
+              if (res.res[0].contracts[key].contractflag == 'BioEntergetics Contract') {
+                this.biocontract = false;
+              }
+              if (res.res[0].contracts[key].contractflag == 'RST Sanexas Contract') {
+                this.rstcontract = false;
+              }
+            }
           }
         }
-      }
+   
     })
     let req_data = {
       "secret": this.cookie.get('secret'),
@@ -174,6 +186,8 @@ export class MarketingreviewNewComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log(this.posterimg,"posterimg");
+
     console.log(this.activatedroute.snapshot.queryParams);
 
     setTimeout(() => {
@@ -190,6 +204,8 @@ export class MarketingreviewNewComponent implements OnInit {
         }
 
       } else {
+        console.log("Else block");
+        
         var newarr = this.videolist[0].videodata[0].url.split("https://betoparedesallvideos.s3.amazonaws.com");
         let url = 'https://d291rlacfzbauk.cloudfront.net' + newarr[1];
         //   this.video_listtable.video_file.path + this.video_listtable.video_file.fileservername;
@@ -367,14 +383,22 @@ export class MarketingreviewNewComponent implements OnInit {
   }
   videoplay(val, i) {
 
-    console.log(val);
+    console.log(val,"videoval+-+-");
     for (const key in this.videolist) {
       this.videolist[key].flag = false;
     }
     this.videolist[i].flag = true;
+    console.log(this.videolist[i],"this.videolist[i]");
+    
+    // this.posterimg=this.videolist[i].videodata[0].img;
+    // console.log(this.posterimg,"posterimg");
+    
     this.videolink = [];
 
     this.videolink = val.videodata;
+
+
+
 
 
 
@@ -464,7 +488,8 @@ export class MarketingreviewNewComponent implements OnInit {
     // this.cookie.delete('video_url');
     console.log(this.cookie.get('video_url'), 'video_url;;;;');
 
-    console.log(val.url);
+    console.log(val,"val/*");
+
     // return;
     var newarr = val.url.split("https://betoparedesallvideos.s3.amazonaws.com");
     let url = 'https://d291rlacfzbauk.cloudfront.net' + newarr[1];
@@ -472,21 +497,23 @@ export class MarketingreviewNewComponent implements OnInit {
     this.cookie.set('video_url', url, undefined, '/');
 
     console.log(this.cookie.get('video_url'), 'video_url;;;===========;');
-
+    this.posterimg=val.img;
+    console.log("poster img",this.posterimg);
+    
     this.videotitle = val.title;
     this.videodescription = val.description;
     this.cookie.set('videotitle', this.videotitle, undefined, '/');
     this.cookie.set('videodesc', this.videodescription, undefined, '/');
     // }, 500);
 
-    setTimeout(() => {
-      console.log('TEST________________-');
+    // setTimeout(() => {
+    //   console.log('TEST________________-');
 
-      let currentUrl = this.router.url;
-      this.router.routeReuseStrategy.shouldReuseRoute = () => false;
-      this.router.onSameUrlNavigation = 'reload';
-      this.router.navigate([currentUrl]);
-    }, 1000);
+    //   let currentUrl = this.router.url;
+    //   this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+    //   this.router.onSameUrlNavigation = 'reload';
+    //   this.router.navigate([currentUrl]);
+    // }, 1000);
 
     return
     // console.log(val.url, i, this.player);
