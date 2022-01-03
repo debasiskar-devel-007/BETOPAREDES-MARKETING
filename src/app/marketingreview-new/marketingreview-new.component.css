@@ -160,6 +160,9 @@
     align-items: center;}
  
     .vlinkdiv img{ width: 100%;}
+
+    .videotitledesc{ display: none!important;}
+
 @media screen and (max-width: 1199px){
 
     .marketingre_view_body_con_left button {  display: block;  }
