@@ -5,6 +5,7 @@ import { MatSnackBar } from '@angular/material';
 import videojs from 'video.js';
 import { DomSanitizer } from '@angular/platform-browser';
 import { CookieService } from 'ngx-cookie-service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-marketingreview-new',
@@ -86,6 +87,7 @@ export class MarketingreviewNewComponent implements OnInit {
   public biocontract: boolean = true;
   public rstcontract: boolean = true;
   public warrantycontract: boolean = true;
+  public userdetails: any = [];
   constructor(public api_service: ApiService,
     public activatedroute: ActivatedRoute, public snackBar: MatSnackBar, private sanitizer: DomSanitizer, public cookie: CookieService, public router: Router) {
     let endpoint = 'https://z2oo2a8oq9.execute-api.us-east-1.amazonaws.com/dev/api/marketiingreviewteach'
@@ -127,7 +129,7 @@ export class MarketingreviewNewComponent implements OnInit {
       "limit": 0,
       "skip": 0
     }
-    this.api_service.requestData1('https://z2oo2a8oq9.execute-api.us-east-1.amazonaws.com/dev/api/firstcontractrequest', send_data).subscribe((res: any) => {
+    this.api_service.requestData1(environment.api_url + 'api/firstcontractrequest', send_data).subscribe((res: any) => {
       if (res.res[0].contracts.length > 0) {
         for (const key in res.res[0].contracts) {
           if (res.res[0].contracts[key].contractflag == 'credit') {
@@ -150,6 +152,22 @@ export class MarketingreviewNewComponent implements OnInit {
           }
         }
       }
+    })
+    let req_data = {
+      "secret": this.cookie.get('secret'),
+      "token": this.cookie.get('jwtToken'),
+      "condition": {
+        "id": "_id",
+        "limit": 1,
+        "skip": 0,
+        "type": "lead",
+        "_id": this.activatedroute.snapshot.params.lead_id
+      }
+    }
+    this.api_service.requestData1(environment.api_url + 'api/getoneleadfolderview', req_data).subscribe((res: any) => {
+      this.userdetails = res.results.userView[0];
+      console.log(this.userdetails);
+
     })
   }
 
@@ -234,7 +252,117 @@ export class MarketingreviewNewComponent implements OnInit {
       });
     })
   }
+  newrequestcontract(val: any) {
+    let contractdata: any = {};
+    let data: any = {};
+    let ednpoint: any = '';
+    if (val == 'pece') {
+      contractdata.leadname = this.userdetails.fullname;
+      contractdata.address = this.userdetails.address;
+      contractdata.Serial = this.userdetails.Serial_Number;
+      data = {
+        lead_id: this.activatedroute.snapshot.params.lead_id,
+        tech_id: this.activatedroute.snapshot.params.rep_id,
+        product_id: '604aff3691b7c80008ca11a8',
+        contractdata: contractdata,
+        "contractflag": "Pece Contract",
+        contracts: [
+          {
+            status: "request",
+            added_by_id: JSON.parse(this.cookie.get('userid')),
+            addedby: JSON.parse(this.cookie.get('firstname')) + ' ' + JSON.parse(this.cookie.get('lastname')),
+            addedondatetime: Math.round(new Date().getTime()),
+            type: JSON.parse(this.cookie.get('type')),
+          },
+        ],
+        contact_id: this.userdetails.singeealldata[0]._id ? this.userdetails.singeealldata[0]._id : '',
+      };
+      ednpoint = 'api/request-contracts';
+    }
+    if (val == 'warranty') {
+      contractdata.PracticeName =
+        this.userdetails.fullname;
+      contractdata.Street =
+        this.userdetails.street;
+      contractdata.City = this.userdetails.city;
+      contractdata.State =
+        this.userdetails.state;
+      contractdata.Zip = this.userdetails.zip;
+      contractdata.Phone =
+        this.userdetails.phone;
+      contractdata.auth_signatory =
+        this.userdetails.singeealldata[0].First_Name +
+        " " +
+        this.userdetails.singeealldata[0].Last_Name;
+      contractdata.printed_name =
+        this.userdetails.singeealldata[0].First_Name +
+        " " +
+        this.userdetails.singeealldata[0].Last_Name;
+      contractdata.equipment = 'TM-FLOW ANS MEDICAL DEVICE'
+      data = {
+        lead_id: this.activatedroute.snapshot.params.lead_id,
+        tech_id: this.activatedroute.snapshot.params.rep_id,
+        product_id: "",
+        contractdata: contractdata,
+        contractflag: "warrenty",
+        contracts: [
+          {
+            status: "request",
+            added_by_id: JSON.parse(this.cookie.get('userid')),
+            addedby: JSON.parse(this.cookie.get('firstname')) + ' ' + JSON.parse(this.cookie.get('lastname')),
+            addedondatetime: Math.round(new Date().getTime()),
+            type: JSON.parse(this.cookie.get('type')),
+          },
+        ],
+        contact_id: this.userdetails.singeealldata[0]._id ? this.userdetails.singeealldata[0]._id : '',
+      };
+      ednpoint = 'api/update-new_contract';
+    }
+    if(val == 'credit'){
+      contractdata.Legal_Company_Name = this.userdetails.fullname;
+      contractdata.address = this.userdetails.address;
+      contractdata.city = this.userdetails.city;
+      contractdata.state = this.userdetails.state;
+      contractdata.zip = this.userdetails.zip;
+      contractdata.website = this.userdetails.Website;
+      contractdata.email = this.userdetails.email;
+      contractdata.phonetwo = this.userdetails.phone;
+      contractdata.compane_name = this.userdetails.company;
+      contractdata.preson_name = this.userdetails.singeealldata.length > 0 ? this.userdetails.singeealldata[0].First_Name + " " + this.userdetails.singeealldata[0].Last_Name : '';
+      contractdata.homeaddress = this.userdetails.singeealldata.length > 0 ? this.userdetails.singeealldata[0].Mailing_Street + "," + this.userdetails.singeealldata[0].Mailing_City + "," + this.userdetails.singeealldata[0].Mailing_State + "," + this.userdetails.singeealldata[0].Mailing_Country : '';
+      contractdata.city_two = this.userdetails.singeealldata.length > 0 ? this.userdetails.singeealldata[0].Mailing_City : '';
+      contractdata.state_two = this.userdetails.singeealldata.length > 0 ? this.userdetails.singeealldata[0].Mailing_State : '';
+      contractdata.zip_two = this.userdetails.singeealldata.length > 0 ? this.userdetails.singeealldata[0].Mailing_Zip : '';
+      contractdata.home_phone = this.userdetails.singeealldata.length > 0 ? this.userdetails.singeealldata[0].Phone : '';
+      contractdata.signer = this.userdetails.singeealldata.length > 0 ? this.userdetails.singeealldata[0].First_Name + " " + this.userdetails.singeealldata[0].Last_Name : '';
+      contractdata.compane_name = this.userdetails.singeealldata.length > 0 ? this.userdetails.firstname : '';
+      data = {
+        lead_id: this.activatedroute.snapshot.params.lead_id,
+        tech_id: this.activatedroute.snapshot.params.rep_id,
+        product_id: '604a0b6e40962e00088f0d79',
 
+        contracts: [
+          {
+            status: "request",
+            added_by_id: JSON.parse(this.cookie.get('userid')),
+            addedby: JSON.parse(this.cookie.get('firstname')) + ' ' + JSON.parse(this.cookie.get('lastname')),
+            addedondatetime: Math.round(new Date().getTime()),
+            type: JSON.parse(this.cookie.get('type')),
+          },
+        ],
+        contractflag: "credit",
+        contractdata: contractdata,
+        contact_id: this.userdetails.singeealldata.length > 0 ? this.userdetails.singeealldata[0]._id : '',
+      };
+      ednpoint = 'api/request-contracts';
+    }
+    console.log(data);
+    this.api_service
+      .requestData1(environment.api_url + ednpoint, data)
+      .subscribe((res: any) => {
+        this.snackBar.open(res.successmsg, 'ok');
+      });
+  }
   videoplay(val, i) {
 
     console.log(val);

@@ -1,6 +1,7 @@
 export const environment = {
   production: true,
-  api_url : 'https://api.influxhostserver.com/',
+  // api_url : 'https://api.influxhostserver.com/',
+  api_url:'https://vg3kx9c825.execute-api.us-east-2.amazonaws.com/production/',
   download_url : 'https://api.influxhostserver.com/download',
   download_url_old : 'https://api.influxhostserver.com/',
   // downloadurl_2:'https://cmte4jq8y5.execute-api.us-east-1.amazonaws.com/production/api/download',
