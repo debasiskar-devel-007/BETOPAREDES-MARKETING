@@ -28,7 +28,7 @@ export class MarketingreviewNewComponent implements OnInit {
   public video_end_time: any = '0:0:0';
   public video_percent: any = 0;
   public posterimg: any ;
-
+  public progressSpinner:boolean = false;
   public videoJsConfigObj = {
     preload: 'metadata',
     controls: false,
@@ -283,6 +283,7 @@ export class MarketingreviewNewComponent implements OnInit {
     })
   }
   newrequestcontract(val: any) {
+    this.progressSpinner = true;
     let contractdata: any = {};
     let data: any = {};
     let ednpoint: any = '';
@@ -305,7 +306,7 @@ export class MarketingreviewNewComponent implements OnInit {
             type: this.userdetails.type,
           },
         ],
-        contact_id: this.userdetails.singeealldata[0]._id ? this.userdetails.singeealldata[0]._id : '',
+        contact_id: this.userdetails.singeealldata.length > 0? this.userdetails.singeealldata[0]._id : '',
       };
       ednpoint = 'api/request-contracts';
     }
@@ -344,7 +345,7 @@ export class MarketingreviewNewComponent implements OnInit {
             type: this.userdetails.type,
           },
         ],
-        contact_id: this.userdetails.singeealldata[0]._id ? this.userdetails.singeealldata[0]._id : '',
+        contact_id: this.userdetails.singeealldata.length > 0? this.userdetails.singeealldata[0]._id : '',
       };
       ednpoint = 'api/update-new_contract';
     }
@@ -393,6 +394,9 @@ export class MarketingreviewNewComponent implements OnInit {
         this.snackBar.open(res.successmsg, 'ok');
         this.firstcontractrequest();
         this.getoneleadfolderview();
+        setTimeout(() => {
+          this.progressSpinner = false;
+        }, 1500);
       });
   }
   videoplay(val, i) {

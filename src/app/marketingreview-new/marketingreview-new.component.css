@@ -285,5 +285,7 @@
 .marketingre_view_top_right_sub{  display: inline-block; background: none; padding: 0; text-align: center; margin: 15px;}
 } 
 
- 
+.newcontract_progressbar{
+    position:fixed!important;
+}
 
