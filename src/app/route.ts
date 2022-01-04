@@ -27,7 +27,7 @@ const appRoutes: Routes = [
     { path: 'product-review/:product_id/:rep_id/:lead_id', component: ProductreviewComponent},
     { path: 'product-review/:product_id/:rep_id', component: ProductreviewComponent},
 
-    { path: 'marketing-review-new/:admin_id/:rep_id/:lead_id', component: MarketingreviewNewComponent}
+    { path: 'marketing-review-new/:rep_id/:lead_id', component: MarketingreviewNewComponent}
 ];
 
 export const appRoutingProviders: any[] = [

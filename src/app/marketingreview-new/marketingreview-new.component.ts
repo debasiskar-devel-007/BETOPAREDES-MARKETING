@@ -130,7 +130,7 @@ export class MarketingreviewNewComponent implements OnInit {
       console.log(this.productdata, 'productdata', this.techata);
     })
     this.firstcontractrequest();
-    this.parentdata();
+    // this.parentdata();
     this.getoneleadfolderview();
   }
 
