@@ -298,11 +298,11 @@ export class MarketingreviewNewComponent implements OnInit {
         "contractflag": "Pece Contract",
         contracts: [
           {
-            status: "request",
-            added_by_id: this.parent_data._id,
-            addedby: this.parent_data.firstname + ' ' + this.parent_data.lastname,
+            status: "requested by lead",
+            added_by_id: this.userdetails._id,
+            addedby: this.userdetails.firstname + ' ' + this.userdetails.lastname,
             addedondatetime: Math.round(new Date().getTime()),
-            type: this.parent_data.type,
+            type: this.userdetails.type,
           },
         ],
         contact_id: this.userdetails.singeealldata[0]._id ? this.userdetails.singeealldata[0]._id : '',
@@ -337,11 +337,11 @@ export class MarketingreviewNewComponent implements OnInit {
         contractflag: "warrenty",
         contracts: [
           {
-            status: "request",
-            added_by_id: this.parent_data._id,
-            addedby: this.parent_data.firstname + ' ' + this.parent_data.lastname,
+            status: "requested by lead",
+            added_by_id: this.userdetails._id,
+            addedby: this.userdetails.firstname + ' ' + this.userdetails.lastname,
             addedondatetime: Math.round(new Date().getTime()),
-            type: this.parent_data.type,
+            type: this.userdetails.type,
           },
         ],
         contact_id: this.userdetails.singeealldata[0]._id ? this.userdetails.singeealldata[0]._id : '',
@@ -373,11 +373,11 @@ export class MarketingreviewNewComponent implements OnInit {
 
         contracts: [
           {
-            status: "request",
-            added_by_id: this.parent_data._id,
-            addedby: this.parent_data.firstname + ' ' + this.parent_data.lastname,
+            status: "requested by lead",
+            added_by_id: this.userdetails._id,
+            addedby: this.userdetails.firstname + ' ' + this.userdetails.lastname,
             addedondatetime: Math.round(new Date().getTime()),
-            type: this.parent_data.type,
+            type: this.userdetails.type,
           },
         ],
         contractflag: "credit",
