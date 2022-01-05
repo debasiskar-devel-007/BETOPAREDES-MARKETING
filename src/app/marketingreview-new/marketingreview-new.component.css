@@ -164,7 +164,9 @@
   
 
 
-    .contract_div{ display: inline-block; padding:2px 5px;    }
+    .contract_div{     display: inline-flex;
+        padding: 2px 5px;
+        align-items: center   }
 .contract_div button{border-radius: 0px;
     margin: 0;
     font-size: 18px;
@@ -181,7 +183,7 @@
     background: linear-gradient( 
 180deg , rgba(250,226,156,1) 0%, rgba(244,185,20,1) 100%);
     width: auto;
-    text-shadow: none; border-radius: 5px;}
+    text-shadow: none; border-radius: 5px; width: 210px;}
 
 
  
@@ -204,6 +206,27 @@
             font-size: 18px;
             color: #363636;}
 
+
+    .medigrade_block{display: flex;
+        flex-wrap: wrap;
+        align-items: center;}     
+
+        .item_block{display: flex;
+            flex-wrap: wrap;
+            align-items: center;} 
+        
+        /* .medigrade_block .contract_div:nth-of-type(4){ width: 380px; flex-wrap: wrap;} */
+
+        .medigrade_block .contract_div{ display: inline-block; }
+
+ .contract_divTEXT{ width: 940px;}
+
+        .medigrade_block .contract_div h2{ display: block; padding: 0 0 5px 0!important;}
+
+        .contract_logo{ width: 260px;}
+
+        .contract_logo img{ width: 100%;}
+
     @media screen and (max-width: 1700px){
 
      .contract_div{ max-width: auto}
@@ -213,17 +236,48 @@
       
     }
 
+    @media screen and (max-width: 1640px){
+        .contract_divTEXT{ width: 900px;}
+        .contract_pro{ width: 50%;}
+    }
     
-    @media screen and (max-width: 1560px){
+ @media screen and (max-width: 1560px){
+.contract_div{ max-width: auto}
+.contract_divTEXT{ width:800px;}
+  }
 
-        .contract_div{ max-width: auto}
-   
- 
-         
-       }
+
+ @media screen and (max-width: 1480px){
+.item_block .contract_div{ display: block;}
+
+.marketingre_view_top_right .item_block .contract_div h2{ padding: 0 0 10px 0;}
+  }
+
+  @media screen and (max-width: 1440px){
+    .contract_divTEXT{ width:740px;}
+
+    .contract_pro{ width: 49%;}
+  }
+
+  
+  @media screen and (max-width: 1340px){
+    .contract_divTEXT{ width:670px;} 
+  }
+
+  @media screen and (max-width: 1260px){
+    .contract_divTEXT{ width:580px;} 
+  }
 
 
 @media screen and (max-width: 1199px){
+
+    .contract_logo img{ width: 250px;}
+
+    .medigrade_block{ display: block;}
+
+    .marketingre_view_top_right .item_block { display: block;}
+
+    .contract_divTEXT{ width: auto; display: block;}
 
     .videodescription{ background-size: cover;}
 
