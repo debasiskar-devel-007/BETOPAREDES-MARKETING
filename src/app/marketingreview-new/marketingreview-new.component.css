@@ -165,7 +165,7 @@
 
 
     .contract_div{     display: inline-flex;
-        padding: 2px 5px;
+        padding: 6px;
         align-items: center   }
 .contract_div button{border-radius: 0px;
     margin: 0;
@@ -213,17 +213,21 @@
 
         .item_block{display: flex;
             flex-wrap: wrap;
-            align-items: center;} 
+            align-items: center;  background: url(https://all-frontend-assets.s3.amazonaws.com/marketing-betoparedes/assets/images/menudevider.png) no-repeat left center; } 
+
+            
+        .item_block:first-of-type{ background: none;}
         
         /* .medigrade_block .contract_div:nth-of-type(4){ width: 380px; flex-wrap: wrap;} */
 
-        .medigrade_block .contract_div{ display: inline-block; }
-
+        .medigrade_block .contract_div{ display: inline-block;     margin: 5px 0; 
+             background: url(https://all-frontend-assets.s3.amazonaws.com/marketing-betoparedes/assets/images/menudevider.png) no-repeat left center; padding: 6px 10px;}
+        .medigrade_block .contract_logo{ background: none; padding-right: 20px;}
  .contract_divTEXT{ width: 940px;}
 
         .medigrade_block .contract_div h2{ display: block; padding: 0 0 5px 0!important;}
 
-        .contract_logo{ width: 260px;}
+        .contract_logo{ width: 240px;}
 
         .contract_logo img{ width: 100%;}
 
@@ -270,6 +274,12 @@
 
 
 @media screen and (max-width: 1199px){
+
+
+    .medigrade_block .contract_logo{   padding-right:10px;}
+    .medigrade_block .contract_div{ background: none;}
+
+    .item_block{ background: none;}
 
     .contract_logo img{ width: 250px;}
 
