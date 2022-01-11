@@ -436,15 +436,7 @@ export class MarketingreviewNewComponent implements OnInit {
   }
 
 
-  openDialog(): void {
-    const dialogRef = this.dialog.open(dialogpage, {
-      
-      panelClass: 'custom-modalbox'
-    })
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    });
-}
+
 
 
 

@@ -87,7 +87,8 @@
               "Fn::Join": [
                 "-",
                 [
-                  "betoparedesmarketing-production",
+                  "betoparedesmarketing",
+                  "production",
                   "lambda"
                 ]
               ]
@@ -127,7 +128,8 @@
           "Fn::Join": [
             "-",
             [
-              "betoparedesmarketing-production",
+              "betoparedesmarketing",
+              "production",
               {
                 "Ref": "AWS::Region"
               },
@@ -144,7 +146,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/betoparedesmarketing/production/1641290952747-2022-01-04T10:09:12.747Z/betoparedesmarketing.zip"
+          "S3Key": "serverless/betoparedesmarketing/production/1641909210614-2022-01-11T13:53:30.614Z/betoparedesmarketing.zip"
         },
         "FunctionName": "betoparedesmarketing-production-api",
         "Handler": "lambda.universal",
@@ -159,18 +161,17 @@
         "Timeout": 10
       },
       "DependsOn": [
-        "ApiLogGroup",
-        "IamRoleLambdaExecution"
+        "ApiLogGroup"
       ]
     },
-    "ApiLambdaVersionI9alyofFSxIgE97g35AhZuhj4uqNVSM4K0SRZRrVNJ8": {
+    "ApiLambdaVersionlq4C9TGuH04HSH7EPOOkqFhzdMsq5EWBZq3ktKt5RT8": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ApiLambdaFunction"
         },
-        "CodeSha256": "BNrc7uJGOAinbsPETuGiynQCO43brYPANLLhvoVFJQw="
+        "CodeSha256": "/9fTw+UH1xw4F9bEMK6A3emmZbAzd1Z25quT9Bx4j40="
       }
     },
     "ApiGatewayRestApi": {
@@ -289,7 +290,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1641290906936": {
+    "ApiGatewayDeployment1641909178936": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -349,7 +350,7 @@
     "ApiLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ApiLambdaVersionI9alyofFSxIgE97g35AhZuhj4uqNVSM4K0SRZRrVNJ8"
+        "Ref": "ApiLambdaVersionlq4C9TGuH04HSH7EPOOkqFhzdMsq5EWBZq3ktKt5RT8"
       }
     },
     "ServiceEndpoint": {
