@@ -3457,7 +3457,7 @@ text-align: center;}
     border-radius: 10px; padding: 10px; }
 
     .custom-modalbox  mat-dialog-container{ background: none!important; padding: 0!important;     
-        color: #fff; text-align: center; font-size: 22px; box-shadow: none; width: 800px!important;}
+        color: #fff; text-align: center; font-size: 22px; box-shadow: none; width: 640px!important;}
 
 @media screen and (max-width:1860px) {
     .marketingre_view_top_body{ width: 1730px;}

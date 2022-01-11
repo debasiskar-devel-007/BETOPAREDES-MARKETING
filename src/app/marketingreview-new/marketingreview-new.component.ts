@@ -388,8 +388,11 @@ export class MarketingreviewNewComponent implements OnInit {
       ednpoint = 'api/request-contracts';
     }
     console.log(data);
+    console.log(environment.api_url + ednpoint);
+    
     this.api_service
       .requestData1(environment.api_url + ednpoint, data)
+      
       .subscribe((res: any) => {
         // this.snackBar.open(res.successmsg, 'ok');
 
