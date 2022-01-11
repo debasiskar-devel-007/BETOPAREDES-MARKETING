@@ -103,10 +103,12 @@
           <ng-container *ngFor='let item of videolist; let i=index'>
 
             <h2 (click)='videoplay(item,i)'>{{item.name}}</h2>
-            <ng-container *ngIf='videolist[i].flag==true'>
 
+          
+            <ng-container *ngIf='item.flag'>
 
-              <label *ngFor='let vlink of videolink; let j=index'>
+        
+              <label *ngFor='let vlink of item.videodata; let j=index'>
 
                 <div class="vlinkdiv"> <img [src]="vlink?.img"></div>
 
