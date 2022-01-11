@@ -3449,6 +3449,16 @@ text-align: center;}
 }
 
 
+
+.custom-modalbox{background: rgb(22,87,174);
+    background: linear-gradient( 
+45deg,rgba(22,87,174,1) 0%,rgba(21,68,110,1) 100%);
+    border: 10px solid #f6dc17; 
+    border-radius: 10px; padding: 10px; }
+
+    .custom-modalbox  mat-dialog-container{ background: none!important; padding: 0!important;     
+        color: #fff; text-align: center; font-size: 22px; box-shadow: none; width: 800px!important;}
+
 @media screen and (max-width:1860px) {
     .marketingre_view_top_body{ width: 1730px;}
     .marketingre_view_body_wrapper{ width: 1730px;}

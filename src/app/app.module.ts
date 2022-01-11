@@ -26,7 +26,7 @@ import { ContractReviewVideoComponent } from './contract-review-video/contract-r
 import { MetaModule, MetaLoader, MetaStaticLoader, PageTitlePositioning } from '@ngx-meta/core';
 import { ProductreviewComponent } from './productreview/productreview.component';
 import { TempaccessComponent } from './tempaccess/tempaccess.component';
-import { MarketingreviewNewComponent } from './marketingreview-new/marketingreview-new.component';
+import { dialogpage, MarketingreviewNewComponent } from './marketingreview-new/marketingreview-new.component';
 import { DemoMaterialModule } from 'src/material-module';
 
 // import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -62,7 +62,8 @@ export function metaFactory(): MetaLoader {
     OrderBy,
     MarketingreviewComponent,
     ProductreviewComponent,
-    MarketingreviewNewComponent
+    MarketingreviewNewComponent,
+    dialogpage
 
   ],
   imports: [
@@ -106,6 +107,10 @@ export function metaFactory(): MetaLoader {
   providers: [
     CookieService,TestresolveService,ApiService
   ],
+
+  entryComponents: [
+    dialogpage
+],
   schemas:[CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   bootstrap: [AppComponent]
 })

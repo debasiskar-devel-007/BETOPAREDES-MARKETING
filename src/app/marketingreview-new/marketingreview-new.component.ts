@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from "../api.service";
 import { ActivatedRoute, Router } from '@angular/router';
-import { MatSnackBar } from '@angular/material';
+import { MatDialog, MatDialogRef, MatSnackBar } from '@angular/material';
 import videojs from 'video.js';
 import { DomSanitizer } from '@angular/platform-browser';
 import { CookieService } from 'ngx-cookie-service';
@@ -99,7 +99,7 @@ export class MarketingreviewNewComponent implements OnInit {
   public warrantycontract: boolean = true;
   public userdetails: any = {};
   public parent_data:any = {};
-  constructor(public api_service: ApiService,
+  constructor(public api_service: ApiService, public dialog: MatDialog,
     public activatedroute: ActivatedRoute, public snackBar: MatSnackBar, private sanitizer: DomSanitizer, public cookie: CookieService, public router: Router) {
     let endpoint = environment.api_url + 'api/marketiingreviewteach';
     let data = {};
@@ -391,7 +391,18 @@ export class MarketingreviewNewComponent implements OnInit {
     this.api_service
       .requestData1(environment.api_url + ednpoint, data)
       .subscribe((res: any) => {
-        this.snackBar.open(res.successmsg, 'ok');
+        // this.snackBar.open(res.successmsg, 'ok');
+
+        const dialogRef = this.dialog.open(dialogpage, {
+         
+          panelClass: 'custom-modalbox'
+        })
+        dialogRef.afterClosed().subscribe(result => {
+          console.log('The dialog was closed');
+        });
+
+
+
         this.firstcontractrequest();
         this.getoneleadfolderview();
         setTimeout(() => {
@@ -423,6 +434,19 @@ export class MarketingreviewNewComponent implements OnInit {
 
 
   }
+
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(dialogpage, {
+      
+      panelClass: 'custom-modalbox'
+    })
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+}
+
+
 
   onprocess() {
     console.log('ppppppp');
@@ -572,5 +596,22 @@ export class MarketingreviewNewComponent implements OnInit {
   ngOnDestroy() {
     // this.cookie.delete('video_url')
     // this.player.dispose();
+  }
+}
+
+
+
+@Component({
+  selector: 'dialogpage',
+  templateUrl: 'dialogpage.html',
+})
+export class dialogpage {
+  constructor(
+    public dialogRef: MatDialogRef<dialogpage>,
+    // @Inject(MAT_DIALOG_DATA) public data: DialogData,
+  ) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
   }
 }
