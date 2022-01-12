@@ -161,7 +161,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/betoparedesmarketing/production/1641909210614-2022-01-11T13:53:30.614Z/betoparedesmarketing.zip"
+                "S3Key": "serverless/betoparedesmarketing/production/1641910944643-2022-01-11T14:22:24.643Z/betoparedesmarketing.zip"
               },
               "FunctionName": "betoparedesmarketing-production-api",
               "Handler": "lambda.universal",
@@ -179,14 +179,14 @@
               "ApiLogGroup"
             ]
           },
-          "ApiLambdaVersionlq4C9TGuH04HSH7EPOOkqFhzdMsq5EWBZq3ktKt5RT8": {
+          "ApiLambdaVersionqC6Ih703wqvR78Ovhu5VR7eCqwe4nhefdxDCgcepXQ": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ApiLambdaFunction"
               },
-              "CodeSha256": "/9fTw+UH1xw4F9bEMK6A3emmZbAzd1Z25quT9Bx4j40="
+              "CodeSha256": "y2ojVFQ8JzdxX7Lk4LiDuwAQk46q7UvMjlN9a7RxYNM="
             }
           },
           "ApiGatewayRestApi": {
@@ -305,7 +305,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1641909178936": {
+          "ApiGatewayDeployment1641910912147": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -365,7 +365,7 @@
           "ApiLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ApiLambdaVersionlq4C9TGuH04HSH7EPOOkqFhzdMsq5EWBZq3ktKt5RT8"
+              "Ref": "ApiLambdaVersionqC6Ih703wqvR78Ovhu5VR7eCqwe4nhefdxDCgcepXQ"
             }
           },
           "ServiceEndpoint": {
@@ -490,7 +490,7 @@
         "timeout": 10,
         "runtime": "nodejs10.x",
         "vpc": {},
-        "versionLogicalId": "ApiLambdaVersionlq4C9TGuH04HSH7EPOOkqFhzdMsq5EWBZq3ktKt5RT8"
+        "versionLogicalId": "ApiLambdaVersionqC6Ih703wqvR78Ovhu5VR7eCqwe4nhefdxDCgcepXQ"
       }
     },
     "configValidationMode": "warn",
@@ -521,7 +521,7 @@
           "!node_modules/mime-db/**"
         ],
         "artifact": "H:\\office\\BETOPAREDES-MARKETING\\.serverless\\betoparedesmarketing.zip",
-        "artifactDirectoryName": "serverless/betoparedesmarketing/production/1641909210614-2022-01-11T13:53:30.614Z"
+        "artifactDirectoryName": "serverless/betoparedesmarketing/production/1641910944643-2022-01-11T14:22:24.643Z"
       },
       "custom": {
         "$ref": "$[\"service\"][\"custom\"]"
@@ -538,7 +538,7 @@
     "artifact": "H:\\office\\BETOPAREDES-MARKETING\\.serverless\\betoparedesmarketing.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/betoparedesmarketing/production/1641909210614-2022-01-11T13:53:30.614Z",
+    "artifactDirectoryName": "serverless/betoparedesmarketing/production/1641910944643-2022-01-11T14:22:24.643Z",
     "artifact": "betoparedesmarketing.zip"
   }
 }
