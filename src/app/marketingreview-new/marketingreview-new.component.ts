@@ -50,16 +50,16 @@ export class MarketingreviewNewComponent implements OnInit {
   public videolist: any = [{
     name: 'Sale deck', flag: true, videodata:
 
-      [{ url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637746453722SampleVideo_720x480_5mb.mp4', title: 'TM-FLOW REPORT', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v2.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
+      [{ url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637746453722SampleVideo_720x480_5mb.mp4', title: 'TM-FLOW REPORT', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
 
-      { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4', title: 'TM-FLOW REPORT', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v2.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' }]
+      { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4', title: 'TM-FLOW REPORT', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' }]
   },
 
 
   {
     name: 'Sales pitch', flag: false, videodata:
 
-      [{ url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/PECE-Sales-cript.mp4', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v2.JPG', title: 'PECE Sale Pitch', description: ' Our pitch script is designed to inform and grab the interest of your clients. By watching this video, you get to know what a salesperson tells his potential customer ( lead or practices ) about a product or service. Our perfectly designed product-based sales pitch is deeply involved with the final close of a deal. In order to become a successful salesperson, you have to sell yourself on what you are selling. Know your products, describe their benefits, and convince them that it is made for them. This video presents you with the complete enterprise system solution that works with every required staff member, including technicians, doctors, physician assistants, nurse practitioners, records keepers, and practice management. ' },
+      [{ url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/PECE-Sales-cript.mp4', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', title: 'PECE Sale Pitch', description: ' Our pitch script is designed to inform and grab the interest of your clients. By watching this video, you get to know what a salesperson tells his potential customer ( lead or practices ) about a product or service. Our perfectly designed product-based sales pitch is deeply involved with the final close of a deal. In order to become a successful salesperson, you have to sell yourself on what you are selling. Know your products, describe their benefits, and convince them that it is made for them. This video presents you with the complete enterprise system solution that works with every required staff member, including technicians, doctors, physician assistants, nurse practitioners, records keepers, and practice management. ' },
 
       // { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4', title: 'TM-FLOW REPORT', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' }
     ]
@@ -77,7 +77,7 @@ export class MarketingreviewNewComponent implements OnInit {
 
       // { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4', title: 'Software walkthrough', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
       
-      { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/PECE-demo.mp4',  img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v2.JPG',  title: 'PECE Software Walk through', description: ' Our product-based software walkthrough converts prospects and demonstrates the testing and tment platform features. After completing your Beto Paredes main training and product-based training, you are introducing with product’s back-office features; from here, you can get a clear idea about the access of different tools back-office system. ' }
+      { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/PECE-demo.mp4',  img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG',  title: 'PECE Software Walk through', description: ' Our product-based software walkthrough converts prospects and demonstrates the testing and tment platform features. After completing your Beto Paredes main training and product-based training, you are introducing with product’s back-office features; from here, you can get a clear idea about the access of different tools back-office system. ' }
     ]
   },
 ];
@@ -437,6 +437,21 @@ export class MarketingreviewNewComponent implements OnInit {
 
 
   }
+
+
+
+  // openDialog(): void {
+  //   const dialogRef = this.dialog.open(dialogpage, {
+  //     panelClass: 'custom-modalbox'
+  //   });
+
+  //   dialogRef.afterClosed().subscribe(result => {
+  //     console.log('The dialog was closed');
+    
+  //   });
+  // }
+ 
+
 
 
 

@@ -3450,14 +3450,16 @@ text-align: center;}
 
 
 
-.custom-modalbox{background: rgb(22,87,174);
-    background: linear-gradient( 
-45deg,rgba(22,87,174,1) 0%,rgba(21,68,110,1) 100%);
-    border: 10px solid #f6dc17; 
+.custom-modalbox{background: linear-gradient(
+    -61deg
+    ,#7fb822,#dddd45);
+        border: 1px solid #efd894; border: solid 5px #fff;
+        box-shadow: 0 0 5px #172007 inset;
     border-radius: 10px; padding: 10px; }
 
     .custom-modalbox  mat-dialog-container{ background: none!important; padding: 0!important;     
-        color: #fff; text-align: center; font-size: 22px; box-shadow: none; width: 640px!important;}
+        color: #021a30;
+    text-shadow: 1px 0px 0px #e6f1d1; text-align: center; font-size: 22px; box-shadow: none; width: 640px!important;   font-family: 'OpenSansBold';}
 
 @media screen and (max-width:1860px) {
     .marketingre_view_top_body{ width: 1730px;}
