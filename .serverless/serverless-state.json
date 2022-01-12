@@ -13,6 +13,7 @@
       "timeout": 10,
       "region": "us-east-1",
       "versionFunctions": true,
+      "remoteFunctionData": null,
       "compiledCloudFormationTemplate": {
         "AWSTemplateFormatVersion": "2010-09-09",
         "Description": "The AWS CloudFormation template for this Serverless application",
@@ -102,8 +103,7 @@
                     "Fn::Join": [
                       "-",
                       [
-                        "betoparedesmarketing",
-                        "production",
+                        "betoparedesmarketing-production",
                         "lambda"
                       ]
                     ]
@@ -143,8 +143,7 @@
                 "Fn::Join": [
                   "-",
                   [
-                    "betoparedesmarketing",
-                    "production",
+                    "betoparedesmarketing-production",
                     {
                       "Ref": "AWS::Region"
                     },
@@ -161,7 +160,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/betoparedesmarketing/production/1641910944643-2022-01-11T14:22:24.643Z/betoparedesmarketing.zip"
+                "S3Key": "serverless/betoparedesmarketing/production/1641995475861-2022-01-12T13:51:15.861Z/betoparedesmarketing.zip"
               },
               "FunctionName": "betoparedesmarketing-production-api",
               "Handler": "lambda.universal",
@@ -176,17 +175,18 @@
               "Timeout": 10
             },
             "DependsOn": [
-              "ApiLogGroup"
+              "ApiLogGroup",
+              "IamRoleLambdaExecution"
             ]
           },
-          "ApiLambdaVersionqC6Ih703wqvR78Ovhu5VR7eCqwe4nhefdxDCgcepXQ": {
+          "ApiLambdaVersionTyh9uxm4sOvgHYrvAN2IpYXHVMjgUvimTX0oj17o5Tw": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ApiLambdaFunction"
               },
-              "CodeSha256": "y2ojVFQ8JzdxX7Lk4LiDuwAQk46q7UvMjlN9a7RxYNM="
+              "CodeSha256": "trrMafhh4/V88uvhYEpDc6UPiYkavKAiMMiplMjg7Qk="
             }
           },
           "ApiGatewayRestApi": {
@@ -305,7 +305,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1641910912147": {
+          "ApiGatewayDeployment1641995437256": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -365,7 +365,7 @@
           "ApiLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ApiLambdaVersionqC6Ih703wqvR78Ovhu5VR7eCqwe4nhefdxDCgcepXQ"
+              "Ref": "ApiLambdaVersionTyh9uxm4sOvgHYrvAN2IpYXHVMjgUvimTX0oj17o5Tw"
             }
           },
           "ServiceEndpoint": {
@@ -490,55 +490,16 @@
         "timeout": 10,
         "runtime": "nodejs10.x",
         "vpc": {},
-        "versionLogicalId": "ApiLambdaVersionqC6Ih703wqvR78Ovhu5VR7eCqwe4nhefdxDCgcepXQ"
+        "versionLogicalId": "ApiLambdaVersionTyh9uxm4sOvgHYrvAN2IpYXHVMjgUvimTX0oj17o5Tw"
       }
     },
-    "configValidationMode": "warn",
     "serviceFilename": "serverless.yml",
     "layers": {},
-    "initialServerlessConfig": {
-      "service": {
-        "$ref": "$[\"service\"][\"serviceObject\"]"
-      },
-      "plugins": {
-        "$ref": "$[\"service\"][\"plugins\"]"
-      },
-      "provider": {
-        "$ref": "$[\"service\"][\"provider\"]"
-      },
-      "package": {
-        "exclude": [
-          "src/**",
-          "node_modules/**",
-          "firebug-lite/**",
-          "e2e/**",
-          "coverage/**",
-          "!node_modules/aws-serverless-express/**",
-          "!node_modules/binary-case/**",
-          "!node_modules/type-is/**",
-          "!node_modules/media-typer/**",
-          "!node_modules/mime-types/**",
-          "!node_modules/mime-db/**"
-        ],
-        "artifact": "H:\\office\\BETOPAREDES-MARKETING\\.serverless\\betoparedesmarketing.zip",
-        "artifactDirectoryName": "serverless/betoparedesmarketing/production/1641910944643-2022-01-11T14:22:24.643Z"
-      },
-      "custom": {
-        "$ref": "$[\"service\"][\"custom\"]"
-      },
-      "functions": {
-        "$ref": "$[\"service\"][\"functions\"]"
-      },
-      "layers": {
-        "$ref": "$[\"service\"][\"layers\"]"
-      },
-      "configValidationMode": "warn"
-    },
     "isDashboardMonitoringPreconfigured": false,
-    "artifact": "H:\\office\\BETOPAREDES-MARKETING\\.serverless\\betoparedesmarketing.zip"
+    "artifact": "/home/garvis/Documents/angular_scripts/BETOPAREDES-MARKETING/.serverless/betoparedesmarketing.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/betoparedesmarketing/production/1641910944643-2022-01-11T14:22:24.643Z",
+    "artifactDirectoryName": "serverless/betoparedesmarketing/production/1641995475861-2022-01-12T13:51:15.861Z",
     "artifact": "betoparedesmarketing.zip"
   }
 }
