@@ -379,18 +379,16 @@
     margin: 0 5px;
     margin-bottom: 5px;
     flex: 1 0 48%;
-    cursor: pointer;
 }
 .videothwrapper:hover{
     border: 1px solid #001420;
 }
 
 .videoth{
-    /* width: 45%; */
     margin-right: 8px;
-    /* height: 94px; */
     width: 168px;
     position: relative;
+    cursor: pointer;
 }
 
 .playicon{
@@ -423,6 +421,7 @@
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
     white-space: normal;
+    cursor: pointer;
 }
 
  
