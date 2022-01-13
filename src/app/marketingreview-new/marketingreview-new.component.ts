@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Inject } from '@angular/core';
 import { ApiService } from "../api.service";
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatDialog, MatDialogRef, MatSnackBar } from '@angular/material';
@@ -6,6 +6,11 @@ import videojs from 'video.js';
 import { DomSanitizer } from '@angular/platform-browser';
 import { CookieService } from 'ngx-cookie-service';
 import { environment } from 'src/environments/environment';
+import {MatBottomSheet, MatBottomSheetRef,MAT_BOTTOM_SHEET_DATA} from '@angular/material/bottom-sheet';
+export interface BottomsheetData {
+  data: any;
+}
+
 
 @Component({
   selector: 'app-marketingreview-new',
@@ -29,6 +34,7 @@ export class MarketingreviewNewComponent implements OnInit {
   public video_percent: any = 0;
   public posterimg: any ;
   public progressSpinner:boolean = false;
+  
   public videoJsConfigObj = {
     preload: 'metadata',
     controls: false,
@@ -52,7 +58,7 @@ export class MarketingreviewNewComponent implements OnInit {
 
       [{ url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637746453722SampleVideo_720x480_5mb.mp4', title: 'TM-FLOW REPORT', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
 
-      { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4', title: 'TM-FLOW REPORT', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' }]
+      { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4', title: 'TM-FLOW REPORT test', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' }]
   },
 
 
@@ -100,7 +106,7 @@ export class MarketingreviewNewComponent implements OnInit {
   public userdetails: any = {};
   public parent_data:any = {};
   constructor(public api_service: ApiService, public dialog: MatDialog,
-    public activatedroute: ActivatedRoute, public snackBar: MatSnackBar, private sanitizer: DomSanitizer, public cookie: CookieService, public router: Router) {
+    public activatedroute: ActivatedRoute, public snackBar: MatSnackBar, private sanitizer: DomSanitizer, public cookie: CookieService, public router: Router,public bottomSheet: MatBottomSheet) {
     let endpoint = environment.api_url + 'api/marketiingreviewteach';
     let data = {};
     if (typeof (this.activatedroute.snapshot.queryParams.pid1) != 'undefined' && this.activatedroute.snapshot.queryParams.pid1 != null) {
@@ -201,6 +207,7 @@ export class MarketingreviewNewComponent implements OnInit {
       this.parent_data = res.result[0]
     })
   }
+
   firstcontractrequest(){
     let send_data = {
       "condition":
@@ -429,16 +436,17 @@ export class MarketingreviewNewComponent implements OnInit {
 
     this.videolink = val.videodata;
 
-
-
-
-
-
-
-
   }
 
-
+  bottomSheetVideoListOpen(val,index){
+    // this.videolist.val.videodata
+    this.videolist[index].videodata
+    console.log(" this.videolist[index].name",this.videolist[index].name)
+    const bottomSheetRef = this.bottomSheet.open(bottomSheetVideoList,{
+      data: this.videolist[index].videodata
+    });
+    }
+  
 
   // openDialog(): void {
   //   const dialogRef = this.dialog.open(dialogpage, {
@@ -623,5 +631,19 @@ export class dialogpage {
 
   onNoClick(): void {
     this.dialogRef.close();
+  }
+}
+
+@Component({
+  selector: 'bottomSheetVideoList',
+  templateUrl: 'bottomSheetVideoList.html',
+})
+export class bottomSheetVideoList {
+  constructor(@Inject(MAT_BOTTOM_SHEET_DATA) public bottomSheetData: any) {
+    console.log(bottomSheetData)
+  }
+  
+  openLink(event: MouseEvent): void {
+    event.preventDefault();
   }
 }

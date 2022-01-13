@@ -102,7 +102,7 @@
 
           <ng-container *ngFor='let item of videolist; let i=index'>
 
-            <h2 (click)='videoplay(item,i)'>{{item.name}}</h2>
+            <h2 (click)='bottomSheetVideoListOpen(item.name,i)'>{{item.name}}</h2>
 
           
             <!-- <ng-container *ngIf='item.flag'>
