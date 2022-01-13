@@ -379,19 +379,16 @@
 {display: flex;
     margin: .5%;
     width:32.2%;
-    box-shadow: 0 0 2px #000000cf;
-    background: linear-gradient(180deg,rgba(147,232,255,1) 0%,rgba(141,223,254,1) 100%);
+    box-shadow: 0 0 3px #04044c;
+    background: #fff;
     border-radius: 4px;
 }
-/* .videothwrapper:last-child{
-    width: 20%;
-} */
+
 .videothwrapper:hover{
-    /* border: 2px solid #0c2331; */
+
     transform: scale(1.05);
     transition: 500ms;
-        /* background: rgb(156,213,243);
-    background: linear-gradient(90deg, rgba(156,213,243,1) 0%, rgba(202,235,228,1) 100%); */
+
 }
 
 .videoth{
@@ -407,7 +404,7 @@
     left: 50%;
     transform: translate(-50%,-50%);
     height: 40px;
-    /* display: none; */
+
 }
 .videoth:hover .playicon{
      height: 45px;
@@ -432,8 +429,6 @@
     text-overflow: ellipsis;
     white-space: normal;
     cursor: pointer;
-    /* color: #fff; */
-    /* text-shadow: 1px 0px 1px #121f4a; */
     padding-right: 5px;
 
 }
