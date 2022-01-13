@@ -1,70 +1,184 @@
-[{
-    "name": "Sale deck",
-    "flag": true,
-    "videodata":[
-        { "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637746453722SampleVideo_720x480_5mb.mp4", "title": "TM-FLOW REPORT", "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG", "description": " TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:." },
+{"flag_pece" : 
+    [
+        {
+            "name": "PECE Presentation slide deck",
+            "flag": true,
+            "videodata":[]
+        },
 
-        { "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4", "title": "TM-FLOW REPORT test", "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG", "description": " TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:." },
-
-        { "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637746453722SampleVideo_720x480_5mb.mp4", "title": "TM-FLOW REPORT", "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG", "description": " TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:." },
-
-        { "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4", "title": "TM-FLOW REPORT test", "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG", "description": " TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:." },
-        
-        { "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637746453722SampleVideo_720x480_5mb.mp4", "title": "TM-FLOW REPORT", "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG", "description": " TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:." },
-
-        { "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4", "title": "TM-FLOW REPORT test", "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG", "description": " TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:." },
-        
-        { "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637746453722SampleVideo_720x480_5mb.mp4", "title": "TM-FLOW REPORT", "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG", "description": " TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:." },
-
-        { "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4", "title": "TM-FLOW REPORT test", "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG", "description": " TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:." },
-
-        { "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4", "title": "TM-FLOW REPORT test", "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG", "description": " TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:." },
-
-        { "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637746453722SampleVideo_720x480_5mb.mp4", "title": "TM-FLOW REPORT", "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG", "description": " TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:." },
-
-        { "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4", "title": "TM-FLOW REPORT test", "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG", "description": " TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:." },
-        
-        { "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637746453722SampleVideo_720x480_5mb.mp4", "title": "TM-FLOW REPORT", "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG", "description": " TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:." },
-
-        { "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4", "title": "TM-FLOW REPORT test", "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG", "description": " TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:." },
-        
-        { "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637746453722SampleVideo_720x480_5mb.mp4", "title": "TM-FLOW REPORT", "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG", "description": " TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:." },
-
-        { "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4", "title": "TM-FLOW REPORT test", "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG", "description": " TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:." },
-
-        { "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4", "title": "TM-FLOW REPORT test", "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG", "description": " TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:." },
-
-        { "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637746453722SampleVideo_720x480_5mb.mp4", "title": "TM-FLOW REPORT", "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG", "description": " TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:." },
-
-        { "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4", "title": "TM-FLOW REPORT test", "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG", "description": " TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:." },
-        
-        { "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637746453722SampleVideo_720x480_5mb.mp4", "title": "TM-FLOW REPORT", "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG", "description": " TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:." },
-
-        { "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4", "title": "TM-FLOW REPORT test", "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG", "description": " TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:." },
-        
-        { "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637746453722SampleVideo_720x480_5mb.mp4", "title": "TM-FLOW REPORT", "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG", "description": " TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:." },
-
-        { "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4", "title": "TM-FLOW REPORT test", "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG", "description": " TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:." }
-    ]
-  },
-
-
-  {
-    "name": "Sales pitch",
-    "flag": false,
-    "videodata":[
-          { "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/PECE-Sales-cript.mp4", "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG", "title": "PECE Sale Pitch", "description": " Our pitch script is designed to inform and grab the interest of your clients. By watching this video, you get to know what a salesperson tells his potential customer ( lead or practices ) about a product or service. Our perfectly designed product-based sales pitch is deeply involved with the final close of a deal. In order to become a successful salesperson, you have to sell yourself on what you are selling. Know your products, describe their benefits, and convince them that it is made for them. This video presents you with the complete enterprise system solution that works with every required staff member, including technicians, doctors, physician assistants, nurse practitioners, records keepers, and practice management. " }
-
-      ]
-  },
-
-
-
-  {
-    "name": "Software walkthrough",
-    "flag": false,
-    "videodata":[
-        { "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/PECE-demo.mp4", "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG", "title": "PECE Software Walk through", "description": " Our product-based software walkthrough converts prospects and demonstrates the testing and tment platform features. After completing your Beto Paredes main training and product-based training, you are introducing with product's back-office features; from here, you can get a clear idea about the access of different tools back-office system. " }
-      ]
-  }
+        {
+            "name": "PECE software walkthrough",
+            "flag": false,
+            "videodata":[
+                { 
+                    "url": "url",
+                    "title": "title",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "description" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/Introduction_to_the_PECE_Medical_device_platform.mp4",
+                    "title": "Introduction to the PECE Medical device platform",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Introduction to the PECE Medical device platform" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/Doctor_portal_dashboard.mp4",
+                    "title": "Doctor portal dashboard",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Doctor portal dashboard" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/Potential_Diagnosis_to_Review_from_the_doctor_dashboard.mp4",
+                    "title": "Potential Diagnosis to Review from the doctor dashboard",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Potential Diagnosis to Review from the doctor dashboard" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/How_to_search_for_important_definitions_with_integrated_WebMD_and_MedlinePlus.mp4",
+                    "title": "How to search for important definitions with integrated WebMD and MedlinePlus",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "How to search for important definitions with integrated WebMD and MedlinePlus" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/Toggle_between_pre_and_post_exam_data_and_viewing_post_exam_data.mp4",
+                    "title": "Toggle between pre and post exam data and viewing post exam data",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Toggle between pre and post exam data and viewing post exam data" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/Job_tickets_to_communicate_with_our_staff_concerning_any_questions_or_concerns.mp4",
+                    "title": "Job tickets to communicate with our staff concerning any questions or concerns",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Job tickets to communicate with our staff concerning any questions or concerns" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/How_to_quickly_review_all_of_the_most_recently_uploaded_reports.mp4",
+                    "title": "How to quickly review all of the most recently uploaded reports",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "How to quickly review all of the most recently uploaded reports" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/How_to_review_patient_folder_access_and_search_variables.mp4",
+                    "title": "How to review patient folder access and search variables",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "How to review patient folder access and search variables" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/A_short_description_on_HPS_Evaluation.mp4",
+                    "title": "A short description on HPS Evaluation",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "A short description on HPS Evaluation" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/How_to_sort_patients_by_Pending_signature_and_different_available_actions.mp4",
+                    "title": "How to sort patients by Pending signature and different available actions",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "How to sort patients by Pending signature and different available actions" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/How_to_add_notes_for_a_patient.mp4",
+                    "title": "How to add notes for a patient",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "How to add notes for a patient" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/How_to_view_a_patient_report_and_access_the_patients_folder.mp4",
+                    "title": "How to view a patient report and access the patients folder",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "How to view a patient report and access the patients folder" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/How_to_toggle_through_different_aspects_of_the_exam_for_a_TM-Flow_Report.mp4",
+                    "title": "How to toggle through different aspects of the exam for a TM-Flow Report",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "How to toggle through different aspects of the exam for a TM-Flow Report" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/Patient_Details_and_patient_intake_data.mp4",
+                    "title": "Patient Details and patient intake data",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Patient Details and patient intake data" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/How_to_review_the_Encounter_forms.mp4",
+                    "title": "How to review the Encounter forms",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "How to review the Encounter forms" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/Superbill_for_obesity.mp4",
+                    "title": "Superbill for obesity",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Superbill for obesity" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/Additional_recommended_diagnostic_tests.mp4",
+                    "title": "Additional recommended diagnostic tests",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Additional recommended diagnostic tests" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/Different_options_available_at_the_top_of_the_patient_folder_navigation.mp4",
+                    "title": "Different options available at the top of the patient folder navigation",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Different options available at the top of the patient folder navigation" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/How_to_access_other_actions_available_for_each_patient.mp4",
+                    "title": "How to access other actions available for each patient",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "How to access other actions available for each patient" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/Different_types_of_users_or_user_roles_available_in_the_system.mp4",
+                    "title": "Different types of users or user roles available in the system",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Different types of users or user roles available in the system" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/Practice_Manager_dashboard.mp4",
+                    "title": "Practice Manager dashboard",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Practice Manager dashboard" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/How_can_a_practice_manager_view_all_recently_billed_exams.mp4",
+                    "title": "How can a practice manager view all recently billed exams",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "How can a practice manager view all recently billed exams" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/How_can_a_practice_manager_view_all_recently_processed_exams.mp4",
+                    "title": "How can a practice manager view all recently processed exams",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "How can a practice manager view all recently processed exams" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/How_can_a_practice_manager_access_patient_reporting.mp4",
+                    "title": "How can a practice manager access patient reporting",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "How can a practice manager access patient reporting" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/How_can_a_practice_manager_manage_other_users_within_the_practice.mp4",
+                    "title": "How can a practice manager manage other users within the practice",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "How can a practice manager manage other users within the practice" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/Different_types_of_reports_that_can_be_accessed_by_a_Practice_manager.mp4",
+                    "title": "Different types of reports that can be accessed by a Practice manager",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Different types of reports that can be accessed by a Practice manager" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/How_can_a_practice_manager_manage_locations.mp4",
+                    "title": "How can a practice manager manage locations",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "How can a practice manager manage locations" 
+                }
+            ]
+        }
   ]
+}
