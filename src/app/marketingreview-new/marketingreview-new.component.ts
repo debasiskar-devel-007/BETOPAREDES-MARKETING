@@ -564,7 +564,7 @@ export class MarketingreviewNewComponent implements OnInit {
     // this.player.reset();
 
     this.player.src(val.url);
-
+    this.player.currentTime(0);
     // this.videoplayflag = true;
 
     // this.player.play();
