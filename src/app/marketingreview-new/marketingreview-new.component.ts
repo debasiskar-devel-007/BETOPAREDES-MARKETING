@@ -1,4 +1,4 @@
-import { Component, OnInit,Inject } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { ApiService } from "../api.service";
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatDialog, MatDialogRef, MatSnackBar } from '@angular/material';
@@ -6,7 +6,7 @@ import videojs from 'video.js';
 import { DomSanitizer } from '@angular/platform-browser';
 import { CookieService } from 'ngx-cookie-service';
 import { environment } from 'src/environments/environment';
-import {MatBottomSheet, MatBottomSheetRef,MAT_BOTTOM_SHEET_DATA} from '@angular/material/bottom-sheet';
+import { MatBottomSheet, MatBottomSheetRef, MAT_BOTTOM_SHEET_DATA } from '@angular/material/bottom-sheet';
 export interface BottomsheetData {
   data: any;
 }
@@ -32,9 +32,9 @@ export class MarketingreviewNewComponent implements OnInit {
   public video_duration: any = '';
   public video_end_time: any = '0:0:0';
   public video_percent: any = 0;
-  public posterimg: any ;
-  public progressSpinner:boolean = false;
-  
+  public posterimg: any;
+  public progressSpinner: boolean = false;
+
   public videoJsConfigObj = {
     preload: 'metadata',
     controls: false,
@@ -67,8 +67,8 @@ export class MarketingreviewNewComponent implements OnInit {
 
       [{ url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/PECE-Sales-cript.mp4', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', title: 'PECE Sale Pitch', description: ' Our pitch script is designed to inform and grab the interest of your clients. By watching this video, you get to know what a salesperson tells his potential customer ( lead or practices ) about a product or service. Our perfectly designed product-based sales pitch is deeply involved with the final close of a deal. In order to become a successful salesperson, you have to sell yourself on what you are selling. Know your products, describe their benefits, and convince them that it is made for them. This video presents you with the complete enterprise system solution that works with every required staff member, including technicians, doctors, physician assistants, nurse practitioners, records keepers, and practice management. ' },
 
-      // { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4', title: 'TM-FLOW REPORT', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' }
-    ]
+        // { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4', title: 'TM-FLOW REPORT', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' }
+      ]
 
 
   },
@@ -81,12 +81,12 @@ export class MarketingreviewNewComponent implements OnInit {
       [
         // { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-16375886325607774485510954222850.mp4', title: 'TM-FLOW REPORT', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
 
-      // { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4', title: 'Software walkthrough', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
-      
-      { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/PECE-demo.mp4',  img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG',  title: 'PECE Software Walk through', description: ' Our product-based software walkthrough converts prospects and demonstrates the testing and tment platform features. After completing your Beto Paredes main training and product-based training, you are introducing with product’s back-office features; from here, you can get a clear idea about the access of different tools back-office system. ' }
-    ]
+        // { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4', title: 'Software walkthrough', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
+
+        { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/PECE-demo.mp4', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', title: 'PECE Software Walk through', description: ' Our product-based software walkthrough converts prospects and demonstrates the testing and tment platform features. After completing your Beto Paredes main training and product-based training, you are introducing with product’s back-office features; from here, you can get a clear idea about the access of different tools back-office system. ' }
+      ]
   },
-];
+  ];
 
 
   public videolink: any = [];
@@ -104,9 +104,9 @@ export class MarketingreviewNewComponent implements OnInit {
   public rstcontract: boolean = true;
   public warrantycontract: boolean = true;
   public userdetails: any = {};
-  public parent_data:any = {};
+  public parent_data: any = {};
   constructor(public api_service: ApiService, public dialog: MatDialog,
-    public activatedroute: ActivatedRoute, public snackBar: MatSnackBar, private sanitizer: DomSanitizer, public cookie: CookieService, public router: Router,public bottomSheet: MatBottomSheet) {
+    public activatedroute: ActivatedRoute, public snackBar: MatSnackBar, private sanitizer: DomSanitizer, public cookie: CookieService, public router: Router, public bottomSheet: MatBottomSheet) {
     let endpoint = environment.api_url + 'api/marketiingreviewteach';
     let data = {};
     if (typeof (this.activatedroute.snapshot.queryParams.pid1) != 'undefined' && this.activatedroute.snapshot.queryParams.pid1 != null) {
@@ -141,7 +141,7 @@ export class MarketingreviewNewComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.posterimg,"posterimg");
+    console.log(this.posterimg, "posterimg");
 
     console.log(this.activatedroute.snapshot.queryParams);
 
@@ -160,7 +160,7 @@ export class MarketingreviewNewComponent implements OnInit {
 
       } else {
         console.log("Else block");
-        
+
         var newarr = this.videolist[0].videodata[0].url.split("https://betoparedesallvideos.s3.amazonaws.com");
         let url = 'https://d291rlacfzbauk.cloudfront.net' + newarr[1];
         //   this.video_listtable.video_file.path + this.video_listtable.video_file.fileservername;
@@ -199,16 +199,16 @@ export class MarketingreviewNewComponent implements OnInit {
 
 
   }
-  parentdata(){
-    let send_data={
-      id:this.activatedroute.snapshot.params.admin_id
+  parentdata() {
+    let send_data = {
+      id: this.activatedroute.snapshot.params.admin_id
     }
-    this.api_service.requestData1(environment.api_url + 'api/getoneuser',send_data).subscribe((res:any)=>{
+    this.api_service.requestData1(environment.api_url + 'api/getoneuser', send_data).subscribe((res: any) => {
       this.parent_data = res.result[0]
     })
   }
 
-  firstcontractrequest(){
+  firstcontractrequest() {
     let send_data = {
       "condition":
       {
@@ -245,7 +245,7 @@ export class MarketingreviewNewComponent implements OnInit {
       }
     })
   }
-  getoneleadfolderview(){
+  getoneleadfolderview() {
     let req_data = {
       "secret": this.cookie.get('secret'),
       "token": this.cookie.get('jwtToken'),
@@ -313,7 +313,7 @@ export class MarketingreviewNewComponent implements OnInit {
             type: this.userdetails.type,
           },
         ],
-        contact_id: this.userdetails.singeealldata.length > 0? this.userdetails.singeealldata[0]._id : '',
+        contact_id: this.userdetails.singeealldata.length > 0 ? this.userdetails.singeealldata[0]._id : '',
       };
       ednpoint = 'api/request-contracts';
     }
@@ -352,11 +352,11 @@ export class MarketingreviewNewComponent implements OnInit {
             type: this.userdetails.type,
           },
         ],
-        contact_id: this.userdetails.singeealldata.length > 0? this.userdetails.singeealldata[0]._id : '',
+        contact_id: this.userdetails.singeealldata.length > 0 ? this.userdetails.singeealldata[0]._id : '',
       };
       ednpoint = 'api/update-new_contract';
     }
-    if(val == 'credit'){
+    if (val == 'credit') {
       contractdata.Legal_Company_Name = this.userdetails.fullname;
       contractdata.address = this.userdetails.address;
       contractdata.city = this.userdetails.city;
@@ -396,15 +396,15 @@ export class MarketingreviewNewComponent implements OnInit {
     }
     console.log(data);
     console.log(environment.api_url + ednpoint);
-    
+
     this.api_service
       .requestData1(environment.api_url + ednpoint, data)
-      
+
       .subscribe((res: any) => {
         // this.snackBar.open(res.successmsg, 'ok');
 
         const dialogRef = this.dialog.open(dialogpage, {
-         
+
           panelClass: 'custom-modalbox'
         })
         dialogRef.afterClosed().subscribe(result => {
@@ -422,31 +422,33 @@ export class MarketingreviewNewComponent implements OnInit {
   }
   videoplay(val, i) {
 
-    console.log(val,"videoval+-+-");
+    console.log(val, "videoval+-+-");
     for (const key in this.videolist) {
       this.videolist[key].flag = false;
     }
     this.videolist[i].flag = true;
-    console.log(this.videolist[i],"this.videolist[i]");
-    
+    console.log(this.videolist[i], "this.videolist[i]");
+
     // this.posterimg=this.videolist[i].videodata[0].img;
     // console.log(this.posterimg,"posterimg");
-    
+
     this.videolink = [];
 
     this.videolink = val.videodata;
 
   }
 
-  bottomSheetVideoListOpen(val,index){
+  bottomSheetVideoListOpen(val, index) {
     // this.videolist.val.videodata
     this.videolist[index].videodata
-    console.log(" this.videolist[index].name",this.videolist[index].name)
-    const bottomSheetRef = this.bottomSheet.open(bottomSheetVideoList,{
-      data: this.videolist[index].videodata
+    console.log(" this.videolist[index].name", this.videolist[index].name)
+    const bottomSheetRef = this.bottomSheet.open(bottomSheetVideoList, {
+      data: this.videolist[index].videodata,
+      panelClass: ['genClass', 'videoGalleryModal']
+
     });
-    }
-  
+  }
+
 
   // openDialog(): void {
   //   const dialogRef = this.dialog.open(dialogpage, {
@@ -455,10 +457,10 @@ export class MarketingreviewNewComponent implements OnInit {
 
   //   dialogRef.afterClosed().subscribe(result => {
   //     console.log('The dialog was closed');
-    
+
   //   });
   // }
- 
+
 
 
 
@@ -548,7 +550,7 @@ export class MarketingreviewNewComponent implements OnInit {
     // this.cookie.delete('video_url');
     console.log(this.cookie.get('video_url'), 'video_url;;;;');
 
-    console.log(val,"val/*");
+    console.log(val, "val/*");
 
     // return;
     var newarr = val.url.split("https://betoparedesallvideos.s3.amazonaws.com");
@@ -557,9 +559,9 @@ export class MarketingreviewNewComponent implements OnInit {
     this.cookie.set('video_url', url, undefined, '/');
 
     console.log(this.cookie.get('video_url'), 'video_url;;;===========;');
-    this.posterimg=val.img;
-    console.log("poster img",this.posterimg);
-    
+    this.posterimg = val.img;
+    console.log("poster img", this.posterimg);
+
     this.videotitle = val.title;
     this.videodescription = val.description;
     this.cookie.set('videotitle', this.videotitle, undefined, '/');
@@ -627,7 +629,7 @@ export class dialogpage {
   constructor(
     public dialogRef: MatDialogRef<dialogpage>,
     // @Inject(MAT_DIALOG_DATA) public data: DialogData,
-  ) {}
+  ) { }
 
   onNoClick(): void {
     this.dialogRef.close();
@@ -637,12 +639,15 @@ export class dialogpage {
 @Component({
   selector: 'bottomSheetVideoList',
   templateUrl: 'bottomSheetVideoList.html',
+  styleUrls: ['./marketingreview-new.component.css']
 })
 export class bottomSheetVideoList {
   constructor(@Inject(MAT_BOTTOM_SHEET_DATA) public bottomSheetData: any) {
     console.log(bottomSheetData)
   }
-  
+
+  videoPlayIcon: string = 'https://all-frontend-assets.s3.amazonaws.com/transcendentpagan/assets/images/playicon.png';
+
   openLink(event: MouseEvent): void {
     event.preventDefault();
   }

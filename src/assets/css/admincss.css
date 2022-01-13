@@ -3334,7 +3334,7 @@ text-align: center;}
     .video-responsive  .mat-slider-horizontal {
         bottom: 38px;
         position: absolute;
-        z-index: 99999;
+        z-index: 999;
         width: 100%;
         min-width: 100%;
         transition: opacity 250ms linear;
@@ -3352,11 +3352,14 @@ text-align: center;}
         top: 0;
     }
 
-    
+ .videoGalleryModal {
+    padding: 0 !important;
+    background: linear-gradient(180deg, rgba(228,246,248,1) 25%, rgba(200,231,215,1) 100%) !important;
+}   
  
 .actioncontrol {
     position: absolute;
-    z-index: 9999!important;
+    z-index: 9!important;
     display: flex;
     align-items: center;
     justify-content: center;

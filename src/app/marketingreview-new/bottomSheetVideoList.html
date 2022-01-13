@@ -19,10 +19,33 @@
       <span mat-line>Show to your coworkers</span>
     </a>
   </mat-nav-list> -->
-  
-  <ng-container *ngFor='let item of bottomSheetData; let i=index'>
-    <button type="button">{{item.title}}</button>
-    <video width="320" height="240" poster="/images/w3schools_green.jpg" controls>
-        <source src="movie.mp4" type="video/mp4">
-     </video>
-  </ng-container>
+<div class="videolistContainer">
+  <h2 class="header">Segmented sections of {{videolist[index].name}}</h2>
+
+
+  <div class="allvideoslists">
+    <ng-container *ngFor='let item of bottomSheetData; let i=index'>
+      <!-- <button type="button">{{item.title}}</button>
+  <video width="320" height="240" poster="/images/w3schools_green.jpg" controls>
+    <source src="movie.mp4" type="video/mp4">
+  </video> -->
+
+      <div class="videothwrapper" (click)="clickOpenVideo(video)">
+        <span class="videoth">
+          <ng-container>
+            <img src="https://img.youtube.com/vi/tgbNymZ7vqY/0.jpg" class="videoimg" alt="">
+            <!-- [src]= https://img.youtube.com/vi/tgbNymZ7vqY/0.jpg -->
+          </ng-container>
+          <img src="{{videoPlayIcon}}" alt="#" class="playicon" (click)="clickOpenVideo(video)">
+        </span>
+
+        <span class="galleryconbox vdoconbox">
+          <h2 class="videoTitle">{{item.title}}</h2>
+          <!-- <p>{{item.description}}</p> -->
+        </span>
+      </div>
+    </ng-container>
+
+  </div>
+
+</div>
