@@ -3,71 +3,71 @@
 <div class="marketingre_view_top">
 
 
-  <div class="marketingre_view_top_body">
-    <div class="marketingre_view_top_wrapper">
+    <div class="marketingre_view_top_body">
+        <div class="marketingre_view_top_wrapper">
 
 
-      <div class="marketingre_view_top_left">
+            <div class="marketingre_view_top_left">
 
-        <img src='../../assets/images/betologo.png' alt="#">
-        <!-- <img src={{productdata?.image}} alt="#"> -->
+                <img src='../../assets/images/betologo.png' alt="#">
+                <!-- <img src={{productdata?.image}} alt="#"> -->
 
-      </div>
+            </div>
 
-      <div class="marketingre_view_top_right">
-        <ng-container *ngFor="let item of productdata">
-          <span class="item_block">
+            <div class="marketingre_view_top_right">
+                <ng-container *ngFor="let item of productdata">
+                    <span class="item_block">
             <ng-container *ngIf="medigrade_product_flag != true">
 
 
               <span class="contract_div"> <img src={{item?.image}} alt="#"></span>
-              <span *ngIf="item?._id == '604aff3691b7c80008ca11a8' && pececontract" class="contract_div">
+                    <span *ngIf="item?._id == '604aff3691b7c80008ca11a8' && pececontract" class="contract_div">
                 <h2>{{item?.productname}} </h2>
                 <!-- <button (click)="newrequestcontract('pece')">Request Contract</button> -->
               </span>
-              <span *ngIf="item?._id == '612c883f118c110009f02820' && biocontract" class="contract_div">
+                    <span *ngIf="item?._id == '612c883f118c110009f02820' && biocontract" class="contract_div">
                 <h2>{{item?.productname}} </h2>
                 <!-- <button (click)="newrequestcontract('bio')">Request Contract</button> -->
               </span>
-              <span *ngIf="item?._id == '612c89242005f400082d5fb1' && rstcontract" class="contract_div">
+                    <span *ngIf="item?._id == '612c89242005f400082d5fb1' && rstcontract" class="contract_div">
                 <h2>{{item?.productname}} </h2>
                 <!-- <button (click)="newrequestcontract('rst')">Request Contract</button> -->
               </span>
 
 
-            </ng-container>
-          </span>
-        </ng-container>
-        <ng-container *ngIf="medigrade_product_flag == true">
-          <span class="medigrade_block">
+                </ng-container>
+                </span>
+                </ng-container>
+                <ng-container *ngIf="medigrade_product_flag == true">
+                    <span class="medigrade_block">
             <span class="contract_div contract_logo"><img src="../../assets/images/quadrant_logo.png" alt="#"></span>
-            <div class="contract_divTEXT">
-              <span *ngIf="pece_product_flag" class="contract_div contract_pro">
+                    <div class="contract_divTEXT">
+                        <span *ngIf="pece_product_flag" class="contract_div contract_pro">
                 <h2>Pece</h2>
                 <!-- <button (click)="newrequestcontract('pece')">Request Contract</button> -->
               </span>
-              <span *ngIf="tmflow_product_flag" class="contract_div contract_pro">
+                        <span *ngIf="tmflow_product_flag" class="contract_div contract_pro">
                 <h2>TM-FLOW ANS MEDICAL</h2>
                 <!-- <button (click)="newrequestcontract('tmflow')">Request Contract</button> -->
               </span>
-              <span *ngIf="creditcontract" class="contract_div contract_pro">
+                        <span *ngIf="creditcontract" class="contract_div contract_pro">
                 <h2>TM-FLOW ANS MEDICAL CREDIT APPLICATION</h2>
                 <!-- <button (click)="newrequestcontract('credit')">Request Contract</button> -->
               </span>
-              <span *ngIf="warrantycontract" class="contract_div contract_pro">
+                        <span *ngIf="warrantycontract" class="contract_div contract_pro">
                 <h2>TM-FLOW ANS MEDICAL DEVICE 5-YEAR EXTENDED WARRANTY</h2>
                 <!-- <button (click)="newrequestcontract('warranty')">Request Contract</button> -->
               </span>
+                    </div>
+                    </span>
+                </ng-container>
             </div>
-          </span>
-        </ng-container>
-      </div>
 
 
 
 
+        </div>
     </div>
-  </div>
 
 </div>
 
@@ -75,36 +75,37 @@
 <div class="marketingre_view_body">
 
 
-  <div class="marketingre_view_body_wrapper">
+    <div class="marketingre_view_body_wrapper">
 
 
-    <div class="neoGEN_bluetextwrapper_main">
-      <div class="neoGEN_bluetextwrapper_sub">
-        <h2>YOUR DOCTORS WILL BE EXCITED WITH THE RM-3A TESTING AND REPORT </h2>
-        <p>Take advantage of your physicians’ network and earn big with AWS PECE Program and the RM-3A medical device.
-          No other system in the ANS medical industry gives you as much data, and our level of analytical accuracy is
-          unmatched by any other available devices.
-        </p>
-      </div>
-    </div>
-
-
+        <div class="neoGEN_bluetextwrapper_main">
+            <div class="neoGEN_bluetextwrapper_sub">
+                <h2>YOUR DOCTORS WILL BE EXCITED WITH THE RM-3A TESTING AND REPORT </h2>
+                <p>Take advantage of your physicians’ network and earn big with AWS PECE Program and the RM-3A medical device. No other system in the ANS medical industry gives you as much data, and our level of analytical accuracy is unmatched by any other
+                    available devices.
+                </p>
+            </div>
+        </div>
 
 
 
-    <div class="marketingre_view_body_wrapper_detail">
-      <div class="marketingre_view_body_con_top">
-        <div class="marketingre_view_body_con_top_left">
-          <!-- 
+
+
+        <div class="marketingre_view_body_wrapper_detail">
+            <div class="marketingre_view_body_con_top">
+                <div class="marketingre_view_body_con_top_left">
+                    <!-- 
           <h3>Know your Representative. This Present link sent by {{techata?.fullname}},
             {{techata?.email}},{{techata?.phone}}</h3> -->
+                    <!-- {{video_all_data | json }} -->
+                    <ng-container *ngIf="video_all_data!= null ">
 
-          <ng-container *ngFor='let item of video_all_data; let i=index'>
+                        <ng-container *ngFor='let item of video_all_data; let i=index'>
 
-            <h2 (click)='bottomSheetVideoListOpen(item.name,i)'>{{item.name}}</h2>
+                            <h2 (click)='bottomSheetVideoListOpen(item.name,i)'>{{item.name}}</h2>
 
 
-            <!-- <ng-container *ngIf='item.flag'>
+                            <!-- <ng-container *ngIf='item.flag'>
 
         
               <label *ngFor='let vlink of item.videodata; let j=index'>
@@ -122,7 +123,8 @@
 
 
 
-          </ng-container>
+                        </ng-container>
+                    </ng-container>
 
 
 
@@ -130,32 +132,30 @@
 
 
 
-        </div>
+                </div>
 
 
-        <!-- <button *ngIf="requestflag==false" (click)=request_contract()> REQUEST A CONTRACT</button>
+                <!-- <button *ngIf="requestflag==false" (click)=request_contract()> REQUEST A CONTRACT</button>
         <button *ngIf="requestflag==true" (click)=request_contract()> Contract request sent</button> -->
 
-      </div>
+            </div>
 
-      <!-- <div class="marketingre_view_btn_group">
+            <!-- <div class="marketingre_view_btn_group">
         <button >contract review</button>
         <button> REQUEST A CONTRACT</button>
         <button >Product Review</button>
       </div> -->
 
-      <div class="marketingre_view_body_con">
+            <div class="marketingre_view_body_con">
 
-        <div class="marketingre_view_body_con_left">
+                <div class="marketingre_view_body_con_left">
 
-          <div class="video-responsive">
+                    <div class="video-responsive">
 
-            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/jssO8-5qmag" frameborder="0"
+                        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/jssO8-5qmag" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe> -->
-            <video id="my-video-modal" *ngIf='videoplayflag' (timeupdate)="onprocess()" preload="auto" width="640"
-              height="264" poster="https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG"
-              data-setup="{}" controls>
+                        <video id="my-video-modal" *ngIf='videoplayflag' (timeupdate)="onprocess()" preload="auto" width="640" height="264" poster="https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG" data-setup="{}" controls>
               <source [src]="video_url" type="video/mp4" />
               <p class="vjs-no-js">
                 To view this video please enable JavaScript, and consider upgrading to a
@@ -167,53 +167,63 @@
             </video>
 
 
-            <!-- <video width="100%" id="vid" autoplay loop controls muted>
+                        <!-- <video width="100%" id="vid" autoplay loop controls muted>
               <source src="{{ video_url }}" type="video/mp4" />
               Your browser does not support HTML video.
             </video> -->
 
-            <ng-container *ngIf="videotimeflag">
-              <!-- <mat-progress-bar class="loaderprogress" mode="determinate" value="{{ video_percent }}"></mat-progress-bar> -->
-              <div (click)='progressvideo(video_percent)'>
-                <mat-slider class="loaderprogress" [disabled]="disabled" [value]='video_percent'
-                  [(ngModel)]="Change_video_percent" aria-labelledby="example-name-label">
-                </mat-slider>
-              </div>
-              <div class="actioncontrol" id="actionid" [ngClass]="show">
-                <span class="videotime">{{ video_time }}/{{ video_end_time }}</span>
+                        <ng-container *ngIf="videotimeflag">
+                            <!-- <mat-progress-bar class="loaderprogress" mode="determinate" value="{{ video_percent }}"></mat-progress-bar> -->
+                            <div (click)='progressvideo(video_percent)'>
+                                <mat-slider class="loaderprogress" [disabled]="disabled" [value]='video_percent' [(ngModel)]="Change_video_percent" aria-labelledby="example-name-label">
+                                </mat-slider>
+                            </div>
+                            <div class="actioncontrol" id="actionid" [ngClass]="show">
+                                <span class="videotime">{{ video_time }}/{{ video_end_time }}</span>
 
-                <button (click)="playbtn()" *ngIf='!playpauseflag' class="playbtn">
+                                <button (click)="playbtn()" *ngIf='!playpauseflag' class="playbtn">
                   <span>play_arrow</span>
                 </button>
-                <div class="playbtnlessplus">
-                  <button (click)="skip(-10)" class="playbtnless">
+                                <div class="playbtnlessplus">
+                                    <button (click)="skip(-10)" class="playbtnless">
                     <img src="https://img.icons8.com/ios-glyphs/30/000000/replay-10.png" />
                   </button>
-                  <button (click)="skip(10)" class="playbtnplus">
+                                    <button (click)="skip(10)" class="playbtnplus">
                     <img src="https://img.icons8.com/ios-glyphs/60/000000/forward-10.png" />
                   </button>
-                  <span *ngIf='!exitfullscreenflag' (click)='fullscreenview()' class="fullscreenBTN">fullscreen</span>
-                  <!-- <mat-icon *ngIf='exitfullscreenflag' (click)='fullscreenview()'>fullscreen_exit</mat-icon> -->
+                                    <span *ngIf='!exitfullscreenflag' (click)='fullscreenview()' class="fullscreenBTN">fullscreen</span>
+                                    <!-- <mat-icon *ngIf='exitfullscreenflag' (click)='fullscreenview()'>fullscreen_exit</mat-icon> -->
 
-                </div>
+                                </div>
 
-                <button (click)="pausebtn()" *ngIf='playpauseflag' class="pausebtn">
+                                <button (click)="pausebtn()" *ngIf='playpauseflag' class="pausebtn">
                   <span>pause</span>
 
                 </button>
-              </div>
+                            </div>
 
-            </ng-container>
+                        </ng-container>
 
-          </div>
+                    </div>
 
-          <div class="videodescription">
-            <h2>{{videotitle}}</h2>
-            <h3>{{videodescription}}</h3>
-          </div>
-          <!-- <button>Marketing Strategies</button>
+                    <div class="videodescription">
+                        <h2>{{videotitle}}</h2>
+                        <h3>{{videodescription}}</h3>
+                    </div>
+                    <!-- <button>Marketing Strategies</button>
 
           <button>Expected Revenues </button> -->
+
+                </div>
+
+
+
+
+
+            </div>
+
+
+
 
         </div>
 
@@ -221,18 +231,7 @@
 
 
 
-      </div>
-
-
-
-
-    </div>
-
-
-
-
-
-    <!-- <div class="marketingre_view_body_footer">
+        <!-- <div class="marketingre_view_body_footer">
 
       <div class="marketingre_view_body_footer_wrapper">
 
@@ -245,7 +244,7 @@
 
 
 
-  </div>
+    </div>
 
 
 </div>

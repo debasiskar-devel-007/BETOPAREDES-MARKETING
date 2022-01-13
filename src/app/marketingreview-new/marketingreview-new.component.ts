@@ -21,7 +21,7 @@ export interface BottomsheetData {
 })
 export class MarketingreviewNewComponent implements OnInit {
   public exitfullscreenflag: boolean = false;
-  public video_all_data: any = {};
+  public video_all_data: any = [];
   public show: boolean = false;
   public disabled: boolean = false;
   public requestflag: boolean = false;
@@ -494,8 +494,8 @@ export class MarketingreviewNewComponent implements OnInit {
     });
     bottomSheetRef.afterDismissed().subscribe((data) => {
       console.log("data==>", data);
-
-      this.playnext(data);
+      if (data != null)
+        this.playnext(data);
     });
   }
 
@@ -611,7 +611,7 @@ export class MarketingreviewNewComponent implements OnInit {
     // this.player.reset();
 
     this.player.src(val.url);
-
+    this.player.currentTime(0);
     // this.videoplayflag = true;
 
     // this.player.play();
