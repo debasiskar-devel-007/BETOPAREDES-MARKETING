@@ -380,7 +380,7 @@
     border: 1px solid #70707057;
     margin: 0 5px;
     margin-bottom: 5px;
-    /* flex: 1 0 20%; */
+    flex: 1 0 19%;
     width: 19%;
 }
 /* .videothwrapper:last-child{
@@ -430,10 +430,4 @@
     cursor: pointer;
 }
 
-@media screen and(max-width:1500px){
-
-    .videothwrapper{
-        width: 24%;   
-    }
-}
  
