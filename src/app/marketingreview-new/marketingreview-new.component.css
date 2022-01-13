@@ -371,6 +371,8 @@
 }
 .allvideoslists{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .videothwrapper
@@ -378,8 +380,12 @@
     border: 1px solid #70707057;
     margin: 0 5px;
     margin-bottom: 5px;
-    flex: 1 0 48%;
+    flex: 1 0 19%;
+    width: 19%;
 }
+/* .videothwrapper:last-child{
+    width: 20%;
+} */
 .videothwrapper:hover{
     border: 1px solid #001420;
 }
