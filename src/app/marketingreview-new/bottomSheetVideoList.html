@@ -32,13 +32,13 @@
     <source src="movie.mp4" type="video/mp4">
   </video> -->
 
-      <div class="videothwrapper" (click)="clickOpenVideo(video)">
+      <div class="videothwrapper" (click)="clickOpenVideo(item)">
         <span class="videoth">
           <ng-container>
-            <img src="https://img.youtube.com/vi/g_d9nczOvtY/0.jpg" class="videoimg" alt="">
+            <img src={{item.img}} class="videoimg" alt="">
             <!-- [src]= https://img.youtube.com/vi/tgbNymZ7vqY/0.jpg -->
           </ng-container>
-          <img src="{{videoPlayIcon}}" alt="#" class="playicon" (click)="clickOpenVideo(video)">
+          <img src="{{videoPlayIcon}}" alt="#" class="playicon" (click)="clickOpenVideo(item)">
         </span>
 
         <span class="galleryconbox vdoconbox">

@@ -56,39 +56,39 @@ export class MarketingreviewNewComponent implements OnInit {
     }
   };
   public playpauseflag: any = false;
-  public videolist: any = [{
-    name: 'Sale deck', flag: true, videodata:
+  // public videolist: any = [{
+  //   name: 'Sale deck', flag: true, videodata:
 
-      [
-        { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637746453722SampleVideo_720x480_5mb.mp4', title: 'TM-FLOW REPORT', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
+  //     [
+  //       { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637746453722SampleVideo_720x480_5mb.mp4', title: 'TM-FLOW REPORT', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
 
-        { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4', title: 'TM-FLOW REPORT test', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
+  //       { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4', title: 'TM-FLOW REPORT test', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
 
-      ]
-  },
-
-
-  {
-    name: 'Sales pitch', flag: false, videodata:
-
-      [{ url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/PECE-Sales-cript.mp4', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', title: 'PECE Sale Pitch', description: ' Our pitch script is designed to inform and grab the interest of your clients. By watching this video, you get to know what a salesperson tells his potential customer ( lead or practices ) about a product or service. Our perfectly designed product-based sales pitch is deeply involved with the final close of a deal. In order to become a successful salesperson, you have to sell yourself on what you are selling. Know your products, describe their benefits, and convince them that it is made for them. This video presents you with the complete enterprise system solution that works with every required staff member, including technicians, doctors, physician assistants, nurse practitioners, records keepers, and practice management. ' },
-
-      ]
+  //     ]
+  // },
 
 
-  },
+  // {
+  //   name: 'Sales pitch', flag: false, videodata:
+
+  //     [{ url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/PECE-Sales-cript.mp4', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', title: 'PECE Sale Pitch', description: ' Our pitch script is designed to inform and grab the interest of your clients. By watching this video, you get to know what a salesperson tells his potential customer ( lead or practices ) about a product or service. Our perfectly designed product-based sales pitch is deeply involved with the final close of a deal. In order to become a successful salesperson, you have to sell yourself on what you are selling. Know your products, describe their benefits, and convince them that it is made for them. This video presents you with the complete enterprise system solution that works with every required staff member, including technicians, doctors, physician assistants, nurse practitioners, records keepers, and practice management. ' },
+
+  //     ]
+
+
+  // },
 
 
 
-  {
-    name: 'Software walkthrough', flag: false, videodata:
+  // {
+  //   name: 'Software walkthrough', flag: false, videodata:
 
-      [
+  //     [
 
-        { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/PECE-demo.mp4', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', title: 'PECE Software Walk through', description: ' Our product-based software walkthrough converts prospects and demonstrates the testing and tment platform features. After completing your Beto Paredes main training and product-based training, you are introducing with product’s back-office features; from here, you can get a clear idea about the access of different tools back-office system. ' }
-      ]
-  },
-  ];
+  //       { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/PECE-demo.mp4', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', title: 'PECE Software Walk through', description: ' Our product-based software walkthrough converts prospects and demonstrates the testing and tment platform features. After completing your Beto Paredes main training and product-based training, you are introducing with product’s back-office features; from here, you can get a clear idea about the access of different tools back-office system. ' }
+  //     ]
+  // },
+  // ];
 
 
   public videolink: any = [];
@@ -193,13 +193,23 @@ export class MarketingreviewNewComponent implements OnInit {
       } else {
         console.log("Else block");
 
-        var newarr = this.videolist[0].videodata[0].url.split("https://betoparedesallvideos.s3.amazonaws.com");
-        let url = 'https://d291rlacfzbauk.cloudfront.net' + newarr[1];
+        // var newarr = this.videolist[0].videodata[0].url.split("https://betoparedesallvideos.s3.amazonaws.com");
+        // let url = 'https://d291rlacfzbauk.cloudfront.net' + newarr[1];
+        let url=""
+        if (this.video_all_data.length > 0 && this.video_all_data[0].videodata.length > 0 ){
+          url = this.video_all_data[0].videodata[0].url
+          console.log("video_all_data url +++")
+
+        }else{
+          url = "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-1637746453722SampleVideo_720x480_5mb.mp4"
+          console.log("else url +++")
+        }
+        
         //   this.video_listtable.video_file.path + this.video_listtable.video_file.fileservername;
         this.cookie.set('video_url', url, undefined, '/');
         this.video_url = url;
-        this.videotitle = this.videolist[0].videodata[0].title;
-        this.videodescription = this.videolist[0].videodata[0].description;
+        this.videotitle = "Demo Video";
+        this.videodescription = "Default video";
 
         // let videotitledesc = {
         //   videotitle: this.videolist[0].videodata[0].title,
@@ -295,18 +305,19 @@ export class MarketingreviewNewComponent implements OnInit {
 
     })
   }
-  loadvideo() {
 
-    setTimeout(() => {
-      this.player = videojs('#my-video-modal');
+  // loadvideo() {
 
-      this.player.controls(false);
-      console.log('onload section');// TO CONTROL FALSE
+  //   setTimeout(() => {
+  //     this.player = videojs('#my-video-modal');
 
-      this.video_currenttime = parseInt(this.player.currentTime());
-      this.onprocess();
-    }, 1000);
-  }
+  //     this.player.controls(false);
+  //     console.log('onload section');// TO CONTROL FALSE
+
+  //     this.video_currenttime = parseInt(this.player.currentTime());
+  //     this.onprocess();
+  //   }, 1000);
+  // }
   // request_contract() {
   //   console.log(this.activatedroute.snapshot.params);
   //   let endpoint = 'https://z2oo2a8oq9.execute-api.us-east-1.amazonaws.com/dev/api/requestcontractfromlead'
@@ -453,23 +464,23 @@ export class MarketingreviewNewComponent implements OnInit {
   //       }, 1500);
   //     });
   // }
-  videoplay(val, i) {
+  // videoplay(val, i) {
 
-    console.log(val, "videoval+-+-");
-    for (const key in this.videolist) {
-      this.videolist[key].flag = false;
-    }
-    this.videolist[i].flag = true;
-    console.log(this.videolist[i], "this.videolist[i]");
+  //   console.log(val, "videoval+-+-");
+  //   for (const key in this.videolist) {
+  //     this.videolist[key].flag = false;
+  //   }
+  //   this.videolist[i].flag = true;
+  //   console.log(this.videolist[i], "this.videolist[i]");
 
-    // this.posterimg=this.videolist[i].videodata[0].img;
-    // console.log(this.posterimg,"posterimg");
+  //   // this.posterimg=this.videolist[i].videodata[0].img;
+  //   // console.log(this.posterimg,"posterimg");
 
-    this.videolink = [];
+  //   this.videolink = [];
 
-    this.videolink = val.videodata;
+  //   this.videolink = val.videodata;
 
-  }
+  // }
 
   bottomSheetVideoListOpen(val, index) {
     // this.videolist.val.videodata
@@ -481,7 +492,13 @@ export class MarketingreviewNewComponent implements OnInit {
       panelClass: ['genClass', 'videoGalleryModal']
 
     });
+    bottomSheetRef.afterDismissed().subscribe((data) => {
+      console.log("data==>",data)
+      
+      this.playnext(data)
+    });
   }
+  
 
 
   // openDialog(): void {
@@ -494,12 +511,6 @@ export class MarketingreviewNewComponent implements OnInit {
 
   //   });
   // }
-
-
-
-
-
-
 
 
   onprocess() {
@@ -577,40 +588,29 @@ export class MarketingreviewNewComponent implements OnInit {
     }
   }
 
-  playnext(val, i) {
-    // this.player.currentTime(0)
-    // this.player.dispose();
-    // videojs('#my-video-modal').dispose();
-    // this.cookie.delete('video_url');
+  playnext(val) {
+    this.videoplayflag = false;
+    // this.video_currenttime =0;
+    // this.video_duration = parseInt(this.player.duration());
+
+    
     console.log(this.cookie.get('video_url'), 'video_url;;;;');
 
-    console.log(val, "val/*");
-
-    // return;
-    var newarr = val.url.split("https://betoparedesallvideos.s3.amazonaws.com");
-    let url = 'https://d291rlacfzbauk.cloudfront.net' + newarr[1];
+    let url = val.url
     // setTimeout(() => {
     this.cookie.set('video_url', url, undefined, '/');
 
     console.log(this.cookie.get('video_url'), 'video_url;;;===========;');
     this.posterimg = val.img;
-    console.log("poster img", this.posterimg);
-
     this.videotitle = val.title;
     this.videodescription = val.description;
     this.cookie.set('videotitle', this.videotitle, undefined, '/');
     this.cookie.set('videodesc', this.videodescription, undefined, '/');
-    // }, 500);
-
-    // setTimeout(() => {
-    //   console.log('TEST________________-');
-
-    //   let currentUrl = this.router.url;
-    //   this.router.routeReuseStrategy.shouldReuseRoute = () => false;
-    //   this.router.onSameUrlNavigation = 'reload';
-    //   this.router.navigate([currentUrl]);
-    // }, 1000);
-
+    console.log(this.cookie.get('video_url'),this.cookie.get('videotitle'),this.cookie.get('videodesc'), 'Video related cookies');
+    this.videoplayflag = true;
+    
+    this.onprocess();
+    this.player.play();
     return
     // console.log(val.url, i, this.player);
     // // setTimeout(() => {
@@ -647,6 +647,7 @@ export class MarketingreviewNewComponent implements OnInit {
 
 
   }
+  
   ngOnDestroy() {
     // this.cookie.delete('video_url')
     // this.player.dispose();
@@ -677,14 +678,19 @@ export class dialogpage {
 })
 export class bottomSheetVideoList {
   public modaldata: any;
-  constructor(@Inject(MAT_BOTTOM_SHEET_DATA) public bottomSheetData: BottomsheetData) {
+  constructor(@Inject(MAT_BOTTOM_SHEET_DATA) public bottomSheetData: BottomsheetData,private _bottomSheetRef: MatBottomSheetRef<bottomSheetVideoList>) {
     this.modaldata = bottomSheetData
-    console.warn(this.modaldata, 'jj')
   }
 
   videoPlayIcon: string = 'https://all-frontend-assets.s3.amazonaws.com/transcendentpagan/assets/images/playicon.png';
 
+  clickOpenVideo(val){
+    console.log("video_val ==>",val)
+    this._bottomSheetRef.dismiss(val);
+  }
+
   openLink(event: MouseEvent): void {
+    this._bottomSheetRef.dismiss();
     event.preventDefault();
   }
 }
