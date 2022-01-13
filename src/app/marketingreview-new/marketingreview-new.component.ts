@@ -21,7 +21,7 @@ export interface BottomsheetData {
 })
 export class MarketingreviewNewComponent implements OnInit {
   public exitfullscreenflag: boolean = false;
-  public video_all_data:any = {};
+  public video_all_data: any = {};
   public show: boolean = false;
   public disabled: boolean = false;
   public requestflag: boolean = false;
@@ -133,7 +133,7 @@ export class MarketingreviewNewComponent implements OnInit {
       console.log(res);
       this.productdata = res.results.productdata;
       for (const key in this.productdata) {
-        this.product_list[key] =  this.productdata[key]._id
+        this.product_list[key] = this.productdata[key]._id
         // if (this.productdata[key]._id == '604aff3691b7c80008ca11a8') {
         //   this.medigrade++;
         // }
@@ -141,26 +141,26 @@ export class MarketingreviewNewComponent implements OnInit {
         //   this.medigrade++;
         // }
       }
-      if (this.product_list.includes('612c883f118c110009f02820') && this.product_list.includes('612c89242005f400082d5fb1')){
-        this.bioenergetics_rst_product_flag=true
-        const video_all_data = 
-        console.log("this.bioenergetics_rst_product_flag ==> ",this.bioenergetics_rst_product_flag)
+      if (this.product_list.includes('612c883f118c110009f02820') && this.product_list.includes('612c89242005f400082d5fb1')) {
+        this.bioenergetics_rst_product_flag = true
+        const video_all_data =
+          console.log("this.bioenergetics_rst_product_flag ==> ", this.bioenergetics_rst_product_flag)
       }
-      if (this.product_list.includes('604aff3691b7c80008ca11a8') && this.product_list.includes('604a0b6e40962e00088f0d79')){
-        this.medigrade_product_flag=true
+      if (this.product_list.includes('604aff3691b7c80008ca11a8') && this.product_list.includes('604a0b6e40962e00088f0d79')) {
+        this.medigrade_product_flag = true
         this.video_all_data = allvideodata.flag_pece
-        console.log("this.medigrade_product_flag ==> ",this.medigrade_product_flag)
-        console.log("video_all_data ==> ",this.video_all_data)
+        console.log("this.medigrade_product_flag ==> ", this.medigrade_product_flag)
+        console.log("video_all_data ==> ", this.video_all_data)
       }
-      if (!this.product_list.includes('604aff3691b7c80008ca11a8') && this.product_list.includes('604a0b6e40962e00088f0d79')){
-        this.tmflow_product_flag=true
-        const video_all_data = 
-        console.log("this.tmflow_product_flag ==> ",this.tmflow_product_flag)
+      if (!this.product_list.includes('604aff3691b7c80008ca11a8') && this.product_list.includes('604a0b6e40962e00088f0d79')) {
+        this.tmflow_product_flag = true
+        const video_all_data =
+          console.log("this.tmflow_product_flag ==> ", this.tmflow_product_flag)
       }
-      if (this.product_list.includes('604aff3691b7c80008ca11a8') && !this.product_list.includes('604a0b6e40962e00088f0d79')){
-        this.pece_product_flag=true
-        const video_all_data = 
-        console.log("this.pece_product_flag ==> ",this.pece_product_flag)
+      if (this.product_list.includes('604aff3691b7c80008ca11a8') && !this.product_list.includes('604a0b6e40962e00088f0d79')) {
+        this.pece_product_flag = true
+        const video_all_data =
+          console.log("this.pece_product_flag ==> ", this.pece_product_flag)
       }
 
       this.techata = res.results.userdata[0];
@@ -172,7 +172,7 @@ export class MarketingreviewNewComponent implements OnInit {
   }
 
   ngOnInit() {
-    
+
     console.log(this.posterimg, "posterimg");
 
     console.log(this.activatedroute.snapshot.queryParams);
@@ -195,16 +195,16 @@ export class MarketingreviewNewComponent implements OnInit {
 
         // var newarr = this.videolist[0].videodata[0].url.split("https://betoparedesallvideos.s3.amazonaws.com");
         // let url = 'https://d291rlacfzbauk.cloudfront.net' + newarr[1];
-        let url=""
-        if (this.video_all_data.length > 0 && this.video_all_data[0].videodata.length > 0 ){
+        let url = ""
+        if (this.video_all_data.length > 0 && this.video_all_data[0].videodata.length > 0) {
           url = this.video_all_data[0].videodata[0].url
           console.log("video_all_data url +++")
 
-        }else{
+        } else {
           url = "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-1637746453722SampleVideo_720x480_5mb.mp4"
           console.log("else url +++")
         }
-        
+
         //   this.video_listtable.video_file.path + this.video_listtable.video_file.fileservername;
         this.cookie.set('video_url', url, undefined, '/');
         this.video_url = url;
@@ -493,12 +493,12 @@ export class MarketingreviewNewComponent implements OnInit {
 
     });
     bottomSheetRef.afterDismissed().subscribe((data) => {
-      console.log("data==>",data)
-      
-      this.playnext(data)
+      console.log("data==>", data);
+
+      this.playnext(data);
     });
   }
-  
+
 
 
   // openDialog(): void {
@@ -589,11 +589,10 @@ export class MarketingreviewNewComponent implements OnInit {
   }
 
   playnext(val) {
-    this.videoplayflag = false;
+    // this.videoplayflag = false;
     // this.video_currenttime =0;
     // this.video_duration = parseInt(this.player.duration());
-
-    
+    // setTimeout(() => {
     console.log(this.cookie.get('video_url'), 'video_url;;;;');
 
     let url = val.url
@@ -606,12 +605,25 @@ export class MarketingreviewNewComponent implements OnInit {
     this.videodescription = val.description;
     this.cookie.set('videotitle', this.videotitle, undefined, '/');
     this.cookie.set('videodesc', this.videodescription, undefined, '/');
-    console.log(this.cookie.get('video_url'),this.cookie.get('videotitle'),this.cookie.get('videodesc'), 'Video related cookies');
-    this.videoplayflag = true;
-    
+    console.log(this.cookie.get('video_url'), this.cookie.get('videotitle'), this.cookie.get('videodesc'), 'Video related cookies');
+
+    // this.player.updateSrc(val.url);
+    // this.player.reset();
+
+    this.player.src(val.url);
+
+    // this.videoplayflag = true;
+
+    // this.player.play();
+    this.playbtn();
     this.onprocess();
-    this.player.play();
+
     return
+
+    // }, 0);
+
+
+
     // console.log(val.url, i, this.player);
     // // setTimeout(() => {
     // this.videoplayflag = false;
@@ -647,7 +659,7 @@ export class MarketingreviewNewComponent implements OnInit {
 
 
   }
-  
+
   ngOnDestroy() {
     // this.cookie.delete('video_url')
     // this.player.dispose();
@@ -678,13 +690,13 @@ export class dialogpage {
 })
 export class bottomSheetVideoList {
   public modaldata: any;
-  constructor(@Inject(MAT_BOTTOM_SHEET_DATA) public bottomSheetData: BottomsheetData,private _bottomSheetRef: MatBottomSheetRef<bottomSheetVideoList>) {
+  constructor(@Inject(MAT_BOTTOM_SHEET_DATA) public bottomSheetData: BottomsheetData, private _bottomSheetRef: MatBottomSheetRef<bottomSheetVideoList>) {
     this.modaldata = bottomSheetData
   }
   videoPlayIcon: string = 'https://all-frontend-assets.s3.amazonaws.com/transcendentpagan/assets/images/playicon.png';
 
-  clickOpenVideo(val){
-    console.log("video_val ==>",val)
+  clickOpenVideo(val) {
+    console.log("video_val ==>", val)
     this._bottomSheetRef.dismiss(val);
   }
 
