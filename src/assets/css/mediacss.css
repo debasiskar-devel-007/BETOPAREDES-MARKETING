@@ -47,7 +47,7 @@
     }
      .videothwrapper{
         width: 24% !important;
-        flex: 1 0 24% !important;   
+        /* flex: 1 0 24% !important;    */
     }
 }
 @media screen and (max-width: 1440px) {
@@ -155,7 +155,7 @@
     .home_wrapper .carousel  .carousel-control-next, .carousel-control-prev{width: 7%!important; }
     .videothwrapper {
         width: 32% !important;
-        flex: 1 0 32% !important;
+        /* flex: 1 0 32% !important; */
     }
 }
 
@@ -246,7 +246,7 @@
     }
     .videothwrapper {
     width: 48% !important;
-    flex: 1 0 48% !important;
+    /* flex: 1 0 48% !important; */
 }
 }
 @media screen and (max-width: 700px){
@@ -280,7 +280,7 @@
         padding:0!important; margin: 0!important;}
     .videothwrapper {
         width: 94% !important;
-        flex: 1 0 94% !important;
+        /* flex: 1 0 94% !important; */
     }
 }
 @media screen and (max-width: 480px){

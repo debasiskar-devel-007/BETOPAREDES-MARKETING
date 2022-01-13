@@ -365,9 +365,9 @@
     border-radius: 0!important;
     font-size: 24px;
     margin-bottom: 10px;
-    background: linear-gradient(
-    45deg,rgba(22,87,174,1) 0%,rgba(21,68,110,1) 100%);
-    color: #fff;
+    background: linear-gradient( 180deg, rgba(250,226,156,1) 0%, rgba(244,185,20,1) 100%);
+    color: #000;
+    text-transform: uppercase;
 }
 .allvideoslists{
     display: flex;
@@ -377,17 +377,28 @@
 
 .videothwrapper
 {display: flex;
-    border: 1px solid #70707057;
+    /* border: 2px solid #70707057; */
     margin: 0 5px;
     margin-bottom: 5px;
-    flex: 1 0 19%;
+    /* flex: 1 0 19%; */
     width: 19%;
+    box-shadow: 0 0 2px #000000cf;
+    /* background: #c3c3c324; */
+    background: linear-gradient(0deg, rgb(1 62 131 / 53%) 0%, rgb(1 153 220 / 12%) 100%);
+    border-radius: 4px;
+    /* background: rgb(156,213,243);
+background: linear-gradient(180deg, rgba(156,213,243,1) 0%, rgba(202,235,228,1) 100%); */
+
 }
 /* .videothwrapper:last-child{
     width: 20%;
 } */
 .videothwrapper:hover{
-    border: 1px solid #001420;
+    /* border: 2px solid #0c2331; */
+    /* transform: scale(1.1); */
+    transition: 500ms;
+        /* background: rgb(156,213,243);
+    background: linear-gradient(90deg, rgba(156,213,243,1) 0%, rgba(202,235,228,1) 100%); */
 }
 
 .videoth{
@@ -415,7 +426,7 @@
 .galleryconbox .videoTitle{
     margin: 0 0 4px 0;
     font-family: "Roboto","Arial",sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 25px;
     font-weight: 500;
     max-height: 4rem;
@@ -428,6 +439,8 @@
     text-overflow: ellipsis;
     white-space: normal;
     cursor: pointer;
+    color: #fff;
+    padding-left: 5px;
 }
 
  

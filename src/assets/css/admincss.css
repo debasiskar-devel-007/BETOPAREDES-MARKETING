@@ -3354,7 +3354,10 @@ text-align: center;}
 
  .videoGalleryModal {
     padding: 0 !important;
-    background: linear-gradient(180deg, rgba(228,246,248,1) 25%, rgba(200,231,215,1) 100%) !important;
+    /* background: linear-gradient(180deg, rgba(228,246,248,1) 25%, rgba(200,231,215,1) 100%) !important; */
+    background: url(../images/youtube-banner-background-2048x1152.jpg)no-repeat top center !important;
+    background-size: cover;
+    min-width: 90vw !important;
 }   
  
 .actioncontrol {
