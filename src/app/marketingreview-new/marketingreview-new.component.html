@@ -17,7 +17,7 @@
       <div class="marketingre_view_top_right">
         <ng-container *ngFor="let item of productdata">
           <span class="item_block">
-            <ng-container *ngIf="medigrade != 2">
+            <ng-container *ngIf="medigrade_product_flag != true">
 
 
               <span class="contract_div"> <img src={{item?.image}} alt="#"></span>
@@ -38,16 +38,15 @@
             </ng-container>
           </span>
         </ng-container>
-        <ng-container *ngIf="medigrade == 2">
+        <ng-container *ngIf="medigrade_product_flag == true">
           <span class="medigrade_block">
             <span class="contract_div contract_logo"><img src="../../assets/images/quadrant_logo.png" alt="#"></span>
             <div class="contract_divTEXT">
-              <span *ngIf="pececontract" class="contract_div contract_pro">
+              <span *ngIf="pece_product_flag" class="contract_div contract_pro">
                 <h2>Pece</h2>
                 <!-- <button (click)="newrequestcontract('pece')">Request Contract</button> -->
               </span>
-
-              <span *ngIf="tmflowcontract" class="contract_div contract_pro">
+              <span *ngIf="tmflow_product_flag" class="contract_div contract_pro">
                 <h2>TM-FLOW ANS MEDICAL</h2>
                 <!-- <button (click)="newrequestcontract('tmflow')">Request Contract</button> -->
               </span>
@@ -84,7 +83,8 @@
         <h2>YOUR DOCTORS WILL BE EXCITED WITH THE RM-3A TESTING AND REPORT </h2>
         <p>Take advantage of your physicians’ network and earn big with AWS PECE Program and the RM-3A medical device.
           No other system in the ANS medical industry gives you as much data, and our level of analytical accuracy is
-          unmatched by any other available devices.
+          unmatched by any other
+          available devices.
         </p>
       </div>
     </div>
@@ -99,13 +99,15 @@
           <!-- 
           <h3>Know your Representative. This Present link sent by {{techata?.fullname}},
             {{techata?.email}},{{techata?.phone}}</h3> -->
+          <!-- {{video_all_data | json }} -->
+          <ng-container *ngIf="video_all_data!= null ">
 
-          <ng-container *ngFor='let item of videolist; let i=index'>
+            <ng-container *ngFor='let item of video_all_data; let i=index'>
 
-            <h2 (click)='bottomSheetVideoListOpen(item.name,i)'>{{item.name}}</h2>
+              <h2 (click)='bottomSheetVideoListOpen(item.name,i)'>{{item.name}}</h2>
 
 
-            <!-- <ng-container *ngIf='item.flag'>
+              <!-- <ng-container *ngIf='item.flag'>
 
         
               <label *ngFor='let vlink of item.videodata; let j=index'>
@@ -123,6 +125,7 @@
 
 
 
+            </ng-container>
           </ng-container>
 
 

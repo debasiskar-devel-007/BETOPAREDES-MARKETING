@@ -7,6 +7,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { CookieService } from 'ngx-cookie-service';
 import { environment } from 'src/environments/environment';
 import { MatBottomSheet, MatBottomSheetRef, MAT_BOTTOM_SHEET_DATA } from '@angular/material/bottom-sheet';
+import allvideodata from './video_cat_list_all.json';
 export interface BottomsheetData {
   data: any,
   name: any,
@@ -20,6 +21,7 @@ export interface BottomsheetData {
 })
 export class MarketingreviewNewComponent implements OnInit {
   public exitfullscreenflag: boolean = false;
+  public video_all_data: any = [];
   public show: boolean = false;
   public disabled: boolean = false;
   public requestflag: boolean = false;
@@ -54,83 +56,39 @@ export class MarketingreviewNewComponent implements OnInit {
     }
   };
   public playpauseflag: any = false;
-  public videolist: any = [{
-    name: 'Sale deck', flag: true, videodata:
+  // public videolist: any = [{
+  //   name: 'Sale deck', flag: true, videodata:
 
-      [
-        { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637746453722SampleVideo_720x480_5mb.mp4', title: 'TM-FLOW REPORT', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
+  //     [
+  //       { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637746453722SampleVideo_720x480_5mb.mp4', title: 'TM-FLOW REPORT', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
 
-        { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4', title: 'TM-FLOW REPORT test', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
+  //       { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4', title: 'TM-FLOW REPORT test', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
 
-        { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637746453722SampleVideo_720x480_5mb.mp4', title: 'TM-FLOW REPORT', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
-
-        { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4', title: 'TM-FLOW REPORT test', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
-
-        { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637746453722SampleVideo_720x480_5mb.mp4', title: 'TM-FLOW REPORT', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
-
-        { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4', title: 'TM-FLOW REPORT test', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
-
-        { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637746453722SampleVideo_720x480_5mb.mp4', title: 'TM-FLOW REPORT', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
-
-        { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4', title: 'TM-FLOW REPORT test', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
-
-        { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4', title: 'TM-FLOW REPORT test', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
-
-        { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637746453722SampleVideo_720x480_5mb.mp4', title: 'TM-FLOW REPORT', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
-
-        { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4', title: 'TM-FLOW REPORT test', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
-
-        { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637746453722SampleVideo_720x480_5mb.mp4', title: 'TM-FLOW REPORT', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
-
-        { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4', title: 'TM-FLOW REPORT test', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
-
-        { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637746453722SampleVideo_720x480_5mb.mp4', title: 'TM-FLOW REPORT', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
-
-        { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4', title: 'TM-FLOW REPORT test', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
-
-        { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4', title: 'TM-FLOW REPORT test', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
-
-        { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637746453722SampleVideo_720x480_5mb.mp4', title: 'TM-FLOW REPORT', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
-
-        { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4', title: 'TM-FLOW REPORT test', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
-
-        { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637746453722SampleVideo_720x480_5mb.mp4', title: 'TM-FLOW REPORT', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
-
-        { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4', title: 'TM-FLOW REPORT test', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
-
-        { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637746453722SampleVideo_720x480_5mb.mp4', title: 'TM-FLOW REPORT', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
-
-        { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4', title: 'TM-FLOW REPORT test', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
-
-      ]
-  },
+  //     ]
+  // },
 
 
-  {
-    name: 'Sales pitch', flag: false, videodata:
+  // {
+  //   name: 'Sales pitch', flag: false, videodata:
 
-      [{ url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/PECE-Sales-cript.mp4', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', title: 'PECE Sale Pitch', description: ' Our pitch script is designed to inform and grab the interest of your clients. By watching this video, you get to know what a salesperson tells his potential customer ( lead or practices ) about a product or service. Our perfectly designed product-based sales pitch is deeply involved with the final close of a deal. In order to become a successful salesperson, you have to sell yourself on what you are selling. Know your products, describe their benefits, and convince them that it is made for them. This video presents you with the complete enterprise system solution that works with every required staff member, including technicians, doctors, physician assistants, nurse practitioners, records keepers, and practice management. ' },
+  //     [{ url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/PECE-Sales-cript.mp4', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', title: 'PECE Sale Pitch', description: ' Our pitch script is designed to inform and grab the interest of your clients. By watching this video, you get to know what a salesperson tells his potential customer ( lead or practices ) about a product or service. Our perfectly designed product-based sales pitch is deeply involved with the final close of a deal. In order to become a successful salesperson, you have to sell yourself on what you are selling. Know your products, describe their benefits, and convince them that it is made for them. This video presents you with the complete enterprise system solution that works with every required staff member, including technicians, doctors, physician assistants, nurse practitioners, records keepers, and practice management. ' },
 
-        // { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4', title: 'TM-FLOW REPORT', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' }
-      ]
+  //     ]
 
 
-  },
+  // },
 
 
 
-  {
-    name: 'Software walkthrough', flag: false, videodata:
+  // {
+  //   name: 'Software walkthrough', flag: false, videodata:
 
-      [
-        // { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-16375886325607774485510954222850.mp4', title: 'TM-FLOW REPORT', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
+  //     [
 
-        // { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4', title: 'Software walkthrough', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
-
-        { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/PECE-demo.mp4', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', title: 'PECE Software Walk through', description: ' Our product-based software walkthrough converts prospects and demonstrates the testing and tment platform features. After completing your Beto Paredes main training and product-based training, you are introducing with product’s back-office features; from here, you can get a clear idea about the access of different tools back-office system. ' }
-      ]
-  },
-  ];
+  //       { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/PECE-demo.mp4', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', title: 'PECE Software Walk through', description: ' Our product-based software walkthrough converts prospects and demonstrates the testing and tment platform features. After completing your Beto Paredes main training and product-based training, you are introducing with product’s back-office features; from here, you can get a clear idea about the access of different tools back-office system. ' }
+  //     ]
+  // },
+  // ];
 
 
   public videolink: any = [];
@@ -141,12 +99,18 @@ export class MarketingreviewNewComponent implements OnInit {
   public videodescription: any = '';
   public videotimeflag: any = false;
   public medigrade: any = 0;
-  public pececontract: boolean = true;
-  public creditcontract: boolean = true;
-  public tmflowcontract: boolean = true;
-  public biocontract: boolean = true;
-  public rstcontract: boolean = true;
-  public warrantycontract: boolean = true;
+  // public pececontract: boolean = true;
+  public pece_product_flag: boolean = false;
+  public tmflow_product_flag: boolean = false;
+  public medigrade_product_flag: boolean = false;
+  public bioenergetics_rst_product_flag: boolean = false;
+  public product_list: any = [];
+
+  // public creditcontract: boolean = true;
+  // public tmflowcontract: boolean = true;
+  // public biocontract: boolean = true;
+  // public rstcontract: boolean = true;
+  // public warrantycontract: boolean = true;
   public userdetails: any = {};
   public parent_data: any = {};
   constructor(public api_service: ApiService, public dialog: MatDialog,
@@ -169,22 +133,46 @@ export class MarketingreviewNewComponent implements OnInit {
       console.log(res);
       this.productdata = res.results.productdata;
       for (const key in this.productdata) {
-        if (this.productdata[key]._id == '604aff3691b7c80008ca11a8') {
-          this.medigrade++;
-        }
-        if (this.productdata[key]._id == '604a0b6e40962e00088f0d79') {
-          this.medigrade++;
-        }
+        this.product_list[key] = this.productdata[key]._id
+        // if (this.productdata[key]._id == '604aff3691b7c80008ca11a8') {
+        //   this.medigrade++;
+        // }
+        // if (this.productdata[key]._id == '604a0b6e40962e00088f0d79') {
+        //   this.medigrade++;
+        // }
       }
+      if (this.product_list.includes('612c883f118c110009f02820') && this.product_list.includes('612c89242005f400082d5fb1')) {
+        this.bioenergetics_rst_product_flag = true
+        const video_all_data =
+          console.log("this.bioenergetics_rst_product_flag ==> ", this.bioenergetics_rst_product_flag)
+      }
+      if (this.product_list.includes('604aff3691b7c80008ca11a8') && this.product_list.includes('604a0b6e40962e00088f0d79')) {
+        this.medigrade_product_flag = true
+        this.video_all_data = allvideodata.flag_pece
+        console.log("this.medigrade_product_flag ==> ", this.medigrade_product_flag)
+        console.log("video_all_data ==> ", this.video_all_data)
+      }
+      if (!this.product_list.includes('604aff3691b7c80008ca11a8') && this.product_list.includes('604a0b6e40962e00088f0d79')) {
+        this.tmflow_product_flag = true
+        const video_all_data =
+          console.log("this.tmflow_product_flag ==> ", this.tmflow_product_flag)
+      }
+      if (this.product_list.includes('604aff3691b7c80008ca11a8') && !this.product_list.includes('604a0b6e40962e00088f0d79')) {
+        this.pece_product_flag = true
+        const video_all_data =
+          console.log("this.pece_product_flag ==> ", this.pece_product_flag)
+      }
+
       this.techata = res.results.userdata[0];
       console.log(this.productdata, 'productdata', this.techata);
     })
-    this.firstcontractrequest();
+    // this.firstcontractrequest();
     // this.parentdata();
     this.getoneleadfolderview();
   }
 
   ngOnInit() {
+
     console.log(this.posterimg, "posterimg");
 
     console.log(this.activatedroute.snapshot.queryParams);
@@ -205,13 +193,23 @@ export class MarketingreviewNewComponent implements OnInit {
       } else {
         console.log("Else block");
 
-        var newarr = this.videolist[0].videodata[0].url.split("https://betoparedesallvideos.s3.amazonaws.com");
-        let url = 'https://d291rlacfzbauk.cloudfront.net' + newarr[1];
+        // var newarr = this.videolist[0].videodata[0].url.split("https://betoparedesallvideos.s3.amazonaws.com");
+        // let url = 'https://d291rlacfzbauk.cloudfront.net' + newarr[1];
+        let url = ""
+        if (this.video_all_data.length > 0 && this.video_all_data[0].videodata.length > 0) {
+          url = this.video_all_data[0].videodata[0].url
+          console.log("video_all_data url +++")
+
+        } else {
+          url = "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-1637746453722SampleVideo_720x480_5mb.mp4"
+          console.log("else url +++")
+        }
+
         //   this.video_listtable.video_file.path + this.video_listtable.video_file.fileservername;
         this.cookie.set('video_url', url, undefined, '/');
         this.video_url = url;
-        this.videotitle = this.videolist[0].videodata[0].title;
-        this.videodescription = this.videolist[0].videodata[0].description;
+        this.videotitle = "Demo Video";
+        this.videodescription = "Default video";
 
         // let videotitledesc = {
         //   videotitle: this.videolist[0].videodata[0].title,
@@ -243,52 +241,52 @@ export class MarketingreviewNewComponent implements OnInit {
 
 
   }
-  parentdata() {
-    let send_data = {
-      id: this.activatedroute.snapshot.params.admin_id
-    }
-    this.api_service.requestData1(environment.api_url + 'api/getoneuser', send_data).subscribe((res: any) => {
-      this.parent_data = res.result[0]
-    })
-  }
+  // parentdata() {
+  //   let send_data = {
+  //     id: this.activatedroute.snapshot.params.admin_id
+  //   }
+  //   this.api_service.requestData1(environment.api_url + 'api/getoneuser', send_data).subscribe((res: any) => {
+  //     this.parent_data = res.result[0]
+  //   })
+  // }
 
-  firstcontractrequest() {
-    let send_data = {
-      "condition":
-      {
-        "id": this.activatedroute.snapshot.params.lead_id,
-        "status": 1
-      },
-      "secret": this.cookie.get('secret'),
-      "token": this.cookie.get('jwtToken'),
-      "limit": 0,
-      "skip": 0
-    }
-    this.api_service.requestData1(environment.api_url + 'api/firstcontractrequest', send_data).subscribe((res: any) => {
-      if (res.res[0].contracts.length > 0) {
-        for (const key in res.res[0].contracts) {
-          if (res.res[0].contracts[key].contractflag == 'credit') {
-            this.creditcontract = false;
-          }
-          if (res.res[0].contracts[key].contractflag == 'warrenty') {
-            this.warrantycontract = false;
-          }
-          if (res.res[0].contracts[key].contractflag == 'Pece Contract') {
-            this.pececontract = false;
-          }
-          if (res.res[0].contracts[key].contractflag == 'tmflow_contract') {
-            this.tmflowcontract = false;
-          }
-          if (res.res[0].contracts[key].contractflag == 'BioEntergetics Contract') {
-            this.biocontract = false;
-          }
-          if (res.res[0].contracts[key].contractflag == 'RST Sanexas Contract') {
-            this.rstcontract = false;
-          }
-        }
-      }
-    })
-  }
+  // firstcontractrequest() {
+  //   let send_data = {
+  //     "condition":
+  //     {
+  //       "id": this.activatedroute.snapshot.params.lead_id,
+  //       "status": 1
+  //     },
+  //     "secret": this.cookie.get('secret'),
+  //     "token": this.cookie.get('jwtToken'),
+  //     "limit": 0,
+  //     "skip": 0
+  //   }
+  //   this.api_service.requestData1(environment.api_url + 'api/firstcontractrequest', send_data).subscribe((res: any) => {
+  //     if (res.res[0].contracts.length > 0) {
+  //       for (const key in res.res[0].contracts) {
+  //         if (res.res[0].contracts[key].contractflag == 'credit') {
+  //           this.creditcontract = false;
+  //         }
+  //         if (res.res[0].contracts[key].contractflag == 'warrenty') {
+  //           this.warrantycontract = false;
+  //         }
+  //         if (res.res[0].contracts[key].contractflag == 'Pece Contract') {
+  //           this.pececontract = false;
+  //         }
+  //         if (res.res[0].contracts[key].contractflag == 'tmflow_contract') {
+  //           this.tmflowcontract = false;
+  //         }
+  //         if (res.res[0].contracts[key].contractflag == 'BioEntergetics Contract') {
+  //           this.biocontract = false;
+  //         }
+  //         if (res.res[0].contracts[key].contractflag == 'RST Sanexas Contract') {
+  //           this.rstcontract = false;
+  //         }
+  //       }
+  //     }
+  //   })
+  // }
   getoneleadfolderview() {
     let req_data = {
       "secret": this.cookie.get('secret'),
@@ -307,191 +305,200 @@ export class MarketingreviewNewComponent implements OnInit {
 
     })
   }
-  loadvideo() {
 
-    setTimeout(() => {
-      this.player = videojs('#my-video-modal');
+  // loadvideo() {
 
-      this.player.controls(false);
-      console.log('onload section');// TO CONTROL FALSE
+  //   setTimeout(() => {
+  //     this.player = videojs('#my-video-modal');
 
-      this.video_currenttime = parseInt(this.player.currentTime());
-      this.onprocess();
-    }, 1000);
-  }
-  request_contract() {
-    console.log(this.activatedroute.snapshot.params);
-    let endpoint = 'https://z2oo2a8oq9.execute-api.us-east-1.amazonaws.com/dev/api/requestcontractfromlead'
-    let data = {
-      product_id: this.activatedroute.snapshot.params.product_id,
-      lead_id: this.activatedroute.snapshot.params.lead_id,
-      rep_id: this.activatedroute.snapshot.params.rep_id
-    }
-    this.api_service.requestData(endpoint, data).subscribe((res: any) => {
-      this.snackBar.open('Contract Request Successfully', 'Ok', {
-        duration: 3000,
-      });
-    })
-  }
-  newrequestcontract(val: any) {
-    this.progressSpinner = true;
-    let contractdata: any = {};
-    let data: any = {};
-    let ednpoint: any = '';
-    if (val == 'pece') {
-      contractdata.leadname = this.userdetails.fullname;
-      contractdata.address = this.userdetails.address;
-      contractdata.Serial = this.userdetails.Serial_Number;
-      data = {
-        lead_id: this.activatedroute.snapshot.params.lead_id,
-        tech_id: this.activatedroute.snapshot.params.rep_id,
-        product_id: '604aff3691b7c80008ca11a8',
-        contractdata: contractdata,
-        "contractflag": "Pece Contract",
-        contracts: [
-          {
-            status: "requested by lead",
-            added_by_id: this.userdetails._id,
-            addedby: this.userdetails.firstname + ' ' + this.userdetails.lastname,
-            addedondatetime: Math.round(new Date().getTime()),
-            type: this.userdetails.type,
-          },
-        ],
-        contact_id: this.userdetails.singeealldata.length > 0 ? this.userdetails.singeealldata[0]._id : '',
-      };
-      ednpoint = 'api/request-contracts';
-    }
-    if (val == 'warranty') {
-      contractdata.PracticeName =
-        this.userdetails.fullname;
-      contractdata.Street =
-        this.userdetails.street;
-      contractdata.City = this.userdetails.city;
-      contractdata.State =
-        this.userdetails.state;
-      contractdata.Zip = this.userdetails.zip;
-      contractdata.Phone =
-        this.userdetails.phone;
-      contractdata.auth_signatory =
-        this.userdetails.singeealldata[0].First_Name +
-        " " +
-        this.userdetails.singeealldata[0].Last_Name;
-      contractdata.printed_name =
-        this.userdetails.singeealldata[0].First_Name +
-        " " +
-        this.userdetails.singeealldata[0].Last_Name;
-      contractdata.equipment = 'TM-FLOW ANS MEDICAL DEVICE'
-      data = {
-        lead_id: this.activatedroute.snapshot.params.lead_id,
-        tech_id: this.activatedroute.snapshot.params.rep_id,
-        product_id: "",
-        contractdata: contractdata,
-        contractflag: "warrenty",
-        contracts: [
-          {
-            status: "requested by lead",
-            added_by_id: this.userdetails._id,
-            addedby: this.userdetails.firstname + ' ' + this.userdetails.lastname,
-            addedondatetime: Math.round(new Date().getTime()),
-            type: this.userdetails.type,
-          },
-        ],
-        contact_id: this.userdetails.singeealldata.length > 0 ? this.userdetails.singeealldata[0]._id : '',
-      };
-      ednpoint = 'api/update-new_contract';
-    }
-    if (val == 'credit') {
-      contractdata.Legal_Company_Name = this.userdetails.fullname;
-      contractdata.address = this.userdetails.address;
-      contractdata.city = this.userdetails.city;
-      contractdata.state = this.userdetails.state;
-      contractdata.zip = this.userdetails.zip;
-      contractdata.website = this.userdetails.Website;
-      contractdata.email = this.userdetails.email;
-      contractdata.phonetwo = this.userdetails.phone;
-      contractdata.compane_name = this.userdetails.company;
-      contractdata.preson_name = this.userdetails.singeealldata.length > 0 ? this.userdetails.singeealldata[0].First_Name + " " + this.userdetails.singeealldata[0].Last_Name : '';
-      contractdata.homeaddress = this.userdetails.singeealldata.length > 0 ? this.userdetails.singeealldata[0].Mailing_Street + "," + this.userdetails.singeealldata[0].Mailing_City + "," + this.userdetails.singeealldata[0].Mailing_State + "," + this.userdetails.singeealldata[0].Mailing_Country : '';
-      contractdata.city_two = this.userdetails.singeealldata.length > 0 ? this.userdetails.singeealldata[0].Mailing_City : '';
-      contractdata.state_two = this.userdetails.singeealldata.length > 0 ? this.userdetails.singeealldata[0].Mailing_State : '';
-      contractdata.zip_two = this.userdetails.singeealldata.length > 0 ? this.userdetails.singeealldata[0].Mailing_Zip : '';
-      contractdata.home_phone = this.userdetails.singeealldata.length > 0 ? this.userdetails.singeealldata[0].Phone : '';
-      contractdata.signer = this.userdetails.singeealldata.length > 0 ? this.userdetails.singeealldata[0].First_Name + " " + this.userdetails.singeealldata[0].Last_Name : '';
-      contractdata.compane_name = this.userdetails.singeealldata.length > 0 ? this.userdetails.firstname : '';
-      data = {
-        lead_id: this.activatedroute.snapshot.params.lead_id,
-        tech_id: this.activatedroute.snapshot.params.rep_id,
-        product_id: '604a0b6e40962e00088f0d79',
+  //     this.player.controls(false);
+  //     console.log('onload section');// TO CONTROL FALSE
 
-        contracts: [
-          {
-            status: "requested by lead",
-            added_by_id: this.userdetails._id,
-            addedby: this.userdetails.firstname + ' ' + this.userdetails.lastname,
-            addedondatetime: Math.round(new Date().getTime()),
-            type: this.userdetails.type,
-          },
-        ],
-        contractflag: "credit",
-        contractdata: contractdata,
-        contact_id: this.userdetails.singeealldata.length > 0 ? this.userdetails.singeealldata[0]._id : '',
-      };
-      ednpoint = 'api/request-contracts';
-    }
-    console.log(data);
-    console.log(environment.api_url + ednpoint);
+  //     this.video_currenttime = parseInt(this.player.currentTime());
+  //     this.onprocess();
+  //   }, 1000);
+  // }
+  // request_contract() {
+  //   console.log(this.activatedroute.snapshot.params);
+  //   let endpoint = 'https://z2oo2a8oq9.execute-api.us-east-1.amazonaws.com/dev/api/requestcontractfromlead'
+  //   let data = {
+  //     product_id: this.activatedroute.snapshot.params.product_id,
+  //     lead_id: this.activatedroute.snapshot.params.lead_id,
+  //     rep_id: this.activatedroute.snapshot.params.rep_id
+  //   }
+  //   this.api_service.requestData(endpoint, data).subscribe((res: any) => {
+  //     this.snackBar.open('Contract Request Successfully', 'Ok', {
+  //       duration: 3000,
+  //     });
+  //   })
+  // }
 
-    this.api_service
-      .requestData1(environment.api_url + ednpoint, data)
+  // newrequestcontract(val: any) {
+  //   this.progressSpinner = true;
+  //   let contractdata: any = {};
+  //   let data: any = {};
+  //   let ednpoint: any = '';
+  //   if (val == 'pece') {
+  //     contractdata.leadname = this.userdetails.fullname;
+  //     contractdata.address = this.userdetails.address;
+  //     contractdata.Serial = this.userdetails.Serial_Number;
+  //     data = {
+  //       lead_id: this.activatedroute.snapshot.params.lead_id,
+  //       tech_id: this.activatedroute.snapshot.params.rep_id,
+  //       product_id: '604aff3691b7c80008ca11a8',
+  //       contractdata: contractdata,
+  //       "contractflag": "Pece Contract",
+  //       contracts: [
+  //         {
+  //           status: "requested by lead",
+  //           added_by_id: this.userdetails._id,
+  //           addedby: this.userdetails.firstname + ' ' + this.userdetails.lastname,
+  //           addedondatetime: Math.round(new Date().getTime()),
+  //           type: this.userdetails.type,
+  //         },
+  //       ],
+  //       contact_id: this.userdetails.singeealldata.length > 0 ? this.userdetails.singeealldata[0]._id : '',
+  //     };
+  //     ednpoint = 'api/request-contracts';
+  //   }
+  //   if (val == 'warranty') {
+  //     contractdata.PracticeName =
+  //       this.userdetails.fullname;
+  //     contractdata.Street =
+  //       this.userdetails.street;
+  //     contractdata.City = this.userdetails.city;
+  //     contractdata.State =
+  //       this.userdetails.state;
+  //     contractdata.Zip = this.userdetails.zip;
+  //     contractdata.Phone =
+  //       this.userdetails.phone;
+  //     contractdata.auth_signatory =
+  //       this.userdetails.singeealldata[0].First_Name +
+  //       " " +
+  //       this.userdetails.singeealldata[0].Last_Name;
+  //     contractdata.printed_name =
+  //       this.userdetails.singeealldata[0].First_Name +
+  //       " " +
+  //       this.userdetails.singeealldata[0].Last_Name;
+  //     contractdata.equipment = 'TM-FLOW ANS MEDICAL DEVICE'
+  //     data = {
+  //       lead_id: this.activatedroute.snapshot.params.lead_id,
+  //       tech_id: this.activatedroute.snapshot.params.rep_id,
+  //       product_id: "",
+  //       contractdata: contractdata,
+  //       contractflag: "warrenty",
+  //       contracts: [
+  //         {
+  //           status: "requested by lead",
+  //           added_by_id: this.userdetails._id,
+  //           addedby: this.userdetails.firstname + ' ' + this.userdetails.lastname,
+  //           addedondatetime: Math.round(new Date().getTime()),
+  //           type: this.userdetails.type,
+  //         },
+  //       ],
+  //       contact_id: this.userdetails.singeealldata.length > 0 ? this.userdetails.singeealldata[0]._id : '',
+  //     };
+  //     ednpoint = 'api/update-new_contract';
+  //   }
+  //   if (val == 'credit') {
+  //     contractdata.Legal_Company_Name = this.userdetails.fullname;
+  //     contractdata.address = this.userdetails.address;
+  //     contractdata.city = this.userdetails.city;
+  //     contractdata.state = this.userdetails.state;
+  //     contractdata.zip = this.userdetails.zip;
+  //     contractdata.website = this.userdetails.Website;
+  //     contractdata.email = this.userdetails.email;
+  //     contractdata.phonetwo = this.userdetails.phone;
+  //     contractdata.compane_name = this.userdetails.company;
+  //     contractdata.preson_name = this.userdetails.singeealldata.length > 0 ? this.userdetails.singeealldata[0].First_Name + " " + this.userdetails.singeealldata[0].Last_Name : '';
+  //     contractdata.homeaddress = this.userdetails.singeealldata.length > 0 ? this.userdetails.singeealldata[0].Mailing_Street + "," + this.userdetails.singeealldata[0].Mailing_City + "," + this.userdetails.singeealldata[0].Mailing_State + "," + this.userdetails.singeealldata[0].Mailing_Country : '';
+  //     contractdata.city_two = this.userdetails.singeealldata.length > 0 ? this.userdetails.singeealldata[0].Mailing_City : '';
+  //     contractdata.state_two = this.userdetails.singeealldata.length > 0 ? this.userdetails.singeealldata[0].Mailing_State : '';
+  //     contractdata.zip_two = this.userdetails.singeealldata.length > 0 ? this.userdetails.singeealldata[0].Mailing_Zip : '';
+  //     contractdata.home_phone = this.userdetails.singeealldata.length > 0 ? this.userdetails.singeealldata[0].Phone : '';
+  //     contractdata.signer = this.userdetails.singeealldata.length > 0 ? this.userdetails.singeealldata[0].First_Name + " " + this.userdetails.singeealldata[0].Last_Name : '';
+  //     contractdata.compane_name = this.userdetails.singeealldata.length > 0 ? this.userdetails.firstname : '';
+  //     data = {
+  //       lead_id: this.activatedroute.snapshot.params.lead_id,
+  //       tech_id: this.activatedroute.snapshot.params.rep_id,
+  //       product_id: '604a0b6e40962e00088f0d79',
 
-      .subscribe((res: any) => {
-        // this.snackBar.open(res.successmsg, 'ok');
+  //       contracts: [
+  //         {
+  //           status: "requested by lead",
+  //           added_by_id: this.userdetails._id,
+  //           addedby: this.userdetails.firstname + ' ' + this.userdetails.lastname,
+  //           addedondatetime: Math.round(new Date().getTime()),
+  //           type: this.userdetails.type,
+  //         },
+  //       ],
+  //       contractflag: "credit",
+  //       contractdata: contractdata,
+  //       contact_id: this.userdetails.singeealldata.length > 0 ? this.userdetails.singeealldata[0]._id : '',
+  //     };
+  //     ednpoint = 'api/request-contracts';
+  //   }
+  //   console.log(data);
+  //   console.log(environment.api_url + ednpoint);
 
-        const dialogRef = this.dialog.open(dialogpage, {
+  //   this.api_service
+  //     .requestData1(environment.api_url + ednpoint, data)
 
-          panelClass: 'custom-modalbox'
-        })
-        dialogRef.afterClosed().subscribe(result => {
-          console.log('The dialog was closed');
-        });
+  //     .subscribe((res: any) => {
+  //       // this.snackBar.open(res.successmsg, 'ok');
+
+  //       const dialogRef = this.dialog.open(dialogpage, {
+
+  //         panelClass: 'custom-modalbox'
+  //       })
+  //       dialogRef.afterClosed().subscribe(result => {
+  //         console.log('The dialog was closed');
+  //       });
 
 
 
-        this.firstcontractrequest();
-        this.getoneleadfolderview();
-        setTimeout(() => {
-          this.progressSpinner = false;
-        }, 1500);
-      });
-  }
-  videoplay(val, i) {
+  //       this.firstcontractrequest();
+  //       this.getoneleadfolderview();
+  //       setTimeout(() => {
+  //         this.progressSpinner = false;
+  //       }, 1500);
+  //     });
+  // }
+  // videoplay(val, i) {
 
-    console.log(val, "videoval+-+-");
-    for (const key in this.videolist) {
-      this.videolist[key].flag = false;
-    }
-    this.videolist[i].flag = true;
-    console.log(this.videolist[i], "this.videolist[i]");
+  //   console.log(val, "videoval+-+-");
+  //   for (const key in this.videolist) {
+  //     this.videolist[key].flag = false;
+  //   }
+  //   this.videolist[i].flag = true;
+  //   console.log(this.videolist[i], "this.videolist[i]");
 
-    // this.posterimg=this.videolist[i].videodata[0].img;
-    // console.log(this.posterimg,"posterimg");
+  //   // this.posterimg=this.videolist[i].videodata[0].img;
+  //   // console.log(this.posterimg,"posterimg");
 
-    this.videolink = [];
+  //   this.videolink = [];
 
-    this.videolink = val.videodata;
+  //   this.videolink = val.videodata;
 
-  }
+  // }
 
   bottomSheetVideoListOpen(val, index) {
     // this.videolist.val.videodata
-    this.videolist[index].videodata
-    console.log(" this.videolist[index].name", this.videolist[index].name)
+    // console.log("videodata",allvideodata)
+    this.video_all_data[index].videodata
+    console.log(" this.video_all_data[index].name", this.video_all_data[index].name)
     const bottomSheetRef = this.bottomSheet.open(bottomSheetVideoList, {
-      data: this.videolist[index],
+      data: this.video_all_data[index],
       panelClass: ['genClass', 'videoGalleryModal']
 
     });
+    bottomSheetRef.afterDismissed().subscribe((data) => {
+      console.log("data==>", data);
+      if (data != null)
+        this.playnext(data);
+    });
   }
+
 
 
   // openDialog(): void {
@@ -504,12 +511,6 @@ export class MarketingreviewNewComponent implements OnInit {
 
   //   });
   // }
-
-
-
-
-
-
 
 
   onprocess() {
@@ -587,41 +588,42 @@ export class MarketingreviewNewComponent implements OnInit {
     }
   }
 
-  playnext(val, i) {
-    // this.player.currentTime(0)
-    // this.player.dispose();
-    // videojs('#my-video-modal').dispose();
-    // this.cookie.delete('video_url');
+  playnext(val) {
+    // this.videoplayflag = false;
+    // this.video_currenttime =0;
+    // this.video_duration = parseInt(this.player.duration());
+    // setTimeout(() => {
     console.log(this.cookie.get('video_url'), 'video_url;;;;');
 
-    console.log(val, "val/*");
-
-    // return;
-    var newarr = val.url.split("https://betoparedesallvideos.s3.amazonaws.com");
-    let url = 'https://d291rlacfzbauk.cloudfront.net' + newarr[1];
+    let url = val.url
     // setTimeout(() => {
     this.cookie.set('video_url', url, undefined, '/');
 
     console.log(this.cookie.get('video_url'), 'video_url;;;===========;');
     this.posterimg = val.img;
-    console.log("poster img", this.posterimg);
-
     this.videotitle = val.title;
     this.videodescription = val.description;
     this.cookie.set('videotitle', this.videotitle, undefined, '/');
     this.cookie.set('videodesc', this.videodescription, undefined, '/');
-    // }, 500);
+    console.log(this.cookie.get('video_url'), this.cookie.get('videotitle'), this.cookie.get('videodesc'), 'Video related cookies');
 
-    // setTimeout(() => {
-    //   console.log('TEST________________-');
+    // this.player.updateSrc(val.url);
+    // this.player.reset();
 
-    //   let currentUrl = this.router.url;
-    //   this.router.routeReuseStrategy.shouldReuseRoute = () => false;
-    //   this.router.onSameUrlNavigation = 'reload';
-    //   this.router.navigate([currentUrl]);
-    // }, 1000);
+    this.player.src(val.url);
+    this.player.currentTime(0);
+    // this.videoplayflag = true;
+
+    // this.player.play();
+    this.playbtn();
+    this.onprocess();
 
     return
+
+    // }, 0);
+
+
+
     // console.log(val.url, i, this.player);
     // // setTimeout(() => {
     // this.videoplayflag = false;
@@ -657,6 +659,7 @@ export class MarketingreviewNewComponent implements OnInit {
 
 
   }
+
   ngOnDestroy() {
     // this.cookie.delete('video_url')
     // this.player.dispose();
@@ -687,17 +690,18 @@ export class dialogpage {
 })
 export class bottomSheetVideoList {
   public modaldata: any;
-  constructor(@Inject(MAT_BOTTOM_SHEET_DATA) public bottomSheetData: BottomsheetData, private bottomSheetRef: MatBottomSheetRef<bottomSheetVideoList>) {
+  constructor(@Inject(MAT_BOTTOM_SHEET_DATA) public bottomSheetData: BottomsheetData, private _bottomSheetRef: MatBottomSheetRef<bottomSheetVideoList>) {
     this.modaldata = bottomSheetData
-    console.warn(this.modaldata, 'jj')
   }
-  clickOpenVideo(val: any) {
-    this.bottomSheetRef.dismiss();
-  }
-
   videoPlayIcon: string = 'https://all-frontend-assets.s3.amazonaws.com/transcendentpagan/assets/images/playicon.png';
 
+  clickOpenVideo(val) {
+    console.log("video_val ==>", val)
+    this._bottomSheetRef.dismiss(val);
+  }
+
   openLink(event: MouseEvent): void {
+    this._bottomSheetRef.dismiss();
     event.preventDefault();
   }
 }

@@ -432,8 +432,8 @@
     text-overflow: ellipsis;
     white-space: normal;
     cursor: pointer;
-    color: #fff;
-    text-shadow: 1px 0px 1px #121f4a;
+    /* color: #fff; */
+    /* text-shadow: 1px 0px 1px #121f4a; */
     padding-right: 5px;
 
 }
