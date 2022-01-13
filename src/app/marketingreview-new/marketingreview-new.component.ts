@@ -681,7 +681,6 @@ export class bottomSheetVideoList {
   constructor(@Inject(MAT_BOTTOM_SHEET_DATA) public bottomSheetData: BottomsheetData,private _bottomSheetRef: MatBottomSheetRef<bottomSheetVideoList>) {
     this.modaldata = bottomSheetData
   }
-
   videoPlayIcon: string = 'https://all-frontend-assets.s3.amazonaws.com/transcendentpagan/assets/images/playicon.png';
 
   clickOpenVideo(val){
