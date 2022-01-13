@@ -379,7 +379,7 @@
     margin: 0 5px;
     margin-bottom: 5px;
     flex: 1 0 48%;
-
+    cursor: pointer;
 }
 .videothwrapper:hover{
     border: 1px solid #001420;
