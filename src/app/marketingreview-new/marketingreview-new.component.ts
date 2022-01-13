@@ -8,7 +8,8 @@ import { CookieService } from 'ngx-cookie-service';
 import { environment } from 'src/environments/environment';
 import { MatBottomSheet, MatBottomSheetRef, MAT_BOTTOM_SHEET_DATA } from '@angular/material/bottom-sheet';
 export interface BottomsheetData {
-  data: any;
+  data: any,
+  name: any,
 }
 
 
@@ -443,7 +444,7 @@ export class MarketingreviewNewComponent implements OnInit {
     this.videolist[index].videodata
     console.log(" this.videolist[index].name", this.videolist[index].name)
     const bottomSheetRef = this.bottomSheet.open(bottomSheetVideoList, {
-      data: this.videolist[index].videodata,
+      data: this.videolist[index],
       panelClass: ['genClass', 'videoGalleryModal']
 
     });
@@ -642,8 +643,10 @@ export class dialogpage {
   styleUrls: ['./marketingreview-new.component.css']
 })
 export class bottomSheetVideoList {
-  constructor(@Inject(MAT_BOTTOM_SHEET_DATA) public bottomSheetData: any) {
-    console.log(bottomSheetData)
+  public modaldata: any;
+  constructor(@Inject(MAT_BOTTOM_SHEET_DATA) public bottomSheetData: BottomsheetData) {
+    this.modaldata = bottomSheetData
+    console.warn(this.modaldata, 'jj')
   }
 
   videoPlayIcon: string = 'https://all-frontend-assets.s3.amazonaws.com/transcendentpagan/assets/images/playicon.png';

@@ -20,11 +20,13 @@
     </a>
   </mat-nav-list> -->
 <div class="videolistContainer">
-  <h2 class="header">Segmented sections of {{videolist[index].name}}</h2>
+  <h2 class="header">Segmented sections of
+    {{modaldata.name}}
+  </h2>
 
 
   <div class="allvideoslists">
-    <ng-container *ngFor='let item of bottomSheetData; let i=index'>
+    <ng-container *ngFor='let item of modaldata.videodata; let i=index'>
       <!-- <button type="button">{{item.title}}</button>
   <video width="320" height="240" poster="/images/w3schools_green.jpg" controls>
     <source src="movie.mp4" type="video/mp4">
