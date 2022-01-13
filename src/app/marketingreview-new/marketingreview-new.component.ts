@@ -692,12 +692,7 @@ export class bottomSheetVideoList {
     console.warn(this.modaldata, 'jj')
   }
   clickOpenVideo(val: any) {
-
-    setTimeout(() => {
-      this.bottomSheetRef.dismiss();
-    }, 1000);
-
-
+    this.bottomSheetRef.dismiss();
   }
 
   videoPlayIcon: string = 'https://all-frontend-assets.s3.amazonaws.com/transcendentpagan/assets/images/playicon.png';
