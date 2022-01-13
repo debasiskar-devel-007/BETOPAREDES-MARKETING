@@ -3355,6 +3355,7 @@ text-align: center;}
  .videoGalleryModal {
     padding: 0 !important;
     background: linear-gradient(180deg, rgba(228,246,248,1) 25%, rgba(200,231,215,1) 100%) !important;
+    min-width: 100vw !important;
 }   
  
 .actioncontrol {
