@@ -11,10 +11,10 @@
             "flag": false,
             "videodata":[
                 { 
-                    "url": "url",
-                    "title": "title",
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/PECE_software_walkthrough.mp4",
+                    "title": "PECE software walkthrough",
                     "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
-                    "description": "description" 
+                    "description": "PECE software walkthrough" 
                 },
                 { 
                     "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Introduction_to_the_PECE_Medical_device_platform.mp4",

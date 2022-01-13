@@ -21,7 +21,7 @@ export interface BottomsheetData {
 })
 export class MarketingreviewNewComponent implements OnInit {
   public exitfullscreenflag: boolean = false;
-  public video_all_data: any = {};
+  public video_all_data: any = [];
   public show: boolean = false;
   public disabled: boolean = false;
   public requestflag: boolean = false;
@@ -56,41 +56,6 @@ export class MarketingreviewNewComponent implements OnInit {
     }
   };
   public playpauseflag: any = false;
-  // public videolist: any = [{
-  //   name: 'Sale deck', flag: true, videodata:
-
-  //     [
-  //       { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637746453722SampleVideo_720x480_5mb.mp4', title: 'TM-FLOW REPORT', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
-
-  //       { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4', title: 'TM-FLOW REPORT test', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
-
-  //     ]
-  // },
-
-
-  // {
-  //   name: 'Sales pitch', flag: false, videodata:
-
-  //     [{ url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/PECE-Sales-cript.mp4', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', title: 'PECE Sale Pitch', description: ' Our pitch script is designed to inform and grab the interest of your clients. By watching this video, you get to know what a salesperson tells his potential customer ( lead or practices ) about a product or service. Our perfectly designed product-based sales pitch is deeply involved with the final close of a deal. In order to become a successful salesperson, you have to sell yourself on what you are selling. Know your products, describe their benefits, and convince them that it is made for them. This video presents you with the complete enterprise system solution that works with every required staff member, including technicians, doctors, physician assistants, nurse practitioners, records keepers, and practice management. ' },
-
-  //     ]
-
-
-  // },
-
-
-
-  // {
-  //   name: 'Software walkthrough', flag: false, videodata:
-
-  //     [
-
-  //       { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/PECE-demo.mp4', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', title: 'PECE Software Walk through', description: ' Our product-based software walkthrough converts prospects and demonstrates the testing and tment platform features. After completing your Beto Paredes main training and product-based training, you are introducing with product’s back-office features; from here, you can get a clear idea about the access of different tools back-office system. ' }
-  //     ]
-  // },
-  // ];
-
-
   public videolink: any = [];
   public video_url: any = '';
   public video_url1: any = '';
@@ -134,12 +99,6 @@ export class MarketingreviewNewComponent implements OnInit {
       this.productdata = res.results.productdata;
       for (const key in this.productdata) {
         this.product_list[key] = this.productdata[key]._id
-        // if (this.productdata[key]._id == '604aff3691b7c80008ca11a8') {
-        //   this.medigrade++;
-        // }
-        // if (this.productdata[key]._id == '604a0b6e40962e00088f0d79') {
-        //   this.medigrade++;
-        // }
       }
       if (this.product_list.includes('612c883f118c110009f02820') && this.product_list.includes('612c89242005f400082d5fb1')) {
         this.bioenergetics_rst_product_flag = true
@@ -210,20 +169,12 @@ export class MarketingreviewNewComponent implements OnInit {
         this.video_url = url;
         this.videotitle = "Demo Video";
         this.videodescription = "Default video";
-
-        // let videotitledesc = {
-        //   videotitle: this.videolist[0].videodata[0].title,
-        //   videodesc: this.videolist[0].videodata[0].description
-
-        // }
         this.cookie.set('videotitle', this.videotitle, undefined, '/');
         this.cookie.set('videodesc', this.videodescription, undefined, '/');
 
       }
       this.video_url1 = this.sanitizer.bypassSecurityTrustResourceUrl(this.video_url);
       this.videoplayflag = true;
-
-      // console.log(this.videolist[0].videodata[0].url, newarr, url);
     }, 500);
 
 
@@ -493,9 +444,11 @@ export class MarketingreviewNewComponent implements OnInit {
 
     });
     bottomSheetRef.afterDismissed().subscribe((data) => {
-      console.log("data==>", data);
-
-      this.playnext(data);
+      if(data != null){
+        console.log("data==>", data);
+        this.playnext(data);
+      }
+      
     });
   }
 
