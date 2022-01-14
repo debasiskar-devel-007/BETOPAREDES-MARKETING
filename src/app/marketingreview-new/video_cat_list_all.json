@@ -289,6 +289,760 @@
                     "description": "TM Flow Conclusion" 
                 }
             ]
+        },
+        {
+            "name": "TM-Flow hardware video",
+            "flag": true,
+            "videodata":[
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/TM_Flow_Hardware.mp4",
+                    "title": "TM-Flow Hardware",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "TM-Flow Hardware" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Introducing_the_TM_Flow_Device.mp4",
+                    "title": "Introducing the TM-Flow Device",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Introducing the TM-Flow Device" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/TM_Flow_Device_contents.mp4",
+                    "title": "TM-Flow Device contents",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "TM-Flow Device contents" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/TM_Flow_Accessories.mp4",
+                    "title": "TM-Flow Accessories",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "TM-Flow Accessories" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/TM_Flow_Hardware_setup_Step_1_The_USB_connections.mp4",
+                    "title": "TM-Flow Hardware setup Step 1 - The USB connections",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "TM-Flow Hardware setup Step 1 - The USB connections" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/TM_Flow_Hardware_setup_Step_2_Connections_to_the_GSR_device.mp4",
+                    "title": "TM-Flow Hardware setup Step 2 - Connections to the GSR device",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "TM-Flow Hardware setup Step 2 - Connections to the GSR device" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/TM_Flow_Hardware_setup_Step_3_Charging_the_bluetooth_and_wireless_devices_Part_1.mp4",
+                    "title": "TM- Flow Hardware setup Step 3 - Charging the bluetooth and wireless devices - Part 1",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "TM- Flow Hardware setup Step 3 - Charging the bluetooth and wireless devices - Part 1" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/TM_Flow_Hardware_setup_Step_4_Charging_the_bluetooth_and_wireless_devices_Part_2.mp4",
+                    "title": "TM- Flow Hardware setup Step 4 - Charging the bluetooth and wireless devices - Part 2",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "TM- Flow Hardware setup Step 4 - Charging the bluetooth and wireless devices - Part 2" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Introduction_to_the_TM_Flow_System.mp4",
+                    "title": "Introduction to the TM-Flow System",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Introduction to the TM-Flow System" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/The_Autonomic_Nervous_System.mp4",
+                    "title": "The Autonomic Nervous System",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "The Autonomic Nervous System" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/The_main_cause_of_neuropathy.mp4",
+                    "title": "The main cause of neuropathy",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "The main cause of neuropathy" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Peripheral_Arterial_Disease_PAD.mp4",
+                    "title": "Peripheral Arterial Disease PAD",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Peripheral Arterial Disease PAD" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/The_TM_Flow_System_and_early_detection_of_diabetes.mp4",
+                    "title": "The TM-Flow System and early detection of diabetes",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "The TM-Flow System and early detection of diabetes" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/The_symptoms_of_autonomic_neuropathy_and_vascular_disease.mp4",
+                    "title": "The symptoms of autonomic neuropathy and vascular disease",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "The symptoms of autonomic neuropathy and vascular disease" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Screening_recommended_by_The_American_Diabetes_Association.mp4",
+                    "title": "Screening recommended by The American Diabetes Association",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Screening recommended by The American Diabetes Association" 
+                }
+            ]
+        }
+    ],
+    "flag_bio_rst" : [
+        {
+            "name": "BioEnergetics deck",
+            "flag": true,
+            "videodata":[
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Bioenergetics_media_center_full.mp4",
+                    "title": "Bioenergetics Presentation Edit For Media Center",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Bioenergetics Presentation Edit For Media Center" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Bioenergetics_media_center_shorts_1.mp4",
+                    "title": "Introduction to BioEnergetics and neoGEN",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Introduction to BioEnergetics and neoGEN" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Bioenergetics_media_center_shorts_2.mp4",
+                    "title": "A state of the art, technologically innovative medical device",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "A state of the art, technologically innovative medical device" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Bioenergetics_media_center_shorts_3.mp4",
+                    "title": "The neoGEN device has been the subject of several white papers and studies",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "The neoGEN device has been the subject of several white papers and studies" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Bioenergetics_media_center_shorts_4.mp4",
+                    "title": "Clinical benefits of the neoGEN Electric Cell Signaling",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Clinical benefits of the neoGEN Electric Cell Signaling" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Bioenergetics_media_center_shorts_5.mp4",
+                    "title": "Quantum Resonance Specific Induction",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Quantum Resonance Specific Induction" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Bioenergetics_media_center_shorts_6.mp4",
+                    "title": "Electronic Signal Induction Technology",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Electronic Signal Induction Technology" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Bioenergetics_media_center_shorts_7.mp4",
+                    "title": "Extensive treatment protocols for chronic conditions covered by insurance",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Extensive treatment protocols for chronic conditions covered by insurance" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Bioenergetics_media_center_shorts_8.mp4",
+                    "title": "ECST addresses the inflammation and pain associated with",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "ECST addresses the inflammation and pain associated with" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Bioenergetics_media_center_shorts_9.mp4",
+                    "title": "The BioEnergetics platform for the neoGEN treatment protocol",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "The BioEnergetics platform for the neoGEN treatment protocol" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Bioenergetics_media_center_shorts_10.mp4",
+                    "title": "Developed by the industry experts and the LABS engineering division of Beto Paredes Family of Companies",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Developed by the industry experts and the LABS engineering division of Beto Paredes Family of Companies" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Bioenergetics_media_center_shorts_11.mp4",
+                    "title": "Operates through custom-engineered treatment plan",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Operates through custom-engineered treatment plan" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Bioenergetics_media_center_shorts_12.mp4",
+                    "title": "In collaboration with one of the larger medical device manufacturers",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "In collaboration with one of the larger medical device manufacturers" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Bioenergetics_media_center_shorts_13.mp4",
+                    "title": "Fully integrated patient intake",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Fully integrated patient intake" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Bioenergetics_media_center_shorts_14.mp4",
+                    "title": "Medical necessity verification",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Medical necessity verification" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Bioenergetics_media_center_shorts_15.mp4",
+                    "title": "Physician patient survey",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Physician patient survey" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Bioenergetics_media_center_shorts_16.mp4",
+                    "title": "The selection of CPT and treatment protocol",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "The selection of CPT and treatment protocol" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Bioenergetics_media_center_shorts_17.mp4",
+                    "title": "Daily treatment management and notes preparation",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Daily treatment management and notes preparation" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Bioenergetics_media_center_shorts_18.mp4",
+                    "title": "Posting for billing validation",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Posting for billing validation" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Bioenergetics_media_center_shorts_19.mp4",
+                    "title": "Conclusion",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Conclusion" 
+                }
+            ]
+        },
+        {
+            "name": "Sanexas Training with Richard Sorgnard, Ph D",
+            "flag": true,
+            "videodata":[
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Sanexas_Training_full.mp4",
+                    "title": "Sanexas Training with Richard Sorgnard, Ph D",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Sanexas Training with Richard Sorgnard, Ph D" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Sanexas_Training_shorts_1.mp4",
+                    "title": "Dr. Richard Introduction",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Dr. Richard Introduction" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Sanexas_Training_shorts_2.mp4",
+                    "title": "Electromedicine History",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Electromedicine History" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Sanexas_Training_shorts_3.mp4",
+                    "title": "Electric Signaling History and Science",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Electric Signaling History and Science" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Sanexas_Training_shorts_4.mp4",
+                    "title": "Electric Signaling Benefits",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Electric Signaling Benefits" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Sanexas_Training_shorts_5.mp4",
+                    "title": "Electric Signaling Effects",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Electric Signaling Effects" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Sanexas_Training_shorts_6.mp4",
+                    "title": "Electric Cell Signaling Mechanisms of Action",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Electric Cell Signaling Mechanisms of Action" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Sanexas_Training_shorts_7.mp4",
+                    "title": "Electric Cell Signaling Mechanism Description",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Electric Cell Signaling Mechanism Description" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Sanexas_Training_shorts_8.mp4",
+                    "title": "Electric Signaling Classification",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Electric Signaling Classification" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Sanexas_Training_shorts_9.mp4",
+                    "title": "Signal Energy Outcomes",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Signal Energy Outcomes" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Sanexas_Training_shorts_10.mp4",
+                    "title": "FDA Indications for Use",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "FDA Indications for Use" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Sanexas_Training_shorts_11.mp4",
+                    "title": "Differentiated Electric Signal Treatment",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Differentiated Electric Signal Treatment" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Sanexas_Training_shorts_12.mp4",
+                    "title": "Demonstration 1",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Demonstration 1" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Sanexas_Training_shorts_13.mp4",
+                    "title": "Demonstration 2 Patient 2",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Demonstration 2 Patient 2" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Sanexas_Training_shorts_14.mp4",
+                    "title": "Patient 3",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Patient 3" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Sanexas_Training_shorts_15.mp4",
+                    "title": "Patient 4 and 5",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Patient 4 and 5" 
+                }
+            ]
+        }
+    ],
+    "flag_medigrade" : [
+        {
+            "name": "Medigrade Presentation Dual deck",
+            "flag": true,
+            "videodata":[
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Medigrade_Presentation_Center.mp4",
+                    "title": "Medigrade Presentation Center",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Medigrade Presentation Center" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-1642062404893Medigrade1.mp4",
+                    "title": "Introduction to the complete ANS testing medical device platform",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Introduction to the complete ANS testing medical device platform" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-1642067100284Medigrade2.mp4",
+                    "title": "Two major tools for the 360-degree operations",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Two major tools for the 360-degree operations" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-1642067692101Medigrade3.mp4",
+                    "title": "The TM-Flow Medical Device",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "The TM-Flow Medical Device" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-1642067860444Medigrade4.mp4",
+                    "title": "Biomedical information on critical areas of a patient's health",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Biomedical information on critical areas of a patient's health" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-1642069136689Medigrade5.mp4",
+                    "title": "A short note on the test and the report",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "A short note on the test and the report" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-1642069570775Medigrade6.mp4",
+                    "title": "Think ANS First - The new patient visit examination",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Think ANS First - The new patient visit examination" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-1642070000709Medigrade7.mp4",
+                    "title": "This Exam is paid out by Medicare and most private insurances",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "This Exam is paid out by Medicare and most private insurances" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-1642070368160Medigrade8.mp4",
+                    "title": "Early detection and prevention of diseases",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Early detection and prevention of diseases" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-1642071164981Medigrade9.mp4",
+                    "title": "Symptoms leading to medical necessity",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Symptoms leading to medical necessity" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-1642071607493Medigrade10.mp4",
+                    "title": "The 8 risk factor areas examined",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "The 8 risk factor areas examined" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-1642072329972Medigrade11.mp4",
+                    "title": "Health risk factors defined part 1",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Health risk factors defined part 1" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-1642072490725Medigrade12.mp4",
+                    "title": "Health risk factors defined part 2",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Health risk factors defined part 2" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-1642072895440Medigrade13.mp4",
+                    "title": "Validation for additional next steps testing",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Validation for additional next steps testing" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-1642073862015Medigrade14.mp4",
+                    "title": "Immediate access to exam results",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Immediate access to exam results" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-1642074433749Medigrade15.mp4",
+                    "title": "Practice dashboard",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Practice dashboard" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-1642074598478Medigrade16.mp4",
+                    "title": "Doctor's Panel",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Doctor's Panel" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-1642075042846Medigrade17.mp4",
+                    "title": "Auto-generated encounter form",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Auto-generated encounter form" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-1642075321342Medigrade18.mp4",
+                    "title": "Additional recommended diagnostic tests",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Additional recommended diagnostic tests" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-1642075482909Medigrade19.mp4",
+                    "title": "Superbill for obesity or IBT form",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Superbill for obesity or IBT form" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-1642076493946Medigrade20.mp4",
+                    "title": "Patient intake system and medical necessity",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Patient intake system and medical necessity" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-1642077150126Medigrade21.mp4",
+                    "title": "Integrated with WEB-MD and Medlineplus",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Integrated with WEB-MD and Medlineplus" 
+                },
+                { 
+                    "url": "urhttps://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-1642077387574Medigrade22.mp4l",
+                    "title": "Important features of PECE",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Important features of PECE" 
+                }
+            ]
+        },
+        {
+            "name": "PECE Software walkthrough",
+            "flag": true,
+            "videodata":[
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/PECE_software_walkthrough.mp4",
+                    "title": "PECE software walkthrough",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "PECE software walkthrough" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Introduction_to_the_PECE_Medical_device_platform.mp4",
+                    "title": "Introduction to the PECE Medical device platform",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Introduction to the PECE Medical device platform" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Doctor_portal_dashboard.mp4",
+                    "title": "Doctor portal dashboard",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Doctor portal dashboard" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Potential_Diagnosis_to_Review_from_the_doctor_dashboard.mp4",
+                    "title": "Potential Diagnosis to Review from the doctor dashboard",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Potential Diagnosis to Review from the doctor dashboard" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/How_to_search_for_important_definitions_with_integrated_WebMD_and_MedlinePlus.mp4",
+                    "title": "How to search for important definitions with integrated WebMD and MedlinePlus",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "How to search for important definitions with integrated WebMD and MedlinePlus" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Toggle_between_pre_and_post_exam_data_and_viewing_post_exam_data.mp4",
+                    "title": "Toggle between pre and post exam data and viewing post exam data",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Toggle between pre and post exam data and viewing post exam data" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Job_tickets_to_communicate_with_our_staff_concerning_any_questions_or_concerns.mp4",
+                    "title": "Job tickets to communicate with our staff concerning any questions or concerns",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Job tickets to communicate with our staff concerning any questions or concerns" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/How_to_quickly_review_all_of_the_most_recently_uploaded_reports.mp4",
+                    "title": "How to quickly review all of the most recently uploaded reports",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "How to quickly review all of the most recently uploaded reports" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/How_to_review_patient_folder_access_and_search_variables.mp4",
+                    "title": "How to review patient folder access and search variables",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "How to review patient folder access and search variables" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/A_short_description_on_HPS_Evaluation.mp4",
+                    "title": "A short description on HPS Evaluation",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "A short description on HPS Evaluation" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/How_to_sort_patients_by_Pending_signature_and_different_available_actions.mp4",
+                    "title": "How to sort patients by Pending signature and different available actions",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "How to sort patients by Pending signature and different available actions" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/How_to_add_notes_for_a_patient.mp4",
+                    "title": "How to add notes for a patient",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "How to add notes for a patient" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/How_to_view_a_patient_report_and_access_the_patients_folder.mp4",
+                    "title": "How to view a patient report and access the patients folder",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "How to view a patient report and access the patients folder" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/How_to_toggle_through_different_aspects_of_the_exam_for_a_TM-Flow_Report.mp4",
+                    "title": "How to toggle through different aspects of the exam for a TM-Flow Report",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "How to toggle through different aspects of the exam for a TM-Flow Report" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Patient_Details_and_patient_intake_data.mp4",
+                    "title": "Patient Details and patient intake data",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Patient Details and patient intake data" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/How_to_review_the_Encounter_forms.mp4",
+                    "title": "How to review the Encounter forms",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "How to review the Encounter forms" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Superbill_for_obesity.mp4",
+                    "title": "Superbill for obesity",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Superbill for obesity" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Additional_recommended_diagnostic_tests.mp4",
+                    "title": "Additional recommended diagnostic tests",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Additional recommended diagnostic tests" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Different_options_available_at_the_top_of_the_patient_folder_navigation.mp4",
+                    "title": "Different options available at the top of the patient folder navigation",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Different options available at the top of the patient folder navigation" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/How_to_access_other_actions_available_for_each_patient.mp4",
+                    "title": "How to access other actions available for each patient",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "How to access other actions available for each patient" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Different_types_of_users_or_user_roles_available_in_the_system.mp4",
+                    "title": "Different types of users or user roles available in the system",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Different types of users or user roles available in the system" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Practice_Manager_dashboard.mp4",
+                    "title": "Practice Manager dashboard",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Practice Manager dashboard" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/How_can_a_practice_manager_view_all_recently_billed_exams.mp4",
+                    "title": "How can a practice manager view all recently billed exams",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "How can a practice manager view all recently billed exams" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/How_can_a_practice_manager_view_all_recently_processed_exams.mp4",
+                    "title": "How can a practice manager view all recently processed exams",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "How can a practice manager view all recently processed exams" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/How_can_a_practice_manager_access_patient_reporting.mp4",
+                    "title": "How can a practice manager access patient reporting",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "How can a practice manager access patient reporting" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/How_can_a_practice_manager_manage_other_users_within_the_practice.mp4",
+                    "title": "How can a practice manager manage other users within the practice",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "How can a practice manager manage other users within the practice" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Different_types_of_reports_that_can_be_accessed_by_a_Practice_manager.mp4",
+                    "title": "Different types of reports that can be accessed by a Practice manager",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Different types of reports that can be accessed by a Practice manager" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/How_can_a_practice_manager_manage_locations.mp4",
+                    "title": "How can a practice manager manage locations",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "How can a practice manager manage locations" 
+                }
+            ]
+        },
+        {
+            "name": "TM-Flow Slide deck",
+            "flag": true,
+            "videodata":[
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/TM_Flow_For_Presentation_center.mp4",
+                    "title": "TM-Flow",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "TM-Flow" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Introducing_the_FDA_approved_TM_Flow.mp4",
+                    "title": "Introducing the FDA approved TM-Flow",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Introducing the FDA approved TM-Flow" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Think_ANS_First.mp4",
+                    "title": "Think ANS First",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Think ANS First" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Assessment_of_health_risks.mp4",
+                    "title": "Assessment of health risks",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Assessment of health risks" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Bio_data_analysis_and_reimbursement.mp4",
+                    "title": "Bio-data analysis and reimbursement",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Bio-data analysis and reimbursement" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Think_ANS_First_symptoms_leading_to_medical_necessity_for_our_exam.mp4",
+                    "title": "Think ANS First (symptoms leading to medical necessity for our exam)",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Think ANS First (symptoms leading to medical necessity for our exam)" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Disease_complications_detected_through_the_ANS_analysis_of_our_test.mp4",
+                    "title": "Disease complications detected through the ANS analysis of our test",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Disease complications detected through the ANS analysis of our test" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/The_TM_Flow_system_markers.mp4",
+                    "title": "The TM-Flow system markers",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "The TM-Flow system markers" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/The_8_risk_factor_areas_examined.mp4",
+                    "title": "The 8 risk factor areas examined",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "The 8 risk factor areas examined" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Health_risk_factors_defined_part_1.mp4",
+                    "title": "Health risk factors defined (part 1)",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Health risk factors defined (part 1)" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Health_risk_factors_defined_part_2.mp4",
+                    "title": "Health risk factors defined (part 2)",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Health risk factors defined (part 2)" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Assessment_of_the_autonomic_nervous_system.mp4",
+                    "title": "Assessment of the autonomic nervous system",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Assessment of the autonomic nervous system" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Assessment_of_the_micro_and_macro_vascular_system.mp4",
+                    "title": "Assessment of the micro and macro vascular system",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Assessment of the micro and macro vascular system" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Measurement_of_vascular_function_by_sound_and_accurate_technologies.mp4",
+                    "title": "Measurement of vascular function by sound and accurate technologies",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Measurement of vascular function by sound and accurate technologies" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/TM_Flow_and_diabetes.mp4",
+                    "title": "TM-Flow and diabetes",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "TM-Flow and diabetes" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/The_TM_flow_Medical_device_is_faster_and_more_comprehensive.mp4",
+                    "title": "The TM-flow Medical device is faster and more comprehensive",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "The TM-flow Medical device is faster and more comprehensive" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/TM_Flow_Conclusion.mp4",
+                    "title": "TM Flow Conclusion",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "TM Flow Conclusion" 
+                }
+            ]
         }
     ]
 }
