@@ -3089,7 +3089,7 @@ text-align: center;}
     padding: 5px;
     border: solid 1px #bce5d7;
     border-radius: 5px; margin: 2px;} 
-.marketingre_view_body{ background: url(https://marketing.betoparedes.com/assets/images/marketingre_view_bodybg.jpg) no-repeat; background-size: cover; padding: 8px 0;}
+.marketingre_view_body{ background:#0b2736 url(../images/page_bg_shadow.png)no-repeat; background-size: cover; padding: 8px 0;}
 
 .marketingre_view_body_wrapper{width: 1780px; margin: 0 auto;}
 
@@ -3210,14 +3210,16 @@ text-align: center;}
     .form-controlDate{ background:#fff url(https://marketing.betoparedes.com/assets/images/marketingre_view_dateicon.png) no-repeat 98% center;     padding-right: 36px;}  
 
 
-.marketingre_view_body_con_top{background: rgba(3,164,251,1);
+.marketingre_view_body_con_top{
+    background: rgba(3,164,251,1);
     background: -moz-linear-gradient(left, rgba(3,164,251,1) 0%, rgba(44,236,243,1) 100%);
     background: -webkit-gradient(left top, right top, color-stop(0%, rgba(3,164,251,1)), color-stop(100%, rgba(44,236,243,1)));
     background: -webkit-linear-gradient(left, rgba(3,164,251,1) 0%, rgba(44,236,243,1) 100%);
     background: -o-linear-gradient(left, rgba(3,164,251,1) 0%, rgba(44,236,243,1) 100%);
     background: -ms-linear-gradient(left, rgba(3,164,251,1) 0%, rgba(44,236,243,1) 100%);
     background: linear-gradient(to right, rgba(3,164,251,1) 0%, rgba(44,236,243,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03a4fb', endColorstr='#2cecf3', GradientType=1 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03a4fb', endColorstr='#2cecf3', GradientType=1 
+    );
  padding: 15px; margin-bottom: 10px; display: flex; align-items: center;
 
 }
