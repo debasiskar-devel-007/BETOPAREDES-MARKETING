@@ -515,6 +515,11 @@
             ]
         },
         {
+            "name": "BioEnergetics software walkthrough",
+            "flag": true,
+            "videodata":[]
+        },
+        {
             "name": "Sanexas Training with Richard Sorgnard, Ph D",
             "flag": true,
             "videodata":[
@@ -761,6 +766,11 @@
                     "description": "Important features of PECE" 
                 }
             ]
+        },
+        {
+            "name": "PECE Presentation deck",
+            "flag": true,
+            "videodata":[]
         },
         {
             "name": "PECE Software walkthrough",
