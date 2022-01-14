@@ -85,69 +85,119 @@ export class MarketingreviewNewComponent implements OnInit {
 
 
     // meta block 
-
-    this.meta_list = [
-      { "og:title": "Media Center for BioEngrgetics and RST Sanexas" },
-      { "og:url": window.location },
-      { "og:image": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG" },
-      { "og:type": "website" },
-      { "og:description": "Entire product information regarding BioEngrgetics and RST Sanexas in a video library" },
-      { "twitter:card": "Media Center for BioEngrgetics and RST Sanexas" },
-      { "twitter:title": "Media Center for BioEngrgetics and RST Sanexas" },
-      { "twitter:description": "Entire product information regarding BioEngrgetics and RST Sanexas in a video library" },
-      { "twitter:image": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG" },
-      { "twitter:url": window.location }
-    ]
-    this.setmetatags(this.meta_list);
     // end of meta block
-    let endpoint = environment.api_url + 'api/marketiingreviewteach';
-    let data = {};
-    if (typeof (this.activatedroute.snapshot.queryParams.pid1) != 'undefined' && this.activatedroute.snapshot.queryParams.pid1 != null) {
-      data = {
-        productid: [this.activatedroute.snapshot.queryParams.pid1],
-        userid: this.activatedroute.snapshot.params.rep_id
-      }
-      if (typeof (this.activatedroute.snapshot.queryParams.pid2) != 'undefined' && this.activatedroute.snapshot.queryParams.pid2 != null) {
-        data = {
-          productid: [this.activatedroute.snapshot.queryParams.pid1, this.activatedroute.snapshot.queryParams.pid2],
-          userid: this.activatedroute.snapshot.params.rep_id
-        }
-      }
-    }
-    this.api_service.requestData(endpoint, data).subscribe((res: any) => {
-      console.log(res);
-      this.productdata = res.results.productdata;
-      for (const key in this.productdata) {
-        this.product_list[key] = this.productdata[key]._id
-      }
-      console.log("this.activatedroute.snapshot===>", window.location)
-      if (this.product_list.includes('612c883f118c110009f02820') && this.product_list.includes('612c89242005f400082d5fb1')) {
-        this.bioenergetics_rst_product_flag = true
-        this.video_all_data = allvideodata.flag_bio_rst
-        console.log("this.bioenergetics_rst_product_flag ==> ", this.bioenergetics_rst_product_flag)
-      }
-      if (this.product_list.includes('604aff3691b7c80008ca11a8') && this.product_list.includes('604a0b6e40962e00088f0d79')) {
-        this.medigrade_product_flag = true
-        this.video_all_data = allvideodata.flag_medigrade
-        console.log("this.medigrade_product_flag ==> ", this.medigrade_product_flag)
-      }
-      if (!this.product_list.includes('604aff3691b7c80008ca11a8') && this.product_list.includes('604a0b6e40962e00088f0d79')) {
-        this.tmflow_product_flag = true
-        this.video_all_data = allvideodata.flag_tmflow
-        console.log("this.tmflow_product_flag ==> ", this.tmflow_product_flag)
-      }
-      if (this.product_list.includes('604aff3691b7c80008ca11a8') && !this.product_list.includes('604a0b6e40962e00088f0d79')) {
-        this.pece_product_flag = true
-        this.video_all_data = allvideodata.flag_pece
-        console.log("this.pece_product_flag ==> ", this.pece_product_flag)
-      }
 
-      this.techata = res.results.userdata[0];
-      console.log(this.productdata, 'productdata', this.techata);
-    })
+    if (typeof (this.activatedroute.snapshot.queryParams.pid1) != 'undefined' && this.activatedroute.snapshot.queryParams.pid1 != null && typeof (this.activatedroute.snapshot.queryParams.pid2) != 'undefined' && this.activatedroute.snapshot.queryParams.pid2 != null) {
+      this.product_list = [this.activatedroute.snapshot.queryParams.pid1, this.activatedroute.snapshot.queryParams.pid2]
+    }
+    if (typeof (this.activatedroute.snapshot.queryParams.pid1) != 'undefined' && this.activatedroute.snapshot.queryParams.pid1 != null && typeof (this.activatedroute.snapshot.queryParams.pid2) == 'undefined' && this.activatedroute.snapshot.queryParams.pid2 == null) {
+      this.product_list = [this.activatedroute.snapshot.queryParams.pid1]
+    }
+    console.log("Product IDs ==>",this.product_list)
+
+    if (this.product_list.includes('612c883f118c110009f02820') && this.product_list.includes('612c89242005f400082d5fb1')) {
+      this.bioenergetics_rst_product_flag = true
+      this.video_all_data = allvideodata.flag_bio_rst
+      this.meta_list = [
+        { "og:title": "Media Center for BioEngrgetics and RST Sanexas" },
+        { "og:url": window.location },
+        { "og:image": "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og2.jpg" },
+        { "og:type": "website" },
+        { "og:description": "Entire product information regarding BioEngrgetics and RST Sanexas in a video library" },
+        { "twitter:card": "Media Center for BioEngrgetics and RST Sanexas" },
+        { "twitter:title": "Media Center for BioEngrgetics and RST Sanexas" },
+        { "twitter:description": "Entire product information regarding BioEngrgetics and RST Sanexas in a video library" },
+        { "twitter:image": "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og2.jpg" },
+        { "twitter:url": window.location }
+      ]
+      this.setmetatags(this.meta_list);
+      console.log("this.bioenergetics_rst_product_flag ==> ", this.bioenergetics_rst_product_flag)
+    }
+    if (this.product_list.includes('604aff3691b7c80008ca11a8') && this.product_list.includes('604a0b6e40962e00088f0d79')) {
+      this.medigrade_product_flag = true
+      this.video_all_data = allvideodata.flag_medigrade
+      this.meta_list = [
+        { "og:title": "Media Center for Medigrade" },
+        { "og:url": window.location },
+        { "og:image": "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og1.jpg" },
+        { "og:type": "website" },
+        { "og:description": "Entire product information regarding Medigrade in a video library" },
+        { "twitter:card": "Media Center for Medigrade" },
+        { "twitter:title": "Media Center for Medigrade" },
+        { "twitter:description": "Entire product information regarding Medigrade in a video library" },
+        { "twitter:image": "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og1.jpg" },
+        { "twitter:url": window.location }
+      ]
+      this.setmetatags(this.meta_list);
+      console.log("this.medigrade_product_flag ==> ", this.medigrade_product_flag)
+    }
+    if (!this.product_list.includes('604aff3691b7c80008ca11a8') && this.product_list.includes('604a0b6e40962e00088f0d79')) {
+      this.tmflow_product_flag = true
+      this.video_all_data = allvideodata.flag_tmflow
+      this.meta_list = [
+        { "og:title": "Media Center for TM-Flow" },
+        { "og:url": window.location },
+        { "og:image": "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og4.jpg" },
+        { "og:type": "website" },
+        { "og:description": "Entire product information regarding TM-Flow in a video library" },
+        { "twitter:card": "Media Center for TM-Flow" },
+        { "twitter:title": "Media Center for TM-Flow" },
+        { "twitter:description": "Entire product information regarding TM-Flow in a video library" },
+        { "twitter:image": "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og4.jpg" },
+        { "twitter:url": window.location }
+      ]
+      this.setmetatags(this.meta_list);
+      console.log("this.tmflow_product_flag ==> ", this.tmflow_product_flag)
+    }
+    if (this.product_list.includes('604aff3691b7c80008ca11a8') && !this.product_list.includes('604a0b6e40962e00088f0d79')) {
+      this.pece_product_flag = true
+      this.video_all_data = allvideodata.flag_pece
+      this.meta_list = [
+        { "og:title": "Media Center for PECE" },
+        { "og:url": window.location },
+        { "og:image": "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og3.jpg" },
+        { "og:type": "website" },
+        { "og:description": "Entire product information regarding PECE in a video library" },
+        { "twitter:card": "Media Center for PECE" },
+        { "twitter:title": "Media Center for PECE" },
+        { "twitter:description": "Entire product information regarding PECE in a video library" },
+        { "twitter:image": "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og3.jpg" },
+        { "twitter:url": window.location }
+      ]
+      this.setmetatags(this.meta_list);
+      console.log("this.pece_product_flag ==> ", this.pece_product_flag)
+    }
+
+    // let endpoint = environment.api_url + 'api/marketiingreviewteach';
+    // let data = {};
+
+    // if (typeof (this.activatedroute.snapshot.queryParams.pid1) != 'undefined' && this.activatedroute.snapshot.queryParams.pid1 != null) {
+    //   data = {
+    //     productid: [this.activatedroute.snapshot.queryParams.pid1],
+    //     userid: this.activatedroute.snapshot.params.rep_id
+    //   }
+    //   if (typeof (this.activatedroute.snapshot.queryParams.pid2) != 'undefined' && this.activatedroute.snapshot.queryParams.pid2 != null) {
+    //     data = {
+    //       productid: [this.activatedroute.snapshot.queryParams.pid1, this.activatedroute.snapshot.queryParams.pid2],
+    //       userid: this.activatedroute.snapshot.params.rep_id
+    //     }
+    //   }
+    // }
+    // this.api_service.requestData(endpoint, data).subscribe((res: any) => {
+    //   console.log(res);
+    //   this.productdata = res.results.productdata;
+    //   for (const key in this.productdata) {
+    //     this.product_list[key] = this.productdata[key]._id
+    //   }
+    //   console.log("this.activatedroute.snapshot===>", window.location)
+      
+
+    //   this.techata = res.results.userdata[0];
+    //   console.log(this.productdata, 'productdata', this.techata);
+    // })
     // this.firstcontractrequest();
     // this.parentdata();
-    this.getoneleadfolderview();
+    // this.getoneleadfolderview();
 
   }
 
