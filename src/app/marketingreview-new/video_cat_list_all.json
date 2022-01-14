@@ -180,5 +180,115 @@
                 }
             ]
         }
-  ]
+    ],
+    "flag_tmflow" : [
+        {
+            "name": "TM-Flow Presentation Sales Deck",
+            "flag": true,
+            "videodata":[
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/TM_Flow_For_Presentation_center.mp4",
+                    "title": "TM-Flow",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "TM-Flow" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Introducing_the_FDA_approved_TM_Flow.mp4",
+                    "title": "Introducing the FDA approved TM-Flow",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Introducing the FDA approved TM-Flow" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Think_ANS_First.mp4",
+                    "title": "Think ANS First",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Think ANS First" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Assessment_of_health_risks.mp4",
+                    "title": "Assessment of health risks",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Assessment of health risks" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Bio_data_analysis_and_reimbursement.mp4",
+                    "title": "Bio-data analysis and reimbursement",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Bio-data analysis and reimbursement" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Think_ANS_First_symptoms_leading_to_medical_necessity_for_our_exam.mp4",
+                    "title": "Think ANS First (symptoms leading to medical necessity for our exam)",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Think ANS First (symptoms leading to medical necessity for our exam)" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Disease_complications_detected_through_the_ANS_analysis_of_our_test.mp4",
+                    "title": "Disease complications detected through the ANS analysis of our test",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Disease complications detected through the ANS analysis of our test" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/The_TM_Flow_system_markers.mp4",
+                    "title": "The TM-Flow system markers",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "The TM-Flow system markers" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/The_8_risk_factor_areas_examined.mp4",
+                    "title": "The 8 risk factor areas examined",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "The 8 risk factor areas examined" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Health_risk_factors_defined_part_1.mp4",
+                    "title": "Health risk factors defined (part 1)",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Health risk factors defined (part 1)" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Health_risk_factors_defined_part_2.mp4",
+                    "title": "Health risk factors defined (part 2)",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Health risk factors defined (part 2)" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Assessment_of_the_autonomic_nervous_system.mp4",
+                    "title": "Assessment of the autonomic nervous system",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Assessment of the autonomic nervous system" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Assessment_of_the_micro_and_macro_vascular_system.mp4",
+                    "title": "Assessment of the micro and macro vascular system",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Assessment of the micro and macro vascular system" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Measurement_of_vascular_function_by_sound_and_accurate_technologies.mp4",
+                    "title": "Measurement of vascular function by sound and accurate technologies",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Measurement of vascular function by sound and accurate technologies" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/TM_Flow_and_diabetes.mp4",
+                    "title": "TM-Flow and diabetes",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "TM-Flow and diabetes" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/The_TM_flow_Medical_device_is_faster_and_more_comprehensive.mp4",
+                    "title": "The TM-flow Medical device is faster and more comprehensive",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "The TM-flow Medical device is faster and more comprehensive" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/TM_Flow_Conclusion.mp4",
+                    "title": "TM Flow Conclusion",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "TM Flow Conclusion" 
+                }
+            ]
+        }
+    ]
 }
