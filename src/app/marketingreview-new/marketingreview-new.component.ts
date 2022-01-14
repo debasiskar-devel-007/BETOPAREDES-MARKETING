@@ -102,7 +102,7 @@ export class MarketingreviewNewComponent implements OnInit {
       }
       if (this.product_list.includes('612c883f118c110009f02820') && this.product_list.includes('612c89242005f400082d5fb1')) {
         this.bioenergetics_rst_product_flag = true
-        const video_all_data = allvideodata.flag_bio_rst
+        this.video_all_data = allvideodata.flag_bio_rst
           console.log("this.bioenergetics_rst_product_flag ==> ", this.bioenergetics_rst_product_flag)
       }
       if (this.product_list.includes('604aff3691b7c80008ca11a8') && this.product_list.includes('604a0b6e40962e00088f0d79')) {
@@ -112,12 +112,12 @@ export class MarketingreviewNewComponent implements OnInit {
       }
       if (!this.product_list.includes('604aff3691b7c80008ca11a8') && this.product_list.includes('604a0b6e40962e00088f0d79')) {
         this.tmflow_product_flag = true
-        const video_all_data = allvideodata.flag_tmflow
+        this.video_all_data = allvideodata.flag_tmflow
           console.log("this.tmflow_product_flag ==> ", this.tmflow_product_flag)
       }
       if (this.product_list.includes('604aff3691b7c80008ca11a8') && !this.product_list.includes('604a0b6e40962e00088f0d79')) {
         this.pece_product_flag = true
-        const video_all_data =allvideodata.flag_pece
+        this.video_all_data = allvideodata.flag_pece
           console.log("this.pece_product_flag ==> ", this.pece_product_flag)
       }
 
@@ -463,42 +463,43 @@ export class MarketingreviewNewComponent implements OnInit {
 
   //   });
   // }
-
+  convertHMS(value) {
+    const sec = parseInt(value, 10); // convert value to number if it's string
+    let hours: any = Math.floor(sec / 3600); // get hours
+    let minutes: any = Math.floor((sec - (hours * 3600)) / 60); // get minutes
+    let seconds: any = sec - (hours * 3600) - (minutes * 60); //  get seconds
+    // add 0 if value < 10; Example: 2 => 02
+    if (hours < 10) {
+      hours = "0" + hours;
+    }
+    if (minutes < 10) {
+      minutes = "0" + minutes;
+    }
+    if (seconds < 10) {
+      seconds = "0" + seconds;
+    }
+    return hours + ':' + minutes + ':' + seconds; // Return is HH : MM : SS
+  }
 
   onprocess() {
-    console.log('ppppppp');
-
     this.videoplayflag = true;
     setTimeout(() => {
       this.video_currenttime = parseInt(this.player.currentTime());
-      const sec_num = parseInt(this.video_currenttime, 10);
-      const hours: any = Math.floor(sec_num / 3600);
-      const minutes: any = Math.floor((sec_num - (hours * 3600)) / 60);
-      const seconds: any = sec_num - (hours * 3600) - (minutes * 60);
-      this.video_time = hours + ':' + minutes + ':' + seconds;
+      this.video_time = this.convertHMS(this.video_currenttime);
       setTimeout(() => {
         this.video_duration = parseInt(this.player.duration());
-        const sec_duration_num = parseInt(this.video_duration, 10);
-        const duration_hours: any = Math.floor(sec_duration_num / 3600);
-        const duration_minutes: any = Math.floor((sec_duration_num - (duration_hours * 3600)) / 60);
-        const duration_seconds: any = sec_duration_num - (duration_hours * 3600) - (duration_minutes * 60);
-        this.video_end_time = duration_hours + ':' + duration_minutes + ':' + duration_seconds;
         this.videotimeflag = true;
+        this.video_end_time = this.convertHMS(this.video_duration);
         console.log(this.video_duration, 'audio_duration', this.video_end_time);
 
       }, 500);
-
-
-
       this.video_percent = (this.video_currenttime / this.video_duration) * 100;
     }, 1000);
   }
   playbtn() {   // FOR PLAY THE VIDEO
     console.log(this.player);
     this.playpauseflag = true;
-
     this.onprocess();
-
     this.player.play();
     console.log(this.player.cache_.currentTime, this.player.cache_.duration);
 
@@ -507,7 +508,6 @@ export class MarketingreviewNewComponent implements OnInit {
   pausebtn() {  //FOR PAUSE THE VIDEO.
     console.log(this.player.cache_.currentTime, this.player.cache_.duration);
     this.playpauseflag = false;
-
     this.player.pause();
   }
 
@@ -515,7 +515,6 @@ export class MarketingreviewNewComponent implements OnInit {
   progressvideo(val) {
     let video_time: any;
     video_time = (this.Change_video_percent * this.video_duration) / 100;
-
     const sec_num = parseInt(video_time, 10);
     const hours: any = Math.floor(sec_num / 3600);
     const minutes: any = Math.floor((sec_num - (hours * 3600)) / 60);
