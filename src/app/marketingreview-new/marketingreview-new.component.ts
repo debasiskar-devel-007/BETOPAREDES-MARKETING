@@ -106,19 +106,19 @@ export class MarketingreviewNewComponent implements OnInit {
       if (this.product_list.includes('612c883f118c110009f02820') && this.product_list.includes('612c89242005f400082d5fb1')) {
         this.bioenergetics_rst_product_flag = true
         this.video_all_data = allvideodata.flag_bio_rst
-        this.meta_list = [
-          {"og:title":"Media Center for BioEngrgetics and RST Sanexas"},
-          {"og:url":window.location},
-          {"og:image":"https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG"},
-          {"og:type":"website"},
-          {"og:description":"Entire product information regarding BioEngrgetics and RST Sanexas in a video library"},
-          {"twitter:card":"Media Center for BioEngrgetics and RST Sanexas"},
-          {"twitter:title":"Media Center for BioEngrgetics and RST Sanexas"},
-          {"twitter:description":"Entire product information regarding BioEngrgetics and RST Sanexas in a video library"},
-          {"twitter:image":"https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG"},
-          {"twitter:url":window.location}
-        ]
-        this.setmetatags(this.meta_list)
+        // this.meta_list = [
+        //   {"og:title":"Media Center for BioEngrgetics and RST Sanexas"},
+        //   {"og:url":window.location},
+        //   {"og:image":"https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG"},
+        //   {"og:type":"website"},
+        //   {"og:description":"Entire product information regarding BioEngrgetics and RST Sanexas in a video library"},
+        //   {"twitter:card":"Media Center for BioEngrgetics and RST Sanexas"},
+        //   {"twitter:title":"Media Center for BioEngrgetics and RST Sanexas"},
+        //   {"twitter:description":"Entire product information regarding BioEngrgetics and RST Sanexas in a video library"},
+        //   {"twitter:image":"https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG"},
+        //   {"twitter:url":window.location}
+        // ]
+        // this.setmetatags(this.meta_list)
         console.log("this.bioenergetics_rst_product_flag ==> ", this.bioenergetics_rst_product_flag)
       }
       if (this.product_list.includes('604aff3691b7c80008ca11a8') && this.product_list.includes('604a0b6e40962e00088f0d79')) {
