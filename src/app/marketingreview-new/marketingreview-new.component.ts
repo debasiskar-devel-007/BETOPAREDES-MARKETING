@@ -1,4 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
+// import { MetaService } from '@ngx-meta/core'
 import { ApiService } from "../api.service";
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatDialog, MatDialogRef, MatSnackBar } from '@angular/material';
@@ -37,7 +39,6 @@ export class MarketingreviewNewComponent implements OnInit {
   public video_percent: any = 0;
   public posterimg: any;
   public progressSpinner: boolean = false;
-
   public videoJsConfigObj = {
     preload: 'metadata',
     controls: false,
@@ -56,41 +57,6 @@ export class MarketingreviewNewComponent implements OnInit {
     }
   };
   public playpauseflag: any = false;
-  // public videolist: any = [{
-  //   name: 'Sale deck', flag: true, videodata:
-
-  //     [
-  //       { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637746453722SampleVideo_720x480_5mb.mp4', title: 'TM-FLOW REPORT', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
-
-  //       { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-1637210549150PECEDoctorTrainingVideo.mp4', title: 'TM-FLOW REPORT test', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', description: ' TM-FLOW REPORT. VASCULAR FUNCTION ASSESSMENT. HR: 77. Height 5 ,. Weight 168 Lbs. BMI: 26.3. CLINICAL CONTEXT. Physician Name:.' },
-
-  //     ]
-  // },
-
-
-  // {
-  //   name: 'Sales pitch', flag: false, videodata:
-
-  //     [{ url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/PECE-Sales-cript.mp4', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', title: 'PECE Sale Pitch', description: ' Our pitch script is designed to inform and grab the interest of your clients. By watching this video, you get to know what a salesperson tells his potential customer ( lead or practices ) about a product or service. Our perfectly designed product-based sales pitch is deeply involved with the final close of a deal. In order to become a successful salesperson, you have to sell yourself on what you are selling. Know your products, describe their benefits, and convince them that it is made for them. This video presents you with the complete enterprise system solution that works with every required staff member, including technicians, doctors, physician assistants, nurse practitioners, records keepers, and practice management. ' },
-
-  //     ]
-
-
-  // },
-
-
-
-  // {
-  //   name: 'Software walkthrough', flag: false, videodata:
-
-  //     [
-
-  //       { url: 'https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/PECE-demo.mp4', img: 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG', title: 'PECE Software Walk through', description: ' Our product-based software walkthrough converts prospects and demonstrates the testing and tment platform features. After completing your Beto Paredes main training and product-based training, you are introducing with product’s back-office features; from here, you can get a clear idea about the access of different tools back-office system. ' }
-  //     ]
-  // },
-  // ];
-
-
   public videolink: any = [];
   public video_url: any = '';
   public video_url1: any = '';
@@ -105,7 +71,7 @@ export class MarketingreviewNewComponent implements OnInit {
   public medigrade_product_flag: boolean = false;
   public bioenergetics_rst_product_flag: boolean = false;
   public product_list: any = [];
-
+  public meta_list: any = [];
   // public creditcontract: boolean = true;
   // public tmflowcontract: boolean = true;
   // public biocontract: boolean = true;
@@ -113,8 +79,9 @@ export class MarketingreviewNewComponent implements OnInit {
   // public warrantycontract: boolean = true;
   public userdetails: any = {};
   public parent_data: any = {};
+
   constructor(public api_service: ApiService, public dialog: MatDialog,
-    public activatedroute: ActivatedRoute, public snackBar: MatSnackBar, private sanitizer: DomSanitizer, public cookie: CookieService, public router: Router, public bottomSheet: MatBottomSheet) {
+    public activatedroute: ActivatedRoute, public snackBar: MatSnackBar, private sanitizer: DomSanitizer, public cookie: CookieService, public router: Router, public bottomSheet: MatBottomSheet,private meta: Meta) {
     let endpoint = environment.api_url + 'api/marketiingreviewteach';
     let data = {};
     if (typeof (this.activatedroute.snapshot.queryParams.pid1) != 'undefined' && this.activatedroute.snapshot.queryParams.pid1 != null) {
@@ -134,17 +101,25 @@ export class MarketingreviewNewComponent implements OnInit {
       this.productdata = res.results.productdata;
       for (const key in this.productdata) {
         this.product_list[key] = this.productdata[key]._id
-        // if (this.productdata[key]._id == '604aff3691b7c80008ca11a8') {
-        //   this.medigrade++;
-        // }
-        // if (this.productdata[key]._id == '604a0b6e40962e00088f0d79') {
-        //   this.medigrade++;
-        // }
       }
+      console.log("this.activatedroute.snapshot===>",window.location)
       if (this.product_list.includes('612c883f118c110009f02820') && this.product_list.includes('612c89242005f400082d5fb1')) {
         this.bioenergetics_rst_product_flag = true
         this.video_all_data = allvideodata.flag_bio_rst
-          console.log("this.bioenergetics_rst_product_flag ==> ", this.bioenergetics_rst_product_flag)
+        this.meta_list = [
+          {"og:title":"Media Center for BioEngrgetics and RST Sanexas"},
+          {"og:url":window.location},
+          {"og:image":"https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG"},
+          {"og:type":"website"},
+          {"og:description":"Entire product information regarding BioEngrgetics and RST Sanexas in a video library"},
+          {"twitter:card":"Media Center for BioEngrgetics and RST Sanexas"},
+          {"twitter:title":"Media Center for BioEngrgetics and RST Sanexas"},
+          {"twitter:description":"Entire product information regarding BioEngrgetics and RST Sanexas in a video library"},
+          {"twitter:image":"https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG"},
+          {"twitter:url":window.location}
+        ]
+        this.setmetatags(this.meta_list)
+        console.log("this.bioenergetics_rst_product_flag ==> ", this.bioenergetics_rst_product_flag)
       }
       if (this.product_list.includes('604aff3691b7c80008ca11a8') && this.product_list.includes('604a0b6e40962e00088f0d79')) {
         this.medigrade_product_flag = true
@@ -154,12 +129,12 @@ export class MarketingreviewNewComponent implements OnInit {
       if (!this.product_list.includes('604aff3691b7c80008ca11a8') && this.product_list.includes('604a0b6e40962e00088f0d79')) {
         this.tmflow_product_flag = true
         this.video_all_data = allvideodata.flag_tmflow
-          console.log("this.tmflow_product_flag ==> ", this.tmflow_product_flag)
+        console.log("this.tmflow_product_flag ==> ", this.tmflow_product_flag)
       }
       if (this.product_list.includes('604aff3691b7c80008ca11a8') && !this.product_list.includes('604a0b6e40962e00088f0d79')) {
         this.pece_product_flag = true
         this.video_all_data = allvideodata.flag_pece
-          console.log("this.pece_product_flag ==> ", this.pece_product_flag)
+        console.log("this.pece_product_flag ==> ", this.pece_product_flag)
       }
 
       this.techata = res.results.userdata[0];
@@ -168,6 +143,7 @@ export class MarketingreviewNewComponent implements OnInit {
     // this.firstcontractrequest();
     // this.parentdata();
     this.getoneleadfolderview();
+
   }
 
   ngOnInit() {
@@ -179,7 +155,6 @@ export class MarketingreviewNewComponent implements OnInit {
     setTimeout(() => {
       if (this.cookie.check('video_url')) {
         console.log(this.cookie.get('video_url'));
-
         this.video_url = this.cookie.get('video_url');
         if (this.cookie.check('videotitle')) {
           this.videotitle = this.cookie.get('videotitle');
@@ -188,42 +163,32 @@ export class MarketingreviewNewComponent implements OnInit {
           this.videodescription = this.cookie.get('videodesc');
 
         }
-
       } else {
         console.log("Else block");
-
-        // var newarr = this.videolist[0].videodata[0].url.split("https://betoparedesallvideos.s3.amazonaws.com");
-        // let url = 'https://d291rlacfzbauk.cloudfront.net' + newarr[1];
         let url = ""
+        console.log("this.video_all_data.length",this.video_all_data.length)
+        console.log("this.video_all_data[0].videodata.length",this.video_all_data[0].videodata.length)
         if (this.video_all_data.length > 0 && this.video_all_data[0].videodata.length > 0) {
           url = this.video_all_data[0].videodata[0].url
+          this.videotitle = this.video_all_data[0].videodata[0].title;
+          this.videodescription = this.video_all_data[0].videodata[0].description;
           console.log("video_all_data url +++")
 
         } else {
           url = "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-1637746453722SampleVideo_720x480_5mb.mp4"
+          this.videotitle = "Demo Video";
+        this.videodescription = "Default video";
           console.log("else url +++")
         }
-
-        //   this.video_listtable.video_file.path + this.video_listtable.video_file.fileservername;
         this.cookie.set('video_url', url, undefined, '/');
         this.video_url = url;
-        this.videotitle = "Demo Video";
-        this.videodescription = "Default video";
-
-        // let videotitledesc = {
-        //   videotitle: this.videolist[0].videodata[0].title,
-        //   videodesc: this.videolist[0].videodata[0].description
-
-        // }
         this.cookie.set('videotitle', this.videotitle, undefined, '/');
         this.cookie.set('videodesc', this.videodescription, undefined, '/');
-
       }
       this.video_url1 = this.sanitizer.bypassSecurityTrustResourceUrl(this.video_url);
       this.videoplayflag = true;
 
-      // console.log(this.videolist[0].videodata[0].url, newarr, url);
-    }, 500);
+    }, 1500);
 
 
     setTimeout(() => {
@@ -234,12 +199,19 @@ export class MarketingreviewNewComponent implements OnInit {
       this.video_currenttime = parseInt(this.player.currentTime());
       this.video_duration = parseInt(this.player.duration());
       console.log(this.video_duration, 'onload section', this.video_currenttime);// TO CONTROL FALSE
-
       this.onprocess();
-    }, 1000);
+      
+    }, 2000);
 
 
   }
+  setmetatags(meta_data){
+    for (const key in meta_data){
+      console.log(Object.keys(meta_data[key])[0] ," : ", Object.values(meta_data[key])[0])
+      this.meta.updateTag({ name: Object.keys(meta_data[key])[0], content: String(Object.values(meta_data[key])[0])});
+    }
+  }
+
   // parentdata() {
   //   let send_data = {
   //     id: this.activatedroute.snapshot.params.admin_id
@@ -286,6 +258,7 @@ export class MarketingreviewNewComponent implements OnInit {
   //     }
   //   })
   // }
+
   getoneleadfolderview() {
     let req_data = {
       "secret": this.cookie.get('secret'),
@@ -482,8 +455,6 @@ export class MarketingreviewNewComponent implements OnInit {
   // }
 
   bottomSheetVideoListOpen(val, index) {
-    // this.videolist.val.videodata
-    // console.log("videodata",allvideodata)
     this.video_all_data[index].videodata
     console.log(" this.video_all_data[index].name", this.video_all_data[index].name)
     const bottomSheetRef = this.bottomSheet.open(bottomSheetVideoList, {
@@ -493,14 +464,12 @@ export class MarketingreviewNewComponent implements OnInit {
     });
     bottomSheetRef.afterDismissed().subscribe((data) => {
       if(data != null){
-        console.log("data==>", data);
+        console.log("bottomSheetRef subscribe data==>", data);
         this.playnext(data);
       }
       
     });
   }
-
-
 
   // openDialog(): void {
   //   const dialogRef = this.dialog.open(dialogpage, {
@@ -512,6 +481,7 @@ export class MarketingreviewNewComponent implements OnInit {
 
   //   });
   // }
+
   convertHMS(value) {
     const sec = parseInt(value, 10); // convert value to number if it's string
     let hours: any = Math.floor(sec / 3600); // get hours
@@ -545,6 +515,7 @@ export class MarketingreviewNewComponent implements OnInit {
       this.video_percent = (this.video_currenttime / this.video_duration) * 100;
     }, 1000);
   }
+
   playbtn() {   // FOR PLAY THE VIDEO
     console.log(this.player);
     this.playpauseflag = true;
@@ -560,7 +531,6 @@ export class MarketingreviewNewComponent implements OnInit {
     this.player.pause();
   }
 
-
   progressvideo(val) {
     let video_time: any;
     video_time = (this.Change_video_percent * this.video_duration) / 100;
@@ -569,16 +539,16 @@ export class MarketingreviewNewComponent implements OnInit {
     const minutes: any = Math.floor((sec_num - (hours * 3600)) / 60);
     const seconds: any = sec_num - (hours * 3600) - (minutes * 60);
     this.video_time = hours + ':' + minutes + ':' + seconds;
-
     console.log(this.video_duration, this.video_percent, this.Change_video_percent, this.video_time);
-
     this.player.currentTime(parseInt(video_time));
 
   }
+
   skip(value) {
     this.player.currentTime(parseInt(this.player.currentTime() + value));
     console.log('currentTime', this.player.currentTime());
   }
+
   fullscreenview() {
     let elem = document.querySelector("video");
     if (!document.fullscreenElement) {
@@ -589,75 +559,19 @@ export class MarketingreviewNewComponent implements OnInit {
   }
 
   playnext(val) {
-    // this.videoplayflag = false;
-    // this.video_currenttime =0;
-    // this.video_duration = parseInt(this.player.duration());
-    // setTimeout(() => {
-    console.log(this.cookie.get('video_url'), 'video_url;;;;');
-
     let url = val.url
-    // setTimeout(() => {
     this.cookie.set('video_url', url, undefined, '/');
-
-    console.log(this.cookie.get('video_url'), 'video_url;;;===========;');
     this.posterimg = val.img;
     this.videotitle = val.title;
     this.videodescription = val.description;
     this.cookie.set('videotitle', this.videotitle, undefined, '/');
     this.cookie.set('videodesc', this.videodescription, undefined, '/');
     console.log(this.cookie.get('video_url'), this.cookie.get('videotitle'), this.cookie.get('videodesc'), 'Video related cookies');
-
-    // this.player.updateSrc(val.url);
-    // this.player.reset();
-
     this.player.src(val.url);
     this.player.currentTime(0);
-    // this.videoplayflag = true;
-
-    // this.player.play();
     this.playbtn();
     this.onprocess();
-
     return
-
-    // }, 0);
-
-
-
-    // console.log(val.url, i, this.player);
-    // // setTimeout(() => {
-    // this.videoplayflag = false;
-
-    // this.video_url = '';
-    // this.video_url1 = '';
-    // // setTimeout(() => {
-    // // var video = document.getElementById('#my-video-modal');
-    // var source = document.getElementById('source');
-
-    // this.player.setAttribute('src', 'http://www.tools4movies.com/trailers/1012/Kill%20Bill%20Vol.3.mp4');
-
-
-    // setTimeout(() => {
-    //   var newarr = val.url.split("https://betoparedesallvideos.s3.amazonaws.com");
-    //   let url = 'https://d291rlacfzbauk.cloudfront.net' + newarr[1];
-    //   this.video_url = url;
-    //   this.video_url1 = this.sanitizer.bypassSecurityTrustResourceUrl(this.video_url);
-    //   this.videoplayflag = true;
-    //   setTimeout(() => {
-    //     this.player = videojs('#my-video-modal');
-
-    //     this.player.controls(false);
-    //     console.log('onload section');// TO CONTROL FALSE
-
-    //     this.video_currenttime = parseInt(this.player.currentTime());
-    //     this.onprocess();
-    //   }, 50);
-
-    // }, 1000);
-    // // }, 50);/
-    // // }, 1000);
-
-
   }
 
   ngOnDestroy() {
@@ -665,8 +579,6 @@ export class MarketingreviewNewComponent implements OnInit {
     // this.player.dispose();
   }
 }
-
-
 
 @Component({
   selector: 'dialogpage',
