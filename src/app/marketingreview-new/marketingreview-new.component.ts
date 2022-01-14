@@ -102,23 +102,23 @@ export class MarketingreviewNewComponent implements OnInit {
       }
       if (this.product_list.includes('612c883f118c110009f02820') && this.product_list.includes('612c89242005f400082d5fb1')) {
         this.bioenergetics_rst_product_flag = true
-        const video_all_data = []
+        const video_all_data =
           console.log("this.bioenergetics_rst_product_flag ==> ", this.bioenergetics_rst_product_flag)
       }
       if (this.product_list.includes('604aff3691b7c80008ca11a8') && this.product_list.includes('604a0b6e40962e00088f0d79')) {
         this.medigrade_product_flag = true
-        this.video_all_data = []
+        this.video_all_data = allvideodata.flag_pece
         console.log("this.medigrade_product_flag ==> ", this.medigrade_product_flag)
         console.log("video_all_data ==> ", this.video_all_data)
       }
       if (!this.product_list.includes('604aff3691b7c80008ca11a8') && this.product_list.includes('604a0b6e40962e00088f0d79')) {
         this.tmflow_product_flag = true
-        const video_all_data = allvideodata.flag_tmflow
+        const video_all_data =
           console.log("this.tmflow_product_flag ==> ", this.tmflow_product_flag)
       }
       if (this.product_list.includes('604aff3691b7c80008ca11a8') && !this.product_list.includes('604a0b6e40962e00088f0d79')) {
         this.pece_product_flag = true
-        const video_all_data = allvideodata.flag_pece
+        const video_all_data =
           console.log("this.pece_product_flag ==> ", this.pece_product_flag)
       }
 
