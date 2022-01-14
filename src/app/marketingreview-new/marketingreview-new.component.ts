@@ -124,7 +124,6 @@ export class MarketingreviewNewComponent implements OnInit {
       if (this.product_list.includes('612c883f118c110009f02820') && this.product_list.includes('612c89242005f400082d5fb1')) {
         this.bioenergetics_rst_product_flag = true
         this.video_all_data = allvideodata.flag_bio_rst
-
         console.log("this.bioenergetics_rst_product_flag ==> ", this.bioenergetics_rst_product_flag)
       }
       if (this.product_list.includes('604aff3691b7c80008ca11a8') && this.product_list.includes('604a0b6e40962e00088f0d79')) {
