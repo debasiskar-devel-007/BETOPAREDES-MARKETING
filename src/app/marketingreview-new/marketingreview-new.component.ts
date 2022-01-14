@@ -81,7 +81,25 @@ export class MarketingreviewNewComponent implements OnInit {
   public parent_data: any = {};
 
   constructor(public api_service: ApiService, public dialog: MatDialog,
-    public activatedroute: ActivatedRoute, public snackBar: MatSnackBar, private sanitizer: DomSanitizer, public cookie: CookieService, public router: Router, public bottomSheet: MatBottomSheet,private meta: Meta) {
+    public activatedroute: ActivatedRoute, public snackBar: MatSnackBar, private sanitizer: DomSanitizer, public cookie: CookieService, public router: Router, public bottomSheet: MatBottomSheet, private meta: Meta) {
+
+
+    // meta block 
+
+    this.meta_list = [
+      { "og:title": "Media Center for BioEngrgetics and RST Sanexas" },
+      { "og:url": window.location },
+      { "og:image": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG" },
+      { "og:type": "website" },
+      { "og:description": "Entire product information regarding BioEngrgetics and RST Sanexas in a video library" },
+      { "twitter:card": "Media Center for BioEngrgetics and RST Sanexas" },
+      { "twitter:title": "Media Center for BioEngrgetics and RST Sanexas" },
+      { "twitter:description": "Entire product information regarding BioEngrgetics and RST Sanexas in a video library" },
+      { "twitter:image": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG" },
+      { "twitter:url": window.location }
+    ]
+    this.setmetatags(this.meta_list);
+    // end of meta block
     let endpoint = environment.api_url + 'api/marketiingreviewteach';
     let data = {};
     if (typeof (this.activatedroute.snapshot.queryParams.pid1) != 'undefined' && this.activatedroute.snapshot.queryParams.pid1 != null) {
@@ -102,23 +120,11 @@ export class MarketingreviewNewComponent implements OnInit {
       for (const key in this.productdata) {
         this.product_list[key] = this.productdata[key]._id
       }
-      console.log("this.activatedroute.snapshot===>",window.location)
+      console.log("this.activatedroute.snapshot===>", window.location)
       if (this.product_list.includes('612c883f118c110009f02820') && this.product_list.includes('612c89242005f400082d5fb1')) {
         this.bioenergetics_rst_product_flag = true
         this.video_all_data = allvideodata.flag_bio_rst
-        this.meta_list = [
-          {"og:title":"Media Center for BioEngrgetics and RST Sanexas"},
-          {"og:url":window.location},
-          {"og:image":"https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG"},
-          {"og:type":"website"},
-          {"og:description":"Entire product information regarding BioEngrgetics and RST Sanexas in a video library"},
-          {"twitter:card":"Media Center for BioEngrgetics and RST Sanexas"},
-          {"twitter:title":"Media Center for BioEngrgetics and RST Sanexas"},
-          {"twitter:description":"Entire product information regarding BioEngrgetics and RST Sanexas in a video library"},
-          {"twitter:image":"https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG"},
-          {"twitter:url":window.location}
-        ]
-        this.setmetatags(this.meta_list)
+
         console.log("this.bioenergetics_rst_product_flag ==> ", this.bioenergetics_rst_product_flag)
       }
       if (this.product_list.includes('604aff3691b7c80008ca11a8') && this.product_list.includes('604a0b6e40962e00088f0d79')) {
@@ -166,8 +172,8 @@ export class MarketingreviewNewComponent implements OnInit {
       } else {
         console.log("Else block");
         let url = ""
-        console.log("this.video_all_data.length",this.video_all_data.length)
-        console.log("this.video_all_data[0].videodata.length",this.video_all_data[0].videodata.length)
+        console.log("this.video_all_data.length", this.video_all_data.length)
+        console.log("this.video_all_data[0].videodata.length", this.video_all_data[0].videodata.length)
         if (this.video_all_data.length > 0 && this.video_all_data[0].videodata.length > 0) {
           url = this.video_all_data[0].videodata[0].url
           this.videotitle = this.video_all_data[0].videodata[0].title;
@@ -177,7 +183,7 @@ export class MarketingreviewNewComponent implements OnInit {
         } else {
           url = "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-1637746453722SampleVideo_720x480_5mb.mp4"
           this.videotitle = "Demo Video";
-        this.videodescription = "Default video";
+          this.videodescription = "Default video";
           console.log("else url +++")
         }
         this.cookie.set('video_url', url, undefined, '/');
@@ -200,15 +206,15 @@ export class MarketingreviewNewComponent implements OnInit {
       this.video_duration = parseInt(this.player.duration());
       console.log(this.video_duration, 'onload section', this.video_currenttime);// TO CONTROL FALSE
       this.onprocess();
-      
+
     }, 2000);
 
 
   }
-  setmetatags(meta_data){
-    for (const key in meta_data){
-      console.log(Object.keys(meta_data[key])[0] ," : ", Object.values(meta_data[key])[0])
-      this.meta.updateTag({ name: Object.keys(meta_data[key])[0], content: String(Object.values(meta_data[key])[0])});
+  setmetatags(meta_data) {
+    for (const key in meta_data) {
+      console.log(Object.keys(meta_data[key])[0], " : ", Object.values(meta_data[key])[0])
+      this.meta.updateTag({ name: Object.keys(meta_data[key])[0], content: String(Object.values(meta_data[key])[0]) });
     }
   }
 
@@ -463,11 +469,11 @@ export class MarketingreviewNewComponent implements OnInit {
 
     });
     bottomSheetRef.afterDismissed().subscribe((data) => {
-      if(data != null){
+      if (data != null) {
         console.log("bottomSheetRef subscribe data==>", data);
         this.playnext(data);
       }
-      
+
     });
   }
 
