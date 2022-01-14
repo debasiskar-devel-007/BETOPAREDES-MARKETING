@@ -1,71 +1,83 @@
 <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
 <mat-progress-bar class="newcontract_progressbar" mode="indeterminate" *ngIf="progressSpinner"></mat-progress-bar>
-<div class="marketingre_view_top">
+<ng-container>
 
-    <div class="marketingre_view_top_body">
-        <ng-container *ngIf="medigrade_product_flag == true">
-            <span>
-        this block is for medigrade
-      </span>
-        </ng-container>
+</ng-container>
+<div class="top_block_marketing">
+  <!-- <div class="marketingre_view_top">
 
-        <ng-container *ngIf="bioenergetics_rst_product_flag == true">
-            <span>
-        this block is for bio energertics
-      </span>
-        </ng-container>
+  <div class="marketingre_view_top_body"> -->
+  <ng-container *ngIf="medigrade_product_flag == true">
+    <!-- <span>
+      this block is for medigrade
+    </span> -->
+    <img src="../../assets/images/marketing/media center _medigrade.png" alt="">
 
-        <ng-container *ngIf="pece_product_flag == true">
-            <span>
-        this block is for pece only
-      </span>
-        </ng-container>
-        <ng-container *ngIf="tmflow_product_flag == true">
-            <span>
-        this block is for tmflow only
-      </span>
-        </ng-container>
-    </div>
+  </ng-container>
+
+  <ng-container *ngIf="bioenergetics_rst_product_flag == true">
+    <!-- <span>
+      this block is for bio energertics
+    </span> -->
+    <img src="../../assets/images/marketing/media center _BioEn_RST.png" alt="">
+  </ng-container>
+
+  <ng-container *ngIf="pece_product_flag == true">
+    <!-- <span>
+      this block is for pece only
+    </span> -->
+    <img src="../../assets/images/marketing/media center _only_pece.png" alt="">
+  </ng-container>
+  <ng-container *ngIf="tmflow_product_flag == true">
+    <!-- <span>
+      this block is for tmflow only
+    </span> -->
+    <img src="../../assets/images/marketing/media center _only_Tmflow.png" alt="">
+  </ng-container>
+  <!-- </div>
 
 
 
+</div> -->
 </div>
 
 <!-- <button mat-raised-button (click)="openDialog()">Pick one</button> -->
 <div class="marketingre_view_body">
 
 
-    <div class="marketingre_view_body_wrapper">
+  <div class="marketingre_view_body_wrapper">
 
 
-        <div class="neoGEN_bluetextwrapper_main">
-            <div class="neoGEN_bluetextwrapper_sub">
-                <h2>YOUR DOCTORS WILL BE EXCITED WITH THE RM-3A TESTING AND REPORT </h2>
-                <p>Take advantage of your physicians’ network and earn big with AWS PECE Program and the RM-3A medical device. No other system in the ANS medical industry gives you as much data, and our level of analytical accuracy is unmatched by any other
-                    available devices.
-                </p>
-            </div>
-        </div>
+    <!-- <div class="neoGEN_bluetextwrapper_main">
+      <div class="neoGEN_bluetextwrapper_sub">
+        <h2>YOUR DOCTORS WILL BE EXCITED WITH THE RM-3A TESTING AND REPORT </h2>
+        <p>Take advantage of your physicians’ network and earn big with AWS PECE Program and the RM-3A medical device.
+          No other system in the ANS medical industry gives you as much data, and our level of analytical accuracy is
+          unmatched by any other
+          available devices.
+        </p>
+      </div>
+    </div> -->
 
 
 
 
 
-        <div class="marketingre_view_body_wrapper_detail">
-            <div class="marketingre_view_body_con_top">
-                <div class="marketingre_view_body_con_top_left">
-                    <!-- 
+    <div class="marketingre_view_body_wrapper_detail">
+      <div class="marketingre_view_body_con_top">
+        <div class="marketingre_view_body_con_top_left">
+          <!-- 
           <h3>Know your Representative. This Present link sent by {{techata?.fullname}},
             {{techata?.email}},{{techata?.phone}}</h3> -->
-                    <!-- {{video_all_data | json }} -->
-                    <ng-container *ngIf="video_all_data!= null ">
+          <!-- {{video_all_data | json }} -->
+          <ng-container *ngIf="video_all_data!= null ">
 
-                        <ng-container *ngFor='let item of video_all_data; let i=index'>
+            <ng-container *ngFor='let item of video_all_data; let i=index'>
 
-                            <h2 (click)='bottomSheetVideoListOpen(item.name,i)'>{{item.name}}</h2>
+              <h2 (click)='bottomSheetVideoListOpen(item.name,i)'>{{item.name}}</h2>
 
 
-                            <!-- <ng-container *ngIf='item.flag'>
+              <!-- <ng-container *ngIf='item.flag'>
 
         
               <label *ngFor='let vlink of item.videodata; let j=index'>
@@ -83,8 +95,8 @@
 
 
 
-                        </ng-container>
-                    </ng-container>
+            </ng-container>
+          </ng-container>
 
 
 
@@ -92,30 +104,32 @@
 
 
 
-                </div>
+        </div>
 
 
-                <!-- <button *ngIf="requestflag==false" (click)=request_contract()> REQUEST A CONTRACT</button>
+        <!-- <button *ngIf="requestflag==false" (click)=request_contract()> REQUEST A CONTRACT</button>
         <button *ngIf="requestflag==true" (click)=request_contract()> Contract request sent</button> -->
 
-            </div>
+      </div>
 
-            <!-- <div class="marketingre_view_btn_group">
+      <!-- <div class="marketingre_view_btn_group">
         <button >contract review</button>
         <button> REQUEST A CONTRACT</button>
         <button >Product Review</button>
       </div> -->
 
-            <div class="marketingre_view_body_con">
+      <div class="marketingre_view_body_con">
 
-                <div class="marketingre_view_body_con_left">
+        <div class="marketingre_view_body_con_left">
 
-                    <div class="video-responsive">
+          <div class="video-responsive">
 
-                        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/jssO8-5qmag" frameborder="0"
+            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/jssO8-5qmag" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe> -->
-                        <video id="my-video-modal" *ngIf='videoplayflag' (timeupdate)="onprocess()" preload="auto" width="640" height="264" poster="https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG" data-setup="{}" controls>
+            <video id="my-video-modal" *ngIf='videoplayflag' (timeupdate)="onprocess()" preload="auto" width="640"
+              height="264" poster="https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG"
+              data-setup="{}" controls>
               <source [src]="video_url" type="video/mp4" />
               <p class="vjs-no-js">
                 To view this video please enable JavaScript, and consider upgrading to a
@@ -127,63 +141,53 @@
             </video>
 
 
-                        <!-- <video width="100%" id="vid" autoplay loop controls muted>
+            <!-- <video width="100%" id="vid" autoplay loop controls muted>
               <source src="{{ video_url }}" type="video/mp4" />
               Your browser does not support HTML video.
             </video> -->
 
-                        <ng-container *ngIf="videotimeflag">
-                            <!-- <mat-progress-bar class="loaderprogress" mode="determinate" value="{{ video_percent }}"></mat-progress-bar> -->
-                            <div (click)='progressvideo(video_percent)'>
-                                <mat-slider class="loaderprogress" [disabled]="disabled" [value]='video_percent' [(ngModel)]="Change_video_percent" aria-labelledby="example-name-label">
-                                </mat-slider>
-                            </div>
-                            <div class="actioncontrol" id="actionid" [ngClass]="show">
-                                <span class="videotime">{{ video_time }}/{{ video_end_time }}</span>
+            <ng-container *ngIf="videotimeflag">
+              <!-- <mat-progress-bar class="loaderprogress" mode="determinate" value="{{ video_percent }}"></mat-progress-bar> -->
+              <div (click)='progressvideo(video_percent)'>
+                <mat-slider class="loaderprogress" [disabled]="disabled" [value]='video_percent'
+                  [(ngModel)]="Change_video_percent" aria-labelledby="example-name-label">
+                </mat-slider>
+              </div>
+              <div class="actioncontrol" id="actionid" [ngClass]="show">
+                <span class="videotime">{{ video_time }}/{{ video_end_time }}</span>
 
-                                <button (click)="playbtn()" *ngIf='!playpauseflag' class="playbtn">
+                <button (click)="playbtn()" *ngIf='!playpauseflag' class="playbtn">
                   <span>play_arrow</span>
                 </button>
-                                <div class="playbtnlessplus">
-                                    <button (click)="skip(-10)" class="playbtnless">
+                <div class="playbtnlessplus">
+                  <button (click)="skip(-10)" class="playbtnless">
                     <img src="https://img.icons8.com/ios-glyphs/30/000000/replay-10.png" />
                   </button>
-                                    <button (click)="skip(10)" class="playbtnplus">
+                  <button (click)="skip(10)" class="playbtnplus">
                     <img src="https://img.icons8.com/ios-glyphs/60/000000/forward-10.png" />
                   </button>
-                                    <span *ngIf='!exitfullscreenflag' (click)='fullscreenview()' class="fullscreenBTN">fullscreen</span>
-                                    <!-- <mat-icon *ngIf='exitfullscreenflag' (click)='fullscreenview()'>fullscreen_exit</mat-icon> -->
-
-                                </div>
-
-                                <button (click)="pausebtn()" *ngIf='playpauseflag' class="pausebtn">
-                  <span>pause</span>
-
-                </button>
-                            </div>
-
-                        </ng-container>
-
-                    </div>
-
-                    <div class="videodescription">
-                        <h2>{{videotitle}}</h2>
-                        <h3>{{videodescription}}</h3>
-                    </div>
-                    <!-- <button>Marketing Strategies</button>
-
-          <button>Expected Revenues </button> -->
+                  <span *ngIf='!exitfullscreenflag' (click)='fullscreenview()' class="fullscreenBTN">fullscreen</span>
+                  <!-- <mat-icon *ngIf='exitfullscreenflag' (click)='fullscreenview()'>fullscreen_exit</mat-icon> -->
 
                 </div>
 
+                <button (click)="pausebtn()" *ngIf='playpauseflag' class="pausebtn">
+                  <span>pause</span>
 
+                </button>
+              </div>
 
+            </ng-container>
 
+          </div>
 
-            </div>
+          <div class="videodescription">
+            <h2>{{videotitle}}</h2>
+            <h3>{{videodescription}}</h3>
+          </div>
+          <!-- <button>Marketing Strategies</button>
 
-
-
+          <button>Expected Revenues </button> -->
 
         </div>
 
@@ -191,7 +195,18 @@
 
 
 
-        <!-- <div class="marketingre_view_body_footer">
+      </div>
+
+
+
+
+    </div>
+
+
+
+
+
+    <!-- <div class="marketingre_view_body_footer">
 
       <div class="marketingre_view_body_footer_wrapper">
 
@@ -204,7 +219,7 @@
 
 
 
-    </div>
+  </div>
 
 
 </div>
