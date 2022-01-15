@@ -208,17 +208,17 @@ export class MarketingreviewNewComponent implements OnInit {
     console.log(this.activatedroute.snapshot.queryParams);
 
     setTimeout(() => {
-      if (this.cookie.check('video_url')) {
-        console.log(this.cookie.get('video_url'));
-        this.video_url = this.cookie.get('video_url');
-        if (this.cookie.check('videotitle')) {
-          this.videotitle = this.cookie.get('videotitle');
-        }
-        if (this.cookie.check('videodesc')) {
-          this.videodescription = this.cookie.get('videodesc');
+      // if (this.cookie.check('video_url')) {
+      //   console.log(this.cookie.get('video_url'));
+      //   this.video_url = this.cookie.get('video_url');
+      //   if (this.cookie.check('videotitle')) {
+      //     this.videotitle = this.cookie.get('videotitle');
+      //   }
+      //   if (this.cookie.check('videodesc')) {
+      //     this.videodescription = this.cookie.get('videodesc');
 
-        }
-      } else {
+      //   }
+      // } else {
         console.log("Else block");
         let url = ""
         console.log("this.video_all_data.length", this.video_all_data.length)
@@ -239,7 +239,7 @@ export class MarketingreviewNewComponent implements OnInit {
         this.video_url = url;
         this.cookie.set('videotitle', this.videotitle, undefined, '/');
         this.cookie.set('videodesc', this.videodescription, undefined, '/');
-      }
+      // }
       this.video_url1 = this.sanitizer.bypassSecurityTrustResourceUrl(this.video_url);
       this.videoplayflag = true;
 
