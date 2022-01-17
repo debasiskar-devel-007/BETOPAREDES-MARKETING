@@ -63,6 +63,7 @@ export class MarketingreviewNewComponent implements OnInit {
   public video_url1: any = '';
   public Change_video_percent: any = 0;
   public videotitle: any = '';
+  // public url: any = '';
   public videodescription: any = '';
   public videotimeflag: any = false;
   public medigrade: any = 0;
@@ -100,16 +101,17 @@ export class MarketingreviewNewComponent implements OnInit {
       this.bioenergetics_rst_product_flag = true
       this.video_all_data = allvideodata.flag_bio_rst
       const data: object ={
-         "og:title": "Media Center for BioEngrgetics and RST Sanexas" ,
-         "og:url": window.location ,
-         "og:image": "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og2.jpg" ,
-         "og:type": "website" ,
-         "og:description": "Entire product information regarding BioEngrgetics and RST Sanexas in a video library" ,
-         "twitter:card": "Media Center for BioEngrgetics and RST Sanexas" ,
-         "twitter:title": "Media Center for BioEngrgetics and RST Sanexas" ,
-         "twitter:description": "Entire product information regarding BioEngrgetics and RST Sanexas in a video library" ,
-         "twitter:image": "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og2.jpg" ,
-         "twitter:url": window.location 
+         title: "Media Center for BioEngrgetics and RST Sanexas" ,
+         og_title: "Media Center for BioEngrgetics and RST Sanexas" ,
+         og_url: window.location ,
+         og_image: "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og2.jpg" ,
+         og_type: "website" ,
+         og_description: "Entire product information regarding BioEngrgetics and RST Sanexas in a video library" ,
+         twitter_card: "Media Center for BioEngrgetics and RST Sanexas" ,
+         twitter_title: "Media Center for BioEngrgetics and RST Sanexas" ,
+         twitter_description: "Entire product information regarding BioEngrgetics and RST Sanexas in a video library" ,
+         twitter_image: "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og2.jpg" ,
+         twitter_url: window.location 
       }
       this.metaservice.setmeta(data);
       console.log("this.bioenergetics_rst_product_flag ==> ", this.bioenergetics_rst_product_flag)
@@ -118,16 +120,17 @@ export class MarketingreviewNewComponent implements OnInit {
       this.medigrade_product_flag = true
       this.video_all_data = allvideodata.flag_medigrade
       const data: object = {
-         "og:title": "Media Center for Medigrade" ,
-         "og:url": window.location ,
-         "og:image": "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og1.jpg" ,
-         "og:type": "website" ,
-         "og:description": "Entire product information regarding Medigrade in a video library" ,
-         "twitter:card": "Media Center for Medigrade" ,
-         "twitter:title": "Media Center for Medigrade" ,
-         "twitter:description": "Entire product information regarding Medigrade in a video library" ,
-         "twitter:image": "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og1.jpg" ,
-         "twitter:url": window.location 
+         title: "Media Center for Medigrade" ,
+         og_title: "Media Center for Medigrade" ,
+         og_url: window.location ,
+         og_image: "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og1.jpg" ,
+         og_type: "website" ,
+         og_description: "Entire product information regarding Medigrade in a video library" ,
+         twitter_card: "Media Center for Medigrade" ,
+         twitter_title: "Media Center for Medigrade" ,
+         twitter_description: "Entire product information regarding Medigrade in a video library" ,
+         twitter_image: "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og1.jpg" ,
+         twitter_url: window.location 
       }
       this.metaservice.setmeta(data);
       console.log("this.medigrade_product_flag ==> ", this.medigrade_product_flag)
@@ -136,16 +139,17 @@ export class MarketingreviewNewComponent implements OnInit {
       this.tmflow_product_flag = true
       this.video_all_data = allvideodata.flag_tmflow
       const data: object = {
-         "og:title": "Media Center for TM-Flow" ,
-         "og:url": window.location ,
-         "og:image": "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og4.jpg" ,
-         "og:type": "website" ,
-         "og:description": "Entire product information regarding TM-Flow in a video library" ,
-         "twitter:card": "Media Center for TM-Flow" ,
-         "twitter:title": "Media Center for TM-Flow" ,
-         "twitter:description": "Entire product information regarding TM-Flow in a video library" ,
-         "twitter:image": "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og4.jpg" ,
-         "twitter:url": window.location 
+         title: "Media Center for TM-Flow" ,
+         og_title: "Media Center for TM-Flow" ,
+         og_url: window.location ,
+         og_image: "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og4.jpg" ,
+         og_type: "website" ,
+         og_description: "Entire product information regarding TM-Flow in a video library" ,
+         twitter_card: "Media Center for TM-Flow" ,
+         twitter_title: "Media Center for TM-Flow" ,
+         twitter_description: "Entire product information regarding TM-Flow in a video library" ,
+         twitter_image: "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og4.jpg" ,
+         twitter_url: window.location 
       }
       this.metaservice.setmeta(data);
       console.log("this.tmflow_product_flag ==> ", this.tmflow_product_flag)
@@ -154,16 +158,17 @@ export class MarketingreviewNewComponent implements OnInit {
       this.pece_product_flag = true
       this.video_all_data = allvideodata.flag_pece
       const data: object = {
-         "og:title": "Media Center for PECE" ,
-         "og:url": window.location ,
-         "og:image": "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og3.jpg" ,
-         "og:type": "website" ,
-         "og:description": "Entire product information regarding PECE in a video library" ,
-         "twitter:card": "Media Center for PECE" ,
-         "twitter:title": "Media Center for PECE" ,
-         "twitter:description": "Entire product information regarding PECE in a video library" ,
-         "twitter:image": "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og3.jpg" ,
-         "twitter:url": window.location 
+         title: "Media Center for PECE" ,
+         og_title: "Media Center for PECE" ,
+         og_url: window.location ,
+         og_image: "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og3.jpg" ,
+         og_type: "website" ,
+         og_description: "Entire product information regarding PECE in a video library" ,
+         twitter_card: "Media Center for PECE" ,
+         twitter_title: "Media Center for PECE" ,
+         twitter_description: "Entire product information regarding PECE in a video library" ,
+         twitter_image: "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og3.jpg" ,
+         twitter_url: window.location 
       };
       this.metaservice.setmeta(data);      
       console.log("this.pece_product_flag ==> ", this.pece_product_flag)
@@ -221,15 +226,15 @@ export class MarketingreviewNewComponent implements OnInit {
       //   }
       // } else {
         // console.log("Else block");
-        let url = ""
+        this.video_url= ""
         if (this.video_all_data.length > 0 && this.video_all_data[0].videodata.length > 0) {
-          url = this.video_all_data[0].videodata[0].url
+          this.video_url = this.video_all_data[0].videodata[0].url
           this.videotitle = this.video_all_data[0].videodata[0].title;
           this.videodescription = this.video_all_data[0].videodata[0].description;
           console.log("video_all_data url +++")
 
         } else {
-          url = "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-1637746453722SampleVideo_720x480_5mb.mp4"
+          this.video_url = "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-1637746453722SampleVideo_720x480_5mb.mp4"
           this.videotitle = "Demo Video";
           this.videodescription = "Default video";
           console.log("else url +++")
@@ -239,6 +244,7 @@ export class MarketingreviewNewComponent implements OnInit {
         // this.cookie.set('videotitle', this.videotitle, undefined, '/');
         // this.cookie.set('videodesc', this.videodescription, undefined, '/');
       // }
+
       this.video_url1 = this.sanitizer.bypassSecurityTrustResourceUrl(this.video_url);
       this.videoplayflag = true;
 
@@ -249,11 +255,14 @@ export class MarketingreviewNewComponent implements OnInit {
       this.player = videojs('#my-video-modal');
 
       this.player.controls(false);
-
-      this.video_currenttime = parseInt(this.player.currentTime());
-      this.video_duration = parseInt(this.player.duration());
-      console.log(this.video_duration, 'onload section', this.video_currenttime);// TO CONTROL FALSE
-      this.onprocess();
+      console.log("url==>",this.video_url)
+      setTimeout(() => {
+        this.video_currenttime = parseInt(this.player.currentTime());
+        this.video_duration = parseInt(this.player.duration());
+        console.log(this.video_duration, 'onload videojs starting point', this.video_currenttime);// TO CONTROL FALSE
+        this.onprocess();
+      }, 500);
+      
 
     }, 2000);
 
