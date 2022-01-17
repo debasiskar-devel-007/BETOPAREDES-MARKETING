@@ -99,11 +99,11 @@ export class MarketingreviewNewComponent implements OnInit {
 
     if (this.product_list.includes('612c883f118c110009f02820') && this.product_list.includes('612c89242005f400082d5fb1')) {
       this.bioenergetics_rst_product_flag = true
-      this.video_all_data = allvideodata.flag_bio_rst
+      if(allvideodata!=null && allvideodata.flag_bio_rst)this.video_all_data = allvideodata.flag_bio_rst
       const data: object ={
          title: "Media Center for BioEngrgetics and RST Sanexas" ,
          og_title: "Media Center for BioEngrgetics and RST Sanexas" ,
-         og_url: window.location ,
+         og_url: "https://marketing.betoparedes.com/marketing-review-new/60d1c221ad6d200008162e5c/619f43d7c8c5460009639936?pid1=612c883f118c110009f02820&pid2=612c89242005f400082d5fb1" ,
          og_image: "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og2.jpg" ,
          og_type: "website" ,
          og_description: "Entire product information regarding BioEngrgetics and RST Sanexas in a video library" ,
@@ -111,18 +111,19 @@ export class MarketingreviewNewComponent implements OnInit {
          twitter_title: "Media Center for BioEngrgetics and RST Sanexas" ,
          twitter_description: "Entire product information regarding BioEngrgetics and RST Sanexas in a video library" ,
          twitter_image: "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og2.jpg" ,
-         twitter_url: window.location 
+         twitter_url: "https://marketing.betoparedes.com/marketing-review-new/60d1c221ad6d200008162e5c/619f43d7c8c5460009639936?pid1=612c883f118c110009f02820&pid2=612c89242005f400082d5fb1" 
       }
       this.metaservice.setmeta(data);
       console.log("this.bioenergetics_rst_product_flag ==> ", this.bioenergetics_rst_product_flag)
     }
     if (this.product_list.includes('604aff3691b7c80008ca11a8') && this.product_list.includes('604a0b6e40962e00088f0d79')) {
+      console.log("this.activatedroute.snapshot==>",this.activatedroute.snapshot['_routerState'].url)
       this.medigrade_product_flag = true
-      this.video_all_data = allvideodata.flag_medigrade
+      if(allvideodata!=null && allvideodata.flag_medigrade)this.video_all_data = allvideodata.flag_medigrade
       const data: object = {
          title: "Media Center for Medigrade" ,
          og_title: "Media Center for Medigrade" ,
-         og_url: window.location ,
+         og_url: "https://marketing.betoparedes.com/marketing-review-new/619b50275064d80008984e09/61c015d7770bdf0008c929eb?pid1=604aff3691b7c80008ca11a8&pid2=604a0b6e40962e00088f0d79" ,
          og_image: "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og1.jpg" ,
          og_type: "website" ,
          og_description: "Entire product information regarding Medigrade in a video library" ,
@@ -130,18 +131,18 @@ export class MarketingreviewNewComponent implements OnInit {
          twitter_title: "Media Center for Medigrade" ,
          twitter_description: "Entire product information regarding Medigrade in a video library" ,
          twitter_image: "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og1.jpg" ,
-         twitter_url: window.location 
+         twitter_url: "https://marketing.betoparedes.com/marketing-review-new/619b50275064d80008984e09/61c015d7770bdf0008c929eb?pid1=604aff3691b7c80008ca11a8&pid2=604a0b6e40962e00088f0d79" 
       }
       this.metaservice.setmeta(data);
       console.log("this.medigrade_product_flag ==> ", this.medigrade_product_flag)
     }
     if (!this.product_list.includes('604aff3691b7c80008ca11a8') && this.product_list.includes('604a0b6e40962e00088f0d79')) {
       this.tmflow_product_flag = true
-      this.video_all_data = allvideodata.flag_tmflow
+      if(allvideodata!=null && allvideodata.flag_tmflow)this.video_all_data = allvideodata.flag_tmflow
       const data: object = {
          title: "Media Center for TM-Flow" ,
          og_title: "Media Center for TM-Flow" ,
-         og_url: window.location ,
+         og_url: "https://marketing.betoparedes.com/marketing-review-new/60d1c221ad6d200008162e5c/619f43d7c8c5460009639936?pid1=604a0b6e40962e00088f0d79" ,
          og_image: "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og4.jpg" ,
          og_type: "website" ,
          og_description: "Entire product information regarding TM-Flow in a video library" ,
@@ -149,18 +150,18 @@ export class MarketingreviewNewComponent implements OnInit {
          twitter_title: "Media Center for TM-Flow" ,
          twitter_description: "Entire product information regarding TM-Flow in a video library" ,
          twitter_image: "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og4.jpg" ,
-         twitter_url: window.location 
+         twitter_url: "https://marketing.betoparedes.com/marketing-review-new/60d1c221ad6d200008162e5c/619f43d7c8c5460009639936?pid1=604a0b6e40962e00088f0d79" 
       }
       this.metaservice.setmeta(data);
       console.log("this.tmflow_product_flag ==> ", this.tmflow_product_flag)
     }
     if (this.product_list.includes('604aff3691b7c80008ca11a8') && !this.product_list.includes('604a0b6e40962e00088f0d79')) {
       this.pece_product_flag = true
-      this.video_all_data = allvideodata.flag_pece
+      if(allvideodata!=null && allvideodata.flag_pece)this.video_all_data = allvideodata.flag_pece
       const data: object = {
          title: "Media Center for PECE" ,
          og_title: "Media Center for PECE" ,
-         og_url: window.location ,
+         og_url: "https://marketing.betoparedes.com/marketing-review-new/60d1c221ad6d200008162e5c/619f43d7c8c5460009639936?pid1=604aff3691b7c80008ca11a8" ,
          og_image: "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og3.jpg" ,
          og_type: "website" ,
          og_description: "Entire product information regarding PECE in a video library" ,
@@ -168,7 +169,7 @@ export class MarketingreviewNewComponent implements OnInit {
          twitter_title: "Media Center for PECE" ,
          twitter_description: "Entire product information regarding PECE in a video library" ,
          twitter_image: "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og3.jpg" ,
-         twitter_url: window.location 
+         twitter_url: "https://marketing.betoparedes.com/marketing-review-new/60d1c221ad6d200008162e5c/619f43d7c8c5460009639936?pid1=604aff3691b7c80008ca11a8" 
       };
       this.metaservice.setmeta(data);      
       console.log("this.pece_product_flag ==> ", this.pece_product_flag)
