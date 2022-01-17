@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { Meta } from '@angular/platform-browser';
+// import { Meta } from '@angular/platform-browser';
+import { MetaService } from 'src/app/meta-service.service';
 // import { MetaService } from '@ngx-meta/core'
 import { ApiService } from "../api.service";
 import { ActivatedRoute, Router } from '@angular/router';
@@ -81,7 +82,7 @@ export class MarketingreviewNewComponent implements OnInit {
   public parent_data: any = {};
 
   constructor(public api_service: ApiService, public dialog: MatDialog,
-    public activatedroute: ActivatedRoute, public snackBar: MatSnackBar, private sanitizer: DomSanitizer, public cookie: CookieService, public router: Router, public bottomSheet: MatBottomSheet, private meta: Meta) {
+    public activatedroute: ActivatedRoute, public snackBar: MatSnackBar, private sanitizer: DomSanitizer, public cookie: CookieService, public router: Router, public bottomSheet: MatBottomSheet, private metaservice:MetaService) {
 
 
     // meta block 
@@ -98,73 +99,73 @@ export class MarketingreviewNewComponent implements OnInit {
     if (this.product_list.includes('612c883f118c110009f02820') && this.product_list.includes('612c89242005f400082d5fb1')) {
       this.bioenergetics_rst_product_flag = true
       this.video_all_data = allvideodata.flag_bio_rst
-      this.meta_list = [
-        { "og:title": "Media Center for BioEngrgetics and RST Sanexas" },
-        { "og:url": window.location },
-        { "og:image": "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og2.jpg" },
-        { "og:type": "website" },
-        { "og:description": "Entire product information regarding BioEngrgetics and RST Sanexas in a video library" },
-        { "twitter:card": "Media Center for BioEngrgetics and RST Sanexas" },
-        { "twitter:title": "Media Center for BioEngrgetics and RST Sanexas" },
-        { "twitter:description": "Entire product information regarding BioEngrgetics and RST Sanexas in a video library" },
-        { "twitter:image": "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og2.jpg" },
-        { "twitter:url": window.location }
-      ]
-      this.setmetatags(this.meta_list);
+      const data: object ={
+         "og:title": "Media Center for BioEngrgetics and RST Sanexas" ,
+         "og:url": window.location ,
+         "og:image": "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og2.jpg" ,
+         "og:type": "website" ,
+         "og:description": "Entire product information regarding BioEngrgetics and RST Sanexas in a video library" ,
+         "twitter:card": "Media Center for BioEngrgetics and RST Sanexas" ,
+         "twitter:title": "Media Center for BioEngrgetics and RST Sanexas" ,
+         "twitter:description": "Entire product information regarding BioEngrgetics and RST Sanexas in a video library" ,
+         "twitter:image": "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og2.jpg" ,
+         "twitter:url": window.location 
+      }
+      this.metaservice.setmeta(data);
       console.log("this.bioenergetics_rst_product_flag ==> ", this.bioenergetics_rst_product_flag)
     }
     if (this.product_list.includes('604aff3691b7c80008ca11a8') && this.product_list.includes('604a0b6e40962e00088f0d79')) {
       this.medigrade_product_flag = true
       this.video_all_data = allvideodata.flag_medigrade
-      this.meta_list = [
-        { "og:title": "Media Center for Medigrade" },
-        { "og:url": window.location },
-        { "og:image": "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og1.jpg" },
-        { "og:type": "website" },
-        { "og:description": "Entire product information regarding Medigrade in a video library" },
-        { "twitter:card": "Media Center for Medigrade" },
-        { "twitter:title": "Media Center for Medigrade" },
-        { "twitter:description": "Entire product information regarding Medigrade in a video library" },
-        { "twitter:image": "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og1.jpg" },
-        { "twitter:url": window.location }
-      ]
-      this.setmetatags(this.meta_list);
+      const data: object = {
+         "og:title": "Media Center for Medigrade" ,
+         "og:url": window.location ,
+         "og:image": "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og1.jpg" ,
+         "og:type": "website" ,
+         "og:description": "Entire product information regarding Medigrade in a video library" ,
+         "twitter:card": "Media Center for Medigrade" ,
+         "twitter:title": "Media Center for Medigrade" ,
+         "twitter:description": "Entire product information regarding Medigrade in a video library" ,
+         "twitter:image": "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og1.jpg" ,
+         "twitter:url": window.location 
+      }
+      this.metaservice.setmeta(data);
       console.log("this.medigrade_product_flag ==> ", this.medigrade_product_flag)
     }
     if (!this.product_list.includes('604aff3691b7c80008ca11a8') && this.product_list.includes('604a0b6e40962e00088f0d79')) {
       this.tmflow_product_flag = true
       this.video_all_data = allvideodata.flag_tmflow
-      this.meta_list = [
-        { "og:title": "Media Center for TM-Flow" },
-        { "og:url": window.location },
-        { "og:image": "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og4.jpg" },
-        { "og:type": "website" },
-        { "og:description": "Entire product information regarding TM-Flow in a video library" },
-        { "twitter:card": "Media Center for TM-Flow" },
-        { "twitter:title": "Media Center for TM-Flow" },
-        { "twitter:description": "Entire product information regarding TM-Flow in a video library" },
-        { "twitter:image": "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og4.jpg" },
-        { "twitter:url": window.location }
-      ]
-      this.setmetatags(this.meta_list);
+      const data: object = {
+         "og:title": "Media Center for TM-Flow" ,
+         "og:url": window.location ,
+         "og:image": "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og4.jpg" ,
+         "og:type": "website" ,
+         "og:description": "Entire product information regarding TM-Flow in a video library" ,
+         "twitter:card": "Media Center for TM-Flow" ,
+         "twitter:title": "Media Center for TM-Flow" ,
+         "twitter:description": "Entire product information regarding TM-Flow in a video library" ,
+         "twitter:image": "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og4.jpg" ,
+         "twitter:url": window.location 
+      }
+      this.metaservice.setmeta(data);
       console.log("this.tmflow_product_flag ==> ", this.tmflow_product_flag)
     }
     if (this.product_list.includes('604aff3691b7c80008ca11a8') && !this.product_list.includes('604a0b6e40962e00088f0d79')) {
       this.pece_product_flag = true
       this.video_all_data = allvideodata.flag_pece
-      this.meta_list = [
-        { "og:title": "Media Center for PECE" },
-        { "og:url": window.location },
-        { "og:image": "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og3.jpg" },
-        { "og:type": "website" },
-        { "og:description": "Entire product information regarding PECE in a video library" },
-        { "twitter:card": "Media Center for PECE" },
-        { "twitter:title": "Media Center for PECE" },
-        { "twitter:description": "Entire product information regarding PECE in a video library" },
-        { "twitter:image": "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og3.jpg" },
-        { "twitter:url": window.location }
-      ]
-      this.setmetatags(this.meta_list);
+      const data: object = {
+         "og:title": "Media Center for PECE" ,
+         "og:url": window.location ,
+         "og:image": "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og3.jpg" ,
+         "og:type": "website" ,
+         "og:description": "Entire product information regarding PECE in a video library" ,
+         "twitter:card": "Media Center for PECE" ,
+         "twitter:title": "Media Center for PECE" ,
+         "twitter:description": "Entire product information regarding PECE in a video library" ,
+         "twitter:image": "https://all-frontend-assets.s3.amazonaws.com/bp-frontend/og3.jpg" ,
+         "twitter:url": window.location 
+      };
+      this.metaservice.setmeta(data);      
       console.log("this.pece_product_flag ==> ", this.pece_product_flag)
     }
 
@@ -260,12 +261,12 @@ export class MarketingreviewNewComponent implements OnInit {
 
 
   }
-  setmetatags(meta_data) {
-    for (const key in meta_data) {
-      console.log(Object.keys(meta_data[key])[0], " : ", Object.values(meta_data[key])[0])
-      this.meta.updateTag({ name: Object.keys(meta_data[key])[0], content: String(Object.values(meta_data[key])[0]) });
-    }
-  }
+  // setmetatags(meta_data) {
+  //   for (const key in meta_data) {
+  //     console.log(Object.keys(meta_data[key])[0], " : ", Object.values(meta_data[key])[0])
+  //     this.meta.updateTag({ name: Object.keys(meta_data[key])[0], content: String(Object.values(meta_data[key])[0]) });
+  //   }
+  // }
 
   // parentdata() {
   //   let send_data = {
