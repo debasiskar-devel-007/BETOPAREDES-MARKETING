@@ -43,25 +43,9 @@
     left: 0;
     bottom: 0; padding: 18px 15px 18px 15px;}
 
-.topHeader{
-    background: rgb(249,192,14);
-    background: linear-gradient(0deg, rgba(249,192,14,1) 0%, rgba(253,234,113,1) 100%);
-    padding: 30px 35px;
-    border-radius: 7px;
-    margin-bottom: 10px;
-    box-shadow: 0px 0px 12px #000;
-}
-.topHeader h2{
-    margin: 0;
-    font-size: 35px;
-    font-family: "Roboto","Arial",sans-serif;
-    font-weight: 500;
-    line-height: 38px;
-    color: #000;
-}
-.topHeader h2 span{
-    color: #f40000;
-}
+.topHeader{background:#f9c00e;background:linear-gradient(0deg,rgba(249,192,14,1) 0%,rgba(253,234,113,1) 100%);padding:30px 35px;border-radius:7px;margin-bottom:10px;box-shadow:0 0 12px #000}
+.topHeader h2{margin:0;font-size:35px;font-family:"Roboto","Arial",sans-serif;font-weight:500;line-height:38px;color:#000}
+.topHeader h2 span{color:#f40000}
     .neoGEN_bluetextwrapper_main {
         position: relative;
         background: rgb(22,87,174);
@@ -376,86 +360,16 @@
 }
 
 /* ~~~~~~~~bottomsheet~~~~~~ */
-.videoGalleryModal {
-    padding: 0;
-}
-.videolistContainer .header{
-    padding: 12px;
-    width: auto!important;
-    margin: 0 auto;
-    text-align: center;
-    border-radius: 0!important;
-    font-size: 24px;
-    background: linear-gradient( 180deg, rgba(250,226,156,1) 0%, rgba(244,185,20,1) 100%);
-    color: #000;
-    text-transform: uppercase;
-}
-.allvideoslists{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: .5%;
-}
-
-.videothwrapper
-{display: flex;
-    margin: .5%;
-    width:32.2%;
-    box-shadow: 0 0 3px #04044c;
-    background: #fff;
-    border-radius: 4px;
-}
-
-.videothwrapper:hover{
-
-    transform: scale(1.05);
-    transition: 500ms;
-
-}
-
-.videoth{
-    margin-right: 8px;
-    width: 200px;
-    position: relative;
-    cursor: pointer;
-}
-
-.playicon{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    height: 40px;
-
-}
-.videoth:hover .playicon{
-     height: 45px;
-}
-.videoth .videoimg{width: 100%;display: block;}
-.galleryconbox{
-    width: 100%;
-}
-.galleryconbox .videoTitle{
-    margin: 4px 0;
-    font-family: "Roboto","Arial",sans-serif;
-    font-size: 18px;
-    line-height: 25px;
-    font-weight: 500;
-    max-height: 4rem;
-    overflow: hidden;
-    display: block;
-    -webkit-line-clamp: 2;
-    display: box;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
-    white-space: normal;
-    cursor: pointer;
-    padding-right: 5px;
-
-}
-.top_block_marketing{width: 100%;}
-.top_block_marketing img{
-    width: 100%;
-}
- 
+.videoGalleryModal{padding:0}
+.videolistContainer .header{padding:12px;width:auto!important;margin:0 auto;text-align:center;border-radius:0!important;font-size:24px;background:linear-gradient(180deg,rgba(250,226,156,1) 0%,rgba(244,185,20,1) 100%);color:#000;text-transform:uppercase}
+.allvideoslists{display:flex;flex-wrap:wrap;justify-content:center;padding:.5%}
+.videothwrapper{display:flex;margin:.5%;width:32.2%;box-shadow:0 0 3px #04044c;background:#fff;border-radius:4px}
+.videothwrapper:hover{transform:scale(1.05);transition:500ms}
+.videoth{margin-right:8px;width:200px;position:relative;cursor:pointer}
+.playicon{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);height:40px}
+.videoth:hover .playicon{height:45px}
+.videoth .videoimg{width:100%;display:block}
+.galleryconbox{width:100%}
+.galleryconbox .videoTitle{margin:4px 0;font-family:"Roboto","Arial",sans-serif;font-size:18px;line-height:25px;font-weight:500;max-height:4rem;overflow:hidden;display:block;-webkit-line-clamp:2;display:box;display:-webkit-box;-webkit-box-orient:vertical;text-overflow:ellipsis;white-space:normal;cursor:pointer;padding-right:5px}
+.top_block_marketing{width:100%}
+.top_block_marketing img{width:100%}
