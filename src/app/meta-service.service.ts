@@ -6,16 +6,20 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class MetaService {
 
-  private defaultTitle = 'peceportal frontend';
-  private defaultKeywords = 'peceportal frontend';
-  private defaultDescription = 'peceportal frontend';
-  private defaultRobots = 'peceportal frontend';
-  private defaultOgTitle = 'peceportal frontend';
-  private defaultOgUrl = '';
+  private defaultTitle = 'Beto Paredes Marketing Media';
+  private defaultKeywords = 'Beto Paredes,Marketing Media';
+  private defaultDescription = 'Beto Paredes Marketing Media';
+  private defaultRobots = 'Beto Paredes Marketing Media';
+  private defaultOgTitle = 'Beto Paredes Marketing Media';
+  private defaultOgUrl = 'https://www.betoparedes.com';
   private defaultOgType = 'website';
   private defaultOgDescription = 'website';
-  private defaultOgImage = 'https://all-frontend-assets.s3.amazonaws.com/pece/assets/images/og_image.jpg';
-  private defaultTwitterCard = 'summery .. ';
+  private defaultOgImage = 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG';
+  private defaultTwitterCard = 'Beto Paredes Marketing Media';
+  private defaultTwitterTitle = 'Beto Paredes Marketing Media';
+  private defaultTwitterDescription = 'Beto Paredes Marketing Media';
+  private defaultTwitterImage = 'https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG';
+  private defaultTwitterUrl = 'https://www.betoparedes.com';
 
   constructor(private titleService: Title, private metaService: Meta) { }
 
@@ -33,7 +37,6 @@ export class MetaService {
     this.metaService.addTags([
       { name: 'robots', content: (data.robots == null) ? this.defaultRobots : data.robots }
     ]);
-
     this.metaService.addTags([
       { name: 'og:title', content: (data.og_title == null) ? this.defaultOgTitle : data.og_title }
     ]);
@@ -51,6 +54,18 @@ export class MetaService {
     ]);
     this.metaService.addTags([
       { name: 'twitter:card', content: (data.twitter_card == null) ? this.defaultTwitterCard : data.twitter_card }
+    ]);
+    this.metaService.addTags([
+      { name: 'twitter:title', content: (data.twitter_title == null) ? this.defaultTwitterTitle : data.twitter_title }
+    ]);
+    this.metaService.addTags([
+      { name: 'twitter:description', content: (data.twitter_description == null) ? this.defaultTwitterDescription : data.twitter_description }
+    ]);
+    this.metaService.addTags([
+      { name: 'twitter:image', content: (data.twitter_image == null) ? this.defaultTwitterImage : data.twitter_image }
+    ]);
+    this.metaService.addTags([
+      { name: 'twitter:url', content: (data.twitter_url == null) ? this.defaultTwitterUrl : data.twitter_url }
     ]);
 
   }

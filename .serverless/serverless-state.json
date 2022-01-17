@@ -160,7 +160,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/betoparedesmarketing/production/1642251238198-2022-01-15T12:53:58.198Z/betoparedesmarketing.zip"
+                "S3Key": "serverless/betoparedesmarketing/production/1642415799482-2022-01-17T10:36:39.482Z/betoparedesmarketing.zip"
               },
               "FunctionName": "betoparedesmarketing-production-api",
               "Handler": "lambda.universal",
@@ -179,14 +179,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "ApiLambdaVersionXEUGSoKUaJ1g4BPBTQs5V6RD7L0fqVVcxrbF9FIwnk": {
+          "ApiLambdaVersionzPuFDBufPiBG3tLnb6Ad5Zu1gf1z2m5RKezrf3UBE": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ApiLambdaFunction"
               },
-              "CodeSha256": "L+unxeNYFnRJBaRVtw8kQ7eUfRwQil6llzN/+Y+cg6I="
+              "CodeSha256": "via5quh4J+48+x7Yspy6bNppiQPuzpp3PvjUWLKsaag="
             }
           },
           "ApiGatewayRestApi": {
@@ -305,7 +305,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1642251198298": {
+          "ApiGatewayDeployment1642415760347": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -365,7 +365,7 @@
           "ApiLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ApiLambdaVersionXEUGSoKUaJ1g4BPBTQs5V6RD7L0fqVVcxrbF9FIwnk"
+              "Ref": "ApiLambdaVersionzPuFDBufPiBG3tLnb6Ad5Zu1gf1z2m5RKezrf3UBE"
             }
           },
           "ServiceEndpoint": {
@@ -490,7 +490,7 @@
         "timeout": 10,
         "runtime": "nodejs10.x",
         "vpc": {},
-        "versionLogicalId": "ApiLambdaVersionXEUGSoKUaJ1g4BPBTQs5V6RD7L0fqVVcxrbF9FIwnk"
+        "versionLogicalId": "ApiLambdaVersionzPuFDBufPiBG3tLnb6Ad5Zu1gf1z2m5RKezrf3UBE"
       }
     },
     "serviceFilename": "serverless.yml",
@@ -499,7 +499,7 @@
     "artifact": "/home/garvis/Documents/angular_scripts/BETOPAREDES-MARKETING/.serverless/betoparedesmarketing.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/betoparedesmarketing/production/1642251238198-2022-01-15T12:53:58.198Z",
+    "artifactDirectoryName": "serverless/betoparedesmarketing/production/1642415799482-2022-01-17T10:36:39.482Z",
     "artifact": "betoparedesmarketing.zip"
   }
 }
