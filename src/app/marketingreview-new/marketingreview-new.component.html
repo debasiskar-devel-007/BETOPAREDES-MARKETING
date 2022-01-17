@@ -3,44 +3,44 @@
 <ng-container>
 
 </ng-container>
-  <div class="top_block_marketing">
+<div class="top_block_marketing">
   <!-- <div class="marketingre_view_top">
 
     <div class="marketingre_view_top_body"> -->
-      <ng-container *ngIf="medigrade_product_flag == true">
-        <!-- <span>
+  <ng-container *ngIf="medigrade_product_flag == true">
+    <!-- <span>
           this block is for medigrade
         </span> -->
-        <img src="../../assets/images/marketing/media center _medigrade.png" alt="">
+    <img src="../../assets/images/marketing/media center _medigrade.png" alt="">
 
-      </ng-container>
+  </ng-container>
 
-      <ng-container *ngIf="bioenergetics_rst_product_flag == true">
-        <!-- <span>
+  <ng-container *ngIf="bioenergetics_rst_product_flag == true">
+    <!-- <span>
           this block is for bio energertics
         </span> -->
-        <img src="../../assets/images/marketing/media center _BioEn_RST.png" alt="">
-      </ng-container>
+    <img src="../../assets/images/marketing/media center _BioEn_RST.png" alt="">
+  </ng-container>
 
-      <ng-container *ngIf="pece_product_flag == true">
-        <!-- <span>
+  <ng-container *ngIf="pece_product_flag == true">
+    <!-- <span>
           this block is for pece only
         </span> -->
-        <img src="../../assets/images/marketing/media center _only_pece.png" alt="">
-      </ng-container>
+    <img src="../../assets/images/marketing/media center _only_pece.png" alt="">
+  </ng-container>
 
-      <ng-container *ngIf="tmflow_product_flag == true">
-        <!-- <span>
+  <ng-container *ngIf="tmflow_product_flag == true">
+    <!-- <span>
           this block is for tmflow only
         </span> -->
-        <img src="../../assets/images/marketing/media center _only_Tmflow.png" alt="">
-      </ng-container>
-    <!-- </div>
+    <img src="../../assets/images/marketing/media center _only_Tmflow.png" alt="">
+  </ng-container>
+  <!-- </div>
 
 
 
   </div> -->
-  </div>
+</div>
 
 <!-- <button mat-raised-button (click)="openDialog()">Pick one</button> -->
 <div class="marketingre_view_body">
@@ -48,6 +48,52 @@
 
   <div class="marketingre_view_body_wrapper">
 
+    <ng-container *ngIf="medigrade_product_flag == true">
+      <div class="topHeader">
+        <h2>In the Medigrade media center, you can learn about the<span> TM-Flow ANS testing</span> medical device along
+          with our<span> PECE medical
+            device platform</span>. This combination offers a complete 360-degree operation of our programs. You can
+          learn how our system
+          offers physicians direct access to consolidated data immediately following the TM-Flow exam.</h2>
+      </div>
+
+    </ng-container>
+
+    <ng-container *ngIf="bioenergetics_rst_product_flag == true">
+      <div class="topHeader">
+        <h2>Welcome to the media center for<span> Bioenergetics / neoGEN</span>, here you can learn more about the<span>
+            neoGEN<sup>Ⓡ </sup></span> system. It’s a
+          state-of-the-art and technically-innovative medical device for electric cell signaling treatment. Learn how
+          it's
+          combination with the<span> BioEnergetics medical device platform</span> can offer unparalleled benefits for
+          physicians with direct
+          access to consolidated data and custom-engineered treatment plans.</h2>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="pece_product_flag == true">
+
+      <div class="topHeader">
+        <h2>In the Media Center of our PECE medical device platform you can get information about the<span> ANS
+            testing</span> industry
+          and how
+          our<span> PECE medical device platform</span> and managed services can improve your patient outcomes and
+          significantly
+          improve your
+          bottom line.</h2>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="tmflow_product_flag == true">
+
+
+      <h2>The<span> TM-Flow ANS testing</span> medical device is an<span> FDA</span>-approved medical device with<span>
+          5 FDA</span> clearance. Here in this media
+        center, you can learn more about the TM-Flow hardware and the system. You can also learn more about how you can
+        access
+        the necessary tools to assess better health risks and potential complications in the autonomous nervous system.
+      </h2>
+    </ng-container>
 
     <!-- <div class="neoGEN_bluetextwrapper_main">
       <div class="neoGEN_bluetextwrapper_sub">
