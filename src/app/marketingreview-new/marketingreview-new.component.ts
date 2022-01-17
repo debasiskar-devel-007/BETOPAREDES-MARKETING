@@ -220,10 +220,8 @@ export class MarketingreviewNewComponent implements OnInit {
 
       //   }
       // } else {
-        console.log("Else block");
+        // console.log("Else block");
         let url = ""
-        console.log("this.video_all_data.length", this.video_all_data.length)
-        console.log("this.video_all_data[0].videodata.length", this.video_all_data[0].videodata.length)
         if (this.video_all_data.length > 0 && this.video_all_data[0].videodata.length > 0) {
           url = this.video_all_data[0].videodata[0].url
           this.videotitle = this.video_all_data[0].videodata[0].title;
@@ -236,10 +234,10 @@ export class MarketingreviewNewComponent implements OnInit {
           this.videodescription = "Default video";
           console.log("else url +++")
         }
-        this.cookie.set('video_url', url, undefined, '/');
-        this.video_url = url;
-        this.cookie.set('videotitle', this.videotitle, undefined, '/');
-        this.cookie.set('videodesc', this.videodescription, undefined, '/');
+        // this.cookie.set('video_url', url, undefined, '/');
+        // this.video_url = url;
+        // this.cookie.set('videotitle', this.videotitle, undefined, '/');
+        // this.cookie.set('videodesc', this.videodescription, undefined, '/');
       // }
       this.video_url1 = this.sanitizer.bypassSecurityTrustResourceUrl(this.video_url);
       this.videoplayflag = true;
