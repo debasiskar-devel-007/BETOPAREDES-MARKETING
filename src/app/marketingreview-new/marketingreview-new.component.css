@@ -43,8 +43,9 @@
     left: 0;
     bottom: 0; padding: 18px 15px 18px 15px;}
 
-.topHeader{background:#f9c00e;background:linear-gradient(0deg,rgba(249,192,14,1) 0%,rgba(253,234,113,1) 100%);padding:30px 35px;border-radius:7px;margin-bottom:10px;box-shadow:0 0 12px #000}
-.topHeader h2{margin:0;font-size:35px;font-family:"Roboto","Arial",sans-serif;font-weight:500;line-height:38px;color:#000}
+.topHeader{background:#f9c00e;background:linear-gradient(0deg,rgba(249,192,14,1) 0%,rgba(253,234,113,1) 100%);padding:22px 25px;border-radius:7px;margin-bottom:10px;box-shadow:0 0 12px #000}
+.topHeader h2{margin:0;font-size:24px;font-family:"Roboto","Arial",sans-serif;font-weight:500;line-height:30px;color:#000}
+.topHeader h1{margin:0;font-size:25px;font-family:"Roboto","Arial",sans-serif;font-weight:600;line-height:30px;color:#000}
 .topHeader h2 span{color:#f40000}
     .neoGEN_bluetextwrapper_main {
         position: relative;
