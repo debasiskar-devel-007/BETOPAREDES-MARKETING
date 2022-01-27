@@ -3,7 +3,80 @@
         {
             "name": "PECE Presentation slide deck",
             "flag": true,
-            "videodata":[]
+            "videodata":[
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-16424207611921.IntroducingthePECEMedicalDevicePlatform.mp4",
+                    "title": "Introducing the PECE Medical Device Platform",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Introducing the PECE Medical Device Platform" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-16424208244912.AfullcyclemanagementwhenoperatingTM-FloworRM-3A.mp4",
+                    "title": "A full cycle management when operating TM-Flow",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "A full cycle management when operating TM-Flow" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-16424208809783.Immediateaccesstoexamresults.mp4",
+                    "title": "Immediate access to exam results",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Immediate access to exam results" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-16424209471364.Practicedashboard.mp4",
+                    "title": "Practice dashboard",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Practice dashboard" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-16424210664235.Doctor’spanel.mp4",
+                    "title": "Doctor’s panel",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Doctor’s panel" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-16424211481906.Auto-GeneratedEncounterForm.mp4",
+                    "title": "Auto-Generated Encounter Form",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Auto-Generated Encounter Form" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-16424212363427.SuperbillforobesityorIBTform.mp4",
+                    "title": "Superbill for obesity or IBT form",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Superbill for obesity or IBT form" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-16424212363427.SuperbillforobesityorIBTform.mp4",
+                    "title": "Patient intake system and medical necessity",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Patient intake system and medical necessity" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-16424213709439.Additionalrecommendeddiagnostictests.mp4",
+                    "title": "Additional recommended diagnostic tests",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Additional recommended diagnostic tests" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-164242145969210.21AdditionalexamsthatPECEplatformqualifies.mp4",
+                    "title": "21 Additional exams that PECE platform qualifies",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "21 Additional exams that PECE platform qualifies" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-164242153220711.IntegratedwithWEB-MDandMedlinePlus.mp4",
+                    "title": "Integrated with WEB-MD and MedlinePlus",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Integrated with WEB-MD and MedlinePlus" 
+                },
+                { 
+                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-164242159999112.ImportantFeaturesofPECE.mp4",
+                    "title": "Important Features of PECE",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Important Features of PECE" 
+                }
+            ]
         },
 
         {
