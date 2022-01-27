@@ -5,73 +5,79 @@
             "flag": true,
             "videodata":[
                 { 
-                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-16424207611921.IntroducingthePECEMedicalDevicePlatform.mp4",
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-1643286170169MediaCenterfullvideo.mp4",
+                    "title": "PECE sales deck",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "PECE sales deck" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-16424207611921.IntroducingthePECEMedicalDevicePlatform.mp4",
                     "title": "Introducing the PECE Medical Device Platform",
                     "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
                     "description": "Introducing the PECE Medical Device Platform" 
                 },
                 { 
-                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-16424208244912.AfullcyclemanagementwhenoperatingTM-FloworRM-3A.mp4",
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-16424208244912.AfullcyclemanagementwhenoperatingTM-FloworRM-3A.mp4",
                     "title": "A full cycle management when operating TM-Flow",
                     "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
                     "description": "A full cycle management when operating TM-Flow" 
                 },
                 { 
-                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-16424208809783.Immediateaccesstoexamresults.mp4",
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-16424208809783.Immediateaccesstoexamresults.mp4",
                     "title": "Immediate access to exam results",
                     "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
                     "description": "Immediate access to exam results" 
                 },
                 { 
-                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-16424209471364.Practicedashboard.mp4",
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-16424209471364.Practicedashboard.mp4",
                     "title": "Practice dashboard",
                     "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
                     "description": "Practice dashboard" 
                 },
                 { 
-                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-16424210664235.Doctor’spanel.mp4",
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-16424210664235.Doctor’spanel.mp4",
                     "title": "Doctor’s panel",
                     "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
                     "description": "Doctor’s panel" 
                 },
                 { 
-                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-16424211481906.Auto-GeneratedEncounterForm.mp4",
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-16424211481906.Auto-GeneratedEncounterForm.mp4",
                     "title": "Auto-Generated Encounter Form",
                     "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
                     "description": "Auto-Generated Encounter Form" 
                 },
                 { 
-                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-16424212363427.SuperbillforobesityorIBTform.mp4",
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-16424212363427.SuperbillforobesityorIBTform.mp4",
                     "title": "Superbill for obesity or IBT form",
                     "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
                     "description": "Superbill for obesity or IBT form" 
                 },
                 { 
-                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-16424212363427.SuperbillforobesityorIBTform.mp4",
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-16424212363427.SuperbillforobesityorIBTform.mp4",
                     "title": "Patient intake system and medical necessity",
                     "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
                     "description": "Patient intake system and medical necessity" 
                 },
                 { 
-                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-16424213709439.Additionalrecommendeddiagnostictests.mp4",
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-16424213709439.Additionalrecommendeddiagnostictests.mp4",
                     "title": "Additional recommended diagnostic tests",
                     "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
                     "description": "Additional recommended diagnostic tests" 
                 },
                 { 
-                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-164242145969210.21AdditionalexamsthatPECEplatformqualifies.mp4",
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-164242145969210.21AdditionalexamsthatPECEplatformqualifies.mp4",
                     "title": "21 Additional exams that PECE platform qualifies",
                     "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
                     "description": "21 Additional exams that PECE platform qualifies" 
                 },
                 { 
-                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-164242153220711.IntegratedwithWEB-MDandMedlinePlus.mp4",
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-164242153220711.IntegratedwithWEB-MDandMedlinePlus.mp4",
                     "title": "Integrated with WEB-MD and MedlinePlus",
                     "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
                     "description": "Integrated with WEB-MD and MedlinePlus" 
                 },
                 { 
-                    "url": "https://betoparedesallvideos.s3.amazonaws.com/betoparedesallvideos/image-164242159999112.ImportantFeaturesofPECE.mp4",
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/image-164242159999112.ImportantFeaturesofPECE.mp4",
                     "title": "Important Features of PECE",
                     "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
                     "description": "Important Features of PECE" 
@@ -590,7 +596,152 @@
         {
             "name": "BioEnergetics software walkthrough",
             "flag": true,
-            "videodata":[]
+            "videodata":[
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/BioEnergetics_Software_Walkthrough.mp4",
+                    "title": "BioEnergetics Software Walkthrough",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "BioEnergetics Software Walkthrough" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Introduction.mp4",
+                    "title": "Introduction",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Introduction" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/The_Doctor_s_Panel.mp4",
+                    "title": "The Doctor's Panel",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "The Doctor's Panel" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Suggested_Treatment_Protocol.mp4",
+                    "title": "Suggested Treatment Protocol",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Suggested Treatment Protocol" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Patient_Folder_access_Related_Users.mp4",
+                    "title": "Patient Folder access - Related Users",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Patient Folder access - Related Users" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Patient_Details_Intake_Form.mp4",
+                    "title": "Patient Details - Intake Form",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Patient Details - Intake Form" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Patient_Details_Physician_Exam.mp4",
+                    "title": "Patient Details - Physician Exam",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Patient Details - Physician Exam" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Physician_order_sheet.mp4",
+                    "title": "Physician order sheet",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Physician order sheet" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Incomplete_Treatment.mp4",
+                    "title": "Incomplete Treatment",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Incomplete Treatment" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Patient_Treatment_Information.mp4",
+                    "title": "Patient Treatment Information",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Patient Treatment Information" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Procedural_Protocol_Validation.mp4",
+                    "title": "Procedural Protocol Validation",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Procedural Protocol Validation" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Incomplete_treatment_other_actions.mp4",
+                    "title": "Incomplete treatment other actions",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Incomplete treatment other actions" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Complete_treatments_and_Actions.mp4",
+                    "title": "Complete treatments and Actions",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Complete treatments and Actions" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Complete_Report.mp4",
+                    "title": "Complete Report",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Complete Report" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Patient_encounter_form.mp4",
+                    "title": "Patient encounter form",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Patient encounter form" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Treatment_summary_other_status.mp4",
+                    "title": "Treatment summary - other status",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Treatment summary - other status" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Practice_Dashboard.mp4",
+                    "title": "Practice Dashboard",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Practice Dashboard" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/User_Management.mp4",
+                    "title": "User Management",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "User Management" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Add_a_user.mp4",
+                    "title": "Add a user",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Add a user" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Practice_patient_view_treatment.mp4",
+                    "title": "Practice - patient view treatment",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Practice - patient view treatment" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Reports.mp4",
+                    "title": "Reports",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Reports" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Manage_Locations.mp4",
+                    "title": "Manage Locations",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Manage Locations" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Email_intake_form.mp4",
+                    "title": "Email intake form",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Email intake form" 
+                },
+                { 
+                    "url": "https://d291rlacfzbauk.cloudfront.net/betoparedesallvideos/Thank_You.mp4",
+                    "title": "Thank You",
+                    "img": "https://all-frontend-assets.s3.amazonaws.com/AWS-Physicians/images/v1.JPG",
+                    "description": "Thank You" 
+                }
+            ]
         },
         {
             "name": "Sanexas Training with Richard Sorgnard, Ph D",
